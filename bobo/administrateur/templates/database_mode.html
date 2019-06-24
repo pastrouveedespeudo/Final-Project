@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+  <html lang="fr">
+
+    <!-- Head section - Loading CDN -->
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="jb" content="">
+      <br><br>
+      <title>Magazine virtuel</title>
+
+      <!-- Font Awesome Icons -->
+      <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+      <!-- Plugin CSS -->
+      <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/static/css/home2.css">
+
+      <!-- Theme CSS - Includes Bootstrap -->
+      <link href="/static/css/creative.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>  
+
+
+<!-- Masthead -->
+<header class="masthead">
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center text-center">
+    
+      <div class="col-lg-10 align-self-end">
+
+        <h1 id="notre_mode">
+          Notre mode ?
+        </h1><br>
+      </div>
+
+
+
+
+       <script>
+
+       $( document ).ready(function() {
+          document.getElementById('dadata').click();
+          document.getElementById('groumit').click();
+          });
+       </script>
+
+
+
+
+
+
+
+       
+      <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5"></p>
+          
+      <div id='interface'>
+          <input type='button' value='voir la database' id='dadata' onclick='database()'><br><br>
+      </div>
+
+      <div id='sure' style='display:none;'>
+        <form method='POST' action='/administrateur/database_mode'>{% csrf_token %}
+          <input type='button' value='oui' id='bubuteid'> &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type='button' value='non' onclick='nanrien1()'>
+        </form>         
+      </div>
+            
+
+      
+            
+    </div>
+  </div>
+ 
+</header>
+
+<!-- Call to Action Section -->
+  <section class="page-section bg-dark text-white" id='section' style='display:none;'>
+    <div class="container text-center">
+    
+      <div id='femme' style='display:none'>
+        <p>Database femme</p>
+      </div>
+
+                                            
+      
+      <i><p id="p_expert">Voici les images sur lesquelles nous basons notre mode. Elles vous sont accessibles afin que vous puissiez puiser dans votre imagination</p></i><br><br>
+      
+          <table class="container" id='container' style='display:none;'>
+            <div class="row" id="row">
+
+                {% for i in image_hab %}
+
+
+                  <script>
+                      function decodeHtml(html) {
+                          var txt = document.createElement("textarea");
+                         txt.innerHTML = html;
+                         return txt.value;
+                      };
+                      function a(){
+                        var a = decodeHtml("{{i|slice:'1'}}").slice(2,-3)
+                        return a;
+                      };
+                      function b(){
+                        var b  = decodeHtml('{{i|slice:'1:2'}}').slice(2,-3)
+                        return b;
+                      };
+                      function c(){
+                        var c = decodeHtml('{{i|slice:'1:2'}}').slice(2,3) + decodeHtml('{{i|slice:'1:2'}}').slice(-7,-3)
+                        return c
+                      };
+                  </script>
+
+
+                <div id={{i|slice:'2:3'}} class="col-sm"></div>
+
+
+                <script>
+                    var vari = "{{i|slice:'2:3'}}";
+                    var a= document.getElementById(vari).innerHTML = "<img class='va1' src=" + "'" + "/static/bobo/" +
+                                                                     b() + "'" + "width='100' height='100'><br>" +
+                                                                     "<img class='va' src='/static/bobo/" + a() +
+                                                                     "'" +
+                                                                     "id='"+ String(c())+ "'"+ "'><br><br>";
+                </script>
+
+              {% endfor %}
+
+
+
+                                                  
+
+          </div>
+        </div>
+
+        <div id='info_image'></div>
+        
+        <div id='vetement' style='float:left; display:none;'>
+          <strong>Vetement</strong>
+        </div>
+        
+        <div id='coupe' style='float:right; display:none;'><strong>
+          Coupe
+        </strong></div>
+
+        <div id='info_image_coupe' style='float:left;'></div>
+        <br><div id='info_image_vetement' style='float:right;'></div>
+        
+        <div id='im_coupe' style='display:none; float:right;'><img id='image_into_coupe' src=''
+                                                              style='width:60px; height:100px'></div>
+                                                        
+        <div id='im_vetement' style='display:none; float:left;'><img id='image_into_vetement' src=''
+                                                              style='width:60px; height:100px'></div>
+    
+        <div id='couleur_cheuveux' style='float:right;'></div>
+        <div id='couleur_haut' style='float:left;'></div><br><br>
+        <div id='couleur_bas' style='float:left;'></div>
+        <div id='couleur_coupe' style='float:right;'></div>
+
+        
+    </div>
+
+
+
+  <script>
+    var LISTE = []
+    var LISTE_IMAGE = []
+    var LISTE_SEXE = []     
+  </script>
+
+
+
+  {% for i in data %}
+
+        <script>
+            function decodeHtml(html) {
+                var txt = document.createElement("textarea");
+                txt.innerHTML = html;
+                return txt.value;
+            };
+            LISTE_IMAGE.push([decodeHtml("{{i|slice:'1:2'}}").slice(2,-3)]);
+            LISTE_SEXE.push([decodeHtml("{{i|slice:'2:3'}}").slice(2,-3)]);
+          
+        </script>
+        <script>
+          function coul_haut(){
+            LES_COULEURS = []
+            
+            var imaima = IM[IM.length-1]
+            var im = LISTE_HAUT[LISTE_HAUT.length-1]
+            for(var i = 0; i < LISTE_HAUT.length; i++){
+              var p = LISTE_HAUT[i][1].slice(0,1) + LISTE_HAUT[i][1].slice(2,)
+              if (imaima == p){
+                LES_COULEURS.push(LISTE_HAUT[i][0])
+                };
+              };
+              document.getElementById('couleur_haut').innerHTML = LES_COULEURS;
+            };
+          
+          function coul_bas(){
+            
+            LES_COULEURS = []
+            
+            var imaima = IM[IM.length-1]
+            var im = LISTE_BAS[LISTE_BAS.length-1]
+            for(var i = 0; i < LISTE_HAUT.length; i++){
+              var p = LISTE_BAS[i][1].slice(0,1) + LISTE_BAS[i][1].slice(2,)
+              if (imaima == p){
+                LES_COULEURS.push(LISTE_BAS[i][0])
+                };
+              };
+              document.getElementById('couleur_bas').innerHTML = LES_COULEURS;
+            };
+      </script>
+
+  {% endfor %}
+
+
+
+  <script>
+        var LISTE_HAUT = []
+        var LISTE_BAS = []
+  </script>
+
+
+  {% for i in data2 %}
+
+    <script>
+      LISTE_HAUT.push([decodeHtml("{{i|slice:'1'}}").slice(2,-3), decodeHtml("{{i|slice:'4:5'}}").slice(2,-3)]);
+      LISTE_BAS.push([decodeHtml("{{i|slice:'1:2'}}").slice(2,-3), decodeHtml("{{i|slice:'4:5'}}").slice(2,-3)]);
+    </script>
+    
+  {% endfor %}
+
+
+
+  <script>
+      var LISTE_COUPE_COULEUR = []
+      var COUL_CHEVUEX = []
+  </script>
+
+
+  {% for i in data_coupe %}
+    <script>
+      LISTE_COUPE_COULEUR.push([decodeHtml('{{i|slice:'1:2'}}').slice(2,-3), decodeHtml('{{i|slice:'2:3'}}').slice(2,-3)])
+    </script>
+  {% endfor %}
+
+  <script>
+    console.log(LISTE_COUPE_COULEUR)
+    
+    function couleur_coupe(){
+        var imaima = IM[IM.length-1]
+        console.log(imaima)
+        for(var i = 0; i < LISTE_HAUT.length; i++){
+          var p = LISTE_COUPE_COULEUR[i][0].slice(0,1) + LISTE_BAS[i][1].slice(2,)
+          if (imaima == p){
+            COUL_CHEVUEX.push(LISTE_COUPE_COULEUR[i][1]);
+            };
+        };
+        document.getElementById('couleur_coupe').innerHTML = COUL_CHEVUEX[COUL_CHEVUEX.length-1];   
+    };   
+  </script>
+
+
+  <!-- Call to Action Section -->
+  <section class="page-section bg-dark text-white" id='section2' style='display:none;'>
+    <div class="container text-center">
+
+      <center>Database sous forme SQL</center><br>
+
+      <center><div>Il y a {{brun}} brun, {{blond}} blond, {{chatain}} chatain</div></center>      
+      
+      <div id='is_save'>
+        {% for i in final %}
+        {{i|slice:'1'}}
+        <br>
+        {{i|slice:'1:2'}}
+        <br>
+        {{i|slice:'2:3'}}
+        <br>
+        {{i|slice:'3:4'}}        
+        {% endfor %}
+    </div>
+
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function databasesql(){
+      document.getElementById('interface').innerHTML = '';
+      document.getElementById('section2').style.display = 'block';
+    };
+
+    function database(){
+        document.getElementById('interface').innerHTML = ''
+        document.getElementById('section').style.display = 'block';
+        document.getElementById('interface').innerHTML = "<input type='button' id='groumit' value='voir la database femme' onclick='femme()'>" +
+                                                         "&nbsp;&nbsp;" + 
+                                                         "<input type='button' value='voir la database homme' onclick='homme()'>"
+    };
+    
+
+
+
+    function nanrien1(){
+      document.getElementById('sure').style.display = 'none';
+    };
+
+    function arriere(){
+        document.location.href="/"; 
+    };
+    
+    function femme(){
+        document.getElementById('interface').style.display = 'none';
+        document.getElementById('container').style.display = 'block'; 
+    };
+    
+    function homme(){
+        document.getElementById('interface').innerHTML = ''
+    };
+    
+</script>
+<script>
+
+  function info(id){
+    LISTE = []
+    IM = []
+    
+    var identifiant = document.getElementById(id).id;
+
+    document.getElementById('info_image').innerHTML = identifiant;
+    for(var i = 0; i < LISTE_IMAGE.length; i ++){
+      
+      var liste_image1 = String(LISTE_IMAGE[i]).slice(0,1);
+      var liste_image2 = String(LISTE_IMAGE[i]).slice(2,);
+      var image = liste_image1 + liste_image2;
+      if(image == identifiant){
+        console.log(image);
+        LISTE.push(i);
+        IM.push(image)
+        
+      };
+    };
+    
+    console.log(LISTE)
+    console.log(LISTE[LISTE.length-2]);
+    console.log(LISTE[LISTE.length-1]);
+      
+    document.getElementById('coupe').style.display='block';
+    document.getElementById('vetement').style.display='block';
+      
+    document.getElementById('info_image_vetement').innerHTML = LISTE_IMAGE[LISTE[LISTE.length-1]];
+    var ok = LISTE_IMAGE[LISTE[LISTE.length-1]]
+    var okok = String(LISTE_IMAGE[LISTE[LISTE.length-1]]).slice(0,1) + 'b' + String(LISTE_IMAGE[LISTE[LISTE.length-1]]).slice(2,)
+    document.getElementById('info_image_coupe').innerHTML = okok;
+      
+      
+    document.getElementById('im_coupe').style.display = 'block';
+    document.getElementById('im_vetement').style.display = 'block';
+    document.getElementById('image_into_coupe').src = '/static/bobo/' + okok;
+    document.getElementById('image_into_vetement').src = '/static/bobo/' +
+                                                      LISTE_IMAGE[LISTE[LISTE.length-1]]
+      
+
+      
+  };
+
+</script>
+
+<style>
+
+  
+#notre_mode{
+  margin-top:-20%;
+  color:black;
+  font-family:amaze;
+  font-size:15vw;;
+}
+.masthead{
+  height:80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1500px) and (max-width:2000px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  .va1{
+    width:50px;
+    height:50px;
+  }
+  .va{
+    width:50px;
+    height:150px;
+  }
+  .col-sm{
+    width:90px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+@media screen and (min-width: 991px) and (max-width:1500px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    margin-top:-80px;
+    height:100%;
+  }
+  .va1{
+    width:80px;
+    height:80px;
+  }
+  .va{
+    width:80px;
+    height:200px;
+  }
+  .col-sm{
+    width:90px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+  
+}
+
+
+
+
+@media screen and (min-width: 767px) and (max-width:991px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  .va1{
+    width:50px;
+    height:50px;
+  }
+  .va{
+    width:50px;
+    height:150px;
+  }
+  .col-sm{
+    width:90px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+  
+}
+
+
+
+
+@media screen and (min-width: 575px) and (max-width:767px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:70px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+@media screen and (min-width: 560px) and (max-width:575px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:80px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+
+@media screen and (min-width: 450px) and (max-width:560px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:75px;
+  
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+@media screen and (min-width: 400px) and (max-width:450px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  #row{
+    text-align:center;
+    font-size:2vw;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:60px;
+    text-align:center;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 380px) and (max-width:400px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  #row{
+    text-align:center;
+    font-size:2vw;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:50px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+
+@media screen and (min-width: 370px) and (max-width:380px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  #row{
+    text-align:center;
+    font-size:2vw;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:50px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+
+@media screen and (min-width: 350px) and (max-width:370px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  #row{
+    text-align:center;
+    font-size:2vw;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:50px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width:350px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:100%;
+    margin-top:-60px;
+  }
+  #row{
+    text-align:center;
+    font-size:2vw;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:50px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width:350px) {
+  input{
+    width:50px;
+    height:90;
+    text-align:center;
+  }
+  .masthead{
+    height:110%;
+    margin-top:-60px;
+  }
+  #row{
+    text-align:center;
+    font-size:2vw;
+  }
+  .va1{
+    width:48px;
+    height:50px;
+  }
+  .va{
+    width:48px;
+    height:100px;
+  }
+  .col-sm{
+    width:50px;
+  }
+  #p_expert{
+    font-size:3vw;
+    color:white;
+    font-weight:italic;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 72px);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.8)), to(rgba(92, 77, 66, 0.8))), url("/static/img/fond2.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/static/img/fond2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+#autre{
+  margin-left:-965px;
+  margin-top:-100px;
+}
+#h{
+  font:Serif;
+  color:white;
+}
+
+
+
+</style>
+
+
