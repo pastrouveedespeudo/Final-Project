@@ -1,0 +1,85 @@
+            {% include "menu/menu/menu.html" %}
+            {% block content %}
+            {% endblock %}
+
+
+
+            <div id="deux" class="col-sm">
+              <center><span><u>Page</u></h1></span>
+
+                      <a href="/polution/donnée#row1">
+                          <p id="Données" class="Données"
+                              onmouseover="un('Données')" onmouseout="deux('Données')">
+                              Les Données
+                          </p>
+                      </a>
+                      
+                      <a href="/polution/donnée#separate">
+                          <p id="Vent" class="Vent"
+                              onmouseover="un('Vent')" onmouseout="deux('Vent')">
+                              La carte du Vent
+                          </p>
+                      </a>    
+                      
+                      <p id="Retour" class="Retour"
+                          onmouseover="un('Retour')" onmouseout="deux('Retour')"
+                          onclick="retour_page('/polution/donnée#sec1')">Retour
+                      </p>
+
+
+
+                      <center><div id="separate_page"></div></center>
+
+
+
+
+
+              
+            </div>
+
+            
+          </div>
+        </div>
+        
+    </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+<style>
+    a:hover{
+        text-decoration: none;
+    }
+    #Données{
+        padding-top:50px;
+    }
+    #Données,
+    #Vent,
+    #Retour{
+        color:white;
+    }
+    #separate_page{
+        width:50px;
+        height:1px;
+        background:white;
+    }
+    #retour_page{
+        color:white;
+    }
+        
+</style>
+
+
+
+<script>
+    function retour_page(page){
+        document.location.href = page;
+    };
+</script>
