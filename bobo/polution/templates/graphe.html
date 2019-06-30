@@ -1,0 +1,904 @@
+{% include "menu_gauche_graphe.html" %}
+{% block content %}
+{% endblock %}
+
+    <link rel="stylesheet" type="text/css" href="/static/css/graphe.css" media="all" />
+    
+    
+    <style>
+      #menumenu{
+        display:none;
+      }
+      #lyon_button:hover,
+      #paris_button:hover,
+      #marseille_button:hover{
+        background:#ccccff;
+      }
+      #marseille_button{
+        background-color: transparent;
+        border: 1px solid black;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      #paris_button{
+        background-color: transparent;
+        border: 1px solid black;
+        color: black;
+        padding: 12px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      #lyon_button{
+        background-color: transparent;
+        border: 1px solid black;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      #graphes_min{
+        float:right;
+      }
+
+      #separate_line1,
+      #separate_line2,
+      #separate_line3{
+        height:2px;
+        width:25px;
+        background:black;
+      }
+      #p_ville1,
+      #p_ville2,
+      #p_ville3{
+        font-size:2vw;
+        text-align: center;
+      }
+
+      #marseille1,
+      #paris1,
+      #lyon1{
+        border:none;
+        background:transparent;
+      }
+      input{
+        border:none;
+        background:transparent;
+      }
+      #choix{
+        height:50px;
+      }
+      a{
+        color:black;
+        text-decoration:none;
+      }
+      a:hover{
+        color:black;
+      }
+      a:visited{
+        
+      }
+      #information_click{
+        height:40px;
+      }
+    </style>
+
+
+      <br><br><br><br><br><br>
+      <div id="section_graphe">
+
+      <div>
+      <span id='menumenu'>Menu</span>
+      <div class="container">
+      <br><br>
+      <p id="information_click"><i><strong>*Choisis une ville et clique sur une des conditions</strong></i></p>
+        <div class="row">
+
+          
+     
+        
+          <div class="col-sm" id='p_ville1'>
+
+            <center><div id="info1" style='width:200px; height:50px; font-size:3vw;'></div></center>
+
+          
+            <center><div id='separate_line1'></div>
+
+            <input type='button' id='lyon1'
+              onmouseover="one('separate_line1', 'info1')"
+              onmouseout="two('separate_line1', 'info1')"
+              onclick='lyon()'
+              value='Lyon'></center>
+
+
+
+
+            
+          </div>
+          
+          <div class="col-sm" id='p_ville2'>
+
+            <center><div id="info2" style='width:300px; height:50px;'></div></center>
+            
+            <center><div id='separate_line2'></div>
+            
+            
+            <input type='button' id='marseille1'
+            onmouseover="one('separate_line2', 'info2')"
+              onmouseout="two('separate_line2', 'info2')"
+              onclick='marseille()'
+              value='Marseille'>
+            </p></center>
+
+            
+          </div>
+
+
+          
+          <div class="col-sm" id='p_ville3'>
+
+            
+            <center><div id="info3" style='width:200px; height:50px;'></div></center>
+
+      
+            <center><div id='separate_line3'></div>
+            
+            <input type='button' id='paris1'
+                onmouseover="one('separate_line3', 'info3')"
+                onmouseout="two('separate_line3', 'info3')"
+                onclick='paris()'
+                value='Paris'>
+            </p></center>
+
+            
+          </div>
+
+
+        
+
+          
+        </div>
+
+        <div><br>
+
+        
+          <center><p id='choix'></p></center><br><br>
+
+          
+
+
+      <style>
+        #heure,
+        #manif,
+        #météo,
+        #pression,
+        #saison,
+        #vent,
+        #weekend,
+        #traffique,
+        #pop,
+        #bouchon{
+          width:100px;
+          height:30px;
+        }
+
+
+        
+      </style>
+
+
+      <div class="container text-center" id='inputs'>
+        <div class="row justify-content-center">
+        
+            <input type='button' id='bouchon' value='bouchon' onclick='graphe("plugs", "bouchon")'
+            onmouseover='hover("bouchon")' onmouseout='no_hover("bouchon")'>&nbsp;&nbsp;&nbsp;
+
+            
+            <input type='button' value='heure' id='heure' onclick='graphe("hour", "heure")'
+            onmouseover='hover("heure")' onmouseout='no_hover("heure")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='manif' id='manif' onclick='graphe("demonstration", "manifestion")'
+            onmouseover='hover("manif")' onmouseout='no_hover("manif")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='météo' id="météo" onclick='graphe("weather", "météo")'
+            onmouseover='hover("météo")' onmouseout='no_hover("météo")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='popu.' id='pop' onclick='graphe("population", "population")'
+            onmouseover='hover("pop")' onmouseout='no_hover("pop")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='pression' id='pression' onclick='graphe("pressure", "pression")'
+            onmouseover='hover("pression")' onmouseout='no_hover("pression")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='saison' id='saison' onclick='graphe("season", "saison")'
+            onmouseover='hover("saison")' onmouseout='no_hover("saison")'>&nbsp;&nbsp;
+            
+            <input type='button' value='vent' id='vent' onclick='graphe("wind", "vent")'
+            onmouseover='hover("vent")' onmouseout='no_hover("vent")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='weekend' id='weekend' onclick='graphe("weekend", "weekend")'
+            onmouseover='hover("weekend")' onmouseout='no_hover("weekend")'>&nbsp;&nbsp;
+            
+            
+            <input type='button' value='traffique' id='traffique' onclick='graphe("traffic", "traffique")'
+            onmouseover='hover("traffique")' onmouseout='no_hover("traffique")'>&nbsp;&nbsp;
+            
+        </div><br>
+        <p id='savoir'><i></i></p><br>
+        <center><div id='graphique1' class='col-xs-12 col-md-12 col-lg-8'></div></center>
+      </div>
+
+
+
+
+      <style>
+        #texte{
+          margin-top:500px;
+        }
+      </style>
+      <div id='texte'>
+
+    
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                Il y a plusieurs consitions qui régissent
+                la polution. Nous vous proposons de voir
+                ces conditions via des graphes parmi les 3
+                villes de Lyon, Paris et Marseille.
+                Nous pouvons par exemple constater par
+                exemple à Lyon la pollution est plus faible
+                durant les épisodes de pluie et pendant les jour de week end.
+                                
+              </div>
+              <div class="col-sm">
+                Nous remarquons aussi que la ville la 
+                plus grande amoindris la pollution.
+                <br><br>
+                Nous voyons cependant plusieurs données
+                contres-intuitives. Les très grands bouchons 
+                n'augmente pas la pollution. Que les heures de pointes
+                non plus ne les incrémentent pas.
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="container">
+            <div class="row">
+
+              <div class="col-sm">
+                On peut constater qu'à Marseille, les manifestations
+                engendrent de la pollution, et que la pluie
+                à l'inverse la fait baisser.<br><br>
+                A paris nous voyons que le weekend augmente
+                la pollution, et que le beau temps aussi.
+
+              </div>
+              <div class="col-sm"><br>
+                Nous ne pensons pas à la fiabilité de
+                ces données car une condition prise toute
+                seule n'est pas très significatifs.
+                Nous ne pensons pas non plus pouvoir les
+                expliquer.
+                <br>Nous manquons de donnée et de connaissance
+                en pollution en circulation, en sociologie ect...
+                Mais nous espérons etre dans le juste !
+
+              </div>
+
+            </div>
+          </div><br>
+
+
+    </div>
+</div>
+</div>
+
+    <div id="reso">
+        {% include "bottom_page_pollution2.html" %}
+        {% block content2 %}
+        {% endblock %}
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+      <script>
+
+
+      function hover(div){
+        document.getElementById(div).style.border = "1px solid black";
+      };
+
+      function no_hover(div){
+        document.getElementById(div).style.border = "transparent";
+      };
+
+
+
+
+
+
+
+
+
+      function one(div, ville){
+        document.getElementById(div).style.background = "red";
+        if(ville == 'info1'){
+          document.getElementById(ville).innerHTML = 'LYON';
+        }
+        else if(ville == 'info2'){
+          document.getElementById(ville).innerHTML = 'MASYLLLIA';
+        }
+        else if(ville == 'info3'){
+          document.getElementById(ville).innerHTML = 'PARIS';
+        }
+
+      };
+      
+      function two(div, ville){
+        document.getElementById(div).style.background = "black";
+        document.getElementById(ville).innerHTML = '';
+      };
+
+
+
+      
+      </script>
+
+        
+        
+      
+    
+
+
+
+
+
+  </body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//Global variable
+LISTE_AJAX = []
+LISTE_AJAX_TYPE_GRAPHE = []
+
+
+//we define the city to push into global array.
+//We define type of graphe we want too
+//and call to the views the city to search
+//by Ajax style
+
+//Choose Lyon city and graphe
+function lyon(){
+  document.getElementById('choix').innerHTML = 'Vous avez choisis Lyon'
+  document.getElementById('section_graphe').style.display = 'block';
+  LISTE_AJAX.push('lyon')
+};
+
+
+//Choose Paris city and graphe
+function paris(){
+  document.getElementById('choix').innerHTML = 'Vous avez choisis Paris'
+  document.getElementById('section_graphe').style.display = 'block';
+  LISTE_AJAX.push('paris')
+};
+
+
+//Choose Marseille city and graphe
+function marseille(){
+  document.getElementById('choix').innerHTML = 'Vous avez choisis Marseille'
+  document.getElementById('section_graphe').style.display = 'block';
+  LISTE_AJAX.push('marseille')
+  };
+
+
+//We call the city and graphe to back
+function graphe(legraphe, condition){
+
+
+  
+  var a = "<i><a href='/polution/info_pollu' id='sav'>" + "En savoir plus sur la condition: " + condition + "</a></i>";
+
+  
+  document.getElementById('savoir').innerHTML = a;
+
+  LISTE_AJAX_TYPE_GRAPHE.push(legraphe)
+     document.getElementById('graphique1').innerHTML = '';
+     jQuery.ajax({
+       data:{
+           'csrfmiddlewaretoken': '{{csrf_token}}' , 
+           'city':LISTE_AJAX[LISTE_AJAX.length - 1],
+           'graph':LISTE_AJAX_TYPE_GRAPHE[LISTE_AJAX_TYPE_GRAPHE.length - 1]},
+
+       
+              type:"POST",
+              url:"/polution/graphe"
+          })
+          .done(function(data){
+              if (data.error){
+                  jQuery("#monCadreAlert").text(data.error);
+                  jQuery("#is_save");
+                  
+                  
+              }
+              else{
+                  jQuery("#is_save").html(data.data);
+                  jQuery("#monCadreAlert");
+             
+                  document.getElementById('graphique1').innerHTML = "<img id='dia' src = '/static/popo/" +
+                                                                    data +
+                                                                    "'>"
+
+       };
+              
+   });
+};
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+#shut,
+#notshut{
+    color:black;
+}
+#reso{
+    padding-top:150px;
+}
+@media screen and (min-width: 320px) and (max-width:375px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:250px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:10px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:8vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-40px;
+    color:white;
+    font-size:3.5vw;
+ }
+ #savoir{
+    font-size:3.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:300px;
+    margin-left:-40px;
+ }
+ #texte{
+    margin-top:100px;
+    font-size:4vw;
+    font-weight:bold;
+ }
+ #inputs{
+    margin-top:-50px;
+ }
+ #reso{
+    width:100%;
+ }  
+  
+}
+
+
+
+@media screen and (min-width: 375px) and (max-width:425px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:10px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:10vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-40px;
+    color:white;
+    font-size:3.5vw;
+ }
+ #savoir{
+    font-size:3.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:300px;
+    margin-left:-40px;
+ }
+ #texte{
+    margin-top:100px;
+    font-size:4.5vw;
+    font-weight:bold;
+ }
+ #inputs{
+    margin-top:-50px;
+ }
+  
+}
+
+
+
+
+
+@media screen and (min-width: 425px) and (max-width:625px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:12px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:6vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-30px;
+    color:white;
+    font-size:3.5vw;
+ }
+ #savoir{
+    font-size:3.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:400px;
+    margin-left:-20px;
+ }
+ #texte{
+    margin-top:100px;
+    font-size:3vw;
+    font-weight:bold;
+    color:black;
+    text-align:center;
+    
+ }
+ #inputs{
+    margin-top:-50px;
+ }  
+}
+
+@media screen and (min-width: 626px) and (max-width:766px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:10px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:5vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:20px;
+    color:white;
+    font-size:3vw;
+ }
+ #savoir{
+    font-size:2vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:500px;
+    text-align:center;
+ }
+ #texte{
+    font-size:3vw;
+    font-weight:bold;
+    text-align:center;
+ }
+ #inputs{
+    margin-top:-100px;
+ }
+  
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:12px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:5vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-10px;
+    color:white;
+    font-size:2vw;
+ }
+ #savoir{
+    font-size:1.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:600px;
+    margin-left:-20px;
+ }
+ #texte{
+    text-align:center;
+    margin-top:300px;
+    font-size:2vw;
+    color:black;
+    font-weight:bold;
+ }
+  
+}
+
+
+@media screen and (min-width: 1024px){
+ #menumenu{
+    margin-left:50px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+    font-size:2vw;
+    display:none;
+ }
+ #information_click{
+    width:600px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:20px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    margin-top:20px;
+    font-size:3vw;
+    height:80px;
+ }
+ #inputs{
+    font-size:20px;
+ }
+ #choix{
+    color:white;
+    font-size:2vw;
+    margin-top:50px;
+ }
+ #savoir{
+    font-size:1vw;
+    height:100px;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:700px;
+ }
+ #texte{
+    margin-top:500px;
+    font-size:1.6vw;
+    text-align:center;
+    font-weight:bold;
+ }
+  
+}
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

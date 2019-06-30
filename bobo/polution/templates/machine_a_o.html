@@ -1,0 +1,905 @@
+{% include "barre_menu_gauche_soluce.html" %}
+{% block content %}
+{% endblock %}
+
+  <link rel="stylesheet" type="text/css" href="/static/css/pollution.css" media="all" />
+  
+
+
+              <input type='button' id="menu_res" value="Menu"
+                  onclick="document.location.href='/polution/navebarre_soluce'"/>
+
+              
+              <header>
+
+                  <center>
+                  
+                  <section id='section_info'>
+
+                        <p id='texte'>
+                        La pluie fait baisser la pollution. La pollution est le fléau de
+                        notre ère. La pollution tue plusieurs milliers de personne dans le
+                        monde. Elle rend l'air irrespirable.<br>Afin de lutter contre la
+                        pollution plusieurs solutions ont été envisagé. La lutte contre le plastique,
+                        la lutte contre les vieilles voitures, la réduction du traffique en temps voulu...
+                        <br><br>Certain ont réussi l'impossible en controlant la météo. C'est le
+                        cas de la Nasa qui a reussi à faire pleuvoir par des machines à eau.
+                        Mais aussi de la Chine et de la Tahilande qui par l'envoie de composant
+                        chimique ont reussi a faire pleuvoir sur leur ville. Dans des but
+                        de pollution ou non.<br>
+                        La pluit plaque la pollution au sol et le vent la nettoie.<br>
+                        Voici plusieurs video de la Nasa, puis d'une interview avec un ingénieur de airparif,
+                        d'une émission radio et de la thailande qui fait pleuvoir sur sa ville contre la
+                        pollution !
+                        </p>
+                        
+                  </section>
+                  </center><br><br>
+
+
+
+              </header>
+
+
+
+
+
+
+            <style>
+
+                    #menu_res{
+                        background:none;
+                        border:none;
+                    }
+                    #titrespan{
+                        font-size:2.5vw;
+                    }
+
+
+                    @media screen and (min-width: 320px) and (max-width:374px) {
+                        #logo, #MENU{
+                            display:none;
+                        }
+                        #section_info{
+                            width:100%;
+                            text-align:center;
+                            margin-top:20px;
+                        }
+                        #para{
+                            width:100%;
+                        }
+                        #texte{
+                            width:100%;
+                            text-align:justify;
+                            word-wrap: break-word;
+                            color:black;
+                        }
+                        #titrespan{
+                            font-size:6vw;
+                        }   
+            
+        
+                    }
+
+
+                    @media screen and (min-width: 375px) and (max-width:425px) {
+                        #logo, #MENU{
+                            display:none;
+                        }
+                        #section_info{
+                            width:100%;
+                            text-align:center;
+                            margin-top:60px;
+                        }
+                        #para{
+                            width:100%;
+                        }
+                        #texte{
+                            width:100%;
+                            text-align:center;
+                            word-wrap: break-word;
+                            font-size:4vw;
+                        }
+                        #menu_res{
+                            font-size:6vw;
+                            color:black;
+                        }
+                        #titrespan{
+                            font-size:6vw;
+                        } 
+            
+        
+                    }
+                    
+
+
+                    @media screen and (min-width: 425px) and (max-width:768px) {
+                        #logo, #MENU{
+                            display:none;
+                        }
+                        #section_info{
+                            width:100%;
+                            text-align:center;
+                            margin-top:60px;
+                        }
+                        #para{
+                            width:100%;
+                        }
+                        #texte{
+                            width:100%;
+                            text-align:center;
+                            word-wrap: break-word;
+                            font-size:2vw;
+                        }
+                        #menu_res{
+                            font-size:4vw;
+                            color:black;
+                        }
+                        #titrespan{
+                            font-size:4vw;
+                        } 
+            
+        
+                    }
+
+                    @media screen and (min-width: 768px) and (max-width:1000px) {
+                        #logo, #MENU{
+                            display:none;
+                        }
+                        #section_info{
+                            margin-top:150px;
+                        }
+                        #menu_res{
+                            font-size:3vw;
+                            color:black;
+                            margin-left:50px;
+                        }
+                        #menu_res{
+                            font-size:2vw;
+                        }
+                        #texte{
+                            width:500px;
+                            word-wrap: break-word;
+                        }
+            
+        
+                    }
+                    @media screen and (min-width: 1000px) and (max-width:1200px) {
+                        #logo, #MENU{
+                            display:none;
+                        }
+                        #section_info{
+                            margin-top:150px;
+                            height:500px;
+                        }
+                        #texte{
+                            width:800px;
+                            word-wrap: break-word;
+                        }
+                        #menu_res{
+                            font-size:3vw;
+                            color:black;
+                            margin-left:50px;
+                        }
+            
+        
+                    }
+
+
+                    @media screen and (min-width: 1200px) and (max-width:1500px) {
+                        #menu_res{
+                            display:none;
+                        }
+                        #section_info{
+                            margin-top:150px;
+                            height:500px;
+                        }
+                        #texte{
+                            width:800px;
+                            word-wrap: break-word;
+                        }
+                        #menu_res{
+                            font-size:3vw;
+                            color:black;
+                            margin-left:50px;
+                        }
+            
+        
+                    }
+                    @media screen and (min-width: 1500px) and (max-width:1700px) {
+                        #menu_res{
+                            display:none;
+                        }
+                        #section_info{
+                            margin-top:150px;
+                            height:500px;
+                        }
+                        #texte{
+                            width:800px;
+                            word-wrap: break-word;
+        
+                        }
+                        #menu_res{
+                            font-size:3vw;
+                            color:black;
+                            margin-left:50px;
+                            
+                        }
+            
+        
+                    }
+
+                    
+                
+            </style>
+
+
+
+
+  
+  <body>
+  
+  
+              <center>
+              
+              <section id="les_video" style='width:100%;'>
+
+
+                <div class="container" style='text-align:center;'>
+                  <div class="row">
+
+
+                
+
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+
+                    
+                        <p id="titre2">La pluie artificielle et la Nasa</p><br>
+
+                        <center>
+                        
+                        <video controls autoplay id="video">
+                            <source src="/static/video/nasa.mp4" type="video/mp4">
+                        </video>
+
+
+                        <center><a href="https://www.dailymotion.com/video/xj815l"
+                        style='color:white'>
+                        <i>https://www.dailymotion.com/video/xj815l</i>
+                        </a></center>
+
+                        
+
+    
+                        </center><br><br><br><br><br><br><br><br>
+
+                        
+                    </div>
+             
+                    </div>
+
+
+
+                        
+                        <style>
+                            #titre1{
+                                color:white;
+                                font-size:4vw;
+                            }
+
+                                @media screen and (min-width: 320px) and (max-width:374px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video{
+                                        width:100%;
+                                    }
+
+                                }
+
+
+                                @media screen and (min-width: 375px) and (max-width:425px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video{
+                                        width:100%;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 425px) and (max-width:768px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video{
+                                        width:60%;
+                                    }
+
+                                }
+
+
+                                @media screen and (min-width: 768px) and (max-width:1000px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video{
+                                        width:40%;
+                                    }
+                                    #titre1{
+                                        font-size:2vw;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 1000px) and (max-width:1200px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video{
+                                        width:80%;
+                                    }
+                                    #titre1{
+                                        font-size:2vw;
+                                    }
+                                }
+
+
+
+                                @media screen and (min-width: 1200px) and (max-width:1500px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video{
+                                        width:80%;
+                                    }
+                                    #titre1{
+                                        font-size:2vw;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 1500px) and (max-width:1700px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video{
+                                        width:60%;
+                                    }
+                                    #titre1{
+                                        font-size:2vw;
+                                    }
+
+                                }
+
+
+                                            
+                            
+                        </style>
+
+
+
+
+
+
+
+                
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+
+                    
+                        <p id="titre2">La pluie artificielle</p><br>
+
+                        <center>
+                        
+                        <video controls autoplay id="video2">
+                            <source src="/static/video/inge.mp4" type="video/mp4">
+                        </video>
+
+
+                        <center><a href="https://www.youtube.com/watch?v=lCw4Hd6c990"
+                        style='color:white'>
+                        <i>https://www.youtube.com/watch?v=lCw4Hd6c990</i>
+                        </a></center>
+
+                        
+
+    
+                        </center><br><br><br><br><br><br><br><br>
+
+                        
+                    </div>
+
+                        <style>
+
+                            #titre2{
+                                color:white;
+                                text-align:center;
+                            }
+
+                                @media screen and (min-width: 320px) and (max-width:374px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video2{
+                                        width:100%;
+                                    }
+
+                                }
+
+
+
+                                @media screen and (min-width: 375px) and (max-width:425px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video2{
+                                        width:100%;
+                                    }
+
+                                }
+                                @media screen and (min-width: 425px) and (max-width:768px) {
+
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video2{
+                                        width:60%;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 1000px) and (max-width:1200px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video2{
+                                        width:85%;
+                                    }
+                                    #titre2{
+                                        font-size:2vw;
+                                    }
+                                }
+
+
+
+                                @media screen and (min-width: 1200px) and (max-width:1500px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video2{
+                                        width:80%;
+                                    }
+                                    #titre2{
+                                        font-size:2vw;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 1500px) and (max-width:1700px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video2{
+                                        width:60%;
+                                    }
+                                    #titre2{
+                                        font-size:2vw;
+                                    }
+
+                                }
+
+
+
+
+
+
+                                
+                            
+                        </style>
+
+
+
+
+
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+
+                    
+                        <p id="titre3">La pluie et la pollution</p><br>
+
+                        <center>
+                        
+                        <video controls autoplay id="video3">
+                            <source src="/static/video/euro.mp4" type="video/mp4">
+                        </video>
+
+                    
+                        </center>
+
+                        <center><a href="https://www.youtube.com/watch?v=NLsyYO1eOSI"
+                        style='color:white'>
+                        <i>https://www.youtube.com/watch?v=NLsyYO1eOSI</i>
+                        </a></center>
+    
+                        </center><br><br><br><br><br><br><br><br>
+
+                        
+                    </div>
+
+                        <style>
+
+                            #titre3{
+                                color:white;
+                                text-align:center;
+                            }
+
+                                @media screen and (min-width: 320px) and (max-width:374px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video3{
+                                        width:100%;
+                                    }
+
+                                }
+
+
+
+                                @media screen and (min-width: 375px) and (max-width:425px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video3{
+                                        width:100%;
+                                    }
+
+                                }
+                                @media screen and (min-width: 425px) and (max-width:768px) {
+
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video3{
+                                        width:60%;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 768px) and (max-width:1000px) {
+
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video3{
+                                        width:50%;
+                                    }
+
+                                }
+
+                                
+
+                                @media screen and (min-width: 1000px) and (max-width:1200px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video3{
+                                        width:85%;
+                                    }
+                                    #titre3{
+                                        font-size:2vw;
+                                        color:white;
+                                    }
+                                }
+
+
+
+                                @media screen and (min-width: 1200px) and (max-width:1500px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video3{
+                                        width:80%;
+                                    }
+                                    #titre3{
+                                        font-size:2vw;
+                                        color:white;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 1500px) and (max-width:1700px) {
+                                    #les_video{
+                                        width:100%;
+                                    }
+                                    #video3{
+                                        width:60%;
+                                    }
+                                    #titre3{
+                                        font-size:2vw;
+                                        color:white;
+                                    }
+
+                                }
+
+
+
+
+
+
+                                
+                            
+                        </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+
+
+
+                    <center>
+                    <p id="titre4">De la pluie artificiel en Thailande</p><br>
+                    <iframe id="inlineFrameExample2"
+                        title="Inline Frame Example"
+                        src="https://www.bfmtv.com/mediaplayer/video/en-thailande-une-pluie-artificielle-contre-la-pollution-1131972.html">
+                    </iframe>
+                    </center>
+
+
+
+
+
+                       <style>
+
+                            #titre4{
+                                color:white;
+                                text-align:center;
+                            }
+
+                                @media screen and (min-width: 320px) and (max-width:374px) {
+                                    #inlineFrameExample2{
+                                        width:100%;
+                                        height:300px;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 375px) and (max-width:425px) {
+                                    #inlineFrameExample2{
+                                        width:100%;
+                                        height:300px;
+                                    }
+
+                                }
+                                @media screen and (min-width: 425px) and (max-width:768px) {
+                                    #inlineFrameExample2{
+                                        width:80%;
+                                        height:350px;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 768px) and (max-width:1000px) {
+                                    #inlineFrameExample2{
+                                        width:70%;
+                                        height:350px;
+                                    }
+                                    #titre4{
+                                        font-size:2.1vw;
+                                    }
+
+                                }
+
+                                @media screen and (min-width: 1000px) and (max-width:1200px) {
+                                    #inlineFrameExample2{
+                                        width:70%;
+                                        height:550px;
+                                    }
+                                    #titre4{
+                                        font-size:2.1vw;
+                                    }
+
+                                }
+                                @media screen and (min-width: 1200px) and (max-width:1500px) {
+                                    #inlineFrameExample2{
+                                        width:50%;
+                                        height:600px;
+                                    }
+                                    #titre4{
+                                        font-size:2.1vw;
+                                    }
+
+                                }
+                                @media screen and (min-width: 1500px) and (max-width:1700px) {
+                                    #inlineFrameExample2{
+                                        width:50%;
+                                        height:600px;
+                                    }
+                                    #titre4{
+                                        font-size:2.1vw;
+                                    }
+
+                                }
+                            
+                        </style>
+
+
+
+
+
+
+
+
+
+
+
+                        
+                        
+                       <br>
+                       
+                    </div>
+                 
+
+
+                    
+                  </div>
+                </div>
+
+
+
+            </section>
+            </center>
+
+
+
+
+<br><br><br><br><br><br><br>
+
+<center>
+<section>
+
+    <div class="container" id="container_text">
+      <div class="row" id="row_text">
+        <div class="col-xs-12 col-md-4 col-lg-4" style='color:white;' id="texte1">
+            VIDEO 1<br>
+            est une video de la Nasa. On
+            peut y voir une machine à pluie.
+            On peut y voir une machine bruyant qui produit un énorme 
+            amas de fumée. Cet amas monte dans le ciel.
+            Le présentateur nous raccontre que c'est un mélange
+            d'hydrogene et d'oxygène en somme de la vapeur.
+            Plus  tard dans la video on voit que la fumé produit
+            de la pluie. Puis nous voyons d'autre présentation
+            de machine à pluie.
+ 
+        </div>
+
+
+        
+        <div class="col-xs-12 col-md-4 col-lg-4" style='color:white;' id="texte2">
+          VIDEO 2 <br>
+          Voici une vidéo ou on nous parle
+          de la technique de la machine a pluie.
+          En effet la tailande utilise du sel par des
+          avions afin de faire pleuvoir (par
+          JF BERTHOUMIEU). La chine utilise des noyeaux
+          de congélation avec de l'iodure d'argent.
+          De plus il existe une technique récent de sel hygroscopique
+          afin de faire pleuvoir. De plus le dernier nous montre
+          des images de la technique de la tailande.
+
+        </div>
+
+
+
+        
+         <div class="col-xs-12 col-md-4 col-lg-4" style='color:white;' id="texte3">
+         VIDEO 3<br>
+         Cette video nous parle de l'effet de la pluie
+         sur la pollution. En effet,
+         le vent et la pluie vont "permettre de
+         disperser la pollution".
+         <br>Il nous est aussi dit
+         que ce n'est pas le taux de pollution qui
+         est mortel mais le temps de présence de 
+         la pollution.
+         
+        </div>
+        
+      </div>
+    </div>
+
+</section>
+</center>
+
+
+            <style>
+
+
+
+
+  
+
+
+                    @media screen and (min-width: 320px) and (max-width:374px) {
+
+
+        
+                    }
+                
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+ h3{
+    color:black;
+ }
+</style>
+
+  
+  
+
+
+
+
+  
+
+    <div id="reso" style='margin-top:200px;'>
+        {% include "bottom_page_pollution2.html" %}
+        {% block content2 %}
+        {% endblock %}
+    </div>
+
+  </body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
