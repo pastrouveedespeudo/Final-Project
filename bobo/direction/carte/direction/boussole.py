@@ -1,5 +1,10 @@
-def calcul_vent(direction):
+"""This is our tool direction"""
 
+def calcul_vent(direction):
+    """We using trigonometric circle
+       for determinate orientation of wind
+       we transform degrees to str"""
+    
     if direction == 0 or direction == 360:
         return 'nord'
 
@@ -91,5 +96,3 @@ def calcul_vent(direction):
     
     elif direction > 315 and direction <= 337.5:
         return 'nordnordouest'
-    
-    #print('degres : ',degres)
