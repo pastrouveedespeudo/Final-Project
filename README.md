@@ -1,3 +1,14 @@
+# ORGANISATION photo
+
+#Il y a les pages principages: coupe, tendance et habits
+
+c'est 3 pages contiennent 1 haut: coupe_haut, habit_haut et tendance_haut
+
+#Il y a egalement 3 "pages navebarres" les menu qui contiennet respectivement un menu dans le fichier menu
+
+ces 7 pages contiennent a leur tour un fichier css et js dans le dossier static
+
+
 # Final-Project
 
 attention certain texte ne sont pas cité et ne sont pas une vérité vraie. Nous n'avons en aucun cas affirmé la justesse des textes
