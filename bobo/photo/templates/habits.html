@@ -2,8 +2,11 @@
 {% block content %}
 {% endblock %}
 
+     
+            <link rel="stylesheet" type="text/css" href="/static/css/coupe/habits/habits1.css" media="all" />
 
-            <link rel="stylesheet" type="text/css" href="/static/css/coupe/habits/habit.css" media="all" />
+
+            
 
             <input type='button' value='Menu' id="menu_res">
 
@@ -569,11 +572,13 @@
 <footer>
     <!-- Bottom Section number 2 -->
     <div id='bottom'> 
-      
+
         {% include "bottom/bottom_page.html" %}
         {% block content2 %}
         {% endblock %}
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    
   </footer>
 
   
@@ -812,7 +817,7 @@ function nom_image(id_im){
      
       jQuery.ajax({
           data:{
-              csrfmiddlewaretoken:'GqiiJmDbVXEqBPMHochZ20e4N3svCIdAmFs2mK2Ira61HDSaZ8MYoCBRLk5rvheq',
+              csrfmiddlewaretoken:'{{ csrf_token }}',
               'a':a,
               'b':b
           },
@@ -1078,12 +1083,6 @@ function voir_t_laine(){
                 
             };
         </script>
-
-
-
-
-
-
 
 
 
