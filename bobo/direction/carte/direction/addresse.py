@@ -1,16 +1,20 @@
+"""Here we search latitude and longititude
+from a city"""
+
 import reverse_geocoder as rg 
 import pprint 
   
-def reverseGeocode(coordinates): 
+def reverseGeocode(coordinates):
+    """We reverse from have an address
+       and not coordinates"""
+    
     result = rg.search(coordinates) 
- 
     return result
-
-  
 
 
 def dress_to_ville(lat, long):
-    
+    """We reverse from have an address
+       and not coordinates (second technic)"""
     coordinates =(lat, long) 
     a = reverseGeocode(coordinates) 
     liste = []
@@ -23,12 +27,5 @@ def dress_to_ville(lat, long):
         c+=1
 
     ad = str(liste[0]+'+'+liste[1])
-    #print(liste[0])
-    return liste[0], ad
 
-#if __name__ == '__main__':
-##
-    a = dress_to_ville(33.7680065, 66.2385139)
-##    print(a[0])
-##    print(a[1])
-    
+    return liste[0], ad
