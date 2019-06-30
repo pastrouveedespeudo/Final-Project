@@ -1,6 +1,4 @@
 
-<!-- Left menu of coupe.html -->
-
 <!DOCTYPE html>
   <html lang="fr">
 
@@ -22,36 +20,37 @@
 
       <!-- Plugin CSS -->
       <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/static/css/home2.css">
 
       <!-- Theme CSS - Includes Bootstrap -->
       <link href="/static/css/creative.min.css" rel="stylesheet">
-      <link href="/static/css/Menu/barre_gauche/barre_gauche_coupe1.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+      <link rel="stylesheet" type="text/css" href="/static/css/coupe/barre_gauche/barre_gauche_coupe.css" media="all" />
+
+      
     </head>
 
-
-
-    <!-- Body section -->
     <body>
 
     
 
+
         <img id="logo" src="/static/v2/logo2.png">
 
-    
-         <div style="float:left; margin-left:50px;z-index: 2; margin-top:-100px;position:fixed;" id="MENU">
-            <br><br><br><br><br><br><br>
-            <i class="fas fa-angle-right" id="notshut" onclick="notshutdown()"
-                style="z-index: 1;position:static;"></i>
+        
+        <div style="float:left; margin-left:50px;z-index: 2; margin-top:-100px;position:fixed;" id="MENU">
+             <br><br><br><br><br><br><br>
+            <i class="fas fa-angle-right" id="notshut" onclick="notshutdown()" style="z-index: 1;position:static;"></i>
             <i class="fas fa-angle-left" id="shut" onclick="shutdown()"></i><br><br>
 
-        
+            
             <div id='contain' style='position:absolute'>
                 <p id="menu"
                     onMouseOver = "sous_menu1('menu', 'hrefmenu', '#91A8A4')"         
                     onMouseOut = "sous_menu2('menu', 'hrefmenu')">
                     <a href="/photo/navebarre_coupe" id="hrefmenu"><strong>Menu</strong></a>
                 </p>
+                
             </div><br><br>
 
 
@@ -60,7 +59,8 @@
                     onMouseOver = "sous_menu1('sommaire', 'hrefsommaire', '#91A8A4')"         
                     onMouseOut = "sous_menu2('sommaire', 'hrefsommaire')">
                     <a href="/" id="hrefsommaire"><strong>Sommaire</strong></a>
-                </p> 
+                </p>
+                
             </div><br><br>
 
 
@@ -71,15 +71,18 @@
                     onMouseOut = "sous_menu2('menu1', 'tendancee')">
                     <a href="/photo/coupe#container_photo" id="tendancee"><strong>Coiffures</strong></a>
                 </p>
+                
             </div><br><br>
               
 
             <div id='contain3' style='position:absolute'>
+            
                 <p id="menu2"
                     onMouseOver = "sous_menu1('menu2', 'book', '#91A8A4')"         
                     onMouseOut = "sous_menu2('menu2', 'book')">
                     <a href="/photo/coupe#CONTENEUR" id="book"><strong>Coiffeurs</strong></a>
-                </p>  
+                </p>
+                    
             </div><br><br>
        
 
@@ -89,6 +92,7 @@
                     onMouseOut = "sous_menu2('menu3', 'reseaux')">
                     <a href="/photo/coupe#CONTENEUR" id="reseaux"><strong>Gym</strong></a>
                 </p>
+                
             </div><br><br>
 
 
@@ -102,21 +106,6 @@
 
         </div>
         
-
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
 
 
     <script>
@@ -163,6 +152,15 @@
 
 
     </script>
+
+
+
+
+
+
+
+
+
 
 
 
