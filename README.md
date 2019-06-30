@@ -1,5 +1,8 @@
 # Final-Project
 
+attention certain texte ne sont pas cité et ne sont pas une vérité vraie. Nous n'avons en aucun cas affirmé la justesse des textes
+d'introduction, ne sommes pas expert en mode ni expert en pollution. (mais quand c'est cité c vrai)
+
 https://myprofilmypollution.herokuapp.com
 
 Ceci est un site web opensource. Ce site opensource a un enjeu sociétal car: 
@@ -36,4 +39,4 @@ mode -> bien etre (enjeu environemental) -> source de pollution -> information -
 
 # UTILISATION 
 
-
+# AMELIORATION
