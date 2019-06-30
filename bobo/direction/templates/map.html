@@ -301,6 +301,7 @@
                   
                   $.ajax({
                     data:{
+                      'csrfmiddlewaretoken': '{{ csrf_token }}',
                       'a':String(a),
                       
                     },
