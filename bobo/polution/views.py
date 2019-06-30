@@ -48,28 +48,28 @@ def home(request):
 
 def navebarre_donnee(request):
     """Here we return html home response"""
-    return render(request, 'navebarre_donnee.html')
+    return render(request, 'menu/navebarre_donnee.html')
 
 def navebarre_graphe(request):
     """Here we return html home response"""
-    return render(request, 'navebarre_graphe.html')
+    return render(request, 'menu/navebarre_graphe.html')
 
 def navebarre_info(request):
     """Here we return html home response"""
-    return render(request, 'navebarre_info.html')
+    return render(request, 'menu/navebarre_info.html')
 
 def navebarre_prediction(request):
     """Here we return html home response"""
-    return render(request, 'navebarre_prediction.html')
+    return render(request, 'menu/navebarre_prediction.html')
 
 
 def navebarre_vent(request):
     """Here we return html home response"""
-    return render(request, 'navebarre_vent.html')
+    return render(request, 'menu/navebarre_vent.html')
 
 def navebarre_soluce(request):
     """Here we return html home response"""
-    return render(request, 'navebarre_soluce.html')
+    return render(request, 'menu/navebarre_soluce.html')
 
 
 def polution(request):
