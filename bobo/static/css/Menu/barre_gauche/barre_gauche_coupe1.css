@@ -1,4 +1,3 @@
-
 body {
   background:url('/static/v2/coupefemme1.jpg') no-repeat fixed center;;
   -webkit-background-size: cover;
@@ -8,14 +7,12 @@ body {
     position:fixed;
     float:left;
     margin-left:10px;
-    margin-top:-90px;
-    
+    margin-top:-90px;  
 }
 
 #shut{
     font-size:300%;
     color:black;
-
 }
 #notshut{
     font-size:300%;
@@ -59,8 +56,6 @@ body {
     font-size:1.2em;
 }
 
-
-
 #menu{
     font-size:1.2em;
 }
@@ -68,40 +63,28 @@ body {
 #sommaire{
     font-size:1.2em;
 }
-
-
-
 a:hover{
     text-decoration: none;
     color:white;
 }
-
-
-
 #hrefsommaire{
-    color:black;
-    
+    color:black; 
 }
 #hreftendance{
     color:black;
 }
-
 #hrefcoiffure{
     color:black;
 }
-
 #hrefcoiffeur{
     color:black;
 }
-
 #hrefgym{
     color:black;
 }
-
 #hrefhabit{
     color:black;
 }
-
 #hrefsommaire{
     color:black;
 }
@@ -109,37 +92,27 @@ a:hover{
 #hrefmenu{
     color:black;
 }
-
-
-
 #hrefsommaire:hover{
     color:white;
 }
 #hreftendance:hover{
     color:white;
 }
-
 #hrefcoiffure:hover{
     color:white;
 }
-
 #hrefcoiffeur:hover{
     color:white;
 }
-
 #hrefgym:hover{
     color:white;
 }
-
 #hrefhabit:hover{
     color:white;
 }
-
-
 #hrefmenu:hover{
     color:white;
 }
-
 #hrefsommaire:hover{
     color:white;
 }
