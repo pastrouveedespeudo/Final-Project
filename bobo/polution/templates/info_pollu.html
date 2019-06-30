@@ -1,17 +1,9 @@
-{% include "barre_gauche_info.html" %}
+{% include "haut_page/info_pollu_haut.html" %}
 {% block content %}
 {% endblock %}
 
-<style>
-
-.row{
-  text-align:center;
-}
-#menumenu{
-    display:none;
-}
-</style>
-
+<link rel="stylesheet" type="text/css" href="/static/css/pollution/info_pollu/info_pollu.css">
+<link rel="stylesheet" type="text/css" href="/static/css/pollution/info_pollu/info_pollu_haut.css">
 <body>
 
   <div class="container">
@@ -191,139 +183,20 @@
 
     
     <div id="reso">
-        {% include "bottom_page_pollution2.html" %}
+        {% include "bottom/bottom_page.html" %}
         {% block content2 %}
         {% endblock %}
+
+
     </div>
 
- 
 
 
-  </body>
+
+
+
+
+
+</body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-@media screen and (min-width: 320px) and (max-width:374px) {
-  body{
-    font-size:3vw;
-  }
- h1{
-    font-size:4vw;
- }
- #MENU{
-    display:none;
- }
- #logo{
-    display:none;
- }
- #menumenu{
-    margin-left:50px;
-    display:block;
- }
-  
-}
-
-
-@media screen and (min-width: 375px) and (max-width:425px) {
- #MENU{
-    display:none;
- }
- #logo{
-    display:none;
- }
- #menumenu{
-    margin-left:50px;
-    display:block;
- }
-  
-}
-
-
-
-@media screen and (min-width: 425px) and (max-width:600px) {
- #MENU{
-    display:none;
- }
- #logo{
-    display:none;
- }
- #menumenu{
-    margin-left:50px;
-    display:block;
- }
-  
-}
-
-
-
-
-@media screen and (min-width: 768px) and (max-width:1024px) {
-  body{
-    font-size:3vw;
-  }
- h1{
-    font-size:4vw;
- }
-}
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
