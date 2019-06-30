@@ -1,7 +1,24 @@
+"""Here we calculate the new
+   direction"""
+
 from math import *
 
+
+"""We have calculate
+   a 1 degree = 111.11 km
+   so we *0.009 the number of
+   km for have degrees to km and add it to lat
+   if direction isn't sud, nord
+   east or west we * by degrees
+   of circle trigo"""
+
+
+
 def long_lat(lat, long, km, sens):
-    print(km)
+    """We calculate new direction"""
+
+    #In case where superficie.py
+    #fail or an exception is present
     try:
         km = float(km)
     except:
@@ -11,16 +28,10 @@ def long_lat(lat, long, km, sens):
     if km > 1000:
         km = 20.0
 
-        
-    #print(lat, long, km, sens)
-
-    #print(sens)
     
     kilometre = km * 0.009
     
-    #print('metre, kilometre: ',km, kilometre)
 
-    
     if sens == 'sud':
         lat1 = kilometre
         nouvel_lat = lat + lat1
@@ -81,7 +92,6 @@ def long_lat(lat, long, km, sens):
         return lat, long
 
     elif sens == 'est':
-        
         kilo = kilometre
         long1 = long - kilo
       
