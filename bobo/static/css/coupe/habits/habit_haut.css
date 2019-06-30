@@ -1,0 +1,253 @@
+body {
+  background:url('/static/v2/image_vetement.jpg') no-repeat fixed center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+#logo{
+    position:fixed;
+    float:left;
+    margin-left:10px;
+    margin-top:-50px;
+    
+}
+
+#shut{
+    font-size:300%;
+    color:white;
+    
+
+}
+#notshut{
+    font-size:300%;
+    display:none;
+    color:white;
+}
+#MENU{
+    float:left;
+    margin-left:50px;
+    position:fixed;
+}
+
+
+#tendancee{
+    color:white;
+
+}
+
+#book{
+    color:white;
+
+}
+
+#reseaux{
+    color:white;
+
+}
+
+#contacter{
+    color:white;
+
+}
+
+#salle{
+    color:white;
+
+}
+
+#hrefmenu{
+    color:white;
+
+}
+
+#hrefsommaire{
+    color:white;
+
+    
+}
+
+
+
+
+
+
+
+
+
+#titre_menu{
+    font-size:1.5em;
+}
+#menu1{
+    font-size:1em;
+}
+
+#menu2{
+    font-size:1em;
+}
+
+#menu3{
+    font-size:1em;
+}
+
+#menu4{
+    font-size:1em;
+}
+
+#menu6{
+    font-size:1em;
+}
+
+
+#menu{
+    font-size:1em;
+}
+
+#sommaire{
+    font-size:1em;
+}
+
+
+
+a:hover{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+
+#hreftendance{
+    color:white;
+;
+}
+
+#hrefcoiffure{
+    color:white;
+}
+
+#hrefcoiffeur{
+    color:white;
+}
+
+#hrefgym{
+    color:white;
+}
+
+#hrefhabit{
+    color:white;
+}
+
+#hrefsommaire{
+    color:white;
+}
+
+
+
+#hrefsommaire:hover{
+    color:white;
+}
+#hreftendance:hover{
+    color:black;
+}
+
+#hrefcoiffure:hover{
+    color:black;
+}
+
+#hrefcoiffeur:hover{
+    color:black;
+}
+
+#hrefgym:hover{
+    color:black;
+}
+
+#hrefhabit:hover{
+    color:black;
+}
+
+
+#hrefmenu:hover{
+    color:black;
+}
+
+#hrefsommaire:hover{
+    color:black;
+}
+
+@media screen and (min-width: 1500px) and (max-width:2000px) {
+  #MENU {
+    padding-top:20px;
+    font-size:1.4vw ;
+  }
+}
+
+
+
+@media screen and (min-width: 1201px) and (max-width:1500px) {
+    #logo {
+        margin-top:-30px;
+        margin-left:30px;
+    }
+    
+  #MENU {
+    padding-top:150px;
+    font-size:1.3vw;
+  }
+}
+
+
+
+
+@media screen and (min-width: 1000px) and (max-width:1200px) {
+    #logo {
+        margin-top:-30px;
+        margin-left:30px;
+    }
+    
+  #MENU {
+    padding-top:110px;
+    font-size:1.3vw;
+    
+  }
+}
+
+
+
+@media screen and (min-width: 850px) and (max-width:999px) {
+    #logo {
+        margin-top:-30px;
+        margin-left:30px;
+    }
+    
+  #MENU {
+    padding-top:150px;
+    font-size:1.3vw;
+    
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 801px) and (max-width:850px) {
+    #logo {
+        margin-top:-30px;
+        margin-left:30px;
+    }
+    #MENU{
+        margin-top:100px;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width:800px) {
+    #logo {
+        margin-top:-30px;
+        margin-left:30px;
+    }
+    #MENU{
+        margin-top:100px;
+    }
+}
