@@ -1,7 +1,7 @@
 # Final-Project
 
 attention certain texte ne sont pas cité et ne sont pas une vérité vraie. Nous n'avons en aucun cas affirmé la justesse des textes
-d'introduction, ne sommes pas expert en mode ni expert en pollution. (mais quand c'est cité c vrai a par si le site ne dit pas la vérité)
+d'introduction, ne sommes pas expert en mode ni expert en pollution. 
 
 https://myprofilmypollution.herokuapp.com
 
