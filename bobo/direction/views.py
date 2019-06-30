@@ -10,7 +10,7 @@ from .views_function import function_map3
 
 
 def navebarre_vent(request):
-    return render(request, "navebarre_vent.html")
+    return render(request, "menu/navebarre_vent.html")
 
 
 def map(request):
