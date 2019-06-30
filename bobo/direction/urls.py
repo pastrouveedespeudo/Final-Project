@@ -5,8 +5,5 @@ from django.conf.urls import include
 
 urlpatterns = [
     path(r'/map', views.map),
-    path(r'/essais', views.essais),
-    path(r'/navebarre_vent', views.navebarre_vent),
-
- 
+    path(r'/navebarre_vent', views.navebarre_vent), 
 ]
