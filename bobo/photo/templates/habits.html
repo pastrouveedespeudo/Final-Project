@@ -1,714 +1,105 @@
+{% include "habits_haut.html" %}
+{% block content %}
+{% endblock %}
 
-    <link rel="stylesheet" type="text/css" href="/static/css/habit.css" media="all" />
-    
-    <style>
-        #titre{
-            float:right;
-            margin-right:260px;
-            color:white;
-            text-shadow:1px 1px black;
 
-        }
-        
-        #resum_titre{
+            <link rel="stylesheet" type="text/css" href="/static/css/coupe/habits/habit.css" media="all" />
+
+            <input type='button' value='Menu' id="menu_res">
+
             
-            float:right;
-            margin-right:50px;
-            color:white;
-            font-size:1.2em;
-            width:300px;
-            text-align:center;
-            text-shadow:1px 1px black;
+            <center>
+            <section id="text_top">
 
-        }
 
-
-
-        @media screen and (min-width: 990px) and (max-width:1000px) {
-          #resum_titre{
-            right:10;
-            font-size:1.6vw;
-            }
-
-        }
-
-        @media screen and (min-width: 750px) and (max-width:800px) {
-          #resum_titre{
-            margin-right:150;
-            font-size:1.6vw;
-            }
-
-        }
-
-
-        @media screen and (min-width: 0px) and (max-width:750px) {
-          #resum_titre{
-            margin-right:150;
-            font-size:2vw;
-            }
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </style>
-
-    <!-- Body Section -->
-    <body id="page-top">
-        <br>
-       <!-- Navebarre Section -->
-        {% include "barre_gauche_habits.html" %}
-        {% block content %}
-        {% endblock %}
-
-
-      <!-- Title Section -->
-      <header>
-
-
-     <style>
-        #les_textes{
-            font-size:1.3vw;
-            margin-right:50px;
-            height:100%;
-         }
-         #menu_res{
-            background:none;
-            border:transparent;
-            float:left;
-            margin-left:20px;
-            color:white;
-         }
-
-
-     </style>
-
-
-    <section id="titre_section">
-        <input type='button' id="menu_res" value="Menu">
-      <div id="les_textes">
-
-   
-          <p id="resum_titre">
-            <span style='float:left;'>Titre</span><br>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            <br><br><br><br>
-
-
-          
-          
-            <span style='float:left;'>Titre</span><br>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-          </p>
-
-      </div>
-      </section>
-
-
-
-
-
-
-
-      
-      
-
-      
-      </header>
-
-
-
-
-
-
-        <script>
-        
-            function shutdown_info(div, logo1, logo2, div1, div2, div3, logo11, logo22, logo33){
-                document.getElementById(div).style.display = 'none';
-                document.getElementById(logo1).style.display = 'none';
-                document.getElementById(logo2).style.display = 'block';
-                
-                document.getElementById(div1).style.display = 'block';
-                document.getElementById(div2).style.display = 'block';
-                document.getElementById(div3).style.display = 'block';
-
-
-                document.getElementById(logo11).style.display = 'block';
-                document.getElementById(logo22).style.display = 'block';
-                document.getElementById(logo33).style.display = 'block';
-
-            };
-
-
-            function no_shutdown_info(div, logo1, logo2, div1, div2, div3, logo11, logo22, logo33){
-                document.getElementById(div).style.display = 'block';
-                document.getElementById(logo1).style.display = 'block';
-                document.getElementById(logo2).style.display = 'none';
-                
-                document.getElementById(div1).style.display = 'none';
-                document.getElementById(div2).style.display = 'none';
-                document.getElementById(div3).style.display = 'none';
-
-                document.getElementById(logo11).style.display = 'none';
-                document.getElementById(logo22).style.display = 'none';
-                document.getElementById(logo33).style.display = 'none';
-                
-            };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </script>
-
-
-
-
-
-
-
-
-
-      <style>
-        #notshut_color{
-            width:300%;
-            float:right;
-            color:white;
-        }
-        #shut_color{
-            font-size:300%;
-            float:right;
-            color:white;
-        }
-        #info_oups{
-            color:white;
-            font-size:1.3vw;
-            text-shadow:1px 1px black;
-
-        }
-
-        #shut_info{
-            font-size:250%;
-            color:white;
-            display:none;
-        }
-        #no_shut_info{
-            font-size:300%;
-            color:white;
-            
-        }
-        #info_p{
-            color:white;
-        }
-        #no_shut_size,
-        #no_shut_tshirt,
-        #no_shut_color_pantalon,
-        #no_shut_color_hair{
-            font-size:300%;
-            color:white;
-            right:100;
-            position:absolute;
-            
-            
-        }
-        #shut_size,
-        #shut_tshirt,
-        #shut_color_pantalon,
-        #shut_color_hair{
-            font-size:300%;
-            color:white;
-            right:100;
-            position:absolute;
-            display:none;²
-
-        }
-        #p_hair_color{
-            font-size:1em;
-            color:white;
-            float:right;
-            width:200px;
-        }
-
-
-        #pantaloune{
-            float:right; 
-            height:100px;
-            width:100px;
-        }
-        #pantalon_div{
-            background:url("/static/img/parquet1.jpg");
-            border:3px solid black;
-            border-radius:50px;
-            width:150px;
-            margin-left:20%;
-        }
-        #Pantalon{
-            border:3px solid black;
-            font-family:segoe print;
-        }
-        #info_oups{
-            font-size:1em;
-        }
-        #blonde,
-        #chatain,
-        #rousse,
-        #noire,
-        #brune{
-          border:3px solid black;
-          width:80px;
-        }
-        
-        #blonde:hover{
-            background:#424874;
-       
-        }
-        #chatain:hover{
-            background:#04724D;
-      
-        }
-        #rousse:hover{
-            background:#4F6272;
-      
-        }
-        #noire:hover{
-            background:#985F99;
-        
-        }
-        #brune:hover{
-          background:#DB5461;
-      
-        }
-
-
-
-
-        
-      </style>
-        
-                <div class="container" id="responsive_cont">
-            <div class="row">
-
-
-
-                <style>
-
-                    #shut_tshirt2,
-                    #shut_size2,
-                    #shut_color_pantalon2,
-                    #shut_color_hair2{
-                        font-size:200%;
-                        color:white;
-                        display:none;
-                        
-                    }
-
-                    #no_shut_tshirt2,
-                    #no_shut_size2,
-                    #no_shut_color_pantalon2,
-                    #no_shut_color_hair2{
-                        font-size:200%;
-                        color:white;
-                       
-                    }
-
-
-                <script>
-       
-                        
-
-
-                </script>
-
-
-
-                    
-                </style>
-                
-                <div class="col-sm col-xs-12" style='text-align:center;'>
-                 <p id="p_hair_color2" style='color:white;'><strong>Les couleurs de cheveux</strong></p>
-                    <i class="fas fa-angle-right" id="shut_color_hair2"
-                    onclick="shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
-                                            'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
-                                            'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')"></i>
-                    <i class="fas fa-angle-left" id="no_shut_color_hair2"
-                    onclick="no_shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
-                                              'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
-                                              'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')"></i>
-                    <div id="input_color_hair2" style='display:none;'>
-                      <input type='button' id='brune' value="Brune" onclick='coul("brune")'>
-                      <input type='button' id='blonde' value='Blonde' onclick='coul("blonde")'>
-                      <input type='button' id='chatain' value='Chatain' onclick='coul("chatain")'>
-                      <input type='button' id='rousse' value='Rousse' onclick='coul("rousse")'>
-                      <input type='button' id='noire' value='Noire' onclick='coul("noire")'>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="col-sm col-xs-12" style='text-align:center;'>
-                    <p id="p_panta_p2" style='color:white;'><strong>Pantalon</strong></p>
-                    <i class="fas fa-angle-right" id="shut_color_pantalon2"
-                    onclick="shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
-                                            'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
-                                            'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')"></i>
-                    <i class="fas fa-angle-left" id="no_shut_color_pantalon2"
-                    onclick="no_shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
-                                            'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
-                                            'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')"></i>
-                    <div id="div_pantalon_menu2" style='display:none;text-align:center;'>
-                        <input type='button' value='Salopette' id='salopette'
-                            style=" border:3px solid black;font-family:segoe print;"
-                            onclick='voir_salopette()'><br><br>
-                         <input type='button' value='Jeans' id='jean' 
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_jean()'><br><br>
-                         <input type='button' value='Toile' id='toile'
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_toile()'></center><br><br>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-                    <div class="col-sm col-xs-12" style='text-align:center;'>
-                         <p id='tshirt_p_p2' style='color:white;'><strong>T-shirt</strong></p>
-                            <i class="fas fa-angle-left" id="no_shut_tshirt2"
-                            onclick="no_shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
-                                                        'p_hair_color2', 'p_panta_p2', 'p_size_p2',
-                                                        'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                            <i class="fas fa-angle-right" id="shut_tshirt2"
-                            onclick="shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
-                                                        'p_hair_color2', 'p_panta_p2', 'p_size_p2',
-                                                        'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                            <div id="div_input_tshirt2" style='display:none;'>                                                    
-                                <input type='button' value='manche longue' id='longue'
-                                    style=" border:3px solid black;font-family:segoe print;"
-                                    onclick='voir_t_longue()'><br><br>                                                                                                   
-                                <input type='button' value='manche courte' id='courte'
-                                    style="border:3px solid black;font-family:segoe print;"
-                                    onclick='voir_t_courte()'><br><br>                                             
-                                <input type='button' value='laine' id='laine'
-                                    style="border:3px solid black;font-family:segoe print;"
-                                    onclick='voir_t_laine()'><br><br>
-                            </div>                                         
-                    </div>
-
-                    <div class="col-sm col-xs-12" style='text-align:center;' id="sizing_res1">
-                        <p id='p_size_p2' style='color:white;'><strong>Modifier la taille</strong></p>  
-                        <i class="fas fa-angle-left" id="no_shut_size2" 
-                        onclick="no_shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
-                                                'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
-                                                'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                        <i class="fas fa-angle-right" id="shut_size2"
-                        onclick="shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
-                                                'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
-                                                'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                     
-                        <div id="input_size_bro2" style='display:none;'>
-                          <input type='button' value='Ajouter de la longueur?' id="add1" style='width:200px;'
-                              onclick='ajout_longueur()'><br><br>
-                        
-                          <input type='button' value='Ajouter de la largeur?' id="add2" style='width:200px;'
-                            onclick='ajout_largeur()'><br><br>
-                      
-                   
-                          <input type='button' value='Enlever de la longueur?' id="no_add1" style='width:200px;'
-                            onclick='enlever_longueur()'><br><br>
-                   
                   
-                          <input type='button' value='Enlever de la largeur?' id="no_add2" style='width:200px;'
-                            onclick='enlever_largeur()'><br><br>
-                       </div>
+                 
+
+          
+                  <div id="les_textes">
+             
+                        Verrez tu un agneau approcher un groupe de lion?
+                        Non tout est question d'apparence. Parmi les Humains,
+                        nous, il existe une multitude de groupe social.
+                        De la famille au groupe de sport tout est codé.
+                        La facon d'etre a la facon de s'habiller.
+                        Chaque condition à son code. Le dimanche matin,
+                        les soirs en boite ou au travaille.<br>
+                        Afin de pouvoir approcher certaine personne
+                        il faut te codifier selon la coutume.
+                        Non pas te conformer mais trouver la ressemblance.
+                        Nous te proposons de pouvoir essayer
+                        des vetements et de te faire Ta propre Mode.
+                        
+         
+                 
                 </div>
+               
+                  
+            </section>
+            </center>
 
 
 
 
+      <section id="section_info1">
+      
+        <div class="container text-center">
+        
 
-
-
+            <div id="CONTENEUR_INFO">
+            
+                <p id='info_oups'><strong><i>Appuyez sur votre couleur
+                de cheveux, et choisissez une catégorie d'habit</i></strong></p><br><br>
+                
+                <p id='info_p'><strong>Les informations des habits</strong></p>
+                
+                <i class="fas fa-angle-down" id="shut_info"
+                onclick="no_shutdown_info('info_cloths_like_price', 'no_shut_info', 'shut_info')"></i>
+                
+                <i class="fas fa-angle-up" id="no_shut_info"
+                onclick="shutdown_info('info_cloths_like_price', 'no_shut_info' , 'shut_info')"></i>
 
                 
-                </div>
             </div>
 
 
-
-
-      <section style='font-size:1.3vw;'>
-        <div class="container text-center" style='font-size:1.3vw;' id='infoinfoinfo'>
-          <div class="row justify-content-center">
-            <div class="col-lg-12 text-center">
-
-                <div style='height:100px;'>
-                    <div id="CONTENEUR_INFO">
-                        <p id='info_oups'><strong><i>Appuyez sur votre couleur
-                        de cheveux, et choisissez une catégorie d'habit</i></strong></p><br><br>
-                        <p id='info_p'><strong>Les informations des habits</strong></p>
-                        <i class="fas fa-angle-down" id="shut_info"
-                        onclick="no_shutdown_info('info_cloths_like_price', 'no_shut_info', 'shut_info')"></i>
-                        <i class="fas fa-angle-up" id="no_shut_info"
-                        onclick="shutdown_info('info_cloths_like_price', 'no_shut_info' , 'shut_info')"></i>
-                    </div>
-
-
-                    <center>
-                      <div id="info_cloths_like_price"style="width:auto;max-width:300px;min-height:80px;"><br>
-                          <strong><center><p id="nos_info_habits">Nos info habits</p></center></strong>
-                          <div id='infofo'>
-                            <center><p id='mage' style='width:100%;'></p></center>
+            <center>
+            
+                  <div id="info_cloths_like_price"><br>
+                  
+                      <strong><center><p id="nos_info_habits">Nos info habits</p></center></strong>
+                      
+                      <div id='infofo'>
+                      
+             
+                            <p id='mage'></p>
+               
+                            
                             <p id='name'></p>
                             <p id='store'></p>
                             <p id='online'></p>
                             <p id='price'></p>
                             <p id='stock'></p>
-                          </div>
-                      </div><br>
-                     
-                    </center>
-                    
-
-              <style>
-                #barre{
-                    position:absolute;
-                    right:-10;
-                    width:200px;
-                    margin-top:50px;
-                    height:500px;
-                  }
-
-                @media screen and (min-width: 1500px) and (max-width:2000px) {
-                  #barre{
-                    clear:right;
-                    margin-right:20px;
-                    font-size:1vw;
-                   }
-                    #name,
-                    #store,
-                    #online,
-                    #price,
-                    #stock{
-                        font-size:vw;
-                    }
-                    #CONTENEUR_INFO{
-                        font-size:vw;
-                    }
-                    #nos_info_habits{
-                        font-size:1vw;
-                    }
-                    #les_textes{
-                        font-size:1vw;
-                        margin-right:200px;
-                    }
-                    #responsive_cont{
-                        display:none;
-                    }
-                    
-                    
-                }
-
-
-                @media screen and (min-width: 1000px) and (max-width:1500px) {
-                  #barre{
-                    right:10;
-                    font-size:1.3vw;
-                    }
-                  #responsive_cont{
-                        display:none;
-                    }
-                }
-
-
-                @media screen and (min-width: 950px) and (max-width:990px) {
-                  #barre{
-                    right:-100;
-                    font-size:1.3vw;
-                    border:1px solid blue;
-                    }
-                  #responsive_cont{
-                        display:none;
-                    }
- 
-                }
-
-
-
-
-
-
-
-
-                @media screen and (min-width: 990px) and (max-width:1000px) {
-                  #barre{
-                    right:10;
-                    font-size:1.3vw;
-                    }
-                  #responsive_cont{
-                        display:none;
-                    }
-                }
-
-
-                @media screen and (min-width: 950px) and (max-width:990px) {
-                  #barre{
-                    right:-100;
-                    font-size:1.3vw;
-                    border:1px solid blue;
-                    }
-                  #responsive_cont{
-                        display:none;
-                    }
- 
-                }
-
-                @media screen and (min-width: 800px) and (max-width:950px) {
-                  #barre{
-                    right:-100;
-                    font-size:1.3vw;
-                  }
-                  #responsive_cont{
-                        display:none;
-                  }
-
-                }
-
-
-                @media screen and (min-width: 500px) and (max-width:800px) {
-                  #barre{
-                    right:-200;
-                    font-size:3vw;
-                    display:none;
-                    }
-                    #name,
-                    #store,
-                    #online,
-                    #price,
-                    #stock{
-                        font-size:2vw;
-                    }
-                    #CONTENEUR_INFO{
-                        font-size:2vw;
-                    }
-                    #nos_info_habits{
-                        font-size:3vw;
-                    }
-                    #page-top{
-                        overflow-x: hidden;
-                    }
-                    #logo{
-                        display:none;
-                    }
-                    #MENU{
-                        display:none;
-                    }
-                    #sizing_res{
-                        font-size:2vw;
-                    }
-                    #p_hair_color2{
-                        width:200px;
-                    }
-                    #nos_info_habits{
-                        font-size:2vw;
-                    }
-                    #responsive_cont{
-                        margin-top:100px;
-                    }
-                    #info_oups{
-                        margin-top:80px;
-                    }
-                    #reso{
-                        margin-top:200px;
-                    }
-                }
-
-
-
-
-
-
-
-                  
-                @media screen and (min-width: 0px) and (max-width:500px) {
-                  #barre{
-                    right:-200;
-                    font-size:3vw;
-                    display:none;
-                    }
-                    #name,
-                    #store,
-                    #online,
-                    #price,
-                    #stock{
-                        font-size:3vw;
-                    }
-                    #CONTENEUR_INFO{
-                        font-size:3vw;
                         
-                        
-                    }
-                    #nos_info_habits{
-                        font-size:3vw;
-                    }
-                    #les_textes{
-                        font-size:3vw;
-                        margin-right:-100px;
-                    }
-                    #page-top{
-                        overflow-x: hidden;
-                    }
-                }
-
+                      </div>
+                      
+                </div><br>
                 
-              </style>
+             </center>
+      
+            </div><br>
+
+
+
+
+
+
+
             
                 <div id="barre">
 
-         
+                  
                     <p id="p_hair_color"><strong>Les couleurs de cheveux</strong></p><br><br>
                     
                     <i class="fas fa-angle-right" id="shut_color_hair"
@@ -719,8 +110,10 @@
                     <i class="fas fa-angle-left" id="no_shut_color_hair"
                     onclick="no_shutdown_info('input_color_hair', 'shut_color_hair', 'no_shut_color_hair',
                                               'p_panta_p', 'tshirt_p_p', 'p_size_p',
-                                              'no_shut_color_pantalon', 'no_shut_tshirt', 'no_shut_size')"></i>
-                    <br><br><br><br>
+                                              'no_shut_color_pantalon', 'no_shut_tshirt', 'no_shut_size')"></i><br><br><br><br>
+
+                                              
+                    
 
                     <div id="input_color_hair" style='float:right;margin-right:50px;display:none;border:10px solid transparent;width:100px;' >
                       <input type='button' id='brune' value="Brune" onclick='coul("brune")'><br><br>
@@ -729,24 +122,30 @@
                       <input type='button' id='rousse' value='Rousse' onclick='coul("rousse")'><br><br>
                       <input type='button' id='noire' value='Noire' onclick='coul("noire")'><br><br>
                     </div>
-            
+               
+
 
 
                     <div>
-                    <p id="p_panta_p" style='color:white;'><strong>Pantalon</strong></p>
+                        <p id="p_panta_p" style='color:white;'><strong>Pantalon</strong></p><br>
 
-                    <i class="fas fa-angle-right" id="shut_color_pantalon"
-                    onclick="shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
-                                            'p_hair_color', 'tshirt_p_p', 'p_size_p',
-                                            'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')"></i>
-                    
-                    <i class="fas fa-angle-left" id="no_shut_color_pantalon"
-                    onclick="no_shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
-                                            'p_hair_color', 'tshirt_p_p', 'p_size_p',
-                                            'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')"></i>
-                    <br><br><br>
+                        <i class="fas fa-angle-right" id="shut_color_pantalon"
+                        onclick="shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
+                                                'p_hair_color', 'tshirt_p_p', 'p_size_p',
+                                                'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')"></i>
+                        
+                        <i class="fas fa-angle-left" id="no_shut_color_pantalon"
+                        onclick="no_shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
+                                                'p_hair_color', 'tshirt_p_p', 'p_size_p',
+                                                'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')"></i><br><br><br>
+                        
                     </div>
-                    <div id="div_pantalon_menu" style='display:none;width:100px;margin-left:50px;'>
+
+
+
+
+                        
+                    <div id="div_pantalon_menu" style='display:none;width:200px;text-align:center;'>
                         <input type='button' value='Salopette' id='salopette'
                             style=" border:3px solid black;font-family:segoe print;"
                             onclick='voir_salopette()'><br><br>
@@ -761,26 +160,9 @@
                     </div>
                                                
 
-                    <style>
-
-
-                    
-                        #salopette:hover{
-                            background:#424874;
-                   
-                        }
-                        #jean:hover{
-                            background:red;
-                     
-                        }
-                        #toile:hover{
-                            background:lightblue;
-                   
-                        }
-
-                    </style>
+               
                 
-                    <p id='tshirt_p_p' style='color:white;border:10px solid transparent;'><strong>T-shirt</strong></p>
+                    <p id='tshirt_p_p' style='color:white;border:10px solid transparent;width:200px;'><strong>T-shirt</strong></p><br>
 
 
                     <i class="fas fa-angle-left" id="no_shut_tshirt"
@@ -812,28 +194,14 @@
             
 
                 
-                    <style>
-                        #longue:hover{
-                            background:green;
-                    
-                        }
-                        #courte:hover{
-                            background:yellow;
-                       
-                        }
-                        #laine:hover{
-                            background:red;
-                        
-                        }
-
-                    </style>
+                   
 
 
 
 
 
 
-                    <p id='p_size_p' style='color:white;border:10px solid transparent;'><strong>Modifier la taille</strong></p>  
+                    <p id='p_size_p' style='color:white;border:10px solid transparent;'><strong>Modifier la taille</strong></p><br>
 
                 
                     <i class="fas fa-angle-left" id="no_shut_size" 
@@ -866,41 +234,114 @@
                    </div>
 
 
-                    <style>
-                        #add1:hover{
-                            background:magenta;
-             
-                        }
-                        #add2:hover{
-                            background:orange;
-                     
-                        }
-                        #no_add1:hover{
-                            background:red;
-                      
-                        }
-                        #no_add2:hover{
-                            background:gray;
                     
-                        }
-                    </style>
 
 
 
                     
                 </div>
          
-                <br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br><br><br><br><br>
+     
             </div>
 
 
+          <div class="container" id="responsive_cont">
+            <div class="row">
 
 
-            
-
-
-
+                
+                <div class="col-sm col-xs-12" style='text-align:center;'>
+                 <p id="p_hair_color2" style='color:white;'><strong>Les couleurs de cheveux</strong></p>
+                    <i class="fas fa-angle-right" id="shut_color_hair2"
+                    onclick="shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
+                                            'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
+                                            'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')"></i>
+                    <i class="fas fa-angle-left" id="no_shut_color_hair2"
+                    onclick="no_shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
+                                              'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
+                                              'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')"></i>
+                    <div id="input_color_hair2" style='display:none;'>
+                      <input type='button' id='brune' value="Brune" onclick='coul("brune")'>
+                      <input type='button' id='blonde' value='Blonde' onclick='coul("blonde")'>
+                      <input type='button' id='chatain' value='Chatain' onclick='coul("chatain")'>
+                      <input type='button' id='rousse' value='Rousse' onclick='coul("rousse")'>
+                      <input type='button' id='noire' value='Noire' onclick='coul("noire")'>
+                    </div>
+                </div>
+                <div class="col-sm col-xs-12" style='text-align:center;'>
+                    <p id="p_panta_p2" style='color:white;'><strong>Pantalon</strong></p>
+                    <i class="fas fa-angle-right" id="shut_color_pantalon2"
+                    onclick="shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
+                                            'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
+                                            'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')"></i>
+                    <i class="fas fa-angle-left" id="no_shut_color_pantalon2"
+                    onclick="no_shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
+                                            'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
+                                            'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')"></i>
+                    <div id="div_pantalon_menu2" style='display:none;text-align:center;'>
+                        <input type='button' value='Salopette' id='salopette'
+                            style=" border:3px solid black;font-family:segoe print;"
+                            onclick='voir_salopette()'><br><br>
+                         <input type='button' value='Jeans' id='jean' 
+                            style="border:3px solid black;font-family:segoe print;"
+                            onclick='voir_jean()'><br><br>
+                         <input type='button' value='Toile' id='toile'
+                            style="border:3px solid black;font-family:segoe print;"
+                            onclick='voir_toile()'></center><br><br>
+                    </div>
+                </div>
+                    <div class="col-sm col-xs-12" style='text-align:center;'>
+                         <p id='tshirt_p_p2' style='color:white;'><strong>T-shirt</strong></p>
+                            <i class="fas fa-angle-left" id="no_shut_tshirt2"
+                            onclick="no_shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
+                                                        'p_hair_color2', 'p_panta_p2', 'p_size_p2',
+                                                        'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
+                            <i class="fas fa-angle-right" id="shut_tshirt2"
+                            onclick="shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
+                                                        'p_hair_color2', 'p_panta_p2', 'p_size_p2',
+                                                        'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
+                            <div id="div_input_tshirt2" style='display:none;'>                                                    
+                                <input type='button' value='manche longue' id='longue'
+                                    style=" border:3px solid black;font-family:segoe print;"
+                                    onclick='voir_t_longue()'><br><br>                                                                                                   
+                                <input type='button' value='manche courte' id='courte'
+                                    style="border:3px solid black;font-family:segoe print;"
+                                    onclick='voir_t_courte()'><br><br>                                             
+                                <input type='button' value='laine' id='laine'
+                                    style="border:3px solid black;font-family:segoe print;"
+                                    onclick='voir_t_laine()'><br><br>
+                            </div>                                         
+                    </div>
+                    <div class="col-sm col-xs-12" style='text-align:center;'>
+                        <p id='p_size_p2' style='color:white;'><strong>Modifier la taille</strong></p>  
+                        <i class="fas fa-angle-left" id="no_shut_size2" 
+                        onclick="no_shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
+                                                'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
+                                                'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
+                        <i class="fas fa-angle-right" id="shut_size2"
+                        onclick="shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
+                                                'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
+                                                'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
+                     
+                        <div id="input_size_bro2" style='display:none;'>
+                          <input type='button' value='Ajouter de la longueur?' id="add1" style='width:200px;'
+                              onclick='ajout_longueur()'><br><br>
+                        
+                          <input type='button' value='Ajouter de la largeur?' id="add2" style='width:200px;'
+                            onclick='ajout_largeur()'><br><br>
+                      
+                   
+                          <input type='button' value='Enlever de la longueur?' id="no_add1" style='width:200px;'
+                            onclick='enlever_longueur()'><br><br>
+                   
+                  
+                          <input type='button' value='Enlever de la largeur?' id="no_add2" style='width:200px;'
+                            onclick='enlever_largeur()'><br><br>
+                       </div>
+                </div>
+                
+                </div>
+            </div>
 
 
 
@@ -1111,7 +552,7 @@
                       
               <div id='image'></div>
                       
-              <div id="1"><div>
+        
               <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
                       
@@ -1120,101 +561,92 @@
       </div>
     </section>
 
+  
 
 
 
 
+<footer>
+    <!-- Bottom Section number 2 -->
+    <div id='bottom'> 
+      
+
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Abonne toi sur nos reseaux sociaux !</h2>
+        <a href=""><i class="fab fa-facebook-square" id="fb"></i></a>
+        <a href=""><i class="fab fa-twitter-square" id="tw"></i></a>
+        <a href=""><i class="fab fa-snapchat-square" id="sn"></i></a>              
+    </div>
+  </section>
 
 
-
-
-
-
-
-
-
-
-
-      <!-- Separate Section for visual aspect-->
-      <div>
-          <br><br><br><br><br><br><br><br>
+  <section class="page-section" id="contact" style="background:white;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Let's Get In Touch!</h2>
+          <hr class="divider my-4">
+          <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+        </div>
       </div>
-
-
-
-
-      <!-- Call to Action Section -->
-      <section class="page-section bg-dark text-white" id="reso">
-        <div class="container text-center">
-          <h2 class="mb-4">Abonne toi sur nos reseaux sociaux !</h2>
-
-
-                     
-          <style>#im10{width:100px; height:100px;margin-left:50px;}</style>
-          <a href='https//:www.facebook.fr'><img src = "/static/img/portfolio/icone/facebook.png"/ id="im10"></a>
-                         
-          <style>#im11{width:100px; height:100px;margin-left:100px;}</style>
-          <a href='https//:www.twitter.fr'><img src = "/static/img/portfolio/icone/twitter.png"/ id="im11"></a>
-          
-          <style>#im12{width:200px; height:200px;margin-left:100px;}</style>
-          <a href='https//:www.snapchat.fr'><img src = "/static/img/portfolio/icone/snap.png"/ id="im12"></a>
-                        
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center">
+          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+          <div>+1 (202) 555-0149</div>
         </div>
-      </section>
-
-
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <!-- Bootstrap core JavaScript -->
-      <script src="/static/vendor/jquery/jquery.min.js"></script>
-      <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-      <!-- Plugin JavaScript -->
-      <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
-      <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-      <!-- Custom scripts for this template -->
-      <script src="/static/js/creative.min.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script type="text/javascript" src="/static/js/habit1.js"></script>
-
-
-
-      <!-- Contact Section -->
-      <section class="page-section" id="contact">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-              <h2 class="mt-0">Let's Get In Touch!</h2>
-              <hr class="divider my-4">
-              <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 ml-auto text-center">
-              <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-              <div>+1 (202) 555-0149</div>
-            </div>
-            <div class="col-lg-4 mr-auto text-center">
-              <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-              <!-- Make sure to change the email address in anchor text AND the link below! -->
-              <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
-            </div>
-          </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+          <!-- Make sure to change the email address in anchor text AND the link below! -->
+          <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-</body>
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+    </div>
+  </footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="/static/js/creative.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
 
 </html>
 
-<script>
 
+      
+      
+
+
+<script>
 LISTE_RESIZE = []
 LISTE_RESIZE_TAILLE_HAUTEUR = []
 LISTE_RESIZE_TAILLE_LARGEUR = []
-
 LISTE1 = []
-
 LISTE_INFO_COULEUR = []
 var click = 0;
 var click2 = 0;
@@ -1227,23 +659,15 @@ var click_t_laine = 0;
 $( function() {
         $("#1, #2, #3, #4, #5, #6, #7, #8, #9, #10, #profil").draggable();
    });
-
-
   $( function() {
     $("#11, #22, #33, #44, #55, #66, #77, #88, #99, #1010, #1111, #1212").draggable();
   });
-
-
   $( function() {
      $("#111, #222, #333, #444, #555, #666, #777, #888, #999, #101010").draggable();
   });
-
-
  $( function() {
      $("#1111, #2222, #3333, #4444, #5555, #6666, #7777, #8888, #9999, #10101010").draggable();
 });
-
-
 function ajout_longueur(){
   
   var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
@@ -1268,30 +692,21 @@ function ajout_longueur(){
   image.setAttribute('width', X);
   image.setAttribute('height',Y);
   var d = document.getElementById(b).style.height = Y;
-
-
   document.getElementById(b).style.width = X;
   
   LISTE1.push([b, X,Y]);
-
 };
-
-
 function ajout_largeur(){
   
-
   var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
   var b = document.getElementById(a).id
   var c = '#' + b
-
   var image = document.querySelector(c);
   var X = image.getAttribute("width");
   X = parseInt(X) ;
-
   var Y = image.getAttribute("height"); 		
   Y = parseInt(Y) ;
  
-
   X += 5 ; 
   Y += 0 ;
   image.setAttribute('width', X);
@@ -1302,44 +717,33 @@ function ajout_largeur(){
   console.log(X,Y)
   
 };
-
-
 function enlever_longueur(){
   var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
   var b = document.getElementById(a).id
   var c = '#' + b
-
   var image = document.querySelector(c);
   var X = image.getAttribute("width");
   X = parseInt(X) ;
-
   var Y = image.getAttribute("height"); 		
   Y = parseInt(Y) ;
  
-
   X += 0 ; 
   Y -= 5 ;
   image.setAttribute('width', X);
   image.setAttribute('height',Y);
   LISTE1.push([b, X,Y]);
   var d = document.getElementById(b).style.height = Y;
-
 };
-
 function enlever_largeur(){
-
   var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
   var b = document.getElementById(a).id
   var c = '#' + b
-
   var image = document.querySelector(c);
   var X = image.getAttribute("width");
   X = parseInt(X) ;
-
   var Y = image.getAttribute("height"); 		
   Y = parseInt(Y) ;
  
-
   X -= 5 ; 
   Y += 0 ;
   image.setAttribute('width', X);
@@ -1349,7 +753,6 @@ function enlever_largeur(){
   
 };
     
-
 liste_info_prix = [['bb1' ,'xxx', '<a href="" style="color:white;">www.xxx.fr</a>', '2550 euros', 'en stock', 'xxx', '<img src="/static/img/portfolio/vetement/femme/bas_blanc/1.png">'],
                    ['bb2' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '5520 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/2.2.png style='height:200px'>"],
                    ['bb3' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '280 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/3.png' style='height:200px'>"],
@@ -1391,11 +794,7 @@ liste_info_prix = [['bb1' ,'xxx', '<a href="" style="color:white;">www.xxx.fr</a
                    ['hg9' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '19 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/9.png' style='height:200px'>"],
                    ['hg10' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '21 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/10.png' style='height:200px'>"],
                    ]
-
-
-
 function inf(image){
-
 for(var i = 0; i < liste_info_prix.length; i ++){
   if(image == liste_info_prix[i][0]){
  
@@ -1407,12 +806,7 @@ for(var i = 0; i < liste_info_prix.length; i ++){
     document.getElementById('mage').innerHTML =  liste_info_prix[i][6]
   }
 }
-
-
 };
-
-
-
 function nom_image(id_im){
   console.log(id_im)
   var a = document.getElementById(id_im).height;
@@ -1420,23 +814,16 @@ function nom_image(id_im){
   
   LISTE_RESIZE.push(id_im)
   LISTE1.push([id_im, a, b])
-
   
   console.log(LISTE_RESIZE)
   console.log(LISTE1)
-
   inf(id_im)
 };
-
-
-
   var HAUT = 'habit_bas_blanc'
   var BAS = 'habit_bas_blanc'
   function coul(couleur){
-
     
     document.getElementById('couleur').innerHTML = 'Vous etes donc ' + couleur;
-
     if(couleur == 'brune'){
       document.getElementById('info_mode').innerHTML = 'Le haut blanc et le bas bleu !'
     }
@@ -1453,31 +840,25 @@ function nom_image(id_im){
       document.getElementById('info_mode').innerHTML = 'Le haut blanc et le bas bleu !';
     };
    
-
     var a = document.getElementById('couleur').innerHTML;
     document.getElementById('couleur').style.display = 'none';
     document.getElementById('info_mode').style.display = 'none';
    
   };
-
-
-
   jQuery("#brune, #blonde, #chatain, #rousse, #noire").on("click", function(e){
     
     var a = document.getElementById('couleur').innerHTML;
     var b = document.getElementById('recherche').innerHTML;
     
-
     
     document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une catégorie d'habit</i></strong></p>"
     
-
     
      e.preventDefault();
      
       jQuery.ajax({
           data:{
-              'csrfmiddlewaretoken': 'vrS3jiKMco5HjUgoQlNOQtDEUWWnq0Dg9jqGC5ECVvtI5mWHXmWtvrZBN09F9AMP' , 
+              csrfmiddlewaretoken:'GqiiJmDbVXEqBPMHochZ20e4N3svCIdAmFs2mK2Ira61HDSaZ8MYoCBRLk5rvheq',
               'a':a,
               'b':b
           },
@@ -1503,9 +884,7 @@ function nom_image(id_im){
                 if(data[i] == ' '){
                     c += 1
                   }
-
                 }
-
               var haut = 'habit_haut_' + liste1[0].join('').slice(0,-1)
               var bas = 'habit_bas_' + liste1[1].join('')
               HAUT = haut
@@ -1513,40 +892,25 @@ function nom_image(id_im){
               
               console.log(liste1[liste1.length - 1].join(''))
               console.log(liste1[liste1.length - 2].join(''))
-
               LISTE_INFO_COULEUR.push(liste1[liste1.length - 1].join(''))
               LISTE_INFO_COULEUR.push(liste1[liste1.length - 2].join(''))
-
             
-
           };
           
       });
   });
-
-
-
-
-
-
-
 function voir_t_longue(){
   
   document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une catégorie d'habit</i></strong></p>"
-
   if(LISTE_INFO_COULEUR == ''){
         document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>S\u00e9lectionnez une couleur de cheveux</i></strong></p>"
         click_t_longue -= 1
   };
-
   click_t_longue += 1
-
   liste_t_longue_blanche = ['hb9']
   liste_t_longue_gris = ['hg7', 'hg5', 'hg4']
   
   
-
-
   if(click_t_longue % 2 == 1){
     if (LISTE_INFO_COULEUR[LISTE_INFO_COULEUR.length - 1] == 'blanc '){
       for (var i = 0; i < liste_t_longue_blanche.length; i ++){
@@ -1572,28 +936,18 @@ function voir_t_longue(){
       } 
     }
   }
-
-
   
 };
-
-
-
-
 function voir_t_courte(){
   
   document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une cat\u00e9gorie d'habit</i></strong></p>"
-
   if(LISTE_INFO_COULEUR == ''){
         document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>S\u00e9lectionnez une couleur de cheveux</i></strong></p>"
         click_t_courte -= 1
   };
-
   click_t_courte += 1
-
   liste_t_courte = ['hb3','hb4', 'hb5', 'hb7', 'hb8','hb2']
   liste_t_courte_gris = ['hg1', 'hg2', 'hg3', 'hg6', 'hg10', 'hg9', 'hg8']
-
   if(click_t_courte % 2 == 1){
     if (LISTE_INFO_COULEUR[LISTE_INFO_COULEUR.length - 1] == 'blanc '){
       for (var i = 0; i < liste_t_courte.length; i ++){
@@ -1620,32 +974,15 @@ function voir_t_courte(){
     }
   }
 };
-
-
-
-
-
-
-
-
-
-
-
 function voir_t_laine(){
-
   
   document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une cat\u00e9gorie d'habit</i></strong></p>"
-
   if(LISTE_INFO_COULEUR == ''){
         document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>S\u00e9lectionnez une couleur de cheveux</i></strong></p>"
         click_t_laine -= 1
   };
-
   click_t_laine += 1
-
   liste_t_laine = ['hb1','hb10']
-
-
   if(click_t_laine % 2 == 1){
     if (LISTE_INFO_COULEUR[LISTE_INFO_COULEUR.length - 1] == 'blanc '){
       for (var i = 0; i < liste_t_laine.length; i ++){
@@ -1666,13 +1003,7 @@ function voir_t_laine(){
     }
   }
 };
-
-
-
-
-
   function voir_salopette(){
-
     document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une cat\u00e9gorie d'habit</i></strong></p>"
     
     if(LISTE_INFO_COULEUR == ''){
@@ -1683,9 +1014,7 @@ function voir_t_laine(){
     if(LISTE_INFO_COULEUR[LISTE_INFO_COULEUR.length - 2] == 'blanc'){
       document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Nous ne disposons pas de salopette blanche</i></strong></p>"
     };
-
     click_salopette += 1
-
     if(click_salopette % 2 == 1){
       if (LISTE_INFO_COULEUR[LISTE_INFO_COULEUR.length - 2] == 'bleu'){
         document.getElementById('bbl10').style.display = 'block';
@@ -1696,9 +1025,6 @@ function voir_t_laine(){
     
    }
   };
-
-
-
   function voir_jean(){
     
     document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une cat\u00e9gorie d'habit</i></strong></p>"
@@ -1707,13 +1033,11 @@ function voir_t_laine(){
       document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>S\u00e9lectionnez une couleur de cheveux</i></strong></p>"
       click_jean -= 1
     };
-
     click_jean += 1
     
     liste_jean_bleu = ['bbl1', 'bbl2','bbl6','bbl17', 'bbl8', 'bbl11', 'bbl12', 'bbl4']
     
     liste_jean_blanc = ['bb1', 'bb2', 'bb6','bb5', 'bb8', 'bb9', 'bb10']
-
     if(click_jean % 2 == 1){
       if (LISTE_INFO_COULEUR[LISTE_INFO_COULEUR.length - 2] == 'bleu'){
         for (var i = 0; i < liste_jean_bleu.length; i ++){
@@ -1734,23 +1058,15 @@ function voir_t_laine(){
       }
     }
   };
-
-
-
-
   function voir_toile(){
-
     document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une cat\u00e9gorie d'habit</i></strong></p>"
-
     if(LISTE_INFO_COULEUR == ''){
       document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>S\u00e9lectionnez une couleur de cheveux</i></strong></p>"
       click_toile -= 1
     };
-
     click_toile += 1
     
     liste_toile_bleu = ['bbl3','bbl5','bbl9']
-
     liste_toile_blanc = ['bb3', 'bb4', 'bb7']
     
     
@@ -1774,390 +1090,40 @@ function voir_t_laine(){
       }
     }
   };
-
-
-
-
-
 </script>
 
 
 
-<style>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#1, #2,#3,#4,#5,#6,#7,#8,#9,
-#10, #11,#22,#33,#44,#55,
-#66, #77, #88 { width: 0px; height: 0px;}
-input{
-  border:1px solid black;
-}
-
-
-
-@media screen and (min-width: 768px) and (max-width:991px) {
-  #shirt_tshirt {
-    margin-left:10%;
-  }
-  #pantaloune {
-    margin-left:-7.5%;
-  }
-}
-
-
-@media screen and (min-width: 0px) and (max-width:767px) {
-
-  #tshirt {
-    
-    margin-right:9%;
-    margin-top:450%;
-  }
-  #pantaloune {
-
-    margin-left:-16%;
-    margin-top:127%;
-  }
-}
-
-
-
-#clothes_section{
-    width:101%;
-    text-align:center;
-}
-
-#info_cloths_like_price{
-    background:url("/static/img/parquet1.jpg");
-    border:3px solid black;
-    border-radius:50px;
-    width:auto;
-    height:auto;
-
-}
-#nos_info_habits{
-    font-family:segoe print;
-}
-
-#mage{
-    text-align:center;
-    width:auto;
-}
-#name{
-    width:200px;
-}
-#store{
-    width:200px;
-}
-#price,
-#stock,
-#online{
-    width:200px;
-}
-#infofo{
-    text-align:left;
-    padding-left:50px;
-}
-
-
-#shirt_tshirt{
-    margin-left:82%;
-    margin-top:-350px;
-    width:150px;
-    position:absolute;
-}
-#tshirt{
-    background:url("/static/img/parquet1.jpg");
-    border:3px solid black;
-    border-radius:50px;
-    font-family:segoe print;
-}
-
-#info_div_container{
-    background:url("/static/img/parquet1.jpg");
-    border:2px solid black;
-    border-radius:50px;
-}
-
-#add1,
-#add2,
-#no_add1,
-#no_add2{
-    border:3px solid black;
-}
-
-#draggable{
-   width:0px; 
-   height:0px;
-}
-
-
-h1{
-    color:black;
-    font-family:"Comic Sans MS, Comic Sans, cursive";
-}
-h2{
-    color:black;
-    font-style:justify;
-}
-h3{
-    color:black;
-}
-#Color_hair{
-    background:url("/static/img/parquet1.jpg");
-    border:3px solid black;
-    border-radius:50px;
-}
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 320px) and (max-width:375px) {
-    #MENU{
-        display:none;
-    }
-    #logo{
-        display:none;
-    }
-    #les_textes{
-        width:100%;
-    }
-    #resum_titre{
-        width:100%;
-        font-size:15px;
-        text-align:center;
-        float:none;
+        <script>
         
-    }
-    span{
-        float:none;
-        width:100%;
-        text-align:center;
-    }
-    #titre_section{
-        text-align:center;
-        
-    }
-    #responsive_cont{
-        font-size:5vw;
-        margin-top:30px;
-        
-    }
-    #info_oups{
-        font-size:5vw;
-        padding-top:10px;
-        
-    }
-    #sizing_res{
-        font-size:5vw;
-    }
-    #reso{
-        margin-top:500px;
-    }
-    #nos_info_habits{
-        font-size:5vw;
-    }
-}
-
-
-
-@media screen and (min-width: 375px) and (max-width:425px) {
-    #MENU{
-        display:none;
-    }
-    #logo{
-        display:none;
-    }
-    #les_textes{
-        width:100%;
-    }
-    #resum_titre{
-        width:100%;
-        font-size:4.5vw;
-        text-align:center;
-        float:none;
-        
-    }
-    span{
-        float:none;
-        width:100%;
-        text-align:center;
-    }
-    #titre_section{
-        text-align:center;
-        
-    }
-    #responsive_cont{
-        padding-top:200px;
-        font-size:4vw;
-    }
-    #info_oups{
-        font-size:3.5vw;
-        padding-top:10px;
-        
-    }
-    #sizing_res{
-        font-size:4vw;
-    }
-    #reso{
-        margin-top:500px;
-    }
-    #nos_info_habits{
-        font-size:4vw;
-    }
-    input{
-        font-size:3vw;
-    }
-    #menu_res{
-        font-size:4vw;
-    }
-    
-  
-}
-
-
-
-
-@media screen and (min-width: 425px) and (max-width:600px) {
-    #MENU{
-        display:none;
-    }
-    #logo{
-        display:none;
-    }
-    #les_textes{
-        width:100%;
-    }
-    #resum_titre{
-        width:100%;
-        font-size:3.5vw;
-        text-align:center;
-        float:none;
-        
-    }
-    span{
-        float:none;
-        width:100%;
-        text-align:center;
-    }
-    #titre_section{
-        text-align:center;
-        
-    }
-    #responsive_cont{
-        padding-top:500px;
-        font-size:2.5vw;
-        display:none;
-    }
-    #info_oups{
-        font-size:2.5vw;
-        padding-top:10px;
-        
-    }
-    #sizing_res{
-        font-size:3vw;
-    }
-    #reso{
-        margin-top:500px;
-    }
-    #nos_info_habits{
-        font-size:3vw;
-    }
-    input{
-        font-size:2.5vw;
-    }
-    #p_hair_color2{
-        width:100%;
-    }
-    #barre{
-        display:block;
-        font-size:2.5vw;
-    }
-    #menu_res{
-        font-size:3vw;
-    }
-    #infoinfoinfo{
-        margin-top:200px;
-    }
-  
-}
-
-
-
-
-
-
-@media screen and (min-width: 1300px) and (max-width:1500px) {
-    #reso{
-        margin-top:250px;
-    }
-    #menu_res{
-        display:none;
-    }
-
-  
-}
-
-</style>
+            function shutdown_info(div, logo1, logo2, div1, div2, div3, logo11, logo22, logo33){
+                document.getElementById(div).style.display = 'none';
+                document.getElementById(logo1).style.display = 'none';
+                document.getElementById(logo2).style.display = 'inline-block';
+                
+                document.getElementById(div1).style.display = 'inline-block';
+                document.getElementById(div2).style.display = 'inline-block';
+                document.getElementById(div3).style.display = 'inline-block';
+                document.getElementById(logo11).style.display = 'inline-block';
+                document.getElementById(logo22).style.display = 'inline-block';
+                document.getElementById(logo33).style.display = 'inline-block';
+            };
+            function no_shutdown_info(div, logo1, logo2, div1, div2, div3, logo11, logo22, logo33){
+                document.getElementById(div).style.display = 'inline-block';
+                document.getElementById(logo1).style.display = 'inline-block';
+                document.getElementById(logo2).style.display = 'none';
+                
+                document.getElementById(div1).style.display = 'none';
+                document.getElementById(div2).style.display = 'none';
+                document.getElementById(div3).style.display = 'none';
+                document.getElementById(logo11).style.display = 'none';
+                document.getElementById(logo22).style.display = 'none';
+                document.getElementById(logo33).style.display = 'none';
+                
+            };
+        </script>
 
 
 
@@ -2199,9 +1165,4 @@ h3{
 
 
 
-
-
-
-
- 
 
