@@ -1,14 +1,15 @@
+            <link href="/static/css/pollution/prediction/navebarre.css" rel="stylesheet">
+
             {% include "menu/menu/menu.html" %}
             {% block content %}
             {% endblock %}
 
-
-
+            
             <div id="deux" class="col-sm">
-              <center><span><u>Page</u></h1></span>
+              <center><span><u>Page</u></h1></span><br><br><br>
 
                       <a href="/polution/prediction#marseille">
-                          <p id="prédiction" class="prédiction"
+                          <p id="prédiction" class="prédiction" style='color:white'
                               onmouseover="un('prédiction')" onmouseout="deux('prédiction')">
                               Les prédictions
                           </p>
@@ -16,7 +17,7 @@
 
 
                       <a href="/polution/prediction#section_info">
-                          <p id="Explications" class="Explications"
+                          <p id="Explications" class="Explications" style='color:white'
                               onmouseover="un('Explications')" onmouseout="deux('Explications')">
                               Les Explications
                           </p>
@@ -32,11 +33,6 @@
 
                       <center><div id="separate_page"></div></center>
 
-
-
-
-
-              
             </div>
 
             
@@ -47,38 +43,6 @@
 
 
 </body>
-
-
-
-
-
-
-
-
-<style>
-    a:hover{
-        text-decoration: none;
-    }
-    #prédiction{
-        padding-top:50px;
-    }
-    #prédiction,
-    #Explications,
-    #Gym,
-    #retour2,
-    #Retour{
-        color:white;
-    }
-    #separate_page{
-        width:50px;
-        height:1px;
-        background:white;
-    }
-    #retour_page{
-        color:white;
-    }
-        
-</style>
 
 
 
