@@ -1,3 +1,5 @@
+"""We call coordinate"""
+
 from geopy.geocoders import Nominatim
 import requests
 from bs4 import *
@@ -21,11 +23,11 @@ def ville(parametre):
     c = location.longitude
 
     
-    print(b,c)
+
     return b, c
 
 
-#ville('Avenue Félix Rozier, 26400 Crest')
+
 
 
 
