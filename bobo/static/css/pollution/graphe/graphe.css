@@ -1,0 +1,606 @@
+input{background:transparent;border:transparent;}
+
+h1{
+  font-family:recursive;
+  color:black;
+}
+h2{
+  font-family:"Comic Sans MS, Comic Sans, cursive";
+  color:black;
+}
+input{
+  border:2px solid black;
+}
+#section_graphe{
+  margin-top:-100px;
+}
+#information_click{
+  margin-left:100px;
+  color:black;
+}
+
+
+#menumenu{
+display:none;
+}
+#lyon_button:hover,
+#paris_button:hover,
+#marseille_button:hover{
+  background:#ccccff;
+}
+#marseille_button{
+background-color: transparent;
+border: 1px solid black;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+#paris_button{
+background-color: transparent;
+border: 1px solid black;
+color: black;
+padding: 12px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+#lyon_button{
+background-color: transparent;
+border: 1px solid black;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+#graphes_min{
+float:right;
+}
+
+#separate_line1,
+#separate_line2,
+#separate_line3{
+height:2px;
+width:25px;
+background:black;
+}
+#p_ville1,
+#p_ville2,
+#p_ville3{
+font-size:2vw;
+text-align: center;
+}
+
+#marseille1,
+#paris1,
+#lyon1{
+border:none;
+background:transparent;
+}
+input{
+border:none;
+background:transparent;
+}
+#choix{
+height:50px;
+}
+a{
+color:black;
+text-decoration:none;
+}
+a:hover{
+color:black;
+}
+a:visited{
+
+}
+#information_click{
+height:40px;
+}
+
+
+#heure,
+#manif,
+#météo,
+#pression,
+#saison,
+#vent,
+#weekend,
+#traffique,
+#pop,
+#bouchon{
+  width:100px;
+  height:30px;
+}
+
+
+i{
+    color:white;
+}
+
+#texte{
+  margin-top:500px;
+}
+
+@media screen and (min-width: 0px) and (max-width:374px) {
+    #fb{
+        font-size:50px;
+        width:250px;
+    }
+    #tw{
+        font-size:50px;
+        width:250px;
+    }
+    #sn{
+        font-size:50px;
+        width:250px;
+    }    
+    .mb-4{
+        font-size:5vw;     
+    }
+}
+
+@media screen and (min-width: 374px) and (max-width:800px) {
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+    }    
+    .mb-4{
+        font-size:5vw;
+    }
+}
+
+
+@media screen and (min-width: 800px) and (max-width:1000px) {
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+    }    
+    .mb-4{
+        font-size:3vw;
+        
+    }
+}
+
+
+
+@media screen and (min-width: 1000px) and (max-width:1500px) {
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+
+    }    
+    .mb-4{
+        font-size:2.5vw;
+        
+    }
+}
+
+@media screen and (min-width: 1501px){
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+        
+    }    
+    .mb-4{
+        font-size:2.5vw;
+        
+    }
+}
+
+#shut,
+#notshut{
+    color:black;
+}
+#reso{
+    padding-top:150px;
+}
+@media screen and (min-width: 320px) and (max-width:375px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:250px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:10px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:8vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-40px;
+    color:white;
+    font-size:3.5vw;
+ }
+ #savoir{
+    font-size:3.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:300px;
+    margin-left:-40px;
+ }
+ #texte{
+    margin-top:100px;
+    font-size:4vw;
+    font-weight:bold;
+ }
+ #inputs{
+    margin-top:-50px;
+ }
+ #reso{
+    width:100%;
+ }  
+  
+}
+
+
+
+@media screen and (min-width: 375px) and (max-width:425px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:10px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:10vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-40px;
+    color:white;
+    font-size:3.5vw;
+ }
+ #savoir{
+    font-size:3.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:300px;
+    margin-left:-40px;
+ }
+ #texte{
+    margin-top:100px;
+    font-size:4.5vw;
+    font-weight:bold;
+ }
+ #inputs{
+    margin-top:-50px;
+ }
+  
+}
+
+
+
+
+
+@media screen and (min-width: 425px) and (max-width:625px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:12px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:6vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-30px;
+    color:white;
+    font-size:3.5vw;
+ }
+ #savoir{
+    font-size:3.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:400px;
+    margin-left:-20px;
+ }
+ #texte{
+    margin-top:100px;
+    font-size:3vw;
+    font-weight:bold;
+    color:black;
+    text-align:center;
+    
+ }
+ #inputs{
+    margin-top:-50px;
+ }  
+}
+
+@media screen and (min-width: 626px) and (max-width:766px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:10px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:5vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:20px;
+    color:white;
+    font-size:3vw;
+ }
+ #savoir{
+    font-size:2vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:500px;
+    text-align:center;
+ }
+ #texte{
+    font-size:3vw;
+    font-weight:bold;
+    text-align:center;
+ }
+ #inputs{
+    margin-top:-100px;
+ }
+  
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+ #MENU{
+    display:none;
+ }
+ #logo{
+    display:none;
+ }
+ #menumenu{
+    margin-left:30px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+ }
+ #information_click{
+    width:300px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:12px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    font-size:5vw;
+    height:80px;
+ }
+ #info3,
+ #info2,
+ #info1{
+    display:none;
+    width:20px;
+ }
+ #choix{
+    margin-top:-10px;
+    color:white;
+    font-size:2vw;
+ }
+ #savoir{
+    font-size:1.5vw;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:600px;
+    margin-left:-20px;
+ }
+ #texte{
+    text-align:center;
+    margin-top:300px;
+    font-size:2vw;
+    color:black;
+    font-weight:bold;
+ }
+  
+}
+
+
+@media screen and (min-width: 1024px){
+ #menumenu{
+    margin-left:50px;
+    display:block;
+    color:white;
+    margin-top:-150px;
+    font-size:2vw;
+    display:none;
+ }
+ #information_click{
+    width:600px;
+    height:50px;
+    margin-left:15px;
+    color:white;
+    font-size:20px;
+ }
+ #p_ville2,
+ #p_ville3,
+ #p_ville1{
+    margin-top:20px;
+    font-size:3vw;
+    height:80px;
+ }
+ #inputs{
+    font-size:20px;
+ }
+ #choix{
+    color:white;
+    font-size:2vw;
+    margin-top:50px;
+ }
+ #savoir{
+    font-size:1vw;
+    height:100px;
+ }
+ #sav{
+    color:white;
+ }
+ #graphique1{
+    text-align:center;
+ }
+ #dia{
+    width:700px;
+ }
+ #texte{
+    margin-top:500px;
+    font-size:1.6vw;
+    text-align:center;
+    font-weight:bold;
+ }
+  
+}
+
+
+
