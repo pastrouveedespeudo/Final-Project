@@ -1,36 +1,11 @@
-{% include "barre_gauche_prediction.html" %}
+{% include "haut_page/prediction_haut.html" %}
 {% block content %}
 {% endblock %}
 
-
 <link rel="stylesheet" type="text/css" href="/static/css/prediction.css" media="all" />
-
-  <style>
-    #text{
-      float:right;
-      margin-right:250px;
-      width:200px;
-    }
-    #conteneur{
-      margin-top:450px;
-    }
-    #choix{
-      text-align:center;
-      font-size:20px;
-    }
-    #pred{
-      text-align:center;
-      font-size:20px;
-    }
-    #menu_res{
-        background:transparent;
-        border:transparent;
-        display:none;
-    }
-    #text{
-        text-align:justify;
-    }
-  </style>
+<link rel="stylesheet" type="text/css" href="/static/css/pollution/prediction/prediction.css">
+<link rel="stylesheet" type="text/css" href="/static/css/pollution/prediction/prediction_haut.css">
+ 
 
 
   <input type='button' value='Menu' id='menu_res' onclick="document.location.href='/polution/navebarre_prediction'">
@@ -63,82 +38,7 @@
 
 
 
-<style>
-      #lyon_button:hover,
-      #paris_button:hover,
-      #marseille_button:hover{
-        background:#ccccff;
-      }
-      #marseille_button{
-        background-color: transparent;
-        border: 1px solid black;
-        color: black;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-      }
-      #paris_button{
-        background-color: transparent;
-        border: 1px solid black;
-        color: black;
-        padding: 12px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-      }
-      #lyon_button{
-        background-color: transparent;
-        border: 1px solid black;
-        color: black;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-      }
-      #graphes_min{
-        float:right;
-      }
-      #separate_line1,
-      #separate_line2,
-      #separate_line3{
-        height:2px;
-        width:25px;
-        background:black;
-      }
-      #p_ville1,
-      #p_ville2,
-      #p_ville3{
-        font-size:2vw;
-        text-align: center;
-      }
-      #marseille1,
-      #paris1,
-      #lyon1{
-        border:none;
-        background:transparent;
-      }
-      input{
-        border:none;
-        background:transparent;
-      }
-      #choix{
-        height:50px;
-      }
-      a{
-        color:black;
-        text-decoration:none;
-      }
-      a:hover{
-        color:black;
-      }
-      a:visited{
-        
-      }
-    </style>
+
 
 
       <br><br><br><br><br><br>
@@ -228,11 +128,7 @@
 
 
   <!-- Explication Section -->
-  <style>
-    #section_info{
-      width:700px;
-  }
-  </style>
+
   <center>
   <section class="page-section bg-dark text-white" id='section_info'>
     <div class="container">
@@ -272,502 +168,32 @@
   </section></center><br><br>
    
 
+
+
+
+
   <section class="page-section" id="reso">
     <div>
-      {% include "bottom_page_pollution2.html" %}
-      {% block content2 %}
-      {% endblock content2%}
+        {% include "bottom/bottom_page.html" %}
+        {% block content2 %}
+        {% endblock %}
     </div>
-  </section>
+  </section >
 
 
 
-</body>
 
+
+
+
+
+
+
+
+
+    </body>
 
 </html>
-
-
-
-<style>
-#reso{
-    padding:0;
-    margin-top:250px;
-}
-@media screen and (min-width: 320px) and (max-width:374px) {
-  #conteneur{
-    margin-top:-300px;
-    margin-top:50px;
-  }
-  #p_ville3,
-  #p_ville2,
-  #p_ville1{
-    font-size:50px;
-    height:150px;
-  }
-  #info1,
-  #info2,
-  #info3{
-    display:none;
-  }
-  #separate_line2,
-  #separate_line3,
-  #separate_line1{
-    width:50px;
-  }
-  #text{
-    float:none;
-    font-size:4vw;
-    text-align:justify;
-    margin-left:80px;
-  }
-  #paris,
-  #lyon,
-  #marseille{
-    font-size:8vw;
-  }
-  #choix{
-    font-size:20px;
-    text-align:center;
-  }
-  #chargement{
-    text-align:center;
-  }
-  #pred{
-    font-size:20px;
-    text-align:center;
-  }
-  #section_info{
-    font-size:3vw;
-    width:100%;
-  }
-  #reso{
-    width:100%;
-  }
-  #logo{
-    display:none;
-  }
-  #MENU{
-    display:none;
-  }
-  #menu_res{
-    margin-left:25px;
-    font-size:20px;
-    display:block;
-  }
-}
-
-
-
-@media screen and (min-width: 375px) and (max-width:424px) {
-  #conteneur{
-    margin-top:-300px;
-    margin-top:50px;
-  }
-  #p_ville3,
-  #p_ville2,
-  #p_ville1{
-    font-size:50px;
-    height:150px;
-  }
-  #info1,
-  #info2,
-  #info3{
-    display:none;
-  }
-  #lyon,
-  #paris,
-  #marseille{
-    font-size:10vw;
-    margin-right:50px;
-  }
-  #separate_line2,
-  #separate_line3,
-  #separate_line1{
-    width:50px;
-    margin-right:50px;
-  }
-  #text{
-    float:none;
-    margin-top:80px;
-    margin-left:50px;
-    font-size:3vw;
-    width:250px;
-  }
-  #choix{
-    font-size:20px;
-    text-align:center;
-  }
-  #chargement{
-    text-align:center;
-  }
-  #pred{
-    font-size:20px;
-    text-align:center;
-  }
-  #section_info{
-    font-size:5vw;
-    text-align:center;
-    width:100%;
-  }
-  #logo{
-    display:none;
-  }
-  #MENU{
-    display:none;
-  }
-  #menu_res{
-    margin-left:25px;
-    font-size:20px;
-    display:block;
-  }
-  #reso{
-    width:100%;
-  }
-  h1{
-    font-size:6vw;
-    width:50px;
-  }
-
-  
-}
-
-
-
-
-
-
-@media screen and (min-width: 425px) and (max-width:506px) {
-  #conteneur{
-    margin-top:50px;
-  }
-  #p_ville3,
-  #p_ville2,
-  #p_ville1{
-    font-size:30px;
-    height:150px;
-    margin-left:-100px;
-  }
-  #info1,
-  #info2,
-  #info3{
-    display:none;
-  }
-  #separate_line2,
-  #separate_line3,
-  #separate_line1{
-    width:50px;
-  }
-  #text{
-    float:none;
-    margin-left:50px;
-    font-size:3vw;
-    width:250px;
-    margin-top:50px;
-  }
-  #choix{
-    font-size:20px;
-    text-align:center;
-  }
-  #chargement{
-    text-align:center;
-  }
-  #pred{
-    font-size:20px;
-    text-align:center;
-  }
-  #section_info{
-    font-size:2vw;
-    text-align:center;
-    width:100%;
-  }
-  #logo{
-    display:none;
-  }
-  #MENU{
-    display:none;
-  }
-  #menu_res{
-    margin-left:25px;
-    font-size:20px;
-    display:block;
-  }
-  #reso{
-    width:100%;
-  }
-
-  
-}
-
-
-@media screen and (min-width: 507px) and (max-width:575px) {
-  #conteneur{
-    margin-top:-300px;
-    margin-top:40px;
-  }
-  #p_ville3,
-  #p_ville2,
-  #p_ville1{
-    font-size:35px;
-    height:150px;
-    margin-left:-100px;
-  }
-  #info1,
-  #info2,
-  #info3{
-    display:none;
-  }
-  #separate_line2,
-  #separate_line3,
-  #separate_line1{
-    width:50px;
-  }
-  #text{
-    float:none;
-    margin-left:150px;
-    font-size:3vw;
-    width:300px;
-  }
-  #choix{
-    font-size:20px;
-    text-align:center;
-  }
-  #chargement{
-    text-align:center;
-  }
-  #pred{
-    font-size:20px;
-    text-align:center;
-  }
-  #section_info{
-    font-size:2vw;
-    text-align:center;
-    width:100%;
-  }
-  #logo{
-    display:none;
-  }
-  #MENU{
-    display:none;
-  }
-  #menu_res{
-    margin-left:25px;
-    font-size:20px;
-    display:block;
-  }
-  #reso{
-    width:100%;
-  }
-
-  
-}
-
-
-
-@media screen and (min-width: 575px) and (max-width:800px) {
-  #conteneur{
-    width:600px;
-    margin-left:10%;
-    margin-top:50px;
-  }
-  #p_ville3,
-  #p_ville2,
-  #p_ville1{
-    font-size:35px;
-    text-align:center;
-    width:500px;
-  }
-  #info1,
-  #info2,
-  #info3{
-    display:none;
-  }
-  #separate_line2,
-  #separate_line3,
-  #separate_line1{
-    width:50px;
-  }
-  #text{
-    float:none;
-    margin-left:400px;
-    font-size:2vw;
-  }
-  #choix{
-    font-size:20px;
-    text-align:center;
-  }
-  #chargement{
-    text-align:center;
-  }
-  #pred{
-    font-size:30px;
-    text-align:center;
-  }
-  #section_info{
-    font-size:2vw;
-    text-align:center;
-  }
-  #logo{
-    display:none;
-  }
-  #MENU{
-    display:none;
-  }
-  #menu_res{
-    margin-left:25px;
-    font-size:20px;
-    display:block;
-  }
-  #reso{
-    width:100%;
-  }
-  
-}
-
-
-@media screen and (min-width: 801px) and (max-width:900px) {
-  #conteneur{
-    margin-top:50px;
-    width:100%;
-  }
-  #p_ville3,
-  #p_ville2,
-  #p_ville1{
-    font-size:30px;
-    text-align:center;
-    width:250px;
-  }
-  #info1,
-  #info2,
-  #info3{
-  }
-  #separate_line2,
-  #separate_line3,
-  #separate_line1{
-    width:50px;
-  }
-  #text{
-    float:none;
-    margin-left:350px;
-    font-size:2vw;
-    width:300px;
-  }
-  #choix{
-    font-size:30px;
-    text-align:center;
-  }
-  #chargement{
-    text-align:center;
-  }
-  #pred{
-    font-size:30px;
-    text-align:center;
-  }
-  #section_info{
-    text-align:center;
-    font-size:2vw;
-  }
-  #reso{
-    width:103%;
-  }
-}
-
-
-@media screen and (min-width: 900px) and (max-width:1000px) {
-  #conteneur{
-    margin-top:50px;
-    width:100%;
-    text-align:center;
-  }
-  #p_ville3,
-  #p_ville2,
-  #p_ville1{
-    font-size:35px;
-    text-align:center;
-    width:300px;
-    
-  }
-  #info1,
-  #info2,
-  #info3{
-  }
-  #separate_line2,
-  #separate_line3,
-  #separate_line1{
-    width:50px;
-  }
-  #text{
-    float:none;
-    margin-left:450px;
-    font-size:2vw;
-    width:400px;
-  }
-  #choix{
-    font-size:30px;
-    text-align:center;
-  }
-  #chargement{
-    text-align:center;
-  }
-  #pred{
-    font-size:30px;
-    text-align:center;
-  }
-  #section_info{
-    text-align:center;
-    font-size:1.5vw;
-    text-align:center;
-  }
-}
-
-
-
-@media screen and (min-width: 1001px){
-    #text{
-      float:right;
-      margin-right:150px;
-      width:500px;
-    }
-
-}
-
-
-
-
-
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -795,16 +221,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 //Here we call database and analysa2.py for lyon
 
 jQuery("#lyon").on("click", function(e){
@@ -819,7 +235,7 @@ jQuery("#lyon").on("click", function(e){
     jQuery.ajax({
         data:{
             'lyon':'lyon',
-            csrfmiddlewaretoken:'{{ csrf_token }}'
+            'csrfmiddlewaretoken': '{{ csrf_token }}',
         },
         type:"POST",
         url:"/polution/prediction"
@@ -867,7 +283,7 @@ jQuery("#paris").on("click", function(e){
     jQuery.ajax({
         data:{
             'paris':'paris',
-            csrfmiddlewaretoken:'{{ csrf_token }}'
+            'csrfmiddlewaretoken': '{{ csrf_token }}',
         },
         type:"POST",
         url:"/polution/prediction"
@@ -914,7 +330,7 @@ jQuery("#marseille").on("click", function(e){
     jQuery.ajax({
         data:{
             'marseille':'marseille',
-            csrfmiddlewaretoken:'{{ csrf_token }}'
+            'csrfmiddlewaretoken': '{{ csrf_token }}',
         },
         type:"POST",
         url:"/polution/prediction"
