@@ -1,11 +1,21 @@
- {% include "menu_photo.html" %}
+            <!-- This is the second part of the main menu.
+                 All pages have a menu and a submenu-->
+
+            {% include "menu/menu_main/menu_direction.html" %}
             {% block content %}
             {% endblock %}
 
-
+            <link href="/static/css/direction/navebarre_vent.css" rel="stylesheet">
 
             <div id="deux" class="col-sm">
               <center><span><u>Page</u></h1></span>
+
+
+
+
+                      <!-- Redirect to Map section -->
+
+                      <!-- un() and deux() changes the color of the text -->
 
                       <a href="/direction/map#texte2">
                           <p id="Carte" class="Carte"
@@ -21,6 +31,7 @@
                               Les Explications
                           </p>
                       </a>
+
                       
                       <p id="Retour" class="Retour"
                           onmouseover="un('Retour')" onmouseout="deux('Retour')"
@@ -39,13 +50,6 @@
             </div>
 
             
-          </div>
-        </div>
-        
-    </div>
-
-
-</body>
 
 
 
@@ -54,30 +58,10 @@
 
 
 
-<style>
-    a:hover{
-        text-decoration: none;
-    }
-    #Carte{
-        padding-top:50px;
-    }
-    #Carte,
-    #Explications,
-    #Gym,
-    #retour2,
-    #Retour{
-        color:white;
-    }
-    #separate_page{
-        width:50px;
-        height:1px;
-        background:white;
-    }
-    #retour_page{
-        color:white;
-    }
-        
-</style>
+
+
+
+
 
 
 
