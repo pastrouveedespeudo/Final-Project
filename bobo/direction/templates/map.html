@@ -164,6 +164,7 @@
                   $.ajax({
                     data:{
                       'a':String(a),
+                      csrfmiddlewaretoken:'{{ csrf_token }}'
                       
                     },
                     
