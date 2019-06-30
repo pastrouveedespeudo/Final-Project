@@ -10,28 +10,29 @@ from django.middleware.gzip import GZipMiddleware
 import os
 import cv2
 
-from accounts.models import Accounts
-
-from .coupe_dico import DICO_COIF
-
 from .views_functions import the_colors_function
+from .views_functions import tendance_function
+from .views_functions import database_mode_function
+
 from .views_functions import gymm_map_function
 from .views_functions import gymm_function
 from .views_functions import haircut_style_function
 from .views_functions import map_hairdresser_function
+ 
+
+def navebarre_admin2(request):
+    """Here we return a home html respons"""
+    return render(request, 'menu/navebarre_admin2.html')
 
 
 def navebarre_coupe(request):
     """Here we return a home html respons"""
-    return render(request, 'navebarre_coupe.html')
+    return render(request, 'menu/navebarre_coupe.html')
 
 def navebarre_habits(request):
     """Here we return a home html respons"""
-    return render(request, 'navebarre_habits.html')
+    return render(request, 'menu/navebarre_habits.html')
 
-def home_bobo(request):
-    """Here we return a home html respons"""
-    return render(request, 'home_bobo.html')
 
 def home(request):
     """Here we return a home html respons"""
@@ -59,7 +60,7 @@ def coupe(request):
         gymm_map = request.POST.get('buttony_gym')
         gym_pays = request.POST.get('country_gym')
 
-
+        
         if gymm_map:
             
             #We call gymm_map_function from views_function
@@ -129,7 +130,18 @@ def habits(request):
 
 
 
+def database_mode(request):
+    """Here we return the pictures from our database"""
+    
+    liste1 = database_mode_function()
+    return render(request, "database_mode.html", {'image_hab':liste1})
 
+
+def tendance(request):
+    """Here we return the mode"""
+
+    liste10 = tendance_function
+    return render(request, "tendance.html", {'liste10':liste10})
 
 
 
