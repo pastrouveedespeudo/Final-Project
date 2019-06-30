@@ -1,0 +1,420 @@
+#map{
+      margin-left:0px;
+      padding:10px;
+      height: 400px;
+      width: 100%;
+      display:none;
+}
+      
+#map22{
+      height: 300px;
+      width: 650px;
+}
+#section_info{
+width:1000px;
+height:650px;      
+}
+#menu_res{
+  margin:20px;
+  background:none;
+  border:none;
+  display:none;
+}
+i{
+    color:white;
+}
+
+
+@media screen and (min-width: 0px) and (max-width:374px) {
+    #fb{
+        font-size:50px;
+        width:250px;
+    }
+    #tw{
+        font-size:50px;
+        width:250px;
+    }
+    #sn{
+        font-size:50px;
+        width:250px;
+    }    
+    .mb-4{
+        font-size:5vw;     
+    }
+}
+
+@media screen and (min-width: 374px) and (max-width:800px) {
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+    }    
+    .mb-4{
+        font-size:5vw;
+    }
+}
+
+
+@media screen and (min-width: 800px) and (max-width:1000px) {
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+    }    
+    .mb-4{
+        font-size:3vw;
+        
+    }
+}
+
+
+
+@media screen and (min-width: 1000px) and (max-width:1500px) {
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+
+    }    
+    .mb-4{
+        font-size:2.5vw;
+        
+    }
+}
+
+@media screen and (min-width: 1501px){
+    #fb{
+        font-size:100px;
+        width:300px;
+    }
+    #tw{
+        font-size:100px;
+        width:300px;
+    }
+    #sn{
+        font-size:100px;
+        width:300px;
+        
+    }    
+    .mb-4{
+        font-size:2.5vw;
+        
+    }
+}
+  h1{
+    color:black;
+    font-family:"cursive";
+  }
+  h2{
+    color:black;
+    font-family:"cursive";
+  }
+  #input_text{
+    text-align:center;
+    border:2px solid black;
+  }
+  #reso{
+    margin:0;
+    padding:0;
+    
+  }
+
+@media screen and (min-width: 320px) and (max-width:375px) {
+  #logo{
+    display:none;
+  }
+  #MENU{
+    display:none;
+  }
+  #textes{
+    margin-left:10px;
+    font-size:4vw;
+  }
+  #texte1{
+    text-align:justify;
+    font-size:5vw;
+    word-wrap: break-word;
+  }
+  #texte2{
+    margin-top:20px;
+    text-align:justify;
+    font-size:5vw;
+    
+  }
+  #inputs{
+    font-size:4.5vw;
+  }
+  #section_info{
+    font-size:4.5vw;
+    width:320px;
+    height:1500px;
+  }
+  #input_text{
+    width:250px;
+  }
+  #menu_res{
+    display:block;
+  }
+}
+
+
+@media screen and (min-width: 375px) and (max-width:425px) {
+  #logo{
+    display:none;
+  }
+  #MENU{
+    display:none;
+  }
+  #textes{
+    margin-left:10px;
+    font-size:3vw;
+  }
+  #texte1{
+    text-align:justify;
+    font-size:5vw;
+    word-wrap: break-word;
+  }
+  #texte2{
+    margin-top:20px;
+    text-align:justify;
+    font-size:5vw;
+    
+  }
+  #inputs{
+    font-size:4vw;
+  }
+  #section_info{
+    font-size:4vw;
+    width:370px;
+    height:1500px;
+  }
+  #input_text{
+    width:300px;
+  }
+  #menu_res{
+    display:block;
+  }
+  
+}
+
+
+
+@media screen and (min-width: 425px) and (max-width:768px) {
+  #logo{
+    display:none;
+  }
+  #MENU{
+    display:none;
+  }
+  #textes{
+    margin-left:10px;
+    font-size:4vw;
+  }
+  #texte1{
+    text-align:justify;
+    font-size:3vw;
+    word-wrap: break-word;
+  }
+  #texte2{
+    margin-top:20px;
+    text-align:justify;
+    font-size:3vw;
+    
+  }
+  #inputs{
+    font-size:3vw;
+  }
+  #section_info{
+    font-size:3vw;
+    width:400px;
+    height:2000px;
+    text-align:justify;
+  }
+  #input_text{
+    width:80%;
+  }
+  #menu_res{
+    display:block;
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+  #logo{
+    display:none;
+  }
+  #MENU{
+    display:none;
+  }
+  #textes{
+    margin-left:10px;
+    font-size:3vw;
+  }
+  #texte1{
+    text-align:justify;
+    font-size:2vw;
+    word-wrap: break-word;
+  }
+  #texte2{
+    margin-top:20px;
+    text-align:justify;
+    font-size:2vw;
+    
+  }
+  #inputs{
+    font-size:2vw;
+  }
+  #section_info{
+    font-size:2vw;
+    width:760px;
+    height:2000px;
+    text-align:justify;
+  }
+  #menu_res{
+    display:block;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width:1024px) {
+  #logo{
+    display:none;
+  }
+  #MENU{
+    display:none;
+  }
+  #textes{
+    margin-left:10px;
+    font-size:3vw;
+  }
+  #texte1{
+    font-size:2vw;
+    word-wrap: break-word;
+    margin-left:500px;
+    width:400px;
+    text-align:justify;
+  }
+  #texte2{
+    margin-top:20px;
+    text-align:justify;
+    font-size:2vw;
+    
+    
+  }
+  #inputs{
+    font-size:1.5vw;
+  }
+  #input_text{
+    width:300px;
+  }
+  #section_info{
+    font-size:2vw;
+    width:990px;
+    height:1000px;
+    text-align:justify;
+  }
+  #menu_res{
+    display:block;
+    font-size:5vw;
+  }
+
+}
+
+
+
+
+
+@media screen and (min-width: 1024px) and (max-width:1200px) {
+  #textes{
+    margin-left:10px;
+    font-size:3vw;
+  }
+  #texte1{
+    font-size:1.5vw;
+    word-wrap: break-word;
+    margin-left:500px;
+    width:400px;
+    text-align:justify;
+  }
+  #texte2{
+    margin-top:20px;
+    text-align:justify;
+    font-size:1.5vw;
+    width:350px;
+    margin-left:80px;
+    
+    
+  }
+  #inputs{
+    font-size:1.5vw;
+  }
+  #input_text{
+    width:300px;
+  }
+  #section_info{
+    font-size:1.7vw;
+    width:990px;
+    height:1000px;
+    text-align:justify;
+  }
+
+}
+
+
+
+@media screen and (min-width: 1200px) and (max-width:1700px) {
+  #textes{
+    margin-left:10px;
+    border:1px solid transparent;
+  }
+  #texte1{
+    width:500px;
+    text-align:justify;
+    float:right;
+    margin-right:150px;
+  }
+  #texte2{
+    width:400px;
+    margin-left:150px;
+    margin-top:400px;
+    text-align:justify;
+  }
+  #inputs{
+    font-size:1vw;
+  }
+  #input_text{
+    width:300px;
+  }
+  #section_info{
+    font-size:1vw;
+    width:990px;
+    height:1000px;
+    text-align:justify;
+  }
+
+}
+
+
+
+
+
