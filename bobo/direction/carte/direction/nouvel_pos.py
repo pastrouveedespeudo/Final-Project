@@ -19,15 +19,17 @@ def long_lat(lat, long, km, sens):
 
     #In case where superficie.py
     #fail or an exception is present
+    
     try:
         km = float(km)
     except:
         km = 20.0
         km = float(km)
 
-    if km > 1000:
+    if km > 500:
         km = 20.0
 
+    print(km, sens)
     
     kilometre = km * 0.009
     
