@@ -1,0 +1,22 @@
+a:hover{
+    text-decoration: none;
+}
+#Coiffures{
+    padding-top:50px;
+}
+#Coiffeurs,
+#Coiffures,
+#Gym,
+#retour2,
+#Retour{
+    color:white;
+}
+#separate_page{
+    width:50px;
+    height:1px;
+    background:white;
+}
+
+#retour_page{
+    color:white;
+}
