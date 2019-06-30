@@ -1,0 +1,20 @@
+a:hover{
+    text-decoration: none;
+}
+#Données{
+    padding-top:50px;
+}
+#Données,
+#Vent,
+#Retour{
+    color:white;
+}
+#separate_page{
+    width:50px;
+    height:1px;
+    background:white;
+}
+#retour_page{
+    color:white;
+}
+    
