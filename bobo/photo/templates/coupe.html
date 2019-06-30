@@ -1,54 +1,79 @@
-{% include "barre_gauche_coupe.html" %}
-{% block content %}
-{% endblock %}
-<style>
-  #menu_res{
-    border:none;
-    background:none;
-  }
 
-</style>
-<body>
+      
 
-    <input type='button' id="menu_res" value="Menu" onclick="redirection()">
-    
+
+    {% include "coupe_haut.html" %}
+    {% block content %}
+    {% endblock %}
+
+    <link rel="stylesheet" type="text/css" href="/static/css/coupe.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/css/coupe/coupe/coupe.css" media="all" />
+
+
+
+
+    <input type='button' id="menu_res" value="Menu" onclick="redirection()"><br><br>
+    <center>
     <section id="text_top">
 
-        <div id="section1">
+       
+       
+          Les coupes de cheveux ont beaucoup de
+          significations et d'importance.<br><br>Les cheveux longs
+          servent à plaire à tous le monde (mais attention à la longueur !).
+          Les cheveux courts représentent la
+          confiance en soi, les cheveux rouges
+          attirent l'attention
+          (l'oeil Humain capte plus facilement le rouge !),
+          la queue de cheval
+          sert à mettre sont visage en avant et 
+          à tirer son visage. La liste est longue
+          et varier. Toutes nos coutumes sont 
+          codées et sont donc inconsciements
+           significatifs.
+          <br>Nous vous proposons de pouvoir
+          vous voir avec différentes coiffures 
+          et ainsi faire VOTRE mode !
+        
+            
+         
+        
 
-            <div id="les_textes">
-                <p id="resum_titre">
-                  Les coupes de cheveux ont beaucoup de
-                  significations et d'importance.<br><br>Les cheveux longs
-                  servent à plaire à tous le monde (mais attention à la longueur !).
-                  Les cheveux courts représentent la
-                  confiance en soi, les cheveux rouges
-                  attirent l'attention
-                  (l'oeil Humain capte plus facilement le rouge !),
-                  la queue de cheval
-                  sert à mettre sont visage en avant et 
-                  à tirer son visage. La liste est longue
-                  et varier. Toutes nos coutumes sont 
-                  codées et sont donc inconsciements
-                   significatifs.
-                  <br>Nous vous proposons de pouvoir
-                  vous voir avec différentes coiffures 
-                  et ainsi faire VOTRE mode !
-                </p>
-            </div>
-
-        </div><br>
     </section>
+    </center>
 
-    <section id="the_picture_section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <setion id="the_picture_section">
+
+
     
+        <center>
         <div id="container_photo">
-            <div class="container" id="inputs_sizes" >
-              <div class="row">
+ 
+              <div class="row" id='basic'>
 
 
-                   <div class="col-xs-8 col-md-8 col-lg-5" id='vivideo'>
-                      <div id="basic" style="text-align:center; z-index: 4;">
+                   
+                   <div class="col-sm-12 col-md-5 col-lg-6" id="basic_in">
+           
                       
                            <h3 id="titre_salon"><strong>Notre salon de coiffure</strong></h3><br><br>
                            <video class="videostream" autoplay></video><br><br>
@@ -73,196 +98,58 @@
                                 <p><button class="capture-button" style='display:none;'>Capture video</button><p>
                                 <button id="cssfilters-apply" style='display:none;'>Mettre en noir et blanc (Recommandé)</button></p>
                             </div>
-                      </div>
+                    </div>
+                    </center>
+
+                    <style>
+
+
+
+
+
+                    </style>
+
+
+
+
+
+
+
+
+
                   
-                      <div id="the_inputs" class="col-xs-4 col-md-4 col-lg-4"style='border:1px solid transparent;'>
+                      <div id="the_inputs" class="col-sm-6 col-md-3 col-lg-3">
                           <center>
-                          <div id="whitewhite" margin-top:-30px; margin-left:-20px; height:380px; width:250px;'><br>
+                          
                           
                           <input type='button' value='ajouter de la longueur?'
                             style=" border:3px solid black"
-                            onclick='ajout_longueur()'/><br><br>
+                            onclick='ajout_longueur()' id="input1"/><br><br>
 
                             
                           <input type='button' value='ajouter de la largeur?'
                             style=" border:3px solid black; text-align:center;"
-                            onclick='ajout_largeur()'/><br><br>
+                            onclick='ajout_largeur()' id="input2" /><br><br>
 
                             
                           <input type='button' value='enlever de la longueur?'
                             style=" border:3px solid black;"
-                            onclick='enlever_longueur()'/><br><br>
+                            onclick='enlever_longueur()' id="input3" /><br><br>
 
                             
                           <input type='button' value='enlever de la largeur?'
                             style="border:3px solid black; text-align:center;"
-                            onclick='enlever_largeur()'/><br>
+                            onclick='enlever_largeur()' id="input4" /><br>
                           
-                          <center>
 
-                            <div id="saving_div">{% csrf_token %}
-                              <input type="hidden" name="csrfmiddlewaretoken"
-                                value="ZAXPtCw1BrKyg5oMDsi3COYuAwppTIV0YgJNvN52C0RPowi7mvU4cAFVg2VgQTti">{% csrf_token %}
-                              <input type="hidden" name="csrfmiddlewaretoken"
-                                value="ZAXPtCw1BrKyg5oMDsi3COYuAwppTIV0YgJNvN52C0RPowi7mvU4cAFVg2VgQTti">{% csrf_token %}
-                              <form id='jaime' method="POST" action='/photo/coupe'>{% csrf_token %}
-                                <input type="HIDDEN" id="coupedecheveux" name="coupedecheveux" value=''>{% csrf_token %}
-                              <input type="hidden" name="coupe"
-                                value=LISTECOUPE>{% csrf_token %}<br>
-                              <input type="button" id='sauve' value="J'aime cette coupe" style='border:3px solid black;'>
-                              {% csrf_token %}
-                              
-                              </form>{% csrf_token %}
-                            </div>
-                          </center><br><br><br><br>
-                        </div>
-
-                        <div id='favoris' style='display:none;' value={{fav}}></div>
-                          <div id="favorite_haircut" style='text-align:center'>
-                              <div id="favdraggable" name="coucou" value='coupe'
-                                class="ui-widget-content"
-                                onclick="nom_image('favdraggable', 200, 150)";
-                                  style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/bbbbbbb.png"
-                                    width='150' height='200'
-                                    id="coupe111"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable3" class="ui-widget-content" value='coupe4'
-                                onclick="nom_image('favdraggable3', 150, 150)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/image849849849.png"
-                                    width='150' height='150'
-                                    id="coupe444"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable4" class="ui-widget-content" value='coupe5'
-                                onclick="nom_image('favdraggable4', 150, 100)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/bbbbbbb.png"
-                                    width='100' height='150'
-                                    id="coupe555"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable5" class="ui-widget-content" value='coupe6'
-                                onclick="nom_image('favdraggable5', 300, 130)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/1.5.png"
-                                    width='130' height='300'
-                                    id="coupe666"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable6" class="ui-widget-content" value='coupe2'
-                                onclick="nom_image('favdraggable6', 300, 130)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/coucou3.png"
-                                    width='130' height='300'
-                                    id="coupe222"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable7" class="ui-widget-content" value='coupe22'
-                              onclick="nom_image('favdraggable7', 100, 70)";
-                              style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/coucou22.png"
-                                  width='70' height='100'
-                                  id="coupe22447"
-                                  style='display:none;'/>
-                              </div>
-                              <div id="favdraggable8" class="ui-widget-content" value='coupe8'
-                                onclick="nom_image('favdraggable8', 50, 70)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/coucou22.png"
-                                    width='70' height='50'
-                                    id="coupe888"style='display:none;'/>
-                              </div>
-                              <div id="favdraggable9" class="ui-widget-content" value='coupe9'
-                                onclick="nom_image('favdraggable9', 160, 140)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/coif.png"
-                                    width='140' height='160'
-                                    id="coupe999"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable10" class="ui-widget-content" value='coupe12'
-                                onclick="nom_image('favdraggable10', 250, 150)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/aa.png"
-                                    width='150' height='250'
-                                    id="coupe12"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable11" class="ui-widget-content" value='coupe13'
-                                onclick="nom_image('favdraggable11', 250, 150)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/aaaaa.png"
-                                    width='150' height='250'
-                                    id="coupe131313"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable12" class="ui-widget-content"  value='coupe14'
-                                onclick="nom_image('favdraggable12', 160, 100)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/bb.png"
-                                    width='100' height='160'
-                                    id="coupe141414"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable14" class="ui-widget-content"  value='coupe16'
-                                onclick="nom_image('favdraggable14', 160, 100)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/bbbb.png"
-                                    width='100' height='160'
-                                    id="coupe161616"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable15" class="ui-widget-content"  value='coupe17'
-                                onclick="nom_image('favdraggable15', 250, 150)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/bbb.png"
-                                    width='150' height='250'
-                                    id="coupe171717"
-                                    style='display:none;'/>
-                              </div>
-
-                              <div id="favdraggable16" class="ui-widget-content"  value='coupe18'
-                                onclick="nom_image('favdraggable16', 160, 140)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/1.1.png"
-                                    width='140' height='160'
-                                    id="coupe181818"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable17" class="ui-widget-content" value='coupe19'
-                                onclick="nom_image('favdraggable17', 100, 110)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/1.2.png"
-                                    width='110' height='100'
-                                    id="coupe191919"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable18" class="ui-widget-content" value='coupe20'
-                                onclick="nom_image('favdraggable18', 250, 150)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/11.3.png"
-                                    width='150' height='250'
-                                    id="coupe202020"
-                                    style='display:none;'/>
-                              </div>
-                              <div id="favdraggable19" class="ui-widget-content" value='coupe21'
-                                onclick="nom_image('favdraggable19', 250, 150)";
-                                style='z-index: 1;'>
-                                  <img src="/static/img/portfolio/coupe/1.4.png"
-                                    width='150' height='250'
-                                    id="coupe212121"
-                                    style='display:none;'/>
-                              </div>
-                              
-                        </div>
                     </div>
-            
 
-                    <div class="col-xs-2 col-md-2 col-lg-3" style='border:1px solid transparent;'>
-                      <div id="div_placement">
+
+
+
+
+                    <div class="col-sm-6 col-md-3 col-lg-3" id="div_placement">
+            
                         <center>
                         
                           <div id='placement'>
@@ -279,120 +166,7 @@
                               <input type='button' value='barbe' onclick='barbe()' id="barbe_button" style='border:3px solid black;'><br><br>
                           </div>
 
-                          <div>  
-                                                       <div id="draggable19" class="ui-widget-content" value='coupe21'
-                            onclick="nom_image('coupe21', 250, 150)";
-                              style='z-index: 1; display:none;'>
-                                <img src="/static/img/portfolio/coupe/1.4.png"
-                                  width='150' height='250'
-                                  id="coupe21"/>
-                            </div>
-                            <div id="draggable18" class="ui-widget-content" value='coupe20'
-                            onclick="nom_image('coupe20', 250, 150)";
-                                style='z-index: 1; display:none;'>
-                                <img src="/static/img/portfolio/coupe/11.3.png"
-                                  width='150' height='250'
-                                  id="coupe20"/>
-                            </div>
-                            <div id="draggable" name="coucou" value='coupe1'
-                              class="ui-widget-content"
-                              onclick="nom_image('coupe1', 200, 150)";
-                              style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/bbbbbbb.png"
-                                    width='150' height='200'
-                                    id="coupe1" />
-                              </div>
-                              <div id="draggable4" class="ui-widget-content" value='coupe5'
-                              onclick="nom_image('coupe5', 150, 100)";
-                              style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/bbbbbbb.png"
-                                  width='100' height='150'
-                                  id="coupe5" />
-                              </div>
-                              <div id="draggable15" class="ui-widget-content"  value='coupe17'
-                                onclick="nom_image('coupe17', 250, 150)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/bbb.png"
-                                    width='150' height='250'
-                                    id="coupe17"/>
-                              </div>
-                              <div id="draggable5" class="ui-widget-content" value='coupe6'
-                                onclick="nom_image('coupe6', 300, 130)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/1.5.png"
-                                    width='130' height='300'
-                                    id="coupe6"/>
-                              </div>
-                              <div id="draggable14" class="ui-widget-content"  value='coupe16'
-                                onclick="nom_image('coupe16', 160, 100)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/bbbb.png"
-                                    width='100' height='160'
-                                    id="coupe16"/>
-                              </div>
-                              <div id="draggable16" class="ui-widget-content"  value='coupe18'
-                                onclick="nom_image('coupe18', 160, 140)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/1.1.png"
-                                    width='140' height='160'
-                                    id="coupe18" />
-                              </div>
-                              <div id="draggable10" class="ui-widget-content" value='coupe12'
-                                onclick="nom_image('coupe12', 250, 150)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/aa.png"
-                                    width='150' height='250'
-                                    id="coupe12"/>
-                              </div>
-                              <div id="draggable11" class="ui-widget-content" value='coupe13'
-                                onclick="nom_image('coupe13', 250, 150)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/aaaaa.png"
-                                    width='150' height='250'
-                                    id="coupe13"/>
-                              </div>
-                              <div id="draggable6" class="ui-widget-content" value='coupe2'
-                                onclick="nom_image('coupe2', 300, 130)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/coucou3.png"
-                                    width='130' height='300'
-                                    id="coupe2"/>
-                              </div>
-                              <div id="draggable3" class="ui-widget-content" value='coupe4'
-                                onclick="nom_image('coupe4', 150, 150)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/image849849849.png"
-                                    width='150' height='150'
-                                    id="coupe4"/>
-                              </div>
-                              <div id="draggable9" class="ui-widget-content" value='coupe9'
-                                onclick="nom_image('coupe9', 160, 140)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/coif.png"
-                                  width='140' height='160'
-                                  id="coupe9"/>
-                              </div>
-                              <div id="draggable12" class="ui-widget-content"  value='coupe14'
-                                onclick="nom_image('coupe14', 160, 100)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/bb.png"
-                                    width='100' height='160'
-                                    id="coupe14"/>
-                              </div>
-                              <div id="draggable7" class="ui-widget-content" value='coupe22'
-                                onclick="nom_image('coupe22', 100, 70)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/coucou22.png"
-                                    width='70' height='100'
-                                    id="coupe22"/>
-                              </div>
-                              <div id="draggable8" class="ui-widget-content" value='coupe8'
-                                onclick="nom_image('coupe8', 50, 70)";
-                                style='z-index: 1; display:none;'>
-                                  <img src="/static/img/portfolio/coupe/coucou22.png"
-                                    width='70' height='50'
-                                    id="coupe8"/>
-                              </div>
+
                               <input type='button' id='bout_fermer_longue' value='fermer' onclick='fermer1()'
                                   style='display:none; border:3px solid black;z-index:1;'><br><br>
                                   
@@ -418,38 +192,190 @@
 
 
 
-             <div class="container" >
 
 
-                 <div class='col-sm-12'>
-                 <center>
-                    <form action='/photo/coupe' method='POST'>{% csrf_token %}
 
-                        <input type='button' id='sauve' value='enregistrer la coupe'
-                          style="border:3px solid black; display:none;"/>
+
+
+
+
+
+                      
+                      <div class="col-sm-12 col-md-12 col-lg-12" id="coucoupe">
+                      <center>
+                        <div id="draggable19" class="ui-widget-content" value='coupe21'
+                        onclick="nom_image('coupe21', 250, 150)";
+                          style='z-index: 1; display:none;'>
+                            <img src="/static/img/portfolio/coupe/1.4.png"
+                              width='150' height='250'
+                              id="coupe21"/>
+                        </div>
+                        <div id="draggable18" class="ui-widget-content" value='coupe20'
+                        onclick="nom_image('coupe20', 250, 150)";
+                            style='z-index: 1; display:none;'>
+                            <img src="/static/img/portfolio/coupe/11.3.png"
+                              width='150' height='250'
+                              id="coupe20"/>
+                        </div>
+                        <div id="draggable" name="coucou" value='coupe1'
+                          class="ui-widget-content"
+                          onclick="nom_image('coupe1', 200, 150)";
+                          style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/bbbbbbb.png"
+                                width='150' height='200'
+                                id="coupe1" />
+                          </div>
+                          <div id="draggable4" class="ui-widget-content" value='coupe5'
+                          onclick="nom_image('coupe5', 150, 100)";
+                          style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/bbbbbbb.png"
+                              width='100' height='150'
+                              id="coupe5" />
+                          </div>
+                          <div id="draggable15" class="ui-widget-content"  value='coupe17'
+                            onclick="nom_image('coupe17', 250, 150)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/bbb.png"
+                                width='150' height='250'
+                                id="coupe17"/>
+                          </div>
+                          <div id="draggable5" class="ui-widget-content" value='coupe6'
+                            onclick="nom_image('coupe6', 300, 130)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/1.5.png"
+                                width='130' height='300'
+                                id="coupe6"/>
+                          </div>
+                          <div id="draggable14" class="ui-widget-content"  value='coupe16'
+                            onclick="nom_image('coupe16', 160, 100)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/bbbb.png"
+                                width='100' height='160'
+                                id="coupe16"/>
+                          </div>
+                          <div id="draggable16" class="ui-widget-content"  value='coupe18'
+                            onclick="nom_image('coupe18', 160, 140)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/1.1.png"
+                                width='140' height='160'
+                                id="coupe18" />
+                          </div>
+                          <div id="draggable10" class="ui-widget-content" value='coupe12'
+                            onclick="nom_image('coupe12', 250, 150)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/aa.png"
+                                width='150' height='250'
+                                id="coupe12"/>
+                          </div>
+                          <div id="draggable11" class="ui-widget-content" value='coupe13'
+                            onclick="nom_image('coupe13', 250, 150)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/aaaaa.png"
+                                width='150' height='250'
+                                id="coupe13"/>
+                          </div>
+                          <div id="draggable6" class="ui-widget-content" value='coupe2'
+                            onclick="nom_image('coupe2', 300, 130)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/coucou3.png"
+                                width='130' height='300'
+                                id="coupe2"/>
+                          </div>
+                          <div id="draggable3" class="ui-widget-content" value='coupe4'
+                            onclick="nom_image('coupe4', 150, 150)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/image849849849.png"
+                                width='150' height='150'
+                                id="coupe4"/>
+                          </div>
+                          <div id="draggable9" class="ui-widget-content" value='coupe9'
+                            onclick="nom_image('coupe9', 160, 140)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/coif.png"
+                              width='140' height='160'
+                              id="coupe9"/>
+                          </div>
+                          <div id="draggable12" class="ui-widget-content"  value='coupe14'
+                            onclick="nom_image('coupe14', 160, 100)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/bb.png"
+                                width='100' height='160'
+                                id="coupe14"/>
+                          </div>
+                          <div id="draggable7" class="ui-widget-content" value='coupe22'
+                            onclick="nom_image('coupe22', 100, 70)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/coucou22.png"
+                                width='70' height='100'
+                                id="coupe22"/>
+                          </div>
+                          <div id="draggable8" class="ui-widget-content" value='coupe8'
+                            onclick="nom_image('coupe8', 50, 70)";
+                            style='z-index: 1; display:none;'>
+                              <img src="/static/img/portfolio/coupe/coucou22.png"
+                                width='70' height='50'
+                                id="coupe8"/>
+                          </div>
+
                     
-                    </form>
-                </center>
-             </div>
+                    </center>
 
-            {% for i in coif %}
-                {% for j in i %}
-                
-                <script>
-                   listeeeee.push('{{j}}')
-                </script>
-                
-                {% endfor %}
-            {% endfor %}
+          
 
-      </div>
-    </div>
-  </div>
+              </div>
+            </div>
+            
+          </div>
+
+
+
+
+
+
 
   <section id="textes_transition">
+      <center>
       <div  id="container2">
-        <div class="row" id="blackblack">
-          <div class="col-sm">
+      
+        <div class="row" style='width:90%;'>
+        
+          <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack">
+
+            <h1 id="titre_re">Les visages</h1><br>
+            Nous voyant les choses structurées afin d'éviter le chaos.
+            Notre cerveau nous permet de voir choses géométriquement.
+            Tout est une question de géométrie et meme pour les figures !
+            Nous te proposons des conseilles pour ta coupe de cheveux !
+            Une coupe de cheveux ? oui mais laquelle ?<br>
+            Tu as <strong>un visage</strong> assez large ou de <strong>grosses joues</strong> ?
+            On parle alors de visage rond. Evite les carrés et  essaie de longueus coiffures.
+            Cela va pouvoir permettre d'atténué la rondeur et de pouvoir donnée une sensation
+            de longueur et d'affinage.
+            <br>
+            <strong>Tu as un visage ovale ?</strong> Toutes les coupes te vont bien.
+            Mais evite alors les coupes trop courtes car
+            cela pourrais casser le carré structuré.<br>
+            <strong>Tu as un visage carré ?</strong> Il te faut alors une coupe longue.
+            Evite le volume car il n'adoucit pas le visage.
+            Le but est d'adoucir ton visage par une frange
+            ou des ondulations de coiffure.<br>
+            Tu as un <strong>visage triangulaire</strong> ?
+            Il te faut une coupe de cheveux qui tend vers le bas.
+            Mais aussi éviter les frange.
+            Tu as une figure <strong>triangulaire vers le bas</strong> ?
+            Il te faut un carré pongeant ou des longueurs ondulées.
+            Evite les cheveux tiré en arrière !
+            <br>http://www.doctissimo.fr/html/beaute/coiffure/articles/forme-visage.
+            htm#quelles-coupes-pour-un-visage-carre-nbsp
+            <br><br>
+
+          
+
+            
+            <br><br>
+            
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack1">
             <h1 id="titre_re">Prenez soin de vos cheveux !</h1><br>
             Que votre coupe de cheveux soit
             "bouclée, raide comme des baguettes ou colorée"
@@ -460,130 +386,109 @@
             Lavez les à l'eau tiède ! et utilisez un 
             après-shampoing. Cela permet de mieux les
             brosser et "favorise la fermeture des 
-            écailles"
-            <i>http://www.madmoizelle.com/conseils-beaute-soin-cheveux-337708</i>
-            
-            <br><br>
-            
-          </div>
-          <div class="col-sm">
-            <h1 id="titre_re">Citation</h1><br>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            écailles"<br>
+            http://www.madmoizelle.com/conseils-beaute-soin-cheveux-337708
             <br><br>
           </div>
           
-          <div class="col-sm">
+          <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack2">
           
-            <h1 id="titre_re">Titre deux</h1><br>
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            <h1 id="titre_re">Des  dreadlocks !</h1><br>
+            Tu as toujours  révé de te faire des dreadlocks ?<br>
+            Pour cela nous te conseillons de ne pas te laver.
+            Ni de te les brosser ou des les peigner. En effet, il
+            faut un maximum noeud. Evite des les attacher car cela ferait
+            une seule dread. Mais c'est degueux ! Il existe plusieurs techniques !
+            Tu peux faire des noeuds avec tes mèches:
+            -Prenez une mèche, divisez-la en 2 sur toute la longueur jusqu'à la racine.<br>
+            -Recommencez avec la même mèche, mais en tirant 2 autres bouts.<br>
+            -Répétez autant de fois que nécessaire : des nœuds remontent des pointes aux racines.<br>
+            -A un tiers de la longueur, roulez les nœuds entre vos doigts pour former votre lock.<br>
+            <br>
+            Notre meilleure technique est le peingne à crêper. Il suffit de peigner de haut en bas avec
+            de créer des deads ! Et en plus le beurre de karité permet des les sculter !
+            <br><br>
+            https://www.fourchette-et-bikini.fr/beaute/cheveux/coiffures/
+            coiffures-cheveux-longs/comment-faire-des-dreadlocks-44584.html
             
           </div>
         </div>
+        </center>
       </div><br><br>
     </section>
 
 
-  
-  <!-- Services Section -->
-  <section class="page-section" id="services" style='text-align:center'>
 
-
-    <div id='coifcoif' style='display:none;text-align:center;'>
-    
-      <br>
-
-      <center><div id="coifcoif_recherche">
-          
-          <br>
-          <div style='position: absolute; left: 50%;'>
-          <img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80' id='gifou'
-              style='position:relative; display:none;left: -50%;'>
-          </div>
-          <br><br><br><br>
-
-          
-          <input type='text' id='coif1'
-                  style='text-align:center; border:3px solid black; width:70%'
-                   placeholder='Votre ville'>
-          <br><br>
-          
-          <center><input type='button' onclick='menuuu()' value='Retour au menu' style='border:2px solid black;'>&nbsp;&nbsp;&nbsp;
-          
-          <input type='button' id='coif2' value='valider' style='border:2px solid black;'></center><br>
-          <br><br><br><br>
-      </div>
-
-             
-    </div></center>
-
-    <style>
-      #gymgym_div_prestation{
-          border:5px solid black;
-          border-radius: 20px; width:50%;
-          background:url("/static/img/parquet1.jpg");
-          box-shadow: 5px 5px 5px 5px;
-      }
-
-    </style>
-    <div id='gymgym' style='display:none;text-align:center;'>
-    
-      <br>
-
-      <center><div id="gymgym_div_prestation">
-          
-          <br>
-          <div style='position: absolute; left: 50%;'>
-          <center>
-          <img src='/static/img/portfolio/icone/chargement1.gif' id='gifou_gym'
-              style='position:relative; display:none;left: -50%;'>
-          </center>
-          </div>
-          <br><br><br><br>
-
-          
-          <input type='text' id='gym1'
-                  style='text-align:center; border:3px solid black; width:70%;'
-                   placeholder='Votre ville'>
-          <br><br>
-          
-          <center><input type='button' onclick='menuuu()' value='Retour au menu' style='border:2px solid black;'>&nbsp;&nbsp;&nbsp;
-          
-          <input type='button' id='gym2' value='valider' style='border:2px solid black;'></center><br>
-          <br><br><br><br>
-      </div>
-
-             
-    </div></center>
 
   
+  
+              <section class="page-section" id="services" style='text-align:center'>
+
+
+                    <div id='coifcoif' style='display:none;text-align:center;width:100%;'><br>
+    
+     
+                          <center>
+                          <div id="coifcoif_recherche"><br>
+          
+         
+                              <div style='position: absolute; left: 50%;'>
+                                  <img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80' id='gifou'
+                                      style='position:relative; display:none;left: -50%;'>
+                              </div><br><br><br><br>
+
+
+                              <input type='text' id='coif1' placeholder='Votre ville'><br><br>
+                              
+                              <center><input type='button' id="input_coif2" onclick='menuuu()' value='Retour au menu'>&nbsp;&nbsp;&nbsp;
+                              
+                              <input type='button' id='coif2' value='valider'></center><br><br><br><br><br>
+                              
+
+                         </div>
+
+                             
+                    </div></center>
+
+
+
+    
+                <div id='gymgym' style='display:none;text-align:center;'>
+    
+      
+                        <center>
+                      <div id="gymgym_div_prestation"><br>
+          
+     
+         
+                          <div style='position: absolute; left: 50%;'>
+          
+                            <img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80' id='gifou_gym'
+                              style='position:relative; display:none;left: -50%;'>
+                         </div><br><br><br><br><br>
+         
+
+          
+                          <input type='text' id='gym1'
+                          style='text-align:center; border:3px solid black; width:70%;'
+                           placeholder='Votre ville'><br><br>
+  
+  
+                          <center><input type='button' onclick='menuuu()'
+                          value='Retour au menu' style='border:2px solid black;'>&nbsp;&nbsp;&nbsp;
+
+                          
+  
+                        <input type='button' id='gym2' value='valider' style='border:2px solid black;'>
+                        </center><br><br><br><br><br>
+          
+                  </div>
+
+             
+            </div></center>
+
+
+
 
     <div id='mapmap' style='text-align:center;display:none;'>
     
@@ -741,195 +646,6 @@
 
 
 
-<style>
-#textes_transition{
-    text-align:center;
-}
-#info1,
-#info2,
-#info3,
-#info4{
-    border:5px solid black;
-    border-radius: 20px; 
-    height:450px;
-    background:url("/static/img/parquet1.jpg");
-}
-
-</style>
-<style>
-#coifcoif_recherche{
-  border:5px solid black;
-  border-radius: 20px; width:50%;
-  background:url("/static/img/parquet1.jpg");
-  box-shadow: 5px 5px 5px 5px;
-}
-
-</style>
-
-
-
-<style>
-#container_photo{
-    padding-top:250px;
-}
-#logo{
-  position:static;
-  margin-top:-95px;
-}
-#menumenu{
-  margin-left:-80px;
-}
-#section1{
-  height:100%;
-}
-.videostream{
-  z-index: 4;
-}
-#fond{
- border:3px solid black;
-}
-#fond1{
-  display:none;
-  border:3px solid black;
-}
-
-#CONTENEUR{
-    background:url("/static/img/parquet1.jpg") no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    width:80%;
-    border:2px solid black;
-
-}
-
-@media screen and (min-width: 320px) and (max-width:374px) {
-  #blackblack{
-    text-align:center;
-    font-size:4vw;
-  }
-  #titre_re{
-    font-size:35px;
-  }
-  #gymgym_div_prestation,
-  #coifcoif_recherche{
-    font-size:3vw;
-    width:300px;
-    margin-left:10px;
-  }
-  #info1,
-  #info2,
-  #info3,
-  #info4{
-    font-size:3vw;
-    width:300px;
-    height:300px;
-    margin-left:15px;
-  }
-}
-
-
-
-@media screen and (min-width: 375px) and (max-width:425px) {
-  #blackblack{
-    text-align:center;
-    font-size:4vw;
-    width:374px;
-    margin-left:6px;
-  }
-  #titre_re{
-    font-size:35px;
-  }
-  #gymgym_div_prestation,
-  #coifcoif_recherche{
-    font-size:3vw;
-    width:366px;
-  }
-  #info1,
-  #info2,
-  #info3,
-  #info4{
-    font-size:3vw;
-    width:366px;
-    height:370px;
-    margin-left:3px;
-  }
-}
-
-
-
-@media screen and (min-width: 425px) and (max-width:768px) {
-  #blackblack{
-    text-align:center;
-    font-size:4vw;
-    margin-left:20px;
-  }
-  #titre_re{
-    font-size:35px;
-  }
-  #gymgym_div_prestation,
-  #coifcoif_recherche{
-    font-size:3vw;
-    width:420px;
-    height:250px;
-  }
-  #info1,
-  #info2,
-  #info3,
-  #info4{
-    font-size:3vw;
-    width:400px;
-    height:400px;
-    margin-left:15px;
-  }
-}
-
-
-
-
-@media screen and (min-width: 768px) and (max-width:1024px) {
-  #blackblack{
-    text-align:center;
-    font-size:2vw;
-  }
-  #titre_re{
-    font-size:35px;
-  }
-  #coifcoif{
-    width:500px;
-  }
-  #gymgym_div_prestation,
-  #coifcoif_recherche{
-    font-size:2.5vw;
-    width:600px;
-    height:350px;
-    padding-right:10px;
-    margin-left:95px;
-  }
-  #info1,
-  #info2,
-  #info3,
-  #info4{
-    font-size:2vw;
-    width:500px;
-    height:400px;
-    margin-left:15px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</style>
 
 
 
@@ -954,15 +670,6 @@
 
 
 
-
-
-
-
-    <style>
-      #CONTENEUR{
-        font-size:1.3vw;
-      }
-    </style>
 
 
     <div class="container" id='CONTENEUR'>
@@ -980,18 +687,14 @@
            <style>#im6{width:100px; height:100px;}</style>
            
            <img onclick="coiffeur()" src="/static/img/portfolio/icone/coiffeur.png"
-             onmouseover="stop('p_coif', 'im6', '/static/img/portfolio/icone/coiffeur2.png')"
-             onmouseout="start('p_coif', 'im6', '/static/img/portfolio/icone/coiffeur.png')"
+             onmouseover="stop('im6', '/static/img/portfolio/icone/coiffeur2.png')"
+             onmouseout="start('im6', '/static/img/portfolio/icone/coiffeur.png')"
              id="im6">
              
             <h3 class="h4 mb-2">Coiffeurs</h3>
             
             <br>
-            
-     
-            <center><p id ='p_coif'  style='color:white; font-size:1em;display:none; position:absolute;left:0%;'>
-              Voir les coiffeurs les plus proches de chez moi
-            </p></center>
+
             
           </div>
         
@@ -1003,18 +706,14 @@
            <style>#im4{width:100px; height:100px;}</style>
            
            <img onclick="gym()" src = "/static/img/portfolio/icone/gym.png"/
-             onmouseover="stop('p_gym', 'im4', '/static/img/portfolio/icone/gym2.png' )"
-             onmouseout="start('p_gym', 'im4', '/static/img/portfolio/icone/gym.png')"
+             onmouseover="stop('im4', '/static/img/portfolio/icone/gym2.png' )"
+             onmouseout="start('im4', '/static/img/portfolio/icone/gym.png')"
              id="im4">
              
             <h3 class="h4 mb-2" >Salle de gym</h3>
             <br>
             
-            <p id='p_gym' style='color:white; font-size:1em;display:²none; position:absolute;left:4%;'>
-              Les salles de gym les plus proches de chez moi
-            </p>
-    
-            
+ 
           </div>
         </div><br><br>
 
@@ -1025,16 +724,12 @@
            <style>#im7{width:100px; height:100px;}</style>
            
            <a href="/photo/habits"><img onclick="vetements()" src="/static/img/portfolio/icone/vetements.png"/
-             onmouseover="stop('p_habit', 'im7', '/static/img/portfolio/icone/vetements22.png')"
-             onmouseout="start('p_habit', 'im7', '/static/img/portfolio/icone/vetements.png')"
+             onmouseover="stop('im7', '/static/img/portfolio/icone/vetements22.png')"
+             onmouseout="start('im7', '/static/img/portfolio/icone/vetements.png')"
              id="im7"></a>
              
             <h3 class="h4 mb-2">Essayer des vêtements</h3>
-            
-            <p id='p_habit' style='color:white; font-size:1em;display:none;
-                position:absolute;right:0%;'>
 
-            Essayer des habits sans faire la queue</p>
           </div>
         </div>
 
@@ -1043,18 +738,15 @@
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
            <style>#im8{width:100px; height:100px;}</style>
-           <a href="/administrateur/tendance/">
+           <a href="/photo/tendance/">
              <img onclick="dresshaircutbodyup()" src="/static/img/portfolio/icone/dresshaircutbodyup.png"/
-                 onmouseover="stop('p_tendance', 'im8','/static/img/portfolio/icone/dresshaircutbodyup2.png')"
-                 onmouseout="start('p_tendance', 'im8', '/static/img/portfolio/icone/dresshaircutbodyup.png')"
+                 onmouseover="stop('im8','/static/img/portfolio/icone/dresshaircutbodyup2.png')"
+                 onmouseout="start('im8', '/static/img/portfolio/icone/dresshaircutbodyup.png')"
              id="im8">
            </a>
             <h3 class="h4 mb-2">
             Voir notre tendance</h3>
-            <p id='p_tendance'
-            style='color:white; font-size:1em;display:none; position:absolute;left:0%;'>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Voir la tendance de cet été pour être à jour</p>
+
           </div>
         </div>
 
@@ -1087,44 +779,36 @@
 
 
 
-  <!-- Call to Action Section -->
-  <section>
-    <div class="container text-center">
-    
-        <h2 class="mb-4">
-          Abonne toi sur nos reseaux sociaux !
-        </h2>
 
-       <a href='https//:www.facebook.fr'><img src = "/static/img/portfolio/icone/facebook.png"/ id="im10"></a>
-       <a href='https//:www.twitter.fr'><img src = "/static/img/portfolio/icone/twitter.png"/ id="im11"></a>
-       <a href='https//:www.snapchat.fr'><img src = "/static/img/portfolio/icone/snap.png"/ id="im12"></a>
-                  
+
+<footer>
+    <!-- Bottom Section number 2 -->
+    <div id='bottom'> 
+      
+
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">Abonne toi sur nos reseaux sociaux !</h2>
+        <a href=""><i class="fab fa-facebook-square" id="fb"></i></a>
+        <a href=""><i class="fab fa-twitter-square" id="tw"></i></a>
+        <a href=""><i class="fab fa-snapchat-square" id="sn"></i></a>              
     </div>
   </section>
 
 
-
-  <!-- Contact Section -->
-  <section class="page-section" id="contact">
+  <section class="page-section" id="contact" style="background:white;">
     <div class="container">
-    
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="mt-0"><strong>Let's Get In Touch!</strong></h2>
+          <h2 class="mt-0">Let's Get In Touch!</h2>
           <hr class="divider my-4">
-          <p  style='color:black;'>
-            <strong>Ready to start your next project with us?
-            Give us a call or send us an email and we
-            will get back to you as soon as possible!</strong>
-          </p>
-          
+          <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
         </div>
       </div>
-      
       <div class="row">
         <div class="col-lg-4 ml-auto text-center">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div><strong>+1 (202) 555-0149</strong></div>
+          <div>+1 (202) 555-0149</div>
         </div>
         <div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
@@ -1135,11 +819,27 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="bg-light py-5">
+    <div class="container">
+      <div class="small text-center text-muted">Copyright &copy; 2019 - Start Bootstrap</div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/static/js/creative.min.js"></script>
 
 
 
-
-
+</html>
 
 
 <!-- Bootstrap core JavaScript -->
@@ -1155,25 +855,10 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqJf5bBiufgiWCK34KcdmPt4Zhsp4oRCc&callback=initMap"
   async defer></script>
-<script type="text/javascript" src="/static/js/coupe.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </html>
 
 
-<script>
-  {% for i in coif %}
-      for(var c = 0; c <= {{coif|length}}*4 - 1; c+=4){
-
-          console.log(listeeeee[c], listeeeee[c + 1], listeeeee[c + 2], listeeeee[c + 3])
-     
-          var url = "<img src='/static/img/portfolio/coupe/"  + listeeeee[c + 1] + "'" +  "height=" + "'" + listeeeee[c + 3] + "'"
-                      + "width=" + "'" +  listeeeee[c + 2] + "' />"
-          console.log(url)
-    
-          var a = document.getElementById(listeeeee[c]).innerHTML = url; 
-       };
-  {% endfor %}
-</script>
 
 
 
@@ -1205,393 +890,6 @@
 
 
 
-<style>
-@media screen and (min-width: 320px) and (max-width:374px) {
-  #text_top{
-    padding-top:50px;
-  }
-  #section1{
-    height:120%;
-    border:3px solid transparent;
-    text-align:center;
-  }
-  #resum_titre{
-    float:none;
-    margin-left:10px;
-    font-size:1em;
-    word-wrap: break-word
-    width:200px;
-    font-weight: bold;
-  }
-  #MENU{
-    display:none;
-  }
-  #logo{
-    diplay:none;
-  }
-  #container_photo{
-    font-size:1vw;
-  }
-  h3{
-    font-size:20px;
-  }
-  #vivideo{
-    font-size:10px;
-    height:700px;
-  }
-  video{
-    border:1px solid black;
-    width:100%;
-  }
-  #whitewhite{
-    width:140px;
-    float:left;
-    margin-left:-25px;
-  }
-  #div_placement{
-    width:150px;
-    float:right;
-    margin-right:-25px;
-  }
-  #p_coupe{
-    display:none;
-  }
-  #aide{
-    font-size:10px;
-  }
-  #gifou{
-    width:40px;
-    height:40px;
-    margin-left:10px;
-  }
-}
-
-@media screen and (min-width: 375px) and (max-width:424px) {
-  #section1{
-    height:120%;
-    border:3px solid transparent;
-  }
-  #les_textes{
-    width:100%;
-    text-align:center;
-  }
-  #resum_titre{
-    margin-left:35px;
-    float:none;
-    font-size:1em;
-    word-wrap: break-word
-    width:300px;
-    font-weight: bold;
-  }
-  #MENU{
-    display:none;
-  }
-  #logo{
-    diplay:none;
-  }
-  #container_photo{
-    font-size:1vw;
-  }
-  h3{
-    font-size:20px;
-  }
-  #vivideo{
-    font-size:10px;
-  }
-  video{
-    border:1px solid black;
-    width:80%;
-  }
-  #whitewhite{
-    width:180px;
-    float:left;
-    margin-left:-25px;
-    font-size:10px;
-  }
-  #div_placement{
-    width:180px;
-    float:right;
-    margin-right:-25px;
-    font-size:11px;
-  }
-  #p_coupe{
-    display:none;
-  }
-  #aide{
-    display:none;
-  }
-}
-
-
-@media screen and (min-width: 425px) and (max-width:767px) {
-  #section1{
-    height:120%;
-    border:3px solid transparent;
-  }
-  #les_textes{
-    text-align:center;
-  }
-  #resum_titre{
-    margin-left:60px;
-    float:none;
-    font-size:1em;
-    word-wrap: break-word
-    width:300px;
-  }
-  #MENU{
-    display:none;
-  }
-  #logo{
-    diplay:none;
-  }
-  #container_photo{
-    font-size:1vw;
-  }
-  h3{
-    font-size:20px;
-  }
-  #vivideo{
-    font-size:10px;
-  }
-  video{
-    border:1px solid black;
-    width:60%;
-    height:200px;
-    margin-left:150px;
-  }
-  #whitewhite{
-    width:150px;
-    float:left;
-    margin-left:-25px;
-    font-size:10px;
-    margin-top:-300px;
-
-  }
-  #div_placement{
-    width:120%;
-    float:left;
-    margin-left:-45px;
-    font-size:11px;
-    margin-top:-10px;
-  }
-  #fond{
-    margin-right:-355px;
-  }
-  #fond1{
-    margin-right:-310px;
-  }
-  #longue_but{
-    float:left;
-    margin-left:20px;
-    margin-top:-40px;
-  }
-  #coute_but{
-    float:left;
-    margin-left:20px;
-    margin-top:-20px;
-  }
-  #longue_coul{
-    float:left;
-    margin-left:160px;
-    margin-top:-105px;
-  }
-  #courte_coul{
-    float:left;
-    margin-left:160px;
-    margin-top:-85px;
-  }
-  #barbe_button{
-    display:none;
-  }
-  #cssfilters-apply{
-    margin-left:150px;
-  }
-  #StartVideo{
-    margin-left:150px;
-  }
-  #p_coupe{
-    display:none;
-  }
-  #blackblack{
-    font-size:3vw;
-  }
-  #aide{
-    font-size:20px;
-  }
-  #logo{
-    display:none;
-  }
-  #menu_res{
-    margin-left:50px;
-  }
-  
-}
-
-
-
-@media screen and (min-width: 768px) and (max-width:1024px) {
-  #section1{
-    height:140%;
-    border:3px solid transparent;
-  }
-  #MENU{
-    display:none;
-  }
-  #logo{
-    display:none;
-  }
-  #resum_titre{
-    margin-left:400px;
-    float:none;
-    font-size:17px;
-    word-wrap: break-word
-    width:500px;
-  }
-  #container_photo{
-    font-size:1vw;
-  }
-  h3{
-    font-size:20px;
-  }
-  #vivideo{
-    font-size:10px;
-  }
-  video{
-    border:1px solid black;
-    width:70%;
-    height:200px;
-    margin-left:200px;
-  }
-  #whitewhite{
-    width:150px;
-    float:left;
-    margin-left:-10px;
-    font-size:12px;
-    margin-top:-300px;
-  }
-  #div_placement{
-    width:180px;
-    float:none;
-    margin-left:520px;
-    font-size:12px;
-    margin-top:-350px;
-  }
-  #p_coupe{
-    font-size:15px;
-  }
-  #cssfilters-apply{
-    margin-left:265px;
-    font-size:9px;
-  }
-  #StartVideo{
-    margin-left:265px;
-    font-size:12px;
-  }
-  #stop-button{
-    font-size:12px;
-  }
-  #titre_salon{
-    margin-left:210px;
-    width:300px;
-    font-size:25px;
-  }
-  #menu_res{
-    margin-left:50px;
-    font-weight:bold;
-  }
-}
-
-
-
-
-@media screen and (min-width: 1024px) and (max-width:1440px) {
-  #section1{
-    height:100%;
-    border:3px solid transparent;
-  }
-  #menumenu{
-    display:none;
-  }
-  #logo{
-    position:fixed;
-  }
-  #les_textes{
-    margin-left:400px;
-    width:800px;
-    height:600px;
-    padding-top:40px;
-    font-size:2vw;
-  }
-  #resum_titre{
-    float:right;
-    width:50%;
-    padding-right:4%;
-    font-size:2vw;
-    margin-left:400px;
-    float:none;
-    font-size:20px;
-    word-wrap: break-word
-    height:450px;
-    text-align:justify;
-  }
-  #container_photo{
-    font-size:1vw;
-  }
-  h3{
-    font-size:20px;
-  }
-  #container_photo{
-    margin-top:-100px;
-    text-align:center;
-  }
-  #inputs_sizes{
-    text-align:center;
-  }
-  #vivideo{
-    margin-left:340px;
-    font-size:10px;
-    text-align:center;
-    border:3px solid transparent;
-  }
-  video{
-    border:1px solid black;
-    width:100%;
-    height:200px;
-  }
-  #whitewhite{
-    margin-left:-600px;
-    margin-top:-300px;
-    font-size:14px;
-  }
-  #div_placement{
-    margin-left:550px;
-    font-size:14px;
-    width:250px;
-    margin-top:-350px;
-  }
-  #p_coupe{
-    display:none;
-  }
-  #cssfilters-apply{
-    font-size:14px;
-  }
-  #StartVideo{
-    font-size:14px;
-  }
-  #stop-button{
-    font-size:14px;
-  }
-  #titre_salon{
-    font-size:20px;
-  }
-  #gifou{
-    width:80;
-    height:80;
-  }
-  #menu_res{
-    display:none;
-  }
-}
 
 
 
@@ -1599,7 +897,25 @@
 
 
 
-</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1617,7 +933,7 @@
 
 <script>
 function put_background(){
-  document.getElementById('container_photo').style.background = '#ccccff';
+  document.getElementById('basic').style.background = '#ccccff';
   shutdown();
   document.getElementById('StartVideo').click();
 
@@ -1629,8 +945,1723 @@ function get_background(){
   notshutdown();
   document.getElementById('fond1').style.display = "none";
   document.getElementById('fond').style.display = "inline";
-  document.getElementById('container_photo').style.background = 'none';
+  document.getElementById('basic').style.background = 'none';
 };
-</script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function favovo(){
+};
+
+
+function coupe_longue(){
+  document.getElementById('placement').style.display = 'none';
+  document.getElementById('bout_fermer_longue').style.display = 'block';
+
+  document.getElementById('draggable19').style.display = 'block';
+  document.getElementById('draggable18').style.display = 'block';
+  document.getElementById('draggable').style.display = 'block';
+  document.getElementById('draggable4').style.display = 'block';
+  document.getElementById('draggable15').style.display = 'block';
+  document.getElementById('draggable5').style.display = 'block';
+
+};
+
+
+function coupe_courte(){
+  document.getElementById('placement').style.display = 'none';
+  document.getElementById('bout_fermer_court').style.display = 'block';
+
+  document.getElementById('draggable14').style.display = 'block';
+  document.getElementById('draggable16').style.display = 'block';
+};
+
+
+function coupe_longue_coul(){
+  document.getElementById('placement').style.display = 'none';
+  document.getElementById('bout_fermer_longue_coul').style.display = 'block';
+
+  document.getElementById('draggable10').style.display = 'block';
+  document.getElementById('draggable11').style.display = 'block';
+  document.getElementById('draggable6').style.display = 'block'; 
+};
+
+
+
+function coupe_courte_coul(){
+  document.getElementById('placement').style.display = 'none';
+  document.getElementById('bout_fermer_court_coul').style.display = 'block';
+
+  document.getElementById('draggable3').style.display = 'block';
+  document.getElementById('draggable9').style.display = 'block';
+  document.getElementById('draggable12').style.display = 'block'; 
+};
+
+
+
+
+function barbe(){
+  document.getElementById('placement').style.display = 'none';
+  document.getElementById('bout_fermer_barbe').style.display = 'block';
+
+  document.getElementById('draggable7').style.display = 'block';
+  document.getElementById('draggable8').style.display = 'block';
+};
+
+
+function fermer1(){
+  document.getElementById('placement').style.display = 'block';
+  document.getElementById('bout_fermer_longue').style.display = 'none';
+
+  document.getElementById('draggable19').style.display = 'none';
+  document.getElementById('draggable18').style.display = 'none';
+  document.getElementById('draggable').style.display = 'none';
+  document.getElementById('draggable4').style.display = 'none';
+  document.getElementById('draggable15').style.display = 'none';
+  document.getElementById('draggable5').style.display = 'none';
+};
+
+function fermer2(){
+  document.getElementById('placement').style.display = 'block';
+  document.getElementById('bout_fermer_court').style.display = 'none';
+
+  document.getElementById('draggable14').style.display = 'none';
+  document.getElementById('draggable16').style.display = 'none';
+};
+
+function fermer3(){
+  document.getElementById('placement').style.display = 'block';
+  document.getElementById('bout_fermer_longue_coul').style.display = 'none';
+
+  document.getElementById('draggable10').style.display = 'none';
+  document.getElementById('draggable11').style.display = 'none';
+  document.getElementById('draggable6').style.display = 'none'; 
+};
+
+function fermer4(){
+  document.getElementById('placement').style.display = 'block';
+  document.getElementById('bout_fermer_court_coul').style.display = 'none';
+
+  document.getElementById('draggable3').style.display = 'none';
+  document.getElementById('draggable9').style.display = 'none';
+  document.getElementById('draggable12').style.display = 'none'; 
+};
+function fermer5(){
+  document.getElementById('placement').style.display = 'block';
+  document.getElementById('bout_fermer_barbe').style.display = 'none';
+
+  document.getElementById('draggable7').style.display = 'none';
+  document.getElementById('draggable8').style.display = 'none';
+};        
+
+
+
+
+  
+
+jQuery("#sauve").on("click", function(e){
+
+ e.preventDefault();
+  jQuery.ajax({
+      data:{
+          'product':String(LISTE1[LISTE1.length -1]),
+          csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+      },
+      type:"POST",
+      url:"/photo/coupe"
+  })
+  .done(function(data){
+      if (data.error){
+          jQuery("#monCadreAlert").text(data.error);
+          jQuery("#is_save");
+          
+          
+      }
+      else{
+          jQuery("#is_save").html(data.data);
+          jQuery("#monCadreAlert");
+          
+          
+      };
+      
+  });
+});
+
+  
+
+
+
+LISTE1 = []
+
+function ajout_longueur(){
+
+  var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
+  console.log(LISTE_RESIZE[LISTE_RESIZE.length -1])
+  var b = document.getElementById(a).id
+  console.log(b, 'b')
+  var c = '#' + b
+  console.log(c)
+  var image = document.querySelector(c);
+  var X = image.getAttribute("width");
+  X = parseInt(X) ;
+  console.log(X)
+  var Y = image.getAttribute("height"); 		
+  Y = parseInt(Y) ;
+  console.log(Y)
+
+  X += 0 ; 
+  Y += 5 ;
+  image.setAttribute('width', X);
+  image.setAttribute('height',Y);
+
+  var d = document.getElementById(b).style.height = Y;
+
+
+
+  document.getElementById(b).style.width = X;
+
+  LISTE1.push([b, X,Y]);
+};
+
+
+function ajout_largeur(){
+
+
+  var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
+  var b = document.getElementById(a).id
+  var c = '#' + b
+
+  var image = document.querySelector(c);
+  var X = image.getAttribute("width");
+  X = parseInt(X) ;
+
+
+  var Y = image.getAttribute("height"); 		
+  Y = parseInt(Y) ;
+
+
+  X += 5 ; 
+  Y += 0 ;
+  image.setAttribute('width', X);
+  image.setAttribute('height',Y);
+  LISTE1.push([b, X,Y]);
+  console.log(LISTE1[LISTE1.length-1])
+  console.log(X,Y)
+
+
+};
+
+
+function enlever_longueur(){
+
+  var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
+  var b = document.getElementById(a).id
+  var c = '#' + b
+
+  var image = document.querySelector(c);
+  var X = image.getAttribute("width");
+  X = parseInt(X) ;
+
+  var Y = image.getAttribute("height"); 		
+  Y = parseInt(Y) ;
+
+
+  X += 0 ; 
+  Y -= 5 ;
+  image.setAttribute('width', X);
+  image.setAttribute('height',Y);
+  LISTE1.push([b, X,Y]);
+
+};
+
+
+function enlever_largeur(){
+
+
+  var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
+  var b = document.getElementById(a).id
+  var c = '#' + b
+
+  var image = document.querySelector(c);
+  var X = image.getAttribute("width");
+  X = parseInt(X) ;
+
+  var Y = image.getAttribute("height"); 		
+  Y = parseInt(Y) ;
+
+
+  X -= 5 ; 
+  Y += 0 ;
+  image.setAttribute('width', X);
+  image.setAttribute('height',Y);
+  LISTE1.push([b, X,Y]);
+
+};
+
+
+
+
+
+var LISTECOUPE = []
+
+var liste_liste = [draggable,draggable3,draggable4,draggable5,draggable6,draggable7,draggable8,draggable9,
+                    draggable10,draggable11,draggable12,draggable14,draggable15,draggable16,draggable18,
+                    draggable19]
+
+
+function yo() {
+
+  for(var i = 0; i <= liste_liste.length - 1; i++){
+ 
+    var a = document.getElementById(liste_liste[i].id).offsetLeft;
+    var b = document.getElementById(liste_liste[i].id).offsetTop;
+
+    if(a >= 10 && a <= 349 & b >=130 && b <= 410 ){
+      
+      LISTECOUPE.push(liste_liste[i].id)
+      document.getElementById("coupedecheveux").value = LISTECOUPE[LISTECOUPE.length - 1];
+  
+      
+      document.getElementById("jaime").submit();
+    }
+  
+   };
+  
+   for (var i = 0; i <= LISTE_FAV_FAV.length - 1; i++){
+
+     var a = document.getElementById(LISTE_FAV_FAV[LISTE_FAV_FAV.length-1]);
+
+     var b = a.offsetLeft;
+     var c = a.offsetTop;
+ 
+     if(b >= 460 && b <= 580 & c >=60 && c <= 220 ){
+
+        document.getElementById("coupedecheveux").value = LISTE_FAV_FAV[LISTE_FAV_FAV.length - 1];
+    
+        document.getElementById("jaime").submit();
+
+        
+     };
+   };
+
+};
+
+
+const constraints = {video: true};
+
+(function() {
+  const video = document.querySelector('#basic video');
+  const captureVideoButton = document.querySelector('#basic .capture-button');
+  let localMediaStream;
+
+  function handleSuccess(stream) {
+    localMediaStream = stream;
+    video.srcObject = stream;
+  }
+
+  captureVideoButton.onclick = function() {
+    navigator.mediaDevices.getUserMedia(constraints).
+      then(handleSuccess).catch(handleError);
+  };
+
+  document.querySelector('#stop-button').onclick = function() {
+    video.pause();
+    localMediaStream.stop();
+  };
+})();
+
+(function() {
+  const captureVideoButton =
+    document.querySelector('#screenshot .capture-button');
+  const screenshotButton = document.querySelector('#screenshot-button');
+  const img = document.querySelector('#screenshot img');
+  const video = document.querySelector('#screenshot video');
+
+  const canvas = document.createElement('canvas');
+
+  captureVideoButton.onclick = function() {
+    navigator.mediaDevices.getUserMedia(constraints).
+      then(handleSuccess).catch(handleError);
+  };
+
+
+  screenshotButton.onclick = video.onclick = function() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext('2d').drawImage(video, 0, 0);
+    // Other browsers will fall back to image/png
+    img.src = canvas.toDataURL('image/webp');
+  };
+
+
+  function handleSuccess(stream) {
+    screenshotButton.disabled = false;
+    video.srcObject = stream;
+  }
+})();
+
+
+(function() {
+  const captureVideoButton =
+    document.querySelector('#cssfilters .capture-button');
+  const cssFiltersButton = document.querySelector('#basic');
+  const video = document.querySelector('#basic video');
+
+  let filterIndex = 0;
+  const filters = [
+    'grayscale',
+    ''
+  ];
+
+
+  captureVideoButton.onclick = function() {
+    navigator.mediaDevices.getUserMedia(constraints).
+      then(handleSuccess).catch(handleError);
+  };
+
+
+  cssFiltersButton.onclick = video.onclick = function() {
+    video.className = filters[filterIndex++ % filters.length];
+  };
+
+
+  function handleSuccess(stream) {
+    video.srcObject = stream;
+  }
+})();
+
+
+
+  function coiffeur(){
+    document.getElementById('CONTENEUR').style.display = "none";
+    document.getElementById('coifcoif').style.display = "block";
+  };
+
+  function gym(){
+    document.getElementById('CONTENEUR').style.display = "none";
+    document.getElementById('gymgym').style.display = "block";
+
+ };
+
+
+
+function return_choice_coif(){
+    document.getElementById('the_map').style.display = 'none';
+    document.getElementById('mapmap').style.display = 'block';
+
+    }
+
+function return_choice_gym(){
+    document.getElementById('the_map').style.display = 'none';
+    document.getElementById('mapmap_gym').style.display = 'block';
+
+    }
+
+
+function menu_map(){
+    document.getElementById('mapmap').style.display = 'none';
+    document.getElementById('mapmap_gym').style.display = 'none';
+    document.getElementById('CONTENEUR').style.display = 'block';
+    document.getElementById('the_map').style.display = 'none';
+    document.getElementById('the_map_gym').style.display = 'none';
+
+
+};
+
+function menuuu(){
+    document.getElementById('coifcoif').style.display = 'none';
+    document.getElementById('CONTENEUR').style.display = 'block';
+    document.getElementById('gymgym').style.display = 'none';
+};
+
+
+
+LISTE_COIFURE = []
+
+
+jQuery("#coif2").on("click", function(e){
+    
+    document.getElementById('gifou').style.display = 'block';
+    var a = document.getElementById('coif1').value;
+
+LISTE = []
+
+ e.preventDefault();
+  jQuery.ajax({
+      data:{
+          'hairdresser':a,
+          csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+      },
+      type:"POST",
+      url:"/photo/coupe"
+  })
+  .done(function(data){
+      if (data.error){
+          jQuery("#monCadreAlert").text(data.error);
+          jQuery("#is_save");
+          
+          
+      }
+      else{
+          jQuery("#is_save").html(data.data);
+          jQuery("#monCadreAlert");
+          document.getElementById('gifou').style.display = 'none';
+          document.getElementById('coifcoif').style.display = 'none';
+          document.getElementById('mapmap').style.display = 'block';
+          document.getElementById('info').style.display = 'block';
+          document.getElementById('p_am_pm').style.display = 'block';
+
+          
+          
+          
+          var c = 0
+          var c1 = 0
+          var nom = ''
+          for(var i = 0; i < data.length; i ++){
+
+            
+            if(data[i] == "'" && data[c1+1] == ']' && data[c1+2] == '['){
+              LISTE.push([nom])
+              c+=1
+              nom = ''
+            }
+            else if (data[i] == "'" || data[i] == "["){
+              {}
+            }
+            else if(data[i] == ']'){
+              {}
+            }
+            else if(data[i] == ',' && data[c1+1] == ' ' && data[c1+2] == '['){
+              LISTE.push([nom])
+              c+=1
+              nom = ''
+            }
+            else if(data[i] == ','){
+              {}
+            }
+            else if(data[i] == '"'){
+              {}
+
+            }
+            else{
+              nom += data[i]
+            };
+            c1 += 1
+
+          };
+
+          console.log(LISTE)
+          console.log('000000000000000')
+
+        
+                    
+        var a = 0
+        if(LISTE[0] == undefined){a += 1};
+        if(LISTE[1] == undefined){a += 1};
+        if(LISTE[2] == undefined){a += 1};
+        if(LISTE[3] == undefined){a += 1};
+        if(LISTE[4] == undefined){a += 1};
+        if(LISTE[5] == undefined){a += 1};
+        if(LISTE[6] == undefined){a += 1};
+        if(LISTE[7] == undefined){a += 1};
+        if(a>4){
+              document.getElementById('info1').style.display = 'none';
+              a = 0
+        }
+        else{
+                
+            var info_coiffeur1 =  "<br><br><strong>" + LISTE[0] + " :</strong><br><br>" +
+                                  LISTE[1] + "<br>" +
+                                  LISTE[2] + "<br>" +
+                                  LISTE[3] + "<br>" +
+                                  LISTE[4] + "<br>" +
+                                  LISTE[5] + "<br>" +
+                                  LISTE[6] + "<br>" +
+                                  LISTE[7] + "<br><br>" +
+                                  "<input type='button' value='Voir la map' onclick='declencheur1_f()'>";
+                                  
+    
+
+                  
+             document.getElementById('info1').innerHTML = info_coiffeur1;                   
+            };           
+
+
+
+        var b = 0
+        if(LISTE[8] == undefined){b += 1};
+        if(LISTE[9] == undefined){b += 1};
+        if(LISTE[10] == undefined){b += 1};
+        if(LISTE[11] == undefined){b += 1};
+        if(LISTE[12] == undefined){b += 1};
+        if(LISTE[13] == undefined){b += 1};
+        if(LISTE[14] == undefined){b += 1};
+        if(LISTE[15] == undefined){b += 1};
+        if(b>4){
+              document.getElementById('info2').style.display = 'none';
+              b = 0
+        }
+        else{
+            
+            var info_coiffeur2 =  "<br><br><strong>" + LISTE[8] + "</strong><br><br>" +
+                                  LISTE[9]  + "<br>" +
+                                  LISTE[10]  + "<br>" +
+                                  LISTE[11] + "<br>" +
+                                  LISTE[12] + "<br>" +
+                                  LISTE[13] + "<br>" +
+                                  LISTE[14] + "<br>" +
+                                  LISTE[15] + "<br><br>" +
+                                 "<input type='button' value='Voir la map' onclick='declencheur2_f()'>";
+                                  
+            document.getElementById('info2').innerHTML = info_coiffeur2;
+      
+
+        }
+
+
+        var c = 0
+        if(LISTE[16] == undefined){c += 1};
+        if(LISTE[17] == undefined){c += 1};
+        if(LISTE[18] == undefined){c += 1};
+        if(LISTE[19] == undefined){c += 1};
+        if(LISTE[20] == undefined){c += 1};
+        if(LISTE[21] == undefined){c += 1};
+        if(LISTE[22] == undefined){c += 1};
+        if(LISTE[23] == undefined){c += 1};
+        if(c>4){
+              document.getElementById('info3').style.display = 'none';
+              c = 0
+        }
+        else{
+            
+            var info_coiffeur3 =  "<br><br><strong>" + LISTE[16] + "</strong><br><br>" +
+                                  LISTE[17] + "<br>" +
+                                  LISTE[18] + "<br>" +
+                                  LISTE[19] + "<br>" +
+                                  LISTE[20] + "<br>" +
+                                  LISTE[21] + "<br>" +
+                                  LISTE[22] + "<br>" +   
+                                  LISTE[23] + "<br><br>" +
+                                  "<input type='button' value='Voir la map' onclick='declencheur3_f()'>";
+                                 
+
+            document.getElementById('info3').innerHTML = info_coiffeur3;
+        
+         }
+
+
+        var d = 0
+        if(LISTE[24] == undefined){d += 1};
+        if(LISTE[25] == undefined){d += 1};
+        if(LISTE[26] == undefined){d += 1};
+        if(LISTE[27] == undefined){d += 1};
+        if(LISTE[28] == undefined){d += 1};
+        if(LISTE[29] == undefined){d += 1};
+        if(LISTE[30] == undefined){d += 1};
+        if(LISTE[31] == undefined){d += 1};
+        if(d>4){
+            document.getElementById('info4').style.display = 'none';
+            d = 0
+        }
+        else{              
+
+            var info_coiffeur4 =  "<br><br><strong>" + LISTE[24] + "</strong><br><br>" + 
+                                  LISTE[25] + "<br>" +
+                                  LISTE[26] + "<br>" +
+                                  LISTE[27] + "<br>" +
+                                  LISTE[28] + "<br>" +
+                                  LISTE[39] + "<br>" +
+                                  LISTE[30] + "<br>" +
+                                  LISTE[31] + "<br><br>" +
+                                  "<input type='button' value='Voir la map' onclick='declencheur4_f()'>";
+                                  
+            
+            document.getElementById('info4').innerHTML = info_coiffeur4;
+                                  
+        }
+
+                                      
+        LISTE_COIFURE.push([LISTE[0], LISTE[8], LISTE[16], LISTE[24]]);
+ 
+        var a = document.getElementById('info1');
+        var b = document.getElementById('info2');
+        var c = document.getElementById('info3');
+        var d = document.getElementById('info4');
+
+        if(a.style.display == 'none' && b.style.display == 'none' && c.style.display == 'none' && d.style.display == 'none'){
+
+            document.getElementById('aucas_ou_coif').innerHTML = "<center><h3><br><br>Veuillez nous excusez nous n'avons rien trouv\u00e9</h3></center>";
+            document.getElementById('cons').style.display = 'none';
+            document.getElementById('coifcoifcoif').style.display = 'none';
+        
+        }
+        
+        
+
+      };
+  });
+});
+
+
+
+
+jQuery("#gym2").on("click", function(e){
+    
+    document.getElementById('gifou_gym').style.display = 'block';
+    var a = document.getElementById('gym1').value;
+
+    LISTE_GYM = []
+    LISTE_GYMGYM = []
+
+ e.preventDefault();
+  jQuery.ajax({
+      data:{
+          'gymnastic':a,
+          csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+      },
+      type:"POST",
+      url:"/photo/coupe"
+  })
+  .done(function(data){
+      if (data.error){
+          jQuery("#monCadreAlert").text(data.error);
+          jQuery("#is_save");
+          
+          
+      }
+      else{
+          jQuery("#is_save").html(data.data);
+          jQuery("#monCadreAlert");
+          document.getElementById('gifou_gym').style.display = 'none';
+          document.getElementById('gymgym').style.display = 'none';
+          document.getElementById('mapmap_gym').style.display = 'block';
+          console.log(data)
+
+          var c = 0
+          var c1 = 0
+          var nom = ''
+          
+          for (var i = 0; i < data.length; i++){
+            
+            if(data[i] == "'" && data[c1+1] == ']' && data[c1+2] == '['){
+              LISTE_GYM.push([nom])
+              c+=1
+              nom = ''
+            }
+            else if (data[i] == "'" || data[i] == "["){
+              {}
+            }
+            else if(data[i] == ']'){
+              {}
+            }
+            else if(data[i] == ',' && data[c1+1] == ' ' && data[c1+2] == '['){
+              LISTE_GYM.push([nom])
+              c+=1
+              nom = ''
+            }
+            else if(data[i] == ','){
+              {}
+            }
+            else if(data[i] == '"'){
+              {}
+
+            }
+            else{
+              nom += data[i]
+            };
+            c1 += 1
+
+          };
+
+          console.log(LISTE_GYM)
+          console.log('000000000000000')
+
+       var e = 0
+       if(LISTE_GYM[0] == undefined){e += 1}
+       if(LISTE_GYM[1] == undefined){e += 1}
+       if(LISTE_GYM[2] == undefined){e += 1}
+       if(LISTE_GYM[3] == undefined){e += 1}
+       if(LISTE_GYM[4] == undefined){e += 1}
+       if(LISTE_GYM[5] == undefined){e += 1}
+       if(LISTE_GYM[6] == undefined){e += 1}
+       if(LISTE_GYM[7] == undefined){e += 1}
+       if(e > 4){
+            document.getElementById('info1_gym').style.display = 'none';
+            e = 0
+        }
+
+      else{
+        var info_gym1 =  "<br><br><strong>" + LISTE_GYM[0] + " :</strong><br><br>" +
+                              LISTE_GYM[1] + "<br>" +
+                              LISTE_GYM[2] + "<br>" +
+                              LISTE_GYM[3] + "<br>" +
+                              LISTE_GYM[4] + "<br>" +
+                              LISTE_GYM[5] + "<br>" +
+                              LISTE_GYM[6] + "<br>" +
+                              LISTE_GYM[7] + "<br><br>" +
+                              "<input type='button' value='Voir la map' onclick='declencheur_gym1f()'>";
+        
+         document.getElementById('info1_gym').innerHTML = info_gym1;                     
+    }     
+                              
+
+
+
+
+
+       var f = 0
+       if(LISTE_GYM[8] == undefined){f += 1}
+       if(LISTE_GYM[9] == undefined){f += 1}
+       if(LISTE_GYM[10] == undefined){f += 1}
+       if(LISTE_GYM[11] == undefined){f += 1}
+       if(LISTE_GYM[12] == undefined){f += 1}
+       if(LISTE_GYM[13] == undefined){f += 1}
+       if(LISTE_GYM[14] == undefined){f += 1}
+       if(LISTE_GYM[15] == undefined){f += 1}
+       if(f > 4){
+            document.getElementById('info2_gym').style.display = 'none';
+            f = 0
+        }
+        else{
+
+
+        var info_gym2 =  "<br><br><strong>" + LISTE_GYM[8] + "</strong><br><br>" +
+                              LISTE_GYM[9]  + "<br>" +
+                              LISTE_GYM[10]  + "<br>" +
+                              LISTE_GYM[11] + "<br>" +
+                              LISTE_GYM[12] + "<br>" +
+                              LISTE_GYM[13] + "<br>" +
+                              LISTE_GYM[14] + "<br>" +
+                              LISTE_GYM[15] + "<br><br>" +
+                              "<input type='button' value='Voir la map' onclick='declencheur_gym2f()'>";
+
+            document.getElementById('info2_gym').innerHTML = info_gym2;
+        }
+
+
+
+
+       var g = 0
+       if(LISTE_GYM[16] == undefined){g += 1}
+       if(LISTE_GYM[17] == undefined){g += 1}
+       if(LISTE_GYM[18] == undefined){g += 1}
+       if(LISTE_GYM[19] == undefined){g += 1}
+       if(LISTE_GYM[20] == undefined){g += 1}
+       if(LISTE_GYM[21] == undefined){g += 1}
+       if(LISTE_GYM[22] == undefined){g += 1}
+       if(LISTE_GYM[23] == undefined){g += 1}
+       if(g > 4){
+            document.getElementById('info3_gym').style.display = 'none';
+            g = 0
+        }
+        else{
+            var info_gym3 =  "<br><br><strong>" + LISTE_GYM[16] + "</strong><br><br>" +
+                                  LISTE_GYM[17] + "<br>" +
+                                  LISTE_GYM[18] + "<br>" +
+                                  LISTE_GYM[19] + "<br>" +
+                                  LISTE_GYM[20] + "<br>" +
+                                  LISTE_GYM[21] + "<br>" +
+                                  LISTE_GYM[22] + "<br>" +
+                                  LISTE_GYM[23] + "<br><br>" +
+                                  "<input type='button' value='Voir la map' onclick='declencheur_gym3f()'>";
+
+            document.getElementById('info3_gym').innerHTML = info_gym3;
+        }
+
+
+                         
+       var h = 0
+       if(LISTE_GYM[24] == undefined){h += 1}
+       if(LISTE_GYM[25] == undefined){h += 1}
+       if(LISTE_GYM[26] == undefined){h += 1}
+       if(LISTE_GYM[27] == undefined){h += 1}
+       if(LISTE_GYM[28] == undefined){h += 1}
+       if(LISTE_GYM[29] == undefined){h += 1}
+       if(LISTE_GYM[30] == undefined){h += 1}
+       if(LISTE_GYM[31] == undefined){h += 1}
+       if(h > 4){
+            document.getElementById('info4_gym').style.display = 'none';
+            h = 0
+        }
+        else{
+            
+            var info_gym4 =  "<br><br><strong>" + LISTE_GYM[24] + "</strong><br><br>" + 
+                                  LISTE_GYM[25] + "<br>" +
+                                  LISTE_GYM[26] + "<br>" +
+                                  LISTE_GYM[27] + "<br>" +
+                                  LISTE_GYM[28] + "<br>" +
+                                  LISTE_GYM[29] + "<br>" +
+                                  LISTE_GYM[30] + "<br>" +
+                                  LISTE_GYM[31] + "<br><br>" +
+                                  "<input type='button' value='Voir la map' onclick='declencheur_gym4f()'>";
+                                  
+            document.getElementById('info4_gym').innerHTML = info_gym4;
+        }
+
+
+
+        var a = document.getElementById('info1_gym')
+        var b = document.getElementById('info2_gym')
+        var c = document.getElementById('info3_gym')
+        var d = document.getElementById('info4_gym')
+
+        
+        if(a.style.display == 'none' && b.style.display == 'none' && c.style.display == 'none' && d.style.display == 'none'){
+            
+            document.getElementById('aucas_ou').innerHTML = "<center><h3>Veuillez nous excusez nous n'avons rien trouv\u00e9</h3></center>";
+            document.getElementById('p_am_pm').style.display = 'none';
+            document.getElementById('info').style.display = 'none';
+        }
+
+        LISTE_GYMGYM.push([LISTE_GYM[0], LISTE_GYM[8], LISTE_GYM[16], LISTE_GYM[24]]);
+ 
+                        
+        
+        
+        
+        
+        
+
+      };
+      
+  });
+});
+
+
+
+
+
+  jQuery("#declencheur1").on("click", function(e){
+      
+     var b = document.getElementById('coif1').value;
+     document.getElementById('mapmap').style.display = 'none';
+     document.getElementById('oups').innerHTML = '';
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+              'buttony':String(LISTE[0]),
+              'country':b,
+              csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+             
+
+              liste_lat = []
+              console.log(data)
+
+
+              if (data == "Oups nous n'avons rien trouvé"){
+             
+      
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouvé désolé";
+                
+                document.getElementById('map').style.display = 'none';  
+                document.getElementById('lapmap').style.display = 'none';
+                
+                document.getElementById('button_lamap_gym').style.display = 'none';
+                document.getElementById('button_lamap').style.display = 'block';
+                
+                }
+              
+              else{
+          
+                  pos = ''
+                  for (var i = 0; i < data.length; i++){
+                      console.log(data[i])
+                      if (data[i] == ' '){
+                        liste_lat.push(pos)
+                        pos = ''
+                      }
+                      else{
+                         pos += data[i]
+                     } 
+                  }
+                  liste_lat.push(pos)
+                  console.log(liste_lat)
+                  console.log("fini")
+                  
+                  document.getElementById('the_map').style.display = 'block';
+                  document.getElementById('button_lamap_gym').style.display = 'none';
+       
+                  document.getElementById('button_lamap').style.display = 'block';
+                  initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+                  
+            };
+          };
+          
+      });
+  });
+
+  
+
+
+  jQuery("#declencheur2").on("click", function(e){
+      
+     var b = document.getElementById('coif1').value;
+     document.getElementById('mapmap').style.display = 'none';
+     document.getElementById('oups').innerHTML = '';
+
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+              'buttony':String(LISTE[8]),
+              'country':b,
+              csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              liste_lat = []
+              console.log(data)
+
+              if (data == "Oups nous n'avons rien trouvé"){
+     
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouvé désolé";
+                
+                document.getElementById('map').style.display = 'none';  
+                document.getElementById('lapmap').style.display = 'none';
+                
+                document.getElementById('button_lamap_gym').style.display = 'none';
+                document.getElementById('button_lamap').style.display = 'block';
+                }
+              else{
+                
+
+
+              pos = ''
+              for (var i = 0; i < data.length; i++){
+                  console.log(data[i])
+                  if (data[i] == ' '){
+                    liste_lat.push(pos)
+                    pos = ''
+                  }
+                  else{
+                     pos += data[i]
+                 } 
+              }
+              liste_lat.push(pos)
+              console.log(liste_lat)
+              document.getElementById('the_map').style.display = 'block';
+              document.getElementById('button_lamap_gym').style.display = 'none';
+              document.getElementById('button_lamap').style.display = 'block';
+              
+              initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+              
+           };   
+          };
+          
+      });
+  });
+
+
+
+  jQuery("#declencheur3").on("click", function(e){
+   
+    var b = document.getElementById('coif1').value;
+    document.getElementById('mapmap').style.display = 'none';
+    document.getElementById('oups').innerHTML = '';
+    
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+              'buttony':String(LISTE[16]),
+              'country':b,
+              csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              liste_lat = []
+              console.log(data)
+
+              if (data == "Oups nous n'avons rien trouvé"){
+           
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
+                
+                document.getElementById('map').style.display = 'none';  
+    
+                document.getElementById('lapmap').style.display = 'none';
+                document.getElementById('button_lamap_gym').style.display = 'none';
+                
+                document.getElementById('button_lamap').style.display = 'block';
+                
+                }
+              else{
+
+              pos = ''
+              for (var i = 0; i < data.length; i++){
+                  console.log(data[i])
+                  if (data[i] == ' '){
+                    liste_lat.push(pos)
+                    pos = ''
+                  }
+                  else{
+                     pos += data[i]
+                 } 
+              }
+              liste_lat.push(pos)
+              console.log(liste_lat)
+              
+              document.getElementById('the_map').style.display = 'block';
+              document.getElementById('button_lamap_gym').style.display = 'none';
+              
+              document.getElementById('button_lamap').style.display = 'block';
+              initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+              
+              
+            };  
+          };
+          
+      });
+  });
+
+
+
+
+  jQuery("#declencheur4").on("click", function(e){
+
+     var b = document.getElementById('coif1').value;
+     document.getElementById('mapmap').style.display = 'none';
+     document.getElementById('oups').innerHTML = '';
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony':String(LISTE[24]),
+               'country':b,
+               csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              liste_lat = []
+              console.log(data)
+
+              if (data == "Oups nous n'avons rien trouvé"){
+              
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
+                
+                document.getElementById('map').style.display = 'none';  
+        
+                document.getElementById('lapmap').style.display = 'none';
+                document.getElementById('button_lamap_gym').style.display = 'none';
+                
+                document.getElementById('button_lamap').style.display = 'block';
+                }
+              else{
+
+
+              pos = ''
+              for (var i = 0; i < data.length; i++){
+                  console.log(data[i])
+                  if (data[i] == ' '){
+                    liste_lat.push(pos)
+                    pos = ''
+                  }
+                  else{
+                     pos += data[i]
+                 } 
+              }
+              liste_lat.push(pos)
+              console.log(liste_lat)
+              document.getElementById('the_map').style.display = 'block';
+              document.getElementById('button_lamap_gym').style.display = 'none';
+              document.getElementById('button_lamap').style.display = 'block';
+              initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+              
+            };  
+          };
+          
+      });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  jQuery("#declencheur_gym1").on("click", function(e){
+ 
+     var b = document.getElementById('gym1').value;
+     document.getElementById('oups').innerHTML = '';
+     document.getElementById('button_lamap').style.display = 'none';
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[0]),
+               'country_gym':b,
+               csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              liste_lat = []
+              console.log(data)
+              
+              if (data == "Oups nous n'avons rien trouvé"){
+
+                document.getElementById('button_lamap_gym').style.display = 'block';
+              
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+                
+                document.getElementById('map').style.display = 'none';  
+                document.getElementById('lapmap').style.display = 'none';
+
+
+              }
+              else{
+
+              pos = ''
+              for (var i = 0; i < data.length; i++){
+            
+                  if (data[i] == ' '){
+                    liste_lat.push(pos)
+                    pos = ''
+                  }
+                  else{
+                     pos += data[i]
+                 } 
+              }
+              liste_lat.push(pos)
+              console.log(liste_lat)
+              
+              document.getElementById('the_map').style.display = 'block';
+              document.getElementById('button_lamap').style.display = 'none';
+              
+              initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+             document.getElementById('button_lamap_gym').style.display = 'block';
+             document.getElementById('button_lamap').style.display = 'none';
+              
+            };
+          };
+          
+      });
+  });
+
+
+
+
+  jQuery("#declencheur_gym2").on("click", function(e){
+
+     var b = document.getElementById('gym1').value;
+     document.getElementById('oups').innerHTML = '';
+     document.getElementById('button_lamap').style.display = 'none';
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[8]),
+               'country_gym':b,
+               csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              console.log(data)
+               if (data == "Oups nous n'avons rien trouvé"){
+
+
+                document.getElementById('button_lamap_gym').style.display = 'block';
+             
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+                
+                document.getElementById('map').style.display = 'none';  
+                document.getElementById('lapmap').style.display = 'none';
+
+                
+   
+                }
+              else{
+
+              liste_lat = []
+            
+              pos = ''
+              for (var i = 0; i < data.length; i++){
+                  console.log(data[i])
+                  if (data[i] == ' '){
+                    liste_lat.push(pos)
+                    pos = ''
+                  }
+                  else{
+                     pos += data[i]
+                 } 
+              }
+              liste_lat.push(pos)
+              console.log(liste_lat)
+              
+              document.getElementById('the_map').style.display = 'block';
+              document.getElementById('button_lamap').style.display = 'none';
+              document.getElementById('button_lamap_gym').style.display = 'block';
+  
+              initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+          };
+          };
+      });
+  });
+
+
+
+  jQuery("#declencheur_gym3").on("click", function(e){
+
+     var b = document.getElementById('gym1').value;
+     document.getElementById('oups').innerHTML = '';
+     document.getElementById('button_lamap').style.display = 'none';
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[16]),
+               'country_gym':b,
+               csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+                if (data == "Oups nous n'avons rien trouvé"){
+
+
+                document.getElementById('button_lamap_gym').style.display = 'block';
+          
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+                
+                document.getElementById('map').style.display = 'none';  
+                document.getElementById('lapmap').style.display = 'none';
+
+                
+                
+                }
+              else{
+              liste_lat = []
+              pos = ''
+              for (var i = 0; i < data.length; i++){
+                  console.log(data[i])
+                  if (data[i] == ' '){
+                    liste_lat.push(pos)
+                    pos = ''
+                  }
+                  else{
+                     pos += data[i]
+                 } 
+              }
+              liste_lat.push(pos)
+              console.log(liste_lat)
+              
+              document.getElementById('the_map').style.display = 'block';
+              document.getElementById('button_lamap').style.display = 'none';
+              document.getElementById('button_lamap_gym').style.display = 'block';
+             document.getElementById('button_lamap').style.display = 'none';
+              initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+            };    
+          };
+          
+      });
+  });
+
+
+
+
+
+  jQuery("#declencheur_gym4").on("click", function(e){
+      
+     document.getElementById('button_lamap').style.display = 'none';
+     var b = document.getElementById('gym1').value;
+     document.getElementById('oups').innerHTML = '';
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[24]),
+               'country_m':b,
+               csrfmiddlewaretoken:'xlHRjgCQbxikx46yYY2zindOIg9D4hP2dARBWE1nHKKVDSc1zUxyEZABGxMzXQQS'
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              if (data == "Oups nous n'avons rien trouvé"){
+
+                document.getElementById('button_lamap_gym').style.display = 'block';
+                
+                document.getElementById('the_map').style.display = 'block';
+                document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+                
+                document.getElementById('map').style.display = 'none';  
+                document.getElementById('lapmap').style.display = 'none';
+
+              }
+              else{
+              liste_lat = []
+              pos = ''
+              for (var i = 0; i < data.length; i++){
+                  console.log(data[i])
+                  if (data[i] == ' '){
+                    liste_lat.push(pos)
+                    pos = ''
+                  }
+                  else{
+                     pos += data[i]
+                 } 
+              }
+              liste_lat.push(pos)
+              console.log(liste_lat,'000000000000000000000')
+              
+              document.getElementById('the_map').style.display = 'block';
+              document.getElementById('button_lamap').style.display = 'none';
+              
+              document.getElementById('button_lamap_gym').style.display = 'block';
+              document.getElementById('button_lamap').style.display = 'none';
+              
+              initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+              
+            };  
+          };
+          
+      });
+  });
+
+
+
+
+
+
+
+   function declencheur_gym1f(){
+
+    document.getElementById('declencheur_gym1').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+
+    };
+
+
+   function declencheur_gym2f(){
+
+    document.getElementById('declencheur_gym2').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+
+    };
+
+
+    function declencheur_gym3f(){
+
+    document.getElementById('declencheur_gym3').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+
+    };
+
+
+
+    function declencheur_gym4f(){
+    document.getElementById('declencheur_gym4').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+
+
+    };
+
+
+
+
+
+         
+  function mapo1(){
+   
+    document.getElementById('declencheur1').click()
+    document.getElementById('mapmap').style.display = 'none';
+    
+
+    };
+
+  function mapo2(){
+    document.getElementById('declencheur2').click()
+    document.getElementById('mapmap').style.display = 'none';
+
+
+    };
+
+  function mapo3(){
+    document.getElementById('declencheur3').click()
+    document.getElementById('mapmap').style.display = 'none';
+
+
+    };
+
+  function mapo4(){
+    document.getElementById('declencheur4').click()
+    document.getElementById('mapmap').style.display = 'none';
+
+
+    };
+
+
+
+
+
+
+
+    var map;
+
+    function initMap(lattitude, longitude) {
+
+      document.getElementById('map').style.display = 'block';
+
+      lattitude = parseFloat(lattitude)
+      longitude = parseFloat(longitude)
+      
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: lattitude, lng: longitude},
+        zoom: 17
+      });
+      
+     var marq1 = {lat: parseFloat(lattitude), lng: parseFloat(longitude)};
+      
+      var marker1 = new google.maps.Marker({
+        position: marq1,
+        map: map,
+      });
+
+    }
+
+
+
+    function stop(im, im_src){
+      document.getElementById(im).src = im_src
+
+    };
+
+    function start(im, im_src){
+      document.getElementById(im).src = im_src
+    };
+
+  
+
+
+    function declencheur1_f(){
+        document.getElementById('declencheur1').click()
+    }
+
+    function declencheur2_f(){
+        document.getElementById('declencheur2').click()
+    }
+
+    function declencheur3_f(){
+        document.getElementById('declencheur3').click()
+    }
+
+    function declencheur4_f(){
+        document.getElementById('declencheur4').click()
+    }
+
+
+    function image(){
+        document.getElementById("image1").src  = src="/static/img/portfolio/thumbnails/1.jpg";  
+    };
+
+  $( function() {
+      $("#draggable, #draggable2, #draggable3, #draggable4, #draggable5").draggable();
+    } );
+  $( function() {
+      $("#draggable6, #draggable7, #draggable8, #draggable9, #draggable10, #draggable11").draggable();
+    } );
+  $( function() {
+      $("#draggable12, #draggable14, #draggable15, #draggable16, #draggable18, #draggable19, #draggable_favoris").draggable();
+    } );
+
+
+
+
+
+
+    LISTE_RESIZE = []
+    LISTE_RESIZE_TAILLE_HAUTEUR = []
+    LISTE_RESIZE_TAILLE_LARGEUR = []
+    
+    function nom_image(id, hauteur, largeur){
+      LISTE_RESIZE.push(id)
+      console.log(id)
+      var a = document.getElementById(id).height;
+      var b = document.getElementById(id).width;
+
+      LISTE1.push([id, b, a])
+
+    LISTE_FAV_FAV = []
+    LISTE_FAV_FAV.push(id)
+
+   
+    var a = document.getElementById(id);
+
+    var b = a.offsetLeft;
+    var c = a.offsetTop;
+ 
+    
+    if(b >= 460 && b <= 580 & c >=60 && c <= 220 ){
+    }
+  }
+
+
+function ya(){
+      var a = document.getElementById("coupe1").offsetLeft;
+      var b = document.getElementById("coupe1").offsetTop;
+      console.log(a,b)
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
 
