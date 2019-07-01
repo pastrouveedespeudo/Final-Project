@@ -12,8 +12,13 @@ d'introduction, ne sommes pas expert en mode ni expert en pollution.
 
 https://myprofilmypollution.herokuapp.com
 
-Ceci est un site web opensource. Ce site opensource a un enjeu sociétal car: 
+Ceci est un site web opensource. Ce site opensource et est un enjeu sociétal car: 
 
+opensource veut dire code source ouvert et sociétal veut dire aspect de la vie en société. La pollution est son information est un aspect de la vie sociétale par son danger. La mode est un aspect de la vie sociétale par son indicateur social. 
+
+Une des plus grande fracture sociétale de ce monde est la mode. Nous avons tenté d'y lutter via les blouses a l'école afin de masquer
+les différences et de s'unifier par exemple. Aujourdh'ui les marques, les logo ainsi que les slogans sont omni présents.
+Ce site web cherche a aider les personnes 
 Il vise a aider les personnes par des conseils mais aussi des applications a essayer des coupes de cheveux mais aussi des habits.
 
 Par les coupes de cheveux ils peuvent essayer des coupes de cheveux via leur caméra. Mais il y a aussi des conseilles selon leur figure. 
@@ -25,7 +30,7 @@ cela que nous avons enlevé le systeme d'account qui pourraient potentiellement 
 orienté vers de la vente. Nous proposons aussi de leur données sommairement les couleurs primaires de la mode actuelle par des images
 récupérées sur internet.
 
-Cependant etre bien dans son corps connaitre les couleurs de la mode, avoir a disposition l'adresse d'un coiffeur ainsi que d'une salle de gym
+Cependant etre bien dans son corps connaitre les couleurs de la mode, avoir a disposition l'adresse d'un coiffeur ainsi que d'une salle de gym.
 n'était pas suffisant car,
 
 La mode est la secodne source de pollution. Par les industrie du textile, le jettage des habits mais aussi par le transport. On apelle ca
