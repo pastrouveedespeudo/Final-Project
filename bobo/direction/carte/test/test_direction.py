@@ -1,9 +1,16 @@
 import requests
 from bs4 import *
+import reverse_geocoder as rg 
+import pprint
+from collections import OrderedDict
+
 
 import ville as script_ville
 import vent as script_vent
-
+import addresse as script_addresse
+import boussole as script_boussole
+import nouvel_pos as script_pos
+import superficie as script_super
 
 """this is test functions of direction
 application. Some data can changed
@@ -18,7 +25,7 @@ def test_ville():
 
 def test_vent():
     parametre = 'crest'
-    sortie = 3.1, 180
+    sortie = 1.5, 170
     assert script_vent.le_vent(parametre) == sortie
 
 
@@ -69,6 +76,51 @@ def test_vent2():
     parametre = 'crest'
     sortie = 'sudsudouest'
     assert script_vent.vent_deux(parametre) == sortie
+
+
+
+def test_reverse():
+    coordinates = 44.7282675, 5.0236641
+    result = rg.search(coordinates)
+    liste = []
+    liste.append(str(result[0]))
+    out = [OrderedDict([('lat', '44.72836'), ('lon', '5.02722'), ('name', 'Crest'), ('admin1', 'Rhone-Alpes'), ('admin2', 'Departement de la Drome'), ('cc', 'FR')])]
+    assert result == out
+
+
+def test_dresse():
+    lat = 44.7282675
+    long = 5.0236641
+    sortie = ('Crest', 'Crest+Rhone-Alpes')
+    assert script_addresse.dress_to_ville(lat, long) == sortie
+
+
+
+def test_vent_calcul():
+    parametre = 360
+    sortie = 'nord'
+    assert script_boussole.calcul_vent(parametre) == sortie
+
+def test_pos():
+    para1 = 44.5
+    para2 = 4.25
+    para3 =  10
+    para4 = 'nord' 
+    
+    sortie = 44.41, 4.25
+    assert script_pos.long_lat(para1, para2, para3, para4) == sortie
+
+
+def test_superficie():
+
+    para = 'crest' 
+    sortie = 23.38
+    assert script_super.superficie_ville(para) == sortie
+
+
+
+
+
 
 
 
