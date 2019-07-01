@@ -801,67 +801,14 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
 
 
-
-           
-
-
-
-
-
-           
+//When user press coif2 or the input
+//search for a hairdresser
+//We display schedules.
+//We display button for visualize map
+//We make functions in case there are errors
 $("#coif2").on("click", function(e){
 
     document.getElementById('gifou').style.display = 'block';
@@ -873,11 +820,10 @@ $("#coif2").on("click", function(e){
     $.ajax({
          data:{
 	       csrfmiddlewaretoken: '{{ csrf_token }}',
-              'hairdresser':a,
-	     
-      },
-      type:"POST",
-      url:"/photo/coupe"
+              'hairdresser':a, 
+    },
+    type:"POST",
+    url:"/photo/coupe"
     })
     .done(function(data){
          if (data.error){
@@ -889,14 +835,10 @@ $("#coif2").on("click", function(e){
      else{
           jQuery("#is_save").html(data.data);
           jQuery("#monCadreAlert");
-          
           LISTE = [];
           terminal(LISTE, data)
 
-        
-        
-
-      };
+     };
   });
 });
 
