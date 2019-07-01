@@ -117,7 +117,7 @@
 
 }
 @media screen and (min-width: 1000px) and (max-width:1200px) {
-    #logo, #MENU{
+    #menu_res{
         display:none;
     }
     #section_info{
