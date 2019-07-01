@@ -1,5 +1,5 @@
 
-
+//We put or not background of video section
 function put_background(){
   document.getElementById('basic').style.background = '#ccccff';
   shutdown();
@@ -21,6 +21,7 @@ function favovo(){
 };
 
 
+//appear long haircuts section
 function coupe_longue(){
   document.getElementById('placement').style.display = 'none';
   document.getElementById('bout_fermer_longue').style.display = 'block';
@@ -34,7 +35,7 @@ function coupe_longue(){
 
 };
 
-
+//appear short haircuts section
 function coupe_courte(){
   document.getElementById('placement').style.display = 'none';
   document.getElementById('bout_fermer_court').style.display = 'block';
@@ -42,7 +43,7 @@ function coupe_courte(){
   document.getElementById('draggable16').style.display = 'block';
 };
 
-
+//appear long haircuts colors section
 function coupe_longue_coul(){
   document.getElementById('placement').style.display = 'none';
   document.getElementById('bout_fermer_longue_coul').style.display = 'block';
@@ -52,7 +53,7 @@ function coupe_longue_coul(){
 };
 
 
-
+//appear haircuts color section
 function coupe_courte_coul(){
   document.getElementById('placement').style.display = 'none';
   document.getElementById('bout_fermer_court_coul').style.display = 'block';
@@ -64,7 +65,7 @@ function coupe_courte_coul(){
 
 
 
-
+//appear bearb section
 function barbe(){
   document.getElementById('placement').style.display = 'none';
   document.getElementById('bout_fermer_barbe').style.display = 'block';
@@ -74,6 +75,8 @@ function barbe(){
 };
 
 
+
+//We take close haircut section
 function fermer1(){
   document.getElementById('placement').style.display = 'block';
   document.getElementById('bout_fermer_longue').style.display = 'none';
@@ -121,6 +124,11 @@ function fermer5(){
 
 var LISTE1 = [];
 
+
+
+//We add or delete size of our haircuts.
+//We take size with offset.
+//And define new size by click on input
 function ajout_longueur(){
 
   var a = LISTE_RESIZE[LISTE_RESIZE.length -1]
@@ -228,7 +236,6 @@ function enlever_largeur(){
 
 
 var LISTECOUPE = [];
-
 var liste_liste = [draggable,draggable3,draggable4,draggable5,draggable6,draggable7,draggable8,draggable9,
                     draggable10,draggable11,draggable12,draggable14,draggable15,draggable16,draggable18,
                     draggable19];
@@ -236,37 +243,15 @@ var liste_liste = [draggable,draggable3,draggable4,draggable5,draggable6,draggab
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//we display:none the last section
+//make appear the new
 function coiffeur(){
     document.getElementById('CONTENEUR').style.display = "none";
     document.getElementById('coifcoif').style.display = "block";
 };
 
+//we display:none the last section
+//make appear the new
 function gym(){
     document.getElementById('CONTENEUR').style.display = "none";
     document.getElementById('gymgym').style.display = "block";
@@ -274,19 +259,21 @@ function gym(){
 };
 
 
+//return to menu coif section
 function return_choice_coif(){
     document.getElementById('the_map').style.display = 'none';
     document.getElementById('mapmap').style.display = 'block';
 
 };
 
+//return to menu gym section
 function return_choice_gym(){
     document.getElementById('the_map').style.display = 'none';
     document.getElementById('mapmap_gym').style.display = 'block';
 
 };
 
-
+//return to menu gym section
 function menu_map(){
     document.getElementById('mapmap').style.display = 'none';
     document.getElementById('mapmap_gym').style.display = 'none';
@@ -297,6 +284,7 @@ function menu_map(){
 
 };
 
+//return to menu coif section
 function menuuu(){
     document.getElementById('coifcoif').style.display = 'none';
     document.getElementById('CONTENEUR').style.display = 'block';
@@ -313,17 +301,8 @@ var LISTE_COIFURE = [];
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//We make appear information
+//and stop the gift return of ajax
 function vision(){
 
      document.getElementById('gifou').style.display = 'none';
@@ -336,7 +315,8 @@ function vision(){
 
 
 
-
+//Traiting data
+//queryset is a better way
 function liste(data, LISTE){
      var c = 0;
      var c1 = 0;
@@ -919,6 +899,7 @@ function display10(){
 };
 
 
+//new section, error message is display:none;
 function display4(){
      var b = document.getElementById('coif1').value;
      document.getElementById('mapmap').style.display = 'none';
@@ -927,6 +908,9 @@ function display4(){
 };
 
 
+
+//Nothing is found
+//display a error message with return menu button
 function errors4(){
       document.getElementById('the_map').style.display = 'block';
       document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
@@ -940,7 +924,8 @@ function errors4(){
 };
 
 
-
+//Trating data of return of views
+//we want lat and longitude
 function display_map545(liste_lat, data){
     pos = ''
     for (var i = 0; i < data.length; i++){
@@ -962,7 +947,7 @@ function display_map545(liste_lat, data){
 };
 
 
-
+//new section, error message is display:none;
 function display13(){
     var b = document.getElementById('coif1').value;
     document.getElementById('mapmap').style.display = 'none';
@@ -970,7 +955,8 @@ function display13(){
     return b;
 };
 
-
+//Nothing is found
+//display a error message with return menu button
 function errors3(){
       document.getElementById('the_map').style.display = 'block';
       document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
@@ -984,6 +970,8 @@ function errors3(){
 };
 
 
+//Trating data of return of views
+//we want lat and longitude
 function map_display3(liste_lat, data){
     pos = ''
     for (var i = 0; i < data.length; i++){
@@ -1006,7 +994,8 @@ function map_display3(liste_lat, data){
     initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
 }
 
-
+//error message is display:none, we make
+//appear new section
 function display11(){
      var b = document.getElementById('coif1').value;
      document.getElementById('mapmap').style.display = 'none';
@@ -1014,7 +1003,8 @@ function display11(){
      return b
 };
 
-
+//Nothing is found
+//display a error message with return menu button
 function errors1(){
       document.getElementById('the_map').style.display = 'block';
       document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
@@ -1026,7 +1016,8 @@ function errors1(){
       document.getElementById('button_lamap').style.display = 'block';
 };
 
-
+//End of return ajax
+//we make appear the map
 function map_display2(liste_lat, data){
 
     pos = ''
@@ -1051,20 +1042,26 @@ function map_display2(liste_lat, data){
 
 };
 
-
+//start of ajax
+//display gift
 function take(){
     document.getElementById('gifou_gym').style.display = 'block';
     var a = document.getElementById('gym1').value;
     return a;
 };
 
+
+//stop animation of gift and
+//display the new section
+//end of ajax
 function stoptake(){
      document.getElementById('gifou_gym').style.display = 'none';
      document.getElementById('gymgym').style.display = 'none';
      document.getElementById('mapmap_gym').style.display = 'block';
 };
 
-
+//Trating data fo gym.
+//querryset is a better way.
 function cleandata(LISTE_GYM, data){
      
      var c = 0
@@ -1108,6 +1105,8 @@ function cleandata(LISTE_GYM, data){
 };
 
 
+
+//Verifie data if e > 4 we display:none it 
 function verif(LISTE_GYM){
   var e = 0
   if(LISTE_GYM[0] == undefined){e += 1}
@@ -1121,13 +1120,16 @@ function verif(LISTE_GYM){
   return e;
 };
 
-
+//We display:none if data isn't found
 function none1(){
      document.getElementById('info1_gym').style.display = 'none';
      e = 0;
      return e;
 };
 
+
+//Trating return of data from views.
+//querryset is a better way
 function no_none1(LISTE_GYM){
    var info_gym1 =  "<br><br><strong>" + LISTE_GYM[0] + " :</strong><br><br>" +
                          LISTE_GYM[1] + "<br>" +
@@ -1143,7 +1145,7 @@ function no_none1(LISTE_GYM){
 };
 
 
-
+//Verifie data if f > 4 we display:none it 
 function verif2(LISTE_GYM){
        var f = 0
        if(LISTE_GYM[8] == undefined){f += 1}
@@ -1161,7 +1163,7 @@ function verif2(LISTE_GYM){
 
 
 
-
+//We display:none if data isn't found
 function none2(){
      document.getElementById('info2_gym').style.display = 'none';
      f = 0
@@ -1172,7 +1174,8 @@ function none2(){
 
 
 
-
+//Trating return of data from views.
+//querryset is a better way
 function no_none2(LISTE_GYM){
    var info_gym2 =  "<br><br><strong>" + LISTE_GYM[8] + "</strong><br><br>" +
                          LISTE_GYM[9]  + "<br>" +
@@ -1189,7 +1192,7 @@ function no_none2(LISTE_GYM){
 };
 
 
-
+//Verifie data if g > 4 we display:none it 
 function verif3(LISTE_GYM){
   var g = 0
   if(LISTE_GYM[16] == undefined){g += 1}
@@ -1203,7 +1206,7 @@ function verif3(LISTE_GYM){
   return g;
 };
 
-
+//We display:none if data isn't found
 function none3(){
      document.getElementById('info3_gym').style.display = 'none';
      g = 0
@@ -1212,7 +1215,8 @@ function none3(){
 
 
 
-
+//Trating return of data from views.
+//querryset is a better way
 function no_none3(LISTE_GYM){
      var info_gym3 =  "<br><br><strong>" + LISTE_GYM[16] + "</strong><br><br>" +
                         LISTE_GYM[17] + "<br>" +
@@ -1227,6 +1231,7 @@ function no_none3(LISTE_GYM){
 
 };
 
+//Verifie data if h > 4 we display:none it 
 function verif4(LISTE_GYM){
        var h = 0
        if(LISTE_GYM[24] == undefined){h += 1}
@@ -1240,7 +1245,7 @@ function verif4(LISTE_GYM){
        return h;
 };
 
-
+//if nothing is found
 function none4(){
      document.getElementById('info4_gym').style.display = 'none';
      h = 0
@@ -1248,7 +1253,8 @@ function none4(){
 };
 
 
-
+//Trating return of data from views.
+//querryset is a better way
 function no_none4(LISTE_GYM){
 
        var info_gym4 =  "<br><br><strong>" + LISTE_GYM[24] + "</strong><br><br>" + 
@@ -1267,7 +1273,8 @@ function no_none4(LISTE_GYM){
 
 
 
-
+//If all schdules arent found
+//we make an error message
 function terminale2(LISTE_GYMGYM, LISTE_GYM){
      
    var a = document.getElementById('info1_gym')
@@ -1285,6 +1292,9 @@ function terminale2(LISTE_GYMGYM, LISTE_GYM){
 };
 
 
+
+//We display none if
+//schedules == none > 4 
 function all1(LISTE_GYM, data, LISTE_GYMGYM){
        stoptake();
 
@@ -1333,6 +1343,551 @@ function all1(LISTE_GYM, data, LISTE_GYMGYM){
 };
 
 
+//All draggables
+$( function() {
+      $("#draggable, #draggable2, #draggable3, #draggable4, #draggable5").draggable();
+} );
+$( function() {
+      $("#draggable6, #draggable7, #draggable8, #draggable9, #draggable10, #draggable11").draggable();
+} );
+$( function() {
+      $("#draggable12, #draggable14, #draggable15, #draggable16, #draggable18, #draggable19, #draggable_favoris").draggable();
+} );
 
-alert("yoyoy")
+
+//We make appear the
+//return button if map appear
+//display:none error message
+function gym_dis(){
+     var b = document.getElementById('gym1').value;
+     document.getElementById('oups').innerHTML = '';
+     document.getElementById('button_lamap').style.display = 'none';
+     return b;
+};
+
+
+
+//Message and error button
+//in case nothing is found
+function display_gym_or_not(){
+      document.getElementById('button_lamap_gym').style.display = 'block';
+    
+      document.getElementById('the_map').style.display = 'block';
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+      
+      document.getElementById('map').style.display = 'none';  
+      document.getElementById('lapmap').style.display = 'none';
+
+};
+
+
+//We auto click from a
+//return of ajax call
+function declencheur_gym1f(){
+    document.getElementById('declencheur_gym1').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+
+};
+
+
+function declencheur_gym2f(){
+    document.getElementById('declencheur_gym2').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+};
+
+
+function declencheur_gym3f(){
+    document.getElementById('declencheur_gym3').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+};
+
+
+
+function declencheur_gym4f(){
+    document.getElementById('declencheur_gym4').click()
+    document.getElementById('mapmap_gym').style.display = 'none';
+};
+function declencheur1_f(){
+        document.getElementById('declencheur1').click();
+};
+
+function declencheur2_f(){
+        document.getElementById('declencheur2').click();
+};
+
+function declencheur3_f(){
+        document.getElementById('declencheur3').click();
+};
+
+function declencheur4_f(){
+        document.getElementById('declencheur4').click();
+};
+
+
+//We switch picture onmouseon
+function image(){
+        document.getElementById("image1").src  = src="/static/img/portfolio/thumbnails/1.jpg";  
+};
+           
+
+function final_gym_display_map(data, liste_lat){
+   pos = ''
+    for (var i = 0; i < data.length; i++){
+  
+        if (data[i] == ' '){
+          liste_lat.push(pos)
+          pos = ''
+        }
+        else{
+           pos += data[i]
+       } 
+    }
+    liste_lat.push(pos)
+    console.log(liste_lat)
+    
+    document.getElementById('the_map').style.display = 'block';
+    document.getElementById('button_lamap').style.display = 'none';
+    
+    initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+   document.getElementById('button_lamap_gym').style.display = 'block';
+   document.getElementById('button_lamap').style.display = 'none';
+};
+//When user press coif2 or the input
+//search for a hairdresser
+//We display schedules.
+//We display button for visualize map
+//We make functions in case there are errors
+$("#coif2").on("click", function(e){
+
+    document.getElementById('gifou').style.display = 'block';
+    var a = document.getElementById('coif1').value;
+
+    LISTE = [];
+
+    e.preventDefault();
+    $.ajax({
+         data:{
+	       csrfmiddlewaretoken: '{{ csrf_token }}',
+              'hairdresser':a, 
+    },
+    type:"POST",
+    url:"/photo/coupe"
+    })
+    .done(function(data){
+         if (data.error){
+               $("#monCadreAlert").text(data.error);
+               $("#is_save");
+     }
+     else{
+          jQuery("#is_save").html(data.data);
+          jQuery("#monCadreAlert");
+          LISTE = [];
+          terminal(LISTE, data)
+     };
+  });
+});
+
+
+
+//If the user click on the see map from
+//the 1st schedule we make an ajax call
+//for display:none the section and
+//display the map hairdresser section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur1").on("click", function(e){
+     b = display10();
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+              'buttony':String(LISTE[0]),
+              'country':b,
+              csrfmiddlewaretoken: '{{ csrf_token }}',
+
+      },
+      type:"POST",
+      url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save"); 
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              liste_lat = []
+              if (data == "Oups nous n'avons rien trouvé"){
+                errors();
+              }
+              else{
+               map_display1(liste_lat, data)
+         };
+      }; 
+   });
+});
+
+
+  
+
+
+//If the user click on the see map from
+//the 2nd schedule we make an ajax call
+//for display:none the section and
+//display the map hairdresser section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur2").on("click", function(e){
+      
+     b = display11();
+
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+              'buttony':String(LISTE[8]),
+              'country':b,
+              csrfmiddlewaretoken: '{{ csrf_token }}',
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              liste_lat = []
+              console.log(data)
+
+              if (data == "Oups nous n'avons rien trouvé"){
+                   errors1();
+
+              }
+              else{
+                   map_display2(liste_lat, data);
+           };   
+          };
+          
+      });
+});
+
+
+
+
+
+//If the user click on the see map from
+//the 3rd schedule we make an ajax call
+//for display:none the section and
+//display the map hairdresser section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur3").on("click", function(e){
+    b = display13();
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+              'buttony':String(LISTE[16]),
+              'country':b,
+              csrfmiddlewaretoken: '{{ csrf_token }}',
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save"); 
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              liste_lat = []
+              console.log(data)
+              if (data == "Oups nous n'avons rien trouvé"){
+                   errors3();
+              }
+              else{
+                   map_display3(liste_lat, data);
+            };  
+          };
+     });
+});
+
+
+//If the user click on the see map from
+//the 4th schedule we make an ajax call
+//for display:none the section and
+//display the map hairdresser section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur4").on("click", function(e){
+     b = display4()
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony':String(LISTE[24]),
+               'country':b,
+               csrfmiddlewaretoken: '{{ csrf_token }}',
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              liste_lat = []
+              console.log(data)
+              if (data == "Oups nous n'avons rien trouvé"){
+                   errors4()
+              }
+              else{
+                   display_map545(liste_lat, data);
+            };  
+          };
+          
+      });
+  });
+
+
+
+
+
+
+//We make appear the schedules of
+//gym.
+jQuery("#gym2").on("click", function(e){
+    
+    a = take();
+    
+    LISTE_GYM = []
+    LISTE_GYMGYM = []
+    
+ e.preventDefault();
+  jQuery.ajax({
+      data:{
+          'gymnastic':a,
+          csrfmiddlewaretoken:'{{ csrf_token }}'
+      },
+      type:"POST",
+      url:"/photo/coupe"
+  })
+  .done(function(data){
+      if (data.error){
+          jQuery("#monCadreAlert").text(data.error);
+          jQuery("#is_save");
+          
+          
+      }
+      else{
+          jQuery("#is_save").html(data.data);
+          jQuery("#monCadreAlert");
+          all1(LISTE_GYM, data, LISTE_GYMGYM);
+
+      };
+      
+  });
+});
+
+
+//If the user click on the see map from
+//the 1st schedule we make an ajax call
+//for display:none the section and
+//display the map section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur_gym1").on("click", function(e){
+      
+     b = gym_dis();
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[0]),
+               'country_gym':b,
+               csrfmiddlewaretoken: '{{ csrf_token }}',
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              liste_lat = []
+              console.log(data)
+              
+              if (data == "Oups nous n'avons rien trouvé"){
+                   display_gym_or_not();
+              }
+              else{
+
+                   final_gym_display_map(data, liste_lat);
+              
+            };
+          };
+          
+      });
+  });
+
+
+
+//If the user click on the see map from
+//the 2nd schedule we make an ajax call
+//for display:none the section and
+//display the map section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur_gym2").on("click", function(e){
+
+     b = gym_dis();
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[8]),
+               'country_gym':b,
+               csrfmiddlewaretoken: '{{ csrf_token }}',
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              console.log(data)
+               if (data == "Oups nous n'avons rien trouvé"){
+                display_gym_or_not();
+              }
+              else{
+
+              liste_lat = []
+            
+              final_gym_display_map(data, liste_lat);
+          };
+          };
+      });
+});
+
+
+//If the user click on the see map from
+//the 3rd schedule we make an ajax call
+//for display:none the section and
+//display the map section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur_gym3").on("click", function(e){
+
+     b = gym_dis();
+ 
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[16]),
+               'country_gym':b,
+               csrfmiddlewaretoken: '{{ csrf_token }}',
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+                if (data == "Oups nous n'avons rien trouvé"){
+                     display_gym_or_not();
+               }
+              else{
+              liste_lat = []
+                   final_gym_display_map(data, liste_lat);
+            };    
+          };
+          
+      });
+});
+
+
+
+
+//If the user click on the see map from
+//the 4th schedule we make an ajax call
+//for display:none the section and
+//display the map section.
+//we make appear button and message error
+//if an error appear.
+jQuery("#declencheur_gym4").on("click", function(e){
+      
+     b = gym_dis();
+     
+     e.preventDefault();
+      jQuery.ajax({
+          data:{
+               'buttony_gym':String(LISTE_GYM[24]),
+               'country_m':b,
+               csrfmiddlewaretoken: '{{ csrf_token }}',
+              
+       
+          },
+          type:"POST",
+          url:"/photo/coupe"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#is_save").html(data.data);
+              jQuery("#monCadreAlert");
+              
+              if (data == "Oups nous n'avons rien trouvé"){
+                display_gym_or_not();
+              }
+              else{
+              liste_lat = []
+                   final_gym_display_map(data, liste_lat);
+              
+            };  
+          };
+          
+      });
+});
+
+
 
