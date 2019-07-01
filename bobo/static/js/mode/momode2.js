@@ -1610,7 +1610,7 @@ jQuery("#declencheur3").on("click", function(e){
               
               liste_lat = []
               console.log(data)
-              if (data == "Oups n'avons rien trouvé"){
+              if (data == "Oups nous n'avons rien trouvé"){
                    errors3();
               }
               else{
