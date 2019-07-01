@@ -648,29 +648,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="container" id='CONTENEUR'>
     <br><br>
       <h2 class="text-center mt-0">Mes services</h2><br>
@@ -815,27 +792,9 @@
   async defer></script>
 
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<SCRIPT type="text/javascript" src="/static/js/mode/coucoupe.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="/static/js/mode/momode.js"></SCRIPT>
            
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -943,12 +902,16 @@ $("#coif2").on("click", function(e){
 
 
 
-  jQuery("#declencheur1").on("click", function(e){
+
+
+
+
+
+
+jQuery("#declencheur1").on("click", function(e){
       
-     var b = document.getElementById('coif1').value;
-     document.getElementById('mapmap').style.display = 'none';
-     document.getElementById('oups').innerHTML = '';
-     
+     b = display10();
+
      e.preventDefault();
       jQuery.ajax({
           data:{
@@ -971,52 +934,21 @@ $("#coif2").on("click", function(e){
               jQuery("#is_save").html(data.data);
               jQuery("#monCadreAlert");
              
-
               liste_lat = []
-              console.log(data)
-
 
               if (data == "Oups nous n'avons rien trouvé"){
-             
-                document.getElementById('button_lamap_gym').style.display = 'none';
-                document.getElementById('the_map').style.display = 'block';
-                document.getElementById('oups').innerHTML = "Nous n'avons rien trouvé désolé";
-                
-                document.getElementById('map').style.display = 'none';  
-                document.getElementById('lapmap').style.display = 'none';
-                
-                document.getElementById('button_lamap').style.display = 'block';
-                
-                }
+                errors();
+              }
               
               else{
-          
-                  pos = ''
-                  for (var i = 0; i < data.length; i++){
-                      console.log(data[i])
-                      if (data[i] == ' '){
-                        liste_lat.push(pos)
-                        pos = ''
-                      }
-                      else{
-                         pos += data[i]
-                     } 
-                  }
-                  liste_lat.push(pos)
-                  console.log(liste_lat)
-                  console.log("fini")
-                  
-                  document.getElementById('the_map').style.display = 'block';
-                  document.getElementById('button_lamap_gym').style.display = 'none';
-       
-                  document.getElementById('button_lamap').style.display = 'block';
-                  initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
-                  
+               map_display1(liste_lat, data)
+ 
             };
           };
           
       });
   });
+
 
   
 
@@ -1589,76 +1521,7 @@ function declencheur_gym4f(){
 
 
          
-function mapo1(){
-   
-    document.getElementById('declencheur1').click()
-    document.getElementById('mapmap').style.display = 'none';
-    
 
-};
-
-function mapo2(){
-    document.getElementById('declencheur2').click()
-    document.getElementById('mapmap').style.display = 'none';
-
-
-};
-
-function mapo3(){
-    document.getElementById('declencheur3').click()
-    document.getElementById('mapmap').style.display = 'none';
-
-
-};
-
-function mapo4(){
-    document.getElementById('declencheur4').click()
-    document.getElementById('mapmap').style.display = 'none';
-
-
-};
-
-
-
-
-
-
-
-var map;
-
-function initMap(lattitude, longitude) {
-
-      document.getElementById('map').style.display = 'block';
-
-      lattitude = parseFloat(lattitude)
-      longitude = parseFloat(longitude)
-      
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: lattitude, lng: longitude},
-        zoom: 17
-      });
-      
-     var marq1 = {lat: parseFloat(lattitude), lng: parseFloat(longitude)};
-      
-      var marker1 = new google.maps.Marker({
-        position: marq1,
-        map: map,
-      });
-
-    }
-
-
-
-function stop(im, im_src){
-      document.getElementById(im).src = im_src;
-
-};
-
-function start(im, im_src){
-      document.getElementById(im).src = im_src;
-};
-
-  
 
 
 function declencheur1_f(){
@@ -1682,6 +1545,8 @@ function image(){
         document.getElementById("image1").src  = src="/static/img/portfolio/thumbnails/1.jpg";  
 };
 
+
+
 $( function() {
       $("#draggable, #draggable2, #draggable3, #draggable4, #draggable5").draggable();
 } );
@@ -1697,35 +1562,6 @@ $( function() {
 
 
 
-var LISTE_RESIZE = [];
-var LISTE_RESIZE_TAILLE_HAUTEUR = [];
-var LISTE_RESIZE_TAILLE_LARGEUR = [];
-    
-function nom_image(id, hauteur, largeur){
-      LISTE_RESIZE.push(id)
-      console.log(id)
-      var a = document.getElementById(id).height;
-      var b = document.getElementById(id).width;
-
-      LISTE1.push([id, b, a])
-
-    LISTE_FAV_FAV = []
-    LISTE_FAV_FAV.push(id)
-
-   
-    var a = document.getElementById(id);
-
-    var b = a.offsetLeft;
-    var c = a.offsetTop;
- 
-};
-
-
-function ya(){
-      var a = document.getElementById("coupe1").offsetLeft;
-      var b = document.getElementById("coupe1").offsetTop;
-      console.log(a,b)
-};
 
 
 
