@@ -29,6 +29,7 @@ def function_map2(data2):
     
     lat = ''
     long = ''
+    index = ''
     listee = []
     
     for i in data2:
