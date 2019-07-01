@@ -177,6 +177,7 @@
         {% include "bottom/bottom_page.html" %}
         {% block content2 %}
         {% endblock %}
+        <SCRIPT type="text/javascript" src="/static/js/pollution/prediction.js"></SCRIPT>
     </div>
   </section >
 
@@ -200,37 +201,16 @@
 
 <script>
 
-      function one(div, ville){
-        document.getElementById(div).style.background = "red";
-        if(ville == 'info1'){
-          document.getElementById(ville).innerHTML = 'LYON';
-        }
-        else if(ville == 'info2'){
-          document.getElementById(ville).innerHTML = 'MASYLLLIA';
-        }
-        else if(ville == 'info3'){
-          document.getElementById(ville).innerHTML = 'PARIS';
-        }
-      };
-      
-      function two(div, ville){
-        document.getElementById(div).style.background = "black";
-        document.getElementById(ville).innerHTML = '';
-      };
+
+
+
 
 
 
 
 //Here we call database and analysa2.py for lyon
-
 jQuery("#lyon").on("click", function(e){
-
-    //we "raise" the pred div, display you choose lyon city
-    //and display the loading logo
-
-    document.getElementById('pred').innerHTML = ""
-    document.getElementById('choix').innerHTML = 'Vous avez choisis Lyon';
-    document.getElementById('chargement').style.display = "block";
+    display();
 
     jQuery.ajax({
         data:{
@@ -252,15 +232,11 @@ jQuery("#lyon").on("click", function(e){
             document.getElementById('chargement').style.display = "none";      
             
             if (data == "pas de donn\u00e9e"){
-                document.getElementById('pred').innerHTML = "<br><br><strong>pas de donn\u00e9e</strong>";
+                if_function();
             }
             else{
-              
-              document.getElementById('pred').innerHTML = '<br><br>' +
-                                                          'Nous pensons que le taux de polution est de: '+
-                                                          '<strong>' +
-                                                          data +
-                                                          ' AQI</strong>';
+                else_function(data);
+
             };      
         };
         
@@ -273,12 +249,7 @@ jQuery("#lyon").on("click", function(e){
 //Here we call database and analysa2.py for paris
 jQuery("#paris").on("click", function(e){
 
-
-    //we "raise" the pred div, display you choose paris city
-    //and display the loading logo
-    document.getElementById('choix').innerHTML = 'Vous avez choisis Paris';
-    document.getElementById('chargement').style.display = "block";
-    document.getElementById('pred').innerHTML = ""
+    display();
     
     jQuery.ajax({
         data:{
@@ -300,14 +271,10 @@ jQuery("#paris").on("click", function(e){
             document.getElementById('chargement').style.display = "none";
             
           if (data == "pas de donn\u00e9e"){
-                document.getElementById('pred').innerHTML = "<br><br><strong>pas de donn\u00e9e</strong>";
+                if_function();
             }
             else{
-            document.getElementById('pred').innerHTML = '<br><br>' +
-                                                        'Nous pensons que le taux de polution est de : '+
-                                                        '<strong>' +
-                                                        data +
-                                                        '</strong>';
+                else_function(data);
 
             };            
         };
@@ -321,11 +288,7 @@ jQuery("#paris").on("click", function(e){
 jQuery("#marseille").on("click", function(e){
 
 
-    //we "raise" the pred div, display you choose marseille city
-    //and display the loading logo
-    document.getElementById('choix').innerHTML = 'Vous avez choisis Marseille';
-    document.getElementById('chargement').style.display = "block";
-    document.getElementById('pred').innerHTML = ""
+    display();
     
     jQuery.ajax({
         data:{
@@ -347,15 +310,11 @@ jQuery("#marseille").on("click", function(e){
             document.getElementById('chargement').style.display = "none";
             
           if (data == "pas de donn\u00e9e"){
-                document.getElementById('pred').innerHTML = "<br><br><strong>pas de donn\u00e9e</strong>";
+                if_function();
             }
 
             else{
-              document.getElementById('pred').innerHTML = '<br><br>' +
-                                                        'Nous pensons que le taux de polution est de : '+
-                                                        '<strong>' +
-                                                        data +
-                                                        '</strong>';
+              else_function(data);
             };            
         }; 
     });
