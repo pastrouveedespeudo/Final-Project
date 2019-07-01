@@ -862,7 +862,7 @@ function ya(){
 function errors(){
       document.getElementById('button_lamap_gym').style.display = 'none';
       document.getElementById('the_map').style.display = 'block';
-      document.getElementById('oups').innerHTML = "Nous n'avons rien trouvé désolé";
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
       
       document.getElementById('map').style.display = 'none';  
       document.getElementById('lapmap').style.display = 'none';
@@ -918,4 +918,421 @@ function display10(){
      return  b;
 };
 
-alert('dzada')
+
+function display4(){
+     var b = document.getElementById('coif1').value;
+     document.getElementById('mapmap').style.display = 'none';
+     document.getElementById('oups').innerHTML = '';
+     return b;
+};
+
+
+function errors4(){
+      document.getElementById('the_map').style.display = 'block';
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
+      
+      document.getElementById('map').style.display = 'none';  
+
+      document.getElementById('lapmap').style.display = 'none';
+      document.getElementById('button_lamap_gym').style.display = 'none';
+      
+      document.getElementById('button_lamap').style.display = 'block';
+};
+
+
+
+function display_map545(liste_lat, data){
+    pos = ''
+    for (var i = 0; i < data.length; i++){
+        console.log(data[i])
+        if (data[i] == ' '){
+          liste_lat.push(pos)
+          pos = ''
+        }
+        else{
+           pos += data[i]
+       } 
+    }
+    liste_lat.push(pos)
+    console.log(liste_lat)
+    document.getElementById('the_map').style.display = 'block';
+    document.getElementById('button_lamap_gym').style.display = 'none';
+    document.getElementById('button_lamap').style.display = 'block';
+    initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+};
+
+
+
+function display13(){
+    var b = document.getElementById('coif1').value;
+    document.getElementById('mapmap').style.display = 'none';
+    document.getElementById('oups').innerHTML = '';
+    return b;
+};
+
+
+function errors3(){
+      document.getElementById('the_map').style.display = 'block';
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
+      
+      document.getElementById('map').style.display = 'none';  
+
+      document.getElementById('lapmap').style.display = 'none';
+      document.getElementById('button_lamap_gym').style.display = 'none';
+      
+      document.getElementById('button_lamap').style.display = 'block';
+};
+
+
+function map_display3(liste_lat, data){
+    pos = ''
+    for (var i = 0; i < data.length; i++){
+        console.log(data[i])
+        if (data[i] == ' '){
+          liste_lat.push(pos)
+          pos = ''
+        }
+        else{
+           pos += data[i]
+       } 
+    }
+    liste_lat.push(pos)
+    console.log(liste_lat)
+    
+    document.getElementById('the_map').style.display = 'block';
+    document.getElementById('button_lamap_gym').style.display = 'none';
+    
+    document.getElementById('button_lamap').style.display = 'block';
+    initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+}
+
+
+function display11(){
+     var b = document.getElementById('coif1').value;
+     document.getElementById('mapmap').style.display = 'none';
+     document.getElementById('oups').innerHTML = '';
+     return b
+};
+
+
+function errors1(){
+      document.getElementById('the_map').style.display = 'block';
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+      
+      document.getElementById('map').style.display = 'none';  
+      document.getElementById('lapmap').style.display = 'none';
+      
+      document.getElementById('button_lamap_gym').style.display = 'none';
+      document.getElementById('button_lamap').style.display = 'block';
+};
+
+
+function map_display2(liste_lat, data){
+
+    pos = ''
+    for (var i = 0; i < data.length; i++){
+        console.log(data[i])
+        if (data[i] == ' '){
+          liste_lat.push(pos)
+          pos = ''
+        }
+        else{
+           pos += data[i]
+       } 
+    }
+    liste_lat.push(pos)
+    console.log(liste_lat)
+    document.getElementById('the_map').style.display = 'block';
+    document.getElementById('button_lamap_gym').style.display = 'none';
+    document.getElementById('button_lamap').style.display = 'block';
+    
+    initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+              
+
+};
+
+
+function take(){
+    document.getElementById('gifou_gym').style.display = 'block';
+    var a = document.getElementById('gym1').value;
+    return a;
+};
+
+function stoptake(){
+     document.getElementById('gifou_gym').style.display = 'none';
+     document.getElementById('gymgym').style.display = 'none';
+     document.getElementById('mapmap_gym').style.display = 'block';
+};
+
+
+function cleandata(LISTE_GYM, data){
+     
+     var c = 0
+     var c1 = 0
+     var nom = ''
+     
+     for (var i = 0; i < data.length; i++){
+       
+       if(data[i] == "'" && data[c1+1] == ']' && data[c1+2] == '['){
+         LISTE_GYM.push([nom])
+         c+=1
+         nom = ''
+       }
+       else if (data[i] == "'" || data[i] == "["){
+         {}
+       }
+       else if(data[i] == ']'){
+         {}
+       }
+       else if(data[i] == ',' && data[c1+1] == ' ' && data[c1+2] == '['){
+         LISTE_GYM.push([nom])
+         c+=1
+         nom = ''
+       }
+       else if(data[i] == ','){
+         {}
+       }
+       else if(data[i] == '"'){
+         {}
+       }
+       else{
+         nom += data[i]
+       };
+       c1 += 1
+     };
+     console.log(LISTE_GYM)
+     console.log('000000000000000')
+
+     return LISTE_GYM;
+
+};
+
+
+function verif(LISTE_GYM){
+  var e = 0
+  if(LISTE_GYM[0] == undefined){e += 1}
+  if(LISTE_GYM[1] == undefined){e += 1}
+  if(LISTE_GYM[2] == undefined){e += 1}
+  if(LISTE_GYM[3] == undefined){e += 1}
+  if(LISTE_GYM[4] == undefined){e += 1}
+  if(LISTE_GYM[5] == undefined){e += 1}
+  if(LISTE_GYM[6] == undefined){e += 1}
+  if(LISTE_GYM[7] == undefined){e += 1}
+  return e;
+};
+
+
+function none1(){
+     document.getElementById('info1_gym').style.display = 'none';
+     e = 0;
+     return e;
+};
+
+function no_none1(LISTE_GYM){
+   var info_gym1 =  "<br><br><strong>" + LISTE_GYM[0] + " :</strong><br><br>" +
+                         LISTE_GYM[1] + "<br>" +
+                         LISTE_GYM[2] + "<br>" +
+                         LISTE_GYM[3] + "<br>" +
+                         LISTE_GYM[4] + "<br>" +
+                         LISTE_GYM[5] + "<br>" +
+                         LISTE_GYM[6] + "<br>" +
+                         LISTE_GYM[7] + "<br><br>" +
+                         "<input type='button' value='Voir la map' onclick='declencheur_gym1f()'>";
+   
+    document.getElementById('info1_gym').innerHTML = info_gym1;  
+};
+
+
+
+function verif2(LISTE_GYM){
+       var f = 0
+       if(LISTE_GYM[8] == undefined){f += 1}
+       if(LISTE_GYM[9] == undefined){f += 1}
+       if(LISTE_GYM[10] == undefined){f += 1}
+       if(LISTE_GYM[11] == undefined){f += 1}
+       if(LISTE_GYM[12] == undefined){f += 1}
+       if(LISTE_GYM[13] == undefined){f += 1}
+       if(LISTE_GYM[14] == undefined){f += 1}
+       if(LISTE_GYM[15] == undefined){f += 1}
+       return f;
+};
+
+
+
+
+
+
+function none2(){
+     document.getElementById('info2_gym').style.display = 'none';
+     f = 0
+     return f;
+};
+
+
+
+
+
+
+function no_none2(LISTE_GYM){
+   var info_gym2 =  "<br><br><strong>" + LISTE_GYM[8] + "</strong><br><br>" +
+                         LISTE_GYM[9]  + "<br>" +
+                         LISTE_GYM[10]  + "<br>" +
+                         LISTE_GYM[11] + "<br>" +
+                         LISTE_GYM[12] + "<br>" +
+                         LISTE_GYM[13] + "<br>" +
+                         LISTE_GYM[14] + "<br>" +
+                         LISTE_GYM[15] + "<br><br>" +
+                         "<input type='button' value='Voir la map' onclick='declencheur_gym2f()'>";
+       document.getElementById('info2_gym').innerHTML = info_gym2;
+
+
+};
+
+
+
+function verif3(LISTE_GYM){
+  var g = 0
+  if(LISTE_GYM[16] == undefined){g += 1}
+  if(LISTE_GYM[17] == undefined){g += 1}
+  if(LISTE_GYM[18] == undefined){g += 1}
+  if(LISTE_GYM[19] == undefined){g += 1}
+  if(LISTE_GYM[20] == undefined){g += 1}
+  if(LISTE_GYM[21] == undefined){g += 1}
+  if(LISTE_GYM[22] == undefined){g += 1}
+  if(LISTE_GYM[23] == undefined){g += 1}
+  return g;
+};
+
+
+function none3(){
+     document.getElementById('info3_gym').style.display = 'none';
+     g = 0
+     return g;
+};
+
+
+
+
+function no_none3(LISTE_GYM){
+     var info_gym3 =  "<br><br><strong>" + LISTE_GYM[16] + "</strong><br><br>" +
+                        LISTE_GYM[17] + "<br>" +
+                        LISTE_GYM[18] + "<br>" +
+                        LISTE_GYM[19] + "<br>" +
+                        LISTE_GYM[20] + "<br>" +
+                        LISTE_GYM[21] + "<br>" +
+                        LISTE_GYM[22] + "<br>" +
+                        LISTE_GYM[23] + "<br><br>" +
+                        "<input type='button' value='Voir la map' onclick='declencheur_gym3f()'>";
+     document.getElementById('info3_gym').innerHTML = info_gym3;
+
+};
+
+function verif4(LISTE_GYM){
+       var h = 0
+       if(LISTE_GYM[24] == undefined){h += 1}
+       if(LISTE_GYM[25] == undefined){h += 1}
+       if(LISTE_GYM[26] == undefined){h += 1}
+       if(LISTE_GYM[27] == undefined){h += 1}
+       if(LISTE_GYM[28] == undefined){h += 1}
+       if(LISTE_GYM[29] == undefined){h += 1}
+       if(LISTE_GYM[30] == undefined){h += 1}
+       if(LISTE_GYM[31] == undefined){h += 1}
+       return h;
+};
+
+
+function none4(){
+     document.getElementById('info4_gym').style.display = 'none';
+     h = 0
+     return h;
+};
+
+
+
+function no_none4(LISTE_GYM){
+
+       var info_gym4 =  "<br><br><strong>" + LISTE_GYM[24] + "</strong><br><br>" + 
+                             LISTE_GYM[25] + "<br>" +
+                             LISTE_GYM[26] + "<br>" +
+                             LISTE_GYM[27] + "<br>" +
+                             LISTE_GYM[28] + "<br>" +
+                             LISTE_GYM[29] + "<br>" +
+                             LISTE_GYM[30] + "<br>" +
+                             LISTE_GYM[31] + "<br><br>" +
+                             "<input type='button' value='Voir la map' onclick='declencheur_gym4f()'>";
+                             
+       document.getElementById('info4_gym').innerHTML = info_gym4;
+};
+
+
+
+
+
+function terminale2(LISTE_GYMGYM, LISTE_GYM){
+     
+   var a = document.getElementById('info1_gym')
+   var b = document.getElementById('info2_gym')
+   var c = document.getElementById('info3_gym')
+   var d = document.getElementById('info4_gym')
+   
+   if(a.style.display == 'none' && b.style.display == 'none' && c.style.display == 'none' && d.style.display == 'none'){
+       
+       document.getElementById('aucas_ou').innerHTML = "<center><h3>Veuillez nous excusez nous n'avons rien trouv\u00e9</h3></center>";
+       document.getElementById('p_am_pm').style.display = 'none';
+       document.getElementById('info').style.display = 'none';
+   }
+   LISTE_GYMGYM.push([LISTE_GYM[0], LISTE_GYM[8], LISTE_GYM[16], LISTE_GYM[24]]);
+};
+
+
+function all1(LISTE_GYM, data, LISTE_GYMGYM){
+       stoptake();
+
+       LISTE_GYM = cleandata(LISTE_GYM, data);
+          
+       e = verif(LISTE_GYM);
+
+          
+       if(e > 4){
+            e = none1();
+       }
+       else{
+            no_none1(LISTE_GYM)                    
+       }     
+                              
+       f = verif2(LISTE_GYM)
+          
+       if(f > 4){
+            f = none2();
+          
+       }
+       else{
+            no_none2(LISTE_GYM)
+       }
+
+
+       g = verif3(LISTE_GYM)
+
+
+
+       if(g > 4){
+            none3();
+       }
+       else{
+            no_none3(LISTE_GYM);
+       }
+                         
+       h = verif4(LISTE_GYM);
+       if(h > 4){
+            h = none4()
+       }
+       else{
+            no_none4(LISTE_GYM)  
+       }
+       terminale2(LISTE_GYMGYM, LISTE_GYM)
+};
+
+
+
+alert("yoyoy")
+
