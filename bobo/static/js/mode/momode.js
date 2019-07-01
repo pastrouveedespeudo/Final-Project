@@ -377,7 +377,11 @@ function liste(data, LISTE){
    return LISTE
 };
 
-
+//In case they are indefined so
+//schedules not found
+//we count it
+//and in the next function if counter > 4
+//we display:none it
 function count(LISTE){
                 
      var a = 0;
@@ -394,6 +398,9 @@ function count(LISTE){
 
 };
 
+
+//We traiting 1st
+//schedules (data from views)
 function info_hairdresser1(LISTE){
      var info_coiffeur1 =  "<br><br><strong>" + LISTE[0] + " :</strong><br><br>" +
                              LISTE[1] + "<br>" +
@@ -410,7 +417,11 @@ function info_hairdresser1(LISTE){
 
 };
 
-
+//In case they are indefined so
+//schedules not found
+//we count it
+//and in the next function if counter > 4
+//we display:none it
 function count2(LISTE){
      var b = 0;
      if(LISTE[8] == undefined){b += 1};
@@ -426,6 +437,8 @@ function count2(LISTE){
 
 };
 
+//We traiting 2nd
+//schedules (data from views)
 function info_hairdresser2(LISTE){
      var info_coiffeur2 =  "<br><br><strong>" + LISTE[8] + "</strong><br><br>" +
                               LISTE[9]  + "<br>" +
@@ -442,7 +455,11 @@ function info_hairdresser2(LISTE){
 };
 
 
-           
+//In case they are indefined so
+//schedules not found
+//we count it
+//and in the next function if counter > 4
+//we display:none it 
 function count3(LISTE){
      var c = 0;
      if(LISTE[16] == undefined){c += 1};
@@ -458,7 +475,8 @@ function count3(LISTE){
 
 };
 
-
+//We traiting 3rd
+//schedules (data from views)
 function info_hairdresser3(LISTE){
 
        var info_coiffeur3 =  "<br><br><strong>" + LISTE[16] + "</strong><br><br>" +
@@ -478,8 +496,12 @@ function info_hairdresser3(LISTE){
 };
 
 
+//In case they are indefined so
+//schedules not found
+//we count it
+//and in the next function if counter > 4
+//we display:none it
 function count4(LISTE){
-
    var d = 0;
    if(LISTE[24] == undefined){d += 1};
    if(LISTE[25] == undefined){d += 1};
@@ -494,7 +516,8 @@ function count4(LISTE){
    
 };
 
-
+//We traiting 4th
+//schedules (data from views)
 function info_hairdresser4(LISTE){
 
        var info_coiffeur4 =  "<br><br><strong>" + LISTE[24] + "</strong><br><br>" + 
@@ -512,12 +535,9 @@ function info_hairdresser4(LISTE){
 
 };
 
-           
-function apo(){
-  document.getElementById('aucas_ou_coif').innerHTML = "<center><h3><br><br>Veuillez nous excusez nous n'avons rien trouv\u00e9</h3></center>";
-  document.getElementById('cons').style.display = 'none';
-  document.getElementById('coifcoifcoif').style.display = 'none';
-};
+
+
+    
 
 
 
@@ -526,7 +546,8 @@ function apo(){
 
 
 
-
+//It nothing is found for
+//the 1st schedul we display:none it
 function a_function(a){
      a = count(LISTE);
      if(a>4){
@@ -540,7 +561,8 @@ function a_function(a){
 };
 
 
-
+//It nothing is found for
+//the 2nd schedul we display:none it
 function b_function(b){
      b = count2(LISTE)
      if(b>4){
@@ -555,7 +577,8 @@ function b_function(b){
 };
 
 
-
+//It nothing is found for
+//the 3rd schedul we display:none it
 function c_function(c){
      c = count3(LISTE)
      if(c>4){
@@ -568,7 +591,8 @@ function c_function(c){
      return c;
 };
 
-
+//It nothing is found for
+//the 4th schedul we display:none it
 function d_function(d){
      d = count4(LISTE);
      if(d>4){
@@ -582,7 +606,11 @@ function d_function(d){
 };
 
 
-
+//Here we recup all data from views
+//And display shcedules.
+//If nothing appear
+//we call apo() function
+//a return to menu and str.
 function terminal(LISTE, data){
      
      vision();
@@ -609,9 +637,18 @@ function terminal(LISTE, data){
 };
 
 
+//message and button if nothing is found
+function apo(){
+  document.getElementById('aucas_ou_coif').innerHTML = "<center><h3><br><br>Veuillez nous excusez nous n'avons rien trouv\u00e9</h3></center>";
+  document.getElementById('cons').style.display = 'none';
+  document.getElementById('coifcoifcoif').style.display = 'none';
+};
 
 
 
+
+//This is video function
+//i just copy the source code.
 const constraints = {video: true};
 
 (function() {
@@ -706,34 +743,30 @@ const constraints = {video: true};
 
 
 
-
+//For raise the time out
+//and because we cant get value a creation of
+//tag for a tag create by ajax call
+//Ajax ->
+//ex : .done doc.getelement('example').innerhtml = 'bonjour';
+//doc.getelement(example).value()
+//it dont work so we create an input display none
+//associate value of data
+//and click on
 function mapo1(){
-   
     document.getElementById('declencheur1').click()
     document.getElementById('mapmap').style.display = 'none';
-    
-
 };
-
 function mapo2(){
     document.getElementById('declencheur2').click()
     document.getElementById('mapmap').style.display = 'none';
-
-
 };
-
 function mapo3(){
     document.getElementById('declencheur3').click()
     document.getElementById('mapmap').style.display = 'none';
-
-
 };
-
 function mapo4(){
     document.getElementById('declencheur4').click()
     document.getElementById('mapmap').style.display = 'none';
-
-
 };
 
 
@@ -741,9 +774,10 @@ function mapo4(){
 
 
 
-
+//Here we initialize google map
+//we recup lattitude and longitude
+//and make appear a marker.
 var map;
-
 function initMap(lattitude, longitude) {
 
       document.getElementById('map').style.display = 'block';
@@ -762,16 +796,15 @@ function initMap(lattitude, longitude) {
         position: marq1,
         map: map,
       });
-
-    }
-
-
-
-function stop(im, im_src){
-      document.getElementById(im).src = im_src;
-
 };
 
+
+//This is two function
+//for dynamic logo
+//on mouseOn and mouseOut
+function stop(im, im_src){
+      document.getElementById(im).src = im_src;
+};
 function start(im, im_src){
       document.getElementById(im).src = im_src;
 };
@@ -782,7 +815,11 @@ function start(im, im_src){
 
 
 
-
+//here it was a function for
+//favorite haircuts
+//We took the size of it
+//for siplay it
+//was an until functionality
 var LISTE_RESIZE = [];
 var LISTE_RESIZE_TAILLE_HAUTEUR = [];
 var LISTE_RESIZE_TAILLE_LARGEUR = [];
@@ -795,18 +832,19 @@ function nom_image(id, hauteur, largeur){
 
       LISTE1.push([id, b, a])
 
-    LISTE_FAV_FAV = []
-    LISTE_FAV_FAV.push(id)
+      LISTE_FAV_FAV = []
+      LISTE_FAV_FAV.push(id)
 
    
-    var a = document.getElementById(id);
+      var a = document.getElementById(id);
 
-    var b = a.offsetLeft;
-    var c = a.offsetTop;
+      var b = a.offsetLeft;
+      var c = a.offsetTop;
  
 };
 
-
+//We take size of the current haircut
+//for resize it by offeset left and top.
 function ya(){
       var a = document.getElementById("coupe1").offsetLeft;
       var b = document.getElementById("coupe1").offsetTop;
@@ -814,6 +852,13 @@ function ya(){
 };
 
 
+
+//Here we make appear
+//Nous n'avons rien trouvé désolé
+//if nothing is found.
+//We make appear button for return to menu
+//Display:none button for return to menu
+//of gym section
 function errors(){
       document.getElementById('button_lamap_gym').style.display = 'none';
       document.getElementById('the_map').style.display = 'block';
@@ -827,6 +872,14 @@ function errors(){
 };
 
 
+//We recup data from django httpresponse
+//querryset is better.
+//We recup data and trait it !
+//for have longitute and lattitude.
+//Displaying map
+//and button for return to menu
+//and display button for return menu of
+//gym section.
 function map_display1(liste_lat, data){
   pos = ''
    for (var i = 0; i < data.length; i++){
@@ -854,7 +907,10 @@ function map_display1(liste_lat, data){
 
 
 
-
+//In case of no error we begening to
+//display the first section (first input
+//enter your city
+//for make appear shedules.
 function display10(){
      var b = document.getElementById('coif1').value;
      document.getElementById('mapmap').style.display = 'none';
