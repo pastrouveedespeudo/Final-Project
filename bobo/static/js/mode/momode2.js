@@ -1007,7 +1007,7 @@ function display11(){
 //display a error message with return menu button
 function errors1(){
       document.getElementById('the_map').style.display = 'block';
-      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
       
       document.getElementById('map').style.display = 'none';  
       document.getElementById('lapmap').style.display = 'none';
@@ -1373,7 +1373,7 @@ function display_gym_or_not(){
       document.getElementById('button_lamap_gym').style.display = 'block';
     
       document.getElementById('the_map').style.display = 'block';
-      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
       
       document.getElementById('map').style.display = 'none';  
       document.getElementById('lapmap').style.display = 'none';
