@@ -206,50 +206,6 @@
 
 
 
-function bouton2(data, POS){
-      the_liste = traitement(data);
-      
-      var dep = depart(the_liste);
-      var arr = arrive(the_liste);
-      
-      POS.push([dep[0], dep[1]])
-      POS.push([arr[0], arr[1]])
-
-      document.getElementById('map').style.display = 'block';
-      
-      initMap(parseFloat(arr[0]), parseFloat(arr[1]),
-              parseFloat(dep[0]), parseFloat(dep[1]), POS)
-
-      document.getElementById('button_valider3').style.display = 'inline-block';
-};
-
-function bout3(){
-    document.getElementById('input_text').style.display = 'none';
-    document.getElementById('map2').style.display = 'none';
-    document.getElementById('button_valider').style.display = 'none';
-};
-
-
-function bout3_ajax_end(data, POS){
-    the_liste = traitement(data);
-    
-    var dep = depart(the_liste);
-    var arr = arrive(the_liste);
-    
-    POS.push([dep[0], dep[1]])
-    POS.push([arr[0], arr[1]])
-
-    
-
-    document.getElementById('button_valider2').disabled = false;
-    document.getElementById('map').style.display = 'block';
-    
-    initMap(parseFloat(arr[0]), parseFloat(arr[1]),
-            parseFloat(dep[0]), parseFloat(dep[1]), POS)
-
-    document.getElementById('button_valider3').style.display = 'inline-block';
-};
-
 
 $(document).ready(function(){
   $("#button_valider2").on("click", function(e){
