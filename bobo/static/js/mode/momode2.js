@@ -842,7 +842,7 @@ function ya(){
 function errors(){
       document.getElementById('button_lamap_gym').style.display = 'none';
       document.getElementById('the_map').style.display = 'block';
-      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 désol\u00e9";
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouv\u00e9 d\u00e9sol\u00e9";
       
       document.getElementById('map').style.display = 'none';  
       document.getElementById('lapmap').style.display = 'none';
@@ -1610,7 +1610,7 @@ jQuery("#declencheur3").on("click", function(e){
               
               liste_lat = []
               console.log(data)
-              if (data == "Oups nous n'avons rien trouvé"){
+              if (data == "Oups n'avons rien trouvé"){
                    errors3();
               }
               else{
