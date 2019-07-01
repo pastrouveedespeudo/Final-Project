@@ -1,0 +1,28 @@
+import os
+import requests
+import datetime
+import urllib.request
+from bs4 import *
+import datetime
+
+
+def period_fertilizer():
+
+    month_fertilizer = [5,6]
+
+    date = datetime.datetime.now()
+    
+    day = date.day
+    month = date.month
+    year = date.year
+
+    for i in month_fertilizer:
+        if month == i:
+            return 'oui'
+
+
+
+
+
+
+
