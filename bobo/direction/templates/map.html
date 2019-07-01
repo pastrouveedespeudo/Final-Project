@@ -251,7 +251,7 @@ $(document).ready(function(){
       
         $.ajax({
             data:{
-                 'csrfmiddlewaretoken': 'POAXLLtrZjqgiRjrJy1UE269v0QECRTxZGyDBzLeCMuF6hS0264VyqNvgSHw1XuZ',
+                csrfmiddlewaretoken: '{{ csrf_token }}',
                 data:$("#input_text").val(),
             },
             type:"POST",
