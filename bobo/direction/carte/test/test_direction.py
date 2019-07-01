@@ -11,6 +11,8 @@ import addresse as script_addresse
 import boussole as script_boussole
 import nouvel_pos as script_pos
 import superficie as script_super
+import views_function as views
+
 
 """this is test functions of direction
 application. Some data can changed
@@ -120,12 +122,20 @@ def test_superficie():
 
 
 
+def test_views_function():
+
+    para = 'crest' 
+    sortie = ((44.9386875, 5.1035092650880935), 44.7282675, 5.0236641)
+    assert views.function_map(para) == sortie
 
 
 
 
+def test_views_function2():
 
-
+    para = 'crest' 
+    sortie = ('crest', '', ['c', 'r', 'e', 's', 't'], '')
+    assert views.function_map2(para) == sortie
 
 
 
