@@ -609,7 +609,7 @@ function terminal(LISTE, data){
 };
 
 
-alert('choichi')
+
 
 
 const constraints = {video: true};
@@ -694,3 +694,172 @@ const constraints = {video: true};
     video.srcObject = stream;
   }
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+function mapo1(){
+   
+    document.getElementById('declencheur1').click()
+    document.getElementById('mapmap').style.display = 'none';
+    
+
+};
+
+function mapo2(){
+    document.getElementById('declencheur2').click()
+    document.getElementById('mapmap').style.display = 'none';
+
+
+};
+
+function mapo3(){
+    document.getElementById('declencheur3').click()
+    document.getElementById('mapmap').style.display = 'none';
+
+
+};
+
+function mapo4(){
+    document.getElementById('declencheur4').click()
+    document.getElementById('mapmap').style.display = 'none';
+
+
+};
+
+
+
+
+
+
+
+var map;
+
+function initMap(lattitude, longitude) {
+
+      document.getElementById('map').style.display = 'block';
+
+      lattitude = parseFloat(lattitude)
+      longitude = parseFloat(longitude)
+      
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: lattitude, lng: longitude},
+        zoom: 17
+      });
+      
+     var marq1 = {lat: parseFloat(lattitude), lng: parseFloat(longitude)};
+      
+      var marker1 = new google.maps.Marker({
+        position: marq1,
+        map: map,
+      });
+
+    }
+
+
+
+function stop(im, im_src){
+      document.getElementById(im).src = im_src;
+
+};
+
+function start(im, im_src){
+      document.getElementById(im).src = im_src;
+};
+
+  
+           
+
+
+
+
+
+var LISTE_RESIZE = [];
+var LISTE_RESIZE_TAILLE_HAUTEUR = [];
+var LISTE_RESIZE_TAILLE_LARGEUR = [];
+    
+function nom_image(id, hauteur, largeur){
+      LISTE_RESIZE.push(id)
+      console.log(id)
+      var a = document.getElementById(id).height;
+      var b = document.getElementById(id).width;
+
+      LISTE1.push([id, b, a])
+
+    LISTE_FAV_FAV = []
+    LISTE_FAV_FAV.push(id)
+
+   
+    var a = document.getElementById(id);
+
+    var b = a.offsetLeft;
+    var c = a.offsetTop;
+ 
+};
+
+
+function ya(){
+      var a = document.getElementById("coupe1").offsetLeft;
+      var b = document.getElementById("coupe1").offsetTop;
+      console.log(a,b)
+};
+
+
+function errors(){
+      document.getElementById('button_lamap_gym').style.display = 'none';
+      document.getElementById('the_map').style.display = 'block';
+      document.getElementById('oups').innerHTML = "Nous n'avons rien trouvé désolé";
+      
+      document.getElementById('map').style.display = 'none';  
+      document.getElementById('lapmap').style.display = 'none';
+      
+      document.getElementById('button_lamap').style.display = 'block';
+
+};
+
+
+function map_display1(liste_lat, data){
+  pos = ''
+   for (var i = 0; i < data.length; i++){
+       console.log(data[i])
+       if (data[i] == ' '){
+         liste_lat.push(pos)
+         pos = ''
+       }
+       else{
+          pos += data[i]
+      } 
+   }
+   liste_lat.push(pos)
+   console.log(liste_lat)
+   console.log("fini")
+   
+   document.getElementById('the_map').style.display = 'block';
+   document.getElementById('button_lamap_gym').style.display = 'none';
+
+   document.getElementById('button_lamap').style.display = 'block';
+   initMap(parseFloat(liste_lat[0]), parseFloat(liste_lat[1]));
+                  
+
+};
+
+
+
+
+function display10(){
+     var b = document.getElementById('coif1').value;
+     document.getElementById('mapmap').style.display = 'none';
+     document.getElementById('oups').innerHTML = '';
+     return  b;
+};
+
+alert('dzada')
