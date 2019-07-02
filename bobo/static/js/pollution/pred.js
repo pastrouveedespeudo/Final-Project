@@ -15,12 +15,12 @@ function two(div, ville){
     document.getElementById(div).style.background = "black";
     document.getElementById(ville).innerHTML = '';
 };
-function display(){
+function display(ville){
     //we "raise" the pred div, display you choose lyon city
     //and display the loading logo
 
     document.getElementById('pred').innerHTML = ""
-    document.getElementById('choix').innerHTML = 'Vous avez choisis Lyon';
+    document.getElementById('choix').innerHTML = 'Vous avez choisis ' + ville;
     document.getElementById('chargement').style.display = "block";
 
 };
