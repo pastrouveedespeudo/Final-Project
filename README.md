@@ -3,21 +3,19 @@ aide + info et calme
 
 parle de cause et conséquence
 
-rajouter a mode des truks genre quand le mec clique mettre un message savais tu que la mode est
-l a seconde source de pollution? ex: habits -> jeter les habits, son transport sa teinture polluent
+
 
 faire le dernier texte + 
 
 faire mention légale 
 
-traquer les bug (marseille ca met lyon, bouchons et marseille, menu prediction se met pas en rouge, t'as oublié des titres
-sur des pages, le fond active directe la camera(faire un truk de conteneur), les video se mettent en route en allant sur la page)
+traquer les bug
+
+le fond active directe la camera(faire un truk de conteneur), les video se mettent en route en allant sur la page)
 
 refais tous les textes, par exemple dread ^^ au lieu de texte d'intro explique pourquoi ste page
 
 remplis la database 
-
-et faire l'explication réfléchis mec + les transi 
 
 entre tu peux faire greffegreffe 
 
