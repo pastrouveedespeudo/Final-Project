@@ -7,6 +7,7 @@ traquer les bug
 
 entre tu peux faire greffegreffe 
 
+mettre les cooki v6 avec csrf cookie
 
 # ORGANISATION photo
 
