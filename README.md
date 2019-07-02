@@ -1,3 +1,16 @@
+faire le dernier texte + 
+
+faire mention légale 
+
+traquer les bug (marseille ca met lyon)
+
+remplis la database 
+
+et faire l'explication réfléchis mec + les transi 
+
+entre tu peux faire greffegreffe 
+
+
 # ORGANISATION photo
 
 #Il y a les pages principages: coupe, tendance et habits
