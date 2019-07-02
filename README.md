@@ -1,5 +1,10 @@
 CE NEST PAS UN SITE DE VENTE NI APPLICATION MOBILE C UN SITE INFORMATIF
 
+oublie pas que c'est l'été les gens ont confiance en eux la, ils petent la forme
+pour peu qu'un membre du jury se mette pile poile en couple ou qu'il reussisse un truk ou a l'inverse qu'il se fasse ken ou ne reussise
+pas un truk du coup l'azpproche vers se site web et ste thématique la pollution et la mode va etre grave changer donc faut pas pencher
+vers un truk ou vers un autre faut etre enter les deux certaines emotions sont amplifié la
+
 parle de cause et conséquence
 
 rajouter a mode des truks genre quand le mec clique mettre un message savais tu que la mode est
