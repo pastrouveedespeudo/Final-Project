@@ -3,12 +3,14 @@
 function put_background(){
   document.getElementById('basic').style.background = '#ccccff';
   shutdown();
-  document.getElementById('StartVideo').click();
+  
 
   document.getElementById('fond1').style.display = "inline";
   document.getElementById('fond').style.display = "none";
 
 };
+
+
 function get_background(){
   notshutdown();
   document.getElementById('fond1').style.display = "none";
