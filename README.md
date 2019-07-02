@@ -7,7 +7,9 @@ faire le dernier texte +
 
 faire mention légale 
 
-traquer les bug (marseille ca met lyon)
+traquer les bug (marseille ca met lyon, bouchons et marseille)
+
+refais tous les textes, par exemple dread ^^ au lieu de texte d'intro explique pourquoi ste page
 
 remplis la database 
 
