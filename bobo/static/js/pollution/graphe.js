@@ -13,6 +13,7 @@ function lyon(){
   document.getElementById('choix').innerHTML = 'Vous avez choisis Lyon'
   document.getElementById('section_graphe').style.display = 'block';
   LISTE_AJAX.push('lyon')
+  document.getElementById('bouchon').style.display = 'block';
 };
 
 
@@ -21,6 +22,7 @@ function paris(){
   document.getElementById('choix').innerHTML = 'Vous avez choisis Paris'
   document.getElementById('section_graphe').style.display = 'block';
   LISTE_AJAX.push('paris')
+  document.getElementById('bouchon').style.display = 'block';
 };
 
 
@@ -29,7 +31,11 @@ function marseille(){
   document.getElementById('choix').innerHTML = 'Vous avez choisis Marseille'
   document.getElementById('section_graphe').style.display = 'block';
   LISTE_AJAX.push('marseille')
+  document.getElementById('bouchon').style.display = 'none';
+
 };
+
+
 
 function hover(div){
     document.getElementById(div).style.border = "1px solid black";
