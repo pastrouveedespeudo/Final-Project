@@ -1,21 +1,9 @@
-aide + info et calme
-
-
-parle de cause et conséquence
-
-
 
 faire le dernier texte + 
 
 faire mention légale 
 
 traquer les bug
-
-le fond active directe la camera(faire un truk de conteneur), les video se mettent en route en allant sur la page)
-
-refais tous les textes, par exemple dread ^^ au lieu de texte d'intro explique pourquoi ste page
-
-remplis la database 
 
 entre tu peux faire greffegreffe 
 
