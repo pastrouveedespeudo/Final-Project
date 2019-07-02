@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
   <html lang="fr">
 
@@ -68,6 +69,7 @@
 
     </div>
   </header>
+  
   <div id="separate10">
     <br><br><br><br>
   </div>
@@ -101,14 +103,7 @@
 
 
 
-            <style>
-              #image_coiffure_href{
 
-              }
-              #h_coiffure:hover{
-                color:#ff8080;
-              }
-            </style>
 
 
 
@@ -141,16 +136,6 @@
                 </div>
             </div><br><br>
 
-
-            <style>
-              #href_coiffeur{
-
-              }
-              #image_coiffeur_href{
-
-              }
-              
-            </style>
 
             
             <div id="les_coiffeurs_div">
@@ -200,7 +185,7 @@
           <div class="col-sm" id="invi1">                                                           
           </div>
 
-            <div class="col-xs-12 col-md-12 col-lg-5" id="div_mode">
+            <div class="col-xs-12 col-md-12 col-lg-5" id="div_mode" style='height:100%;'>
               <div id="la_mode">
                 <a href="/photo/tendance" id="tendance_href" title="Rubrique Tendance !">
                   <h3 id="mode_h2">La mode</h3>
@@ -233,18 +218,6 @@
               </div><br><br><br>
 
 
-            <script>
-                function coul(element){
-                  document.getElementById(element).style.color = "#ff8080";
-                };
-
-                function coul1(element){
-                  document.getElementById(element).style.color = "black";
-
-                };
-
-
-            </script>
 
 
 
@@ -354,33 +327,6 @@
         
 
 
-      <script>
-        function image1(image_bordure, image, path){
-          document.getElementById(image).src = path
-          document.getElementById(image_bordure).style.border = "5px solid transparent";
-          
-        };
-        function image2(image_bordure, image, path){
-          document.getElementById(image).src = path
-          document.getElementById(image_bordure).style.border = "";
-        };
-
-        
-        function image3(image){
-          document.getElementById(image).style.border = "5px solid transparent"; 
-        };
-        function image4(image){
-          document.getElementById(image).style.border = "";
-        };
-      </script>
-
-
-
-
-
-
-
-
 
         <div class="container">
             <div class="row">
@@ -395,7 +341,13 @@
                   <h4 id="titre_info_pollu">Nos informations sur la pollution</h4>
                 </a>
                 <a href="/polution/info_pollu" title="Voir les informations">
-                  <img src="/static/v2/info.jpg" alt="" height="250" width="450"/>
+                  <img src="/static/v2/info.jpg" alt="" height="250" width="98%"
+                  id="image_pollu_info"
+                  onMouseOver="image1('image_pollu_info', 'image_pollu_info',
+                                    '/static/v2/nat1.jpg')";
+                  onMouseOut="image2('image_pollu_info', 'image_pollu_info',
+                                    '/static/v2/info.jpg')";/><center><br>
+
                 </a><br><br>
                 <p style='text-align:justify;'>
                   Le savoir est transmis de génération en génération,
@@ -418,6 +370,11 @@
               
               <div class="col-xs-0 col-md-0 col-lg-2" >
               </div>
+
+
+
+
+
               
               <div class="col-xs-12 col-md-12 col-lg-5">
               <br>
@@ -426,7 +383,12 @@
                 <h4 id='titre_graphique'>Nos Graphiques</h4>
               </a>
               <a href="/polution/graphe" title="Voir les graphiques !">
-                <img src="/static/v2/graphique.jpg" alt="" height="250" width="450"/><br><br>
+                <img src="/static/v2/graphique.jpg" alt="" height="250" width="98%"
+                  id="image_pollu_graphique"
+                  onMouseOver="image1('image_pollu_graphique', 'image_pollu_graphique',
+                                    '/static/v2/nat2.jpg')";
+                  onMouseOut="image2('image_pollu_graphique', 'image_pollu_graphique',
+                                    '/static/v2/graphique.jpg')";/><center><br>
               </a>
                 <p style='text-align:justify;'>
                   Par les graphiques nous vous proposons de visualiser les
@@ -448,8 +410,15 @@
                 </a></center><br>
               </div>
 
+
+
+
+
+
+
+
               
-            <div class="col-xs-0 col-md-0 col-lg-4" >
+            <div class="col-xs-0 col-md-0 col-lg-5" >
               <br>
               <a href="/polution/donnée" title="Voir les données !">
                 <h4 id="donnée"
@@ -457,22 +426,24 @@
                 Nos données sur la pollution</h4>
               </a>
               <a href="/polution/donnée" title="Voir les données !">
-                <img src="/static/v2/données.jpg" alt="" height="250" width="450"/><br><br>
-              </a>            
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br><br>
+                <img src="/static/v2/données.jpg" alt="" height="250" width="98%"
+                  id="image_pollu_donnée"
+                  onMouseOver="image1('image_pollu_donnée', 'image_pollu_donnée',
+                                    '/static/v2/nat3.jpg')";
+                  onMouseOut="image2('image_pollu_donnée', 'image_pollu_donnée',
+                                    '/static/v2/données.jpg')";/><center><br>
+              </a><p style='text-align:justify;width:450px;'>
+               <p style='text-align:justify;'>
+                Tous ce que nous savons aujourd'hui est basé sur des faits  
+                démontrés. Nous vous proposons à travers ce site web de prendre
+                connaissance de quelques données sur la pollution en temps réel.
+                <br>Que ce soit le taux de pollution (source <i>Airplumlabs</i> actuel
+                le nombre de kilomètre de bouchon <i>Mon coyaute</i> en temps réel
+                ou la météo de la ville <i>Openweather</i> nous vous proposons des données
+                uniquement vérifiées et actualisées.<br>
                 <center><a href="/polution/donnée" class="bouton1"
                   title="Voir les données">Voir les données !
-                </a></center><br>
+                </a></p></center><br>
 
                 
                 <br><br>
@@ -483,26 +454,33 @@
                 Notre carte des Vents</h4>
               </a>
               <a href="/direction/map" title="Voir la carte !">
-                <img src="/static/v2/vent.jpg" alt="" height="250" width="450"/><br><br>
-              </a>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br><br>
+                <img src="/static/v2/vent.jpg" alt="" height="250" width="98%"
+                  id="image_pollu_vent"
+                  onMouseOver="image1('image_pollu_vent', 'image_pollu_vent',
+                                    '/static/v2/nat5.jpg')";
+                  onMouseOut="image2('image_pollu_vent', 'image_pollu_vent',
+                                    '/static/v2/vent.jpg')";/><center><br>   
+              </a><p style='text-align:justify;width:450px;'>
+                <p style='text-align:justify;'>
+                La pollution est transportable par les airs et se déplace
+                selon le grès du vent. Le vent lui est l'oeuvre de la différence
+                de température de la planète. Le vent verticale
+                nous néttoie la pollution par l'air
+                froid situé en haute altitude. Le vent horrizontal
+                lui balaie la pollution présente chez nous; mais 
+                il peut aussi la transporter chez nos voisins.<br>
+                C'est pourquoi nous vous proposons de le suivre
+                en partant de chez vous, de chez vos amis ou de votre
+                famille.
+                Laissez-vous transporter !
+                <br><br>
                 <center><a href="/direction/map" class="bouton1"
                   title="Voir la carte">Voir la carte !
-                </a></center><br>
+                </a></p></center><br>
             </div>
 
             
-            <div class="col-xs-0 col-md-0 col-lg-3">
+            <div class="col-xs-0 col-md-0 col-lg-2">
             </div>
 
             
@@ -513,47 +491,44 @@
                 Nos Pré-voyances</h4>
               </a>
               <a href="/polution/prediction" title="Voir nos prédictions">
-                <img src="/static/v2/prédiction.jpg" alt="" height="250" width="450"/><br><br>
-              </a>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br><br>
+                <img src="/static/v2/prédiction.jpg" alt="" height="250" width="98%"
+                  id="image_pollu_prédiction"
+                  onMouseOver="image1('image_pollu_prédiction', 'image_pollu_prédiction',
+                                    '/static/v2/nat4.jpg')";
+                  onMouseOut="image2('image_pollu_prédiction', 'image_pollu_prédiction',
+                                    '/static/v2/prédiction.jpg')";/><center><br>  
+              </a><p style='text-align:justify;width450px;'>
+                                                    
+                Et si vous aussi vous pouviez savoir quel est le taux actuel ?
+                Nous vous proposons de le savoir à travers cette rubrique !
+                Puis-je ouvrir la fenetre ? allez courir ? Et si je m'informai
+                sur les risques en regardant le taux de pollution ?
+                Afin de vous prévenir nous nous sommes basés sur plusieurs
+                situations simillaires à celle-ci et avant noté le <strong>taux moyen</strong>
+                de pollution. Attention n'allez pas courir si le score est en rouge !
+                <br><br>
 
                 <center><a href="/polution/prediction" class="bouton1"
                   title="Voir les prédictions">Voir les prédictions !
-                </a></center><br>
+                </a></p></center><br>
 
                 <div id="article3">
 
                   <h4>Article</h4>
-                  Sur la mode
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  sur l'eau
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-                  ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
+                  <h4><strong>Sur la mode
+                  La mode a des conséquences déstructrices.
+                  Elle est la seconde cause de pollution dans le monde.
+                  Par toutes ces étapes de production la mode pollue.
+                  Par toutes ces étapes de production la mode tue.
+                  Par toutes ces étapes de production la pollution évolue.
+                  Par les industries du textiles par le transport
+                  par le deversement de polluant dans l'eau,
+                  par la teinture, par l'impression, par la récolte...</strong></h4><br><br>
+                  
+                  <h3><strong><i>https://www.lebonbon.fr/paris/<br>mode/carte-industrie-de-la-mode-et-
+                  pollution-chine-nayla-ajaltouni-inditex-nrdc-ipe/</strong></i></h3><br><br>
+                  <h3><strong><i>https://www.sloweare.com/la-mode-sur-le-podium-des-industries-polluantes/
+                  </strong></i></h3><br><br>
 
                 </div>
  
@@ -567,29 +542,22 @@
 
 
 
-            <div id="article4">
+            <div id="article4" class="col-xs-12 col-md-12" style='word-wrap: break-word;'>
 
-              <h4>Article</h4>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
-              ccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaa<br>
+              <h4><strong>Sur la mode
+              La mode a des conséquences déstructrices.
+              Elle est la seconde cause de pollution dans le monde.
+              Par toutes ces étapes de production la mode pollue.
+              Par toutes ces étapes de production la mode tue.
+              Par toutes ces étapes de production la pollution évolue.
+              Par les industries du textiles par le transport
+              par le deversement de polluant dans l'eau,
+              par la teinture, par l'impression, par la récolte...</strong></h4><br><br>
+              
+              <h3><strong><i>https://www.lebonbon.fr/paris/<br>mode/carte-industrie-de-la-mode-et-
+              pollution-chine-nayla-ajaltouni-inditex-nrdc-ipe/</strong></i></h3><br><br>
+              <h3><strong><i>https://www.sloweare.com/la-mode-sur-le-podium-des-industries-polluantes/
+              </strong></i></h3><br><br>
 
           </div>
 
@@ -611,19 +579,25 @@
                   Notre Solution</h4><br>
                 </a>
                 <a href="/polution/machine_a_o">
-                  <img src="/static/v2/pluie.jpg" alt="" height="250" width="400"/>
+                  <img src="/static/v2/pluie.jpg" alt="" height="250" width="98%"
+                  id="image_pollu_pluie"
+                  onMouseOver="image1('image_pollu_pluie', 'image_pollu_pluie',
+                                    '/static/v2/nat6.jpg')";
+                  onMouseOut="image2('image_pollu_pluie', 'image_pollu_pluie',
+                                    '/static/v2/pluie.jpg')";/><center><br>  
                 </a>
               </div>
               
               <div class="col-xs-12 col-md-12 col-lg-6">
-              <br><br><br>
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+              <br><br><br><p style='text-align:justify;width:450px;'>
+                <p style='text-align:justify;'>
+                La pollution peut etre diminué ! Par la conscience collective
+                d'une mais aussi par le mauvais temps ! Le mauvais temps
+                par le vent ou par le froid va pouvoir nettoyer les masses
+                d'air mais aussi par la pluie qui les fera "tomber".
+                Peut on inventer la pluie ?<br>
+                Selon ces témoignanges oui !
+                </p>
                 <br><br><br>
                 <center><a href="/polution/machine_a_o" class="bouton1"
                   title="Voir la solution">Voir la solution !
@@ -641,267 +615,22 @@
 
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </div>
-  </div>
-</header>  
 
 
 
 
+    <section class="page-section bg-dark text-white" style='margin-top:350px;'>
 
-
-
-
-
-
-
-
-
-<style>
-#paragraphe{
-  text-align:justify;
-  font-size:50%;
-  margin-left:3px;
-  margin-right:3px;
-}
-#div_coiffure{
-  background:#;
-}
-
-#les_coiffeurs_div{
-  background:#;
-}
-#la_mode{
-  background:#;
-}
-#paragraphe2{
-  text-align:justify;
-  font-size:100%;
-  margin-left:3px;
-  margin-right:3px;
-}
-#salle_de_gym{
-  background:#;
-}
-#vetement_row_background{
-  background:#;
-}
-
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-        
-
-  <script>
-  function preloadImage(url)
-  {
-      var img=new Image();
-      img.src=url;
-  }
-  preloadImage("/static/v2/coiffure2.jpg")
-  preloadImage("/static/v2/horraire_sport.png")
-  preloadImage("/static/v2/salon2.png")
-  preloadImage("/static/v2/vetementvetement2.png")
-  preloadImage("/static/v2/mode22.png")   
-  </script>
-
-
- 
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-My_profil      My_pollution
-
-<a href="/administrateur/tendance"><p>Notre tendance</p></a>
-<a href="/photo/coupe"><p>J'essaie des coiffures</p></a>
-<a href="/photo/coupe"><p>Mes coiffeurs les plus proches de chez moi</p></a>
-<a href="/photo/coupe"><p>Mes salles de gym les plus proches de chez moi</p></a>
-<a href="/photo/habits"><p>J'essaie des vetements</p></a>
-
-<a href="/polution/graphe"><p>Les graphiques sur nos données pollutions</p></a>
-<a href="/polution/donnée"><p>Nos données pollution</p></a>
-<a href="/polution/donnée"><p>Notre carte des vents</p></a>
-<a href="/polution/prediction"><p>Nos prévisions</p></a>
-<a href="/polution/info_pollu"><p>Nos informations</p></a>
-<a href="/polution/machine_a_o"><p>Notre solution</p></a>
-
-
-                  
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-
-
-
-
-
-#separate10{
-  background:#ccccff;
-}
-#article_journal{
-  font-size:80%;
-  margin-top:-60px;
-  text-align:justify;
-}
-
-#tendance_href{
-  color:black;
-}
-#tendance_href:hover{
-  color:#ff8080;
-}
-
-
-a.bouton1 {
-padding: 10px 30px; 
-background: #809fff; 
-color: white; 
-}
-a.bouton1:hover {
-background: #ff8080; 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  #div_mode{
-    height:1150px;
-
-  }
-  #tendance_href{
-    margin-left:100px;
-  }
-
-  #edite{
-    font-size:0.9em;
-  }
-  #coif{
-    width:50%;
-    height:70%;
-  }
-  #logo{
-    width:15%;
-  }
-  #titre_created{
-    margin-left:-5%;
-  }
-  #logo2{
-    margin-top:-50%;
-  }
-  #mode_picture{
-    width:80%;
-    
-  }
-</style>
-
-<script>
-function switch_picture1(image, source){
-  document.getElementById(image).src = source;
-}
-function switch_picture2(image, src){
-
-}
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Separate section -->  
-    <div id="separate1">
-      <br><br><br>
-    </div>
-
-
-    <!-- Portfolio section. We present our project on a slider (left-right-speed 10) -->  
-    <section class="page-section bg-dark text-white">
+                                                      
       <div class='container'>
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-4" id='bg1'>
-            <center><h2>Nos autres projets</h2></center>
+                                                      
+          <div class="col-xs-12 col-sm-12 col-md-12" id='bg1'>
+                                                      
+            <center><h2 id="my_project">Nos autres projets</h2></center>
             <br>
-            <div id='bg11'>
-              <marquee direction="right" id='marc'scrollamount="10" height="210">
+            <div>
+              <marquee direction="right" id='marc'scrollamount="10" height="210" width="100%;">
                 <a href="https://github.com/pastrouveedespeudo/mot_fonction">
                   <img src='/static/img/phrase.png' onmouseover="stop('im4')" onmouseout="start()"
                     alt="little white bonhome of the kind Cetem who holds a sign with a sentence on it">
@@ -941,321 +670,289 @@ function switch_picture2(image, src){
               </marquee>
               <br>
             </div>
-            <p id='status'></p>
-            <div id='description'></div>
+            <p id='status'>
+            <center><div id='description'></p></div></center>
+            
           </div>
-          <br>
-
-          
-          <!-- This is our link for the current project --> 
-          <div class="col-xs-12 col-sm-12 col-md-3"></div>
-          <br>
-          <div class="col-xs-12 col-sm-12 col-md-4" id='bg2'>
-            <br>
-            <h2><center>Nos liens tuto</center></h2>
-            <br>
-            <ul>
-              <a href ="https://www.femmeactuelle.fr/beaute/news-beaute/video-camille-cerf-miss-france-2015-son-tuto-pour-se-maquiller-dans-un-train-2077617">
-                <li>Les conseils beautés d'une Miss France</li>
-              </a>
-              <a href="https://www.youtube.com/watch?v=UfuGIZFJ01U">
-                <li>Tuto pour la vraie vie</li>
-              </a>
-              <a href="https://www.grazia.fr/beaute/maquillage/tutoriels-maquillage-nos-conseils-avant-de-s-y-mettre-813991">
-                <li>Maquillage et vidéo</li>
-              </a>
-              <a href="https://www.fr.clinique.com/thewink/how-tos">
-                <li>Le maquillage et des astuces cliniques</li>
-              </a>
-            </ul>
-          </div>
-        </div>
 
 
-        <!-- Portfolio Openclassrooms section. We present our OC project and we alert that our projects start with project -->  
+        
+
+      </div>
+    </div>    <br><br>
+
+
+        <center>
         <div class='row'>
 
-        <div class="col-xs-12 col-sm-12 col-md-3" id='bg4'></div>
-        <br>
-        <div class="col-xs-12 col-sm-12 col-md-3" id='bg4'></div>
-        <br>
-        <div class="col-xs-12 col-sm-12 col-md-4" id='bg3'>
+        <div class="col-xs-12 col-sm-12 col-md-12" style='border:1px solid maroon;'>
           <br><br> 
           <center><h4>Nos projets Openclassrooms</h4></center>
           <br>
+                                                      
           <a href='https://github.com/pastrouveedespeudo'>
-            <center><img src='/static/img/oc.jpg' onclick='alert("Nos projets OC commencent par projet")' id="oc_alert"
+            <center><img src='/static/img/oc.jpg' onclick='alert("Nos projets OC commencent par projet")' id="oc_image"
               alt="Logo Openclassrooms background white, black writting">
             </center>
           </a>
-          <br>
-        </div><br>
-      </div>
-    </div>    
-    <br>
 
-
-    <!-- Second separate div for visual aspect -->  
-    <div>
-      <br><br><br>
-      <div id='separate1' style="background:b3d9ff;">
-        <br><br>
-      </div>
-    </div>
-    <br><br><br><br><br><br><br>
-
-
-    <!-- Social section - Facebook, Twitter and Snapchat; and their links -->                            
-    <div class="container text-center">                           
-      <h2 class="mb-4">
-        Abonne toi sur nos reseaux sociaux !
-      </h2>  
-      <a href='https://www.facebook.com/'>
-        <img src = "/static/img/portfolio/icone/facebook.png"/ id="im10">
-      </a>
-      <a href='https://twitter.com/'>
-        <img src = "/static/img/portfolio/icone/twitter.png"/ id="im11">
-      </a>                              
-      <a href='https://www.snapchat.com/l/fr-fr/download'>
-        <img src = "/static/img/portfolio/icone/snap.png"/ id="im12">
-      </a>            
-    </div>
-  </section>
-
-
-  <!-- Contact Section we decide to let base model-->
-    <section class="page-section" id="contact">
-      <div class="container">                         
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">                        
-            <h2 class="mt-0">
-              Let's Get In Touch!
-            </h2><hr class="divider my-4">                         
-            <p class="text-muted mb-5">
-                Ready to start your next project with us?
-                Give us a call or send us an email and we
-                will get back to you as soon as possible!
-            </p>                          
-          </div>
-        </div>                            
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">                         
-            <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-            <div>
-              +1 (202) 555-0149
-            </div>                          
-          </div>                         
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-            <!-- Make sure to change the email address in anchor text AND the link below! -->
-            <a class="d-block" href="mailto:jeanbaptisteservais26@gmail.com">
-              jeanbaptisteservais26@gmail.com
-            </a>
-          </div>                           
         </div>
-      </div>                               
-    </section>
+      </center>
 
-    
-    <!-- Footer -->
-    <footer class="bg-light py-5">
-      <div class="container">
-        <div class="small text-center text-muted">
-          Copyright &copy; 2019 - Start Bootstrap
-        </div>
-      </div>
-    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </body>
 </html>
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="/static/vendor/jquery/jquery.min.js"></script>
-  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-  <!-- Custom scripts for this template -->
-  <script src="/static/js/creative.min.js"></script>
-  <script type="text/javascript" src="/static/js/home1.js"></script>
 
+                                                    
 
+                                                      
 
 
 
 
 
 
-
-
-
-
-
-
- <style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  #article4,
-  #article2{
-    display:none;
-  }
-
-
-
-
-
-
-
-
-
-  @media screen and (min-width: 100px) and (max-width:1000px) {
-    #article{
-      display:none;
-    }
-    #article3{
-      display:none;
-    }
-    #article2{
-      display:block;
-    }
-    #article4{
-      display:block;
-    }
-  }
-
-
-  @media screen and (min-width: 100px) and (max-width:700px) {
-    #text_vetement{
-      float:left;
-    }
-    #vetement_image{
-      float:left;
-
-    }
-  }
-
-
-  @media screen and (min-width: 100px) and (max-width:700px) {
-    #invi1{
-      display:none;
-    }
-  }
-
-
-  @media screen and (min-width: 800px) and (max-width:1000px) {
-    #vetement_row_background{
-      margin-top:100px;
-    }
-  }
-  
-
-  @media screen and (min-width: 700px) and (max-width:800px) {
-    #vetement_row_background{
-      margin-top:200px;
-    }
-  }
-
-
-  @media screen and (min-width: 600px) and (max-width:700px) {
-    #vetement_row_background{
-      margin-top:200px;
-    }
-  }
-  @media screen and (min-width: 550px) and (max-width:600px) {
-    #vetement_row_background{
-      margin-top:190px;
-    }
-  }
-
-  @media screen and (min-width: 500px) and (max-width:550px) {
-    #vetement_row_background{
-      margin-top:250px;
-    }
-  }
-
-
-
-
-
- 
-    #h41{
-      margin-left:10px;
-    }
-
-    
-
-    #sec{
-      background:#white;
-    }
-    #separate1{
-      background:#white;
-    }
-    
-    a:hover{
-      text-decoration: none;
-    }
-
-    #my_popo{
-      font-size: 90px;
-      color:black;
-    }
-    #MYPROF2{
-      font-size:90px;
-      color:black;
-    }
-    #MY_POLLU_TITLE:hover{
-      color:white;
-    }
-    #my_prof_h:hover{
-      color:white;
-    }
-    #title_mode:hover{
-      color:white;
-    }
-
-
-   h1{font-family:Comic Sans MS, Comic Sans;
-      color:black;}
-   h4{
-      font-family:Comic Sans MS, Comic Sans;
-      color:black;
-    }
-  </style>
 
 
 
 <style>
+#description{
+  height:200px;
+  text-align:justify;
+  width:100%;
+}
+#status{
+  height:50px;
+}
+h3{
+  color:black;
+}
+#paragraphe{
+  text-align:justify;
+  font-size:50%;
+  margin-left:3px;
+  margin-right:3px;
+}
+#div_coiffure{
+  background:#;
+}
+
+#les_coiffeurs_div{
+  background:#;
+}
+#la_mode{
+  background:#;
+}
+#paragraphe2{
+  text-align:justify;
+  font-size:100%;
+  margin-left:3px;
+  margin-right:3px;
+}
+#salle_de_gym{
+  background:#;
+}
+#vetement_row_background{
+  background:#;
+}
+
+
+#separate10{
+  background:#ccccff;
+}
+#article_journal{
+  font-size:80%;
+  margin-top:-60px;
+  text-align:justify;
+}
+
+#tendance_href{
+  color:black;
+}
+#tendance_href:hover{
+  color:#ff8080;
+}
+
+
+a.bouton1 {
+padding: 10px 30px; 
+background: #809fff; 
+color: white; 
+}
+a.bouton1:hover {
+background: #ff8080; 
+}
+
+
+
+  #div_mode{
+    height:1150px;
+
+  }
+  #tendance_href{
+    margin-left:100px;
+  }
+
+  #edite{
+    font-size:0.9em;
+  }
+  #coif{
+    width:50%;
+    height:70%;
+  }
+  #logo{
+    width:15%;
+  }
+  #titre_created{
+    margin-left:-5%;
+  }
+  #logo2{
+    margin-top:-50%;
+  }
+  #mode_picture{
+    width:80%;
+    
+  }
+i{
+  color:black;
+}
+#article4,
+#article2{
+  display:none;
+}
+
+@media screen and (min-width: 100px) and (max-width:1000px) {
+  #article{
+    display:none;
+  }
+  #article3{
+    display:none;
+  }
+  #article2{
+    display:block;
+  }
+  #article4{
+    display:block;
+  }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:700px) {
+  #text_vetement{
+    float:left;
+  }
+  #vetement_image{
+    float:left;
+
+  }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:700px) {
+  #invi1{
+    display:none;
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width:1000px) {
+  #vetement_row_background{
+    margin-top:100px;
+  }
+}
+
+
+@media screen and (min-width: 700px) and (max-width:800px) {
+  #vetement_row_background{
+    margin-top:200px;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width:700px) {
+  #vetement_row_background{
+    margin-top:200px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width:600px) {
+  #vetement_row_background{
+    margin-top:190px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width:550px) {
+  #vetement_row_background{
+    margin-top:250px;
+  }
+}
+
+
+
+
+
+
+  #h41{
+    margin-left:10px;
+  }
+
+  
+
+  #sec{
+    background:#white;
+  }
+  #separate1{
+    background:#white;
+  }
+  
+  a:hover{
+    text-decoration: none;
+  }
+
+  #my_popo{
+    font-size: 90px;
+    color:black;
+  }
+  #MYPROF2{
+    font-size:90px;
+    color:black;
+  }
+  #MY_POLLU_TITLE:hover{
+    color:white;
+  }
+  #my_prof_h:hover{
+    color:white;
+  }
+  #title_mode:hover{
+    color:white;
+  }
+
+
+ h1{font-family:Comic Sans MS, Comic Sans;
+    color:black;}
+ h4{
+    font-family:Comic Sans MS, Comic Sans;
+    color:black;
+  }
+
 @media screen and (min-width: 1150px) and (max-width:1200px) {
   #bg3{
     height:210px;
@@ -1520,7 +1217,270 @@ function switch_picture2(image, src){
 
 
 
+
+  #image_coiffure_href{
+
+  }
+  #h_coiffure:hover{
+    color:#ff8080;
+  }
 </style>
 
-<a href="https://fr.freepik.com/photos-vecteurs-libre/fond">Fond PSD créé par graphictwister - fr.freepik.com</a>
-<a href="https://fr.freepik.com/photos-vecteurs-libre/fond">Fond vecteur créé par coolvector - fr.freepik.com</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+function switch_picture1(image, source){
+  document.getElementById(image).src = source;
+};
+function switch_picture2(image, src){
+
+};
+
+
+  function preloadImage(url)
+  {
+      var img=new Image();
+      img.src=url;
+  }
+  preloadImage("/static/v2/coiffure2.jpg")
+  preloadImage("/static/v2/horraire_sport.png")
+  preloadImage("/static/v2/salon2.png")
+  preloadImage("/static/v2/vetementvetement2.png")
+  preloadImage("/static/v2/mode22.png")
+  preloadImage("/static/v2/nat1.png")
+  preloadImage("/static/v2/nat2.png")
+  preloadImage("/static/v2/nat3.png")
+  preloadImage("/static/v2/nat4.png")
+  preloadImage("/static/v2/nat5.png")
+  preloadImage("/static/v2/nat6.png")
+  
+
+
+
+  
+
+  function image1(image_bordure, image, path){
+    document.getElementById(image).src = path
+    document.getElementById(image_bordure).style.border = "5px solid transparent";
+    
+  };
+  function image2(image_bordure, image, path){
+    document.getElementById(image).src = path
+    document.getElementById(image_bordure).style.border = "";
+  };
+
+  
+  function image3(image){
+    document.getElementById(image).style.border = "5px solid transparent"; 
+  };
+  function image4(image){
+    document.getElementById(image).style.border = "";
+  };
+
+  function coul(element){
+    document.getElementById(element).style.color = "#ff8080";
+  };
+
+  function coul1(element){
+    document.getElementById(element).style.color = "black";
+
+  };
+
+
+</script>
+
+<script>
+
+//HOME JS
+
+//Here we stop the slider and display
+//text of pictures.
+
+// ---> VISUAL FUNCTION <--- si image un alors j'affiche ca sinon non
+
+function stop(im){
+  document.getElementById('marc').stop(); //stop the slider when the mouse is on the picture
+
+
+  //for PICTURE NUMBER ONE we put the status, and give description of the project.
+  if(im == 'im1'){
+    document.getElementById('status').innerHTML = '<center>Status : Fini</center>';
+    document.getElementById('description').innerHTML = '<center>' +
+                                                        'Saisissez le nom d\'une ville ! ' +
+                                                        'Nous r\u00e9cup\u00e9rons ses coordonn\u00e9es, le sens du vent, ' +
+                                                        'calculons sa nouvelle trajectoire et ' +
+                                                        'nous l\'affichons sur une carte google map.'
+                                                        '</center>';
+    document.getElementById('description').style.textAlign = 'justify';
+  }
+
+  //PICTURE NUMBER TWO
+  else if(im == 'im2'){
+    
+    document.getElementById('status').innerHTML = '<center>Status : Fini</center>';
+    document.getElementById('description').innerHTML = '<center>' +
+                                                        'Saisissez une phrase ! ' +
+                                                        'Nous la r\u00e9cup\u00e9rons et la traitons, ' +
+                                                        'au choix une table de multiplication, ' +
+                                                        'un affichage et une recherche de d\u00e9finition. ' +
+                                                        "Banal, oui sauf que nous n'avons pas coder de fonction</center>";
+
+    document.getElementById('description').style.textAlign = 'justify';
+    
+  }
+
+  //PICTURE NUMBER THREE
+  else if(im == 'im3'){
+    
+    document.getElementById('status').innerHTML = '<center>Status : En cours</center>';
+    document.getElementById('description').innerHTML = '<center>' +
+                                                        "Un jeux d'arcarde ! " +
+                                                        'bas\u00e9 sur speech recognition de google, ' +
+                                                        "J'ai besoin d'un bouclier et vite. " +
+                                                        "SHIELDDD !!</center>";
+    
+    document.getElementById('description').style.textAlign = 'justify';
+    
+  }
+
+  //PICTURE NUMBER FOUR
+  else if(im == 'im4'){
+    
+    document.getElementById('status').innerHTML = '<center>Status : En cours</center>';
+    document.getElementById('description').innerHTML = '<center>' +
+                                                        'Saisissez une phrase ! ' +
+                                                        'Nous la r\u00e9cup\u00e9rons et la traitons. ' +
+                                                        'Nous vous donnons ensuite la fonction de chaque mot, ' +
+                                                        'pronom, verbe, nominal...' +
+                                                        "</center>";
+    
+    document.getElementById('description').style.textAlign = 'justify';
+  }
+
+  //PICTURE NUMBER FIVE
+  else if(im == 'im5'){
+    
+    document.getElementById('status').innerHTML = '<center>Status : En cours</center>';
+    
+    document.getElementById('description').innerHTML = '<center>' +
+                                                        'Un script qui permet ' +
+                                                        'de dire les mots r\u00e9currents ' +
+                                                        "d'un texte" +
+                                                        "</center>";
+    
+    document.getElementById('description').style.textAlign = 'justify';
+  }
+
+  //PICTURE NUMBER SIX
+  else if(im == 'im6'){
+    
+    document.getElementById('status').innerHTML = '<center>Status : Fini</center>';
+    document.getElementById('description').innerHTML = '<center>' +
+                                                        'Un script qui permet de dessiner ! ' +
+                                                        'sommairement une voiture ' +
+                                                        'par sa description ' +
+                                                        '(4 roues, une caisse ect...' +
+                                                        "</center>";
+    
+    document.getElementById('description').style.textAlign = 'justify';
+  }
+
+  //PICTURE NUMBER SEVEN
+  else if(im == 'im7'){
+    document.getElementById('status').innerHTML = '<center>Status : En cours de finition</center>';
+    
+    document.getElementById('description').innerHTML = "<center>Un magazine virtuel " +
+                                                      "avec une rubrique mode et une rubrique de pollution. " +
+                                                      "Avez vous d\u00e9j\u00e0 lu un magazine chez votre marchand de journaux ? Et... en ligne ?" +
+                                                      "</center>";
+    
+    document.getElementById('description').style.textAlign = 'justify';
+  }
+
+  //PICTURE NUMBER TEN
+  else if(im == 'im10'){
+    document.getElementById('status').innerHTML = '<center>Status : Fini</center>';
+    
+    document.getElementById('description').innerHTML = "<center>Dk labyrinth " +
+                                                      "Dk apprend tout seul \u00e0 se d\u00e9placer " +
+                                                      "via un algorithme g\u00e9n\u00e9tique par Brute force " +
+                                                      "qui n'est pas la meilleur solution</center>";
+    
+    document.getElementById('description').style.textAlign = 'justify';
+  }
+
+  //PICTURE NUMBER ELEVEN
+  else if(im == 'im11'){
+    document.getElementById('status').innerHTML = '<center>Status : Fini</center>';
+    
+    document.getElementById('description').innerHTML = "<center>Openfoodfact " +
+                                                      "Un jeu o\u00f9 il faut choisir la meilleure bouffe. " +
+                                                      "Ce projet contient un d\u00e9tecteur d'objet ! (permettant de d\u00e9tecter des m\u00eames objets par matching)" +
+                                                      "</center>";
+    
+    document.getElementById('description').style.textAlign = 'justify';
+  }
+
+
+
+
+  
+};
+
+
+//When mouse is out the picture we reinitialise the description and status div to nothing
+// ---> VISUAL FUNCTION <--- des que souris quitte alors jefface tout
+function start(){
+  document.getElementById('marc').start();
+    document.getElementById('description').innerHTML = "";
+  document.getElementById('status').innerHTML = "";
+};
+
+
+
+function image1(image_bordure, image, path){
+  document.getElementById(image).src = path
+  document.getElementById(image_bordure).style.border = "5px solid transparent";
+  
+};
+function image2(image_bordure, image, path){
+  document.getElementById(image).src = path
+  document.getElementById(image_bordure).style.border = "";
+};
+
+
+function image3(image){
+  document.getElementById(image).style.border = "5px solid transparent"; 
+};
+function image4(image){
+  document.getElementById(image).style.border = "";
+};
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+  
