@@ -19,14 +19,14 @@
 
       <!-- Plugin CSS -->
       <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="/static/css/menu/menu.css">
+      <link rel="stylesheet" type="text/css" href="/static/css/menu/le_menu.css">
 
       <!-- Theme CSS - Includes Bootstrap -->
       <link href="/static/css/creative.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
     </head>
 
-    <body>
+    <body style='background:black;'>
 
         <div>
             <h1>Menu</h1>
@@ -83,8 +83,9 @@
                       Les informations Pollution</p>
                       </a>
 
-                      <a href="/polution/donnée"><p id="données" class="données"
-                          onmouseover="un('données')" onmouseout="deux('données')">
+                      <a href="/polution/donnée"><p id="donnes" class="donnes"
+                          onmouseover="un('donnes')" onmouseout="deux('donnes')"
+                          style='color:white;'>
                           Les données Pollutions
                       </p>
                       </a>
@@ -95,8 +96,9 @@
                       </p>
                       </a>
                       
-                      <a href="/polution/prediction"><p id="prédictions" class="predi"
-                      onmouseover="un('predi')" onmouseout="deux('predi')">
+                      <a href="/polution/prediction"><p id="prédi" class="predi"
+                      onmouseover="un('prédi')" onmouseout="deux('prédi')"
+                      style='color:white;'>
                       Les prédictions</p>
                       </a>
                       
@@ -220,9 +222,6 @@
 </script>
 
 
-
-
-
 </html>
 
 
@@ -231,115 +230,7 @@
 
 
 
-<style>
-#coupe{
-    color:white;
-    padding-top:50px;
-}
-#informations{
-    padding-top:50px;
-}
-#coiffeurs,
-#gym,
-#habit,
-#retour2,
-#informations{
-    color:white;
-}
-#graphiques{
-    color:white;
-}
-#Tendancee{
-    color:white;
-}
-#données{
-    color:white;
-}
-#prédictions{
-    color:white;
-}
-#carte{
-    color:white;
-}
-#solution{
-    color:white;
-}
-#pollution_section,
-#mode_section{
-    display:none;
-}
-#separate_mode,
-#separate_pollution,
-#separate{
-    width:50px;
-    height:1px;
-    background:white;
-}
 
-body{
-    background:black;
-    color:white;
-    
-}
-h1{
-    color:white;
-    float:left;
-    margin-left:100px;
-}
-.container{
-    padding-top:80px;
-    text-align:center;
-}
-#barre{
-    margin-top:50px;
-    background:white;
-    height:200px;
-    width:2px;
-}
-u{
-    color:white;
-}
-#Sommaire{
-    padding-top:50px;
-    color:white;
-}
-#Mode{
-    color:white;
-}
-#Pollution{
-    color:white;
-}
-#Contact{
-    color:white;
-}
-#Mention{
-    color:white;
-}
-#retour,
-#retour1{
-    color:white;
-}
-
-
-@media screen and (min-width: 320px) and (max-width:374px) {
-  #deux{
-    margin-top:-200px;
-  }
-}
-
-@media screen and (min-width: 375px) and (max-width:424px) {
-  #deux{
-    margin-top:-200px;
-  }
-}
-
-
-@media screen and (min-width: 403px) and (max-width:475px) {
-  #deux{
-    margin-top:-200px;
-  }
-}
-</style>
 
 
 
