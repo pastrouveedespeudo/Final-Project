@@ -1,3 +1,5 @@
+parle de truk et conséquence
+
 rajouter a mode des truks genre quand le mec clique mettre un message savais tu que la mode est
 l a seconde source de pollution? ex: habits -> jeter les habits, son transport sa teinture polluent
 
