@@ -1,11 +1,5 @@
-CE NEST PAS UN SITE DE VENTE NI APPLICATION MOBILE C UN SITE INFORMATIF
+aide + info et calme
 
-oublie pas que c'est l'été les gens ont confiance en eux la, ils petent la forme
-pour peu qu'un membre du jury se mette pile poile en couple ou qu'il reussisse un truk ou a l'inverse qu'il se fasse ken ou ne reussise
-pas un truk du coup l'azpproche vers se site web et ste thématique la pollution et la mode va etre grave changer donc faut pas pencher
-vers un truk ou vers un autre faut etre enter les deux certaines emotions sont amplifié la
-
-pfffffff mais c trop dure, faut trouvé le désir commun ou les désirs commun, les gens adorent les glace et les boissons fraiches en ce moment faut faire le meme truk comme quand tu block tu te met a transpi faut pas les prendre de haut faut les accomapgner et que ce soit fluide laisse tombé et la majorité ne regarde pas les texte ou les balaie vite fait faut pensé a ca et nan jtrouche plus au page donc c tout pété ce site de merde pfff
 
 parle de cause et conséquence
 
