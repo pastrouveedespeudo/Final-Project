@@ -25,7 +25,7 @@
     nous la comparons à nos données.<br>
     Ainsi nous faisons la moyenne de toutes
     les données en base de donnée et
-    estimons le taux de pollution.
+    estimons le taux de pollution avec une certaine précision.
     
     
     
@@ -177,7 +177,7 @@
         {% include "bottom/bottom_page.html" %}
         {% block content2 %}
         {% endblock %}
-        <SCRIPT type="text/javascript" src="/static/js/pollution/prediction.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="/static/js/pollution/pred.js"></SCRIPT>
     </div>
   </section >
 
@@ -210,7 +210,7 @@
 
 //Here we call database and analysa2.py for lyon
 jQuery("#lyon").on("click", function(e){
-    display();
+    display('lyon');
 
     jQuery.ajax({
         data:{
@@ -249,7 +249,7 @@ jQuery("#lyon").on("click", function(e){
 //Here we call database and analysa2.py for paris
 jQuery("#paris").on("click", function(e){
 
-    display();
+    display('paris');
     
     jQuery.ajax({
         data:{
@@ -288,7 +288,7 @@ jQuery("#paris").on("click", function(e){
 jQuery("#marseille").on("click", function(e){
 
 
-    display();
+    display('marseille');
     
     jQuery.ajax({
         data:{
