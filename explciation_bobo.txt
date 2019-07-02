@@ -106,11 +106,26 @@ les bonnes notes, la sensation d'intelligence et de sympathie.
 Il est donc rtès important
 detre bien sur soi et donc, de suivre la mode.
 mais la mode, a quel prix ? Au prix des futur générations ?
+En effet, la mode est le deuxieme facteur de pollution apres
+le pétrol. Par le non recyclage des vetements, le transport ou bien
+la teinture des vetements le monde de la beauté
+aggrave la qualité de l'air.
+Nous essayons donc d'aider mais aussi informer a travers ce site web,
+de donnée les connaissances a l'utilisateur des différents
+aspect de la pollution. Afin de faire cela
+nous avons faire un raisonement académique ou
+nous présentons les informations puis les données, 
+puis les graphiques et une des solutions qui existe
+pour lutter contre la polluiton. 
+Bien sur nous avons fait d'autres fonctionnalités comme
+une carte des vent afin de suivre la pollution et une
+prédiction afin de suivre la pollution en temps réel selon
+des elements bien précis.
 
 
-
+bien sur que ca a l'air horrible les moche les beau on s'en branle de la beauté ce qui compte c'est le compte bancaire pffffff 
 mais serieux la mode jy connais rien frere chui en calbute toute la journée jvoualis faire un projet avec des images...
-
+ca fait 1 ans que chui en calbu
 
 
 
