@@ -8,7 +8,7 @@ faire le dernier texte +
 faire mention légale 
 
 traquer les bug (marseille ca met lyon, bouchons et marseille, menu prediction se met pas en rouge, t'as oublié des titres
-sur des pages)
+sur des pages, le fond active directe la camera(faire un truk de conteneur), les video se mettent en route en allant sur la page)
 
 refais tous les textes, par exemple dread ^^ au lieu de texte d'intro explique pourquoi ste page
 
