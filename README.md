@@ -7,7 +7,7 @@ faire le dernier texte +
 
 faire mention légale 
 
-traquer les bug (marseille ca met lyon, bouchons et marseille)
+traquer les bug (marseille ca met lyon, bouchons et marseille, menu prediction se met pas en rouge)
 
 refais tous les textes, par exemple dread ^^ au lieu de texte d'intro explique pourquoi ste page
 
