@@ -50,12 +50,40 @@ Nous avons aussi fais plusieurs applications et pages de textes informatives:
 	- (qui rapel que la production d'habit est polluante lien pollution)
 
 
--
--
--
--
 
--
+
+afin de pouvoir informer nous avons principalement fais des pages explicatives.
+
+- les informations sur la pollution
+	- une page de texte sur la pollution qui informe
+
+
+
+Mais des info sans données...
+
+
+- les données sur la pollution
+	- une page qui regroupe des données qui informe  en temps réel 
+
+Mais des données sans preuve...
+
+
+
+- les graphiques
+	-une page qui informe sur les elements par des graphiques 
+
+
+Que peut on faire de ces données preuvées?
+
+- la prédiction 
+	- une page qui donne une estimation du taux de pollution
+
+
+Peut on poussez le  truk plus loin ?
+
+- la solution
+	- une page qui informe sur plusieurs techniques de réduction de
+	la pollution.
 
 
 
