@@ -1,3 +1,5 @@
+CE NEST PAS UN SITE DE VENTE NI APPLICATION MOBILE C UN SITE INFORMATIF
+
 parle de cause et conséquence
 
 rajouter a mode des truks genre quand le mec clique mettre un message savais tu que la mode est
