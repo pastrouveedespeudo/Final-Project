@@ -116,8 +116,9 @@ aggrave la qualité de l'air.
 Nous essayons donc d'aider mais aussi d'informer a travers ce site web,
 de donnée les connaissances a l'utilisateur des différents
 aspect de la pollution. Afin de faire cela
-nous avons faire un raisonement académique ou
-nous présentons les informations puis les données, 
+nous avons faire un raisoner de la facon suivante: 
+nous présentons les informations sur la pollution puis les données
+surlequelles nous nous sommes basés, 
 puis les graphiques et une des solutions qui existe
 pour lutter contre la polluiton. 
 Bien sur nous avons fait d'autres fonctionnalités comme
@@ -130,6 +131,7 @@ bien sur que ca a l'air horrible les moche les beau on s'en branle de la beauté
 mais serieux la mode jy connais rien frere chui en calbute toute la journée jvoualis faire un projet avec des images...
 ca fait 1 ans que chui en calbutte
 mouais bon pas grave faut dire ca avec de la conviction et ca passera
+elle marche pas ta prediction gros con
 
 
 
