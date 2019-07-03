@@ -1,95 +1,214 @@
-{% include "haut_page/tendance_haut.html" %}
+{% include "haut_page/graphe_haut.html" %}
 {% block content %}
 {% endblock %}
 
-<link rel="stylesheet" type="text/css" href="/static/css/coupe/tendance/tendance.css">
-<link rel="stylesheet" type="text/css" href="/static/css/coupe/tendance/tendance_haut.css">
-<div id="menu_rep"><a href="/administrateur/navebarre_admin2">Menu</a></div>
+<link rel="stylesheet" type="text/css" href="/static/css/pollution/graphe/graphe.css">
+<link rel="stylesheet" type="text/css" href="/static/css/pollution/graphe/graphe_haut.css">
 
-<header>
-    <section id="top_text">
-        <div id="fond_tendance"> 
-            <div id ="texte_in_texte">
-                <h1 id="titre1">La tendance du moment</h1><br>
-                       
-                  Les vêtement sont l'oeuvre d'une erreur
-                  pour les uns, un atout pour les autres,
-                  un signe de distinction ou de séparation;
-                  nous te proposons de voir les coloris
-                  de la mode actuelle selon les coupe de cheveux.<br>
-                  Ne soyez pas conforme aux règles ! Sans pour
-                  autant vous en affranchir !<br><br>
-                  <em>Savais-tu que les teintures de vêtement, de coiffure ainsi que
-                  les shampoings sont une source de pollution ?
-                  <a href='/polution/info_pollu' style='color:black;'> Consulter</a></em>
-                  
-            </div>
-            
-        </div>      
-        <div id='latendance'></div>
-    </section>
-    <br><br><br><br><br><br>
-</header>
+    <link rel="stylesheet" type="text/css" href="/static/css/graphe.css" media="all" />
+    
+      <style>input{background:transparent;border:transparent;}</style>
+      <br><br><br><br><br><br>
+      <div id="section_graphe">
 
+      <div>
+      <span id='menumenu'>Menu</span>
+      <div class="container">
+      <br><br>
+      <p id="information_click"><i><strong>*Choisis une ville et clique sur une des conditions</strong></i></p>
+        <div class="row">
 
-
-
-
-<body> 
-
-
-    <section id='section_mode'>
-      <center><div id="cart_color">
-
-        <center><h1 id="cart_h1">Notre tendance</h1></center>
+          
+     
         
-        <center>
-          <div id='brun'></div>
-          <div id='blond'></div>
-          <div id='chatain'></div>
-          <br>
-        </center>
+          <div class="col-sm" id='p_ville1'>
 
-      </div></center>
-    </section>
+            <center><div id="info1" style='width:200px; height:50px; font-size:3vw;'></div></center>
+
+          
+            <center><div id='separate_line1'></div>
+
+            <input type='button' id='lyon1'
+              onmouseover="one('separate_line1', 'info1')"
+              onmouseout="two('separate_line1', 'info1')"
+              onclick='lyon()'
+              value='Lyon'></center>
 
 
 
-    <section id="iframe_section">
-        <!-- Iframe from an other page. Give feeling to consult a book -->
-        <div id="">
-          <center>
-            <iframe id="inlineFrameExample"
-                title="Inline Frame Example"
-                src="/photo/database_mode">
-            </iframe>
-          </center>
+
+            
+          </div>
+          
+          <div class="col-sm" id='p_ville2'>
+
+            <center><div id="info2" style='width:300px; height:50px;'></div></center>
+            
+            <center><div id='separate_line2'></div>
+            
+            
+            <input type='button' id='marseille1'
+            onmouseover="one('separate_line2', 'info2')"
+              onmouseout="two('separate_line2', 'info2')"
+              onclick='marseille()'
+              value='Marseille'>
+            </p></center>
+
+            
+          </div>
+
+
+          
+          <div class="col-sm" id='p_ville3'>
+
+            
+            <center><div id="info3" style='width:200px; height:50px;'></div></center>
+
+      
+            <center><div id='separate_line3'></div>
+            
+            <input type='button' id='paris1'
+                onmouseover="one('separate_line3', 'info3')"
+                onmouseout="two('separate_line3', 'info3')"
+                onclick='paris()'
+                value='Paris'>
+            </p></center>
+
+            
+          </div>
+
+
+        
+
+          
         </div>
-    </section>
+
+        <div><br>
+
+        
+          <center><p id='choix'></p></center><br><br>
+
+          
 
 
-</body>
-
-<footer id="botttom">
-
-{% include "bottom/bottom_page.html" %}
-{% block content2 %}
-{% endblock %}
-
-</footer>
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="/static/vendor/jquery/jquery.min.js"></script>
-  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <div class="container text-center" id='inputs'>
+        <div class="row justify-content-center">
+        
+            <input type='button' id='bouchon' value='bouchon' onclick='graphe("plugs", "bouchon")'
+            onmouseover='hover("bouchon")' onmouseout='no_hover("bouchon")'>&nbsp;&nbsp;&nbsp;
 
-  <!-- Plugin JavaScript -->
-  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+            
+            <input type='button' value='heure' id='heure' onclick='graphe("hour", "heure")'
+            onmouseover='hover("heure")' onmouseout='no_hover("heure")'>&nbsp;&nbsp;
 
-  <!-- Custom scripts for this template -->
-  <script src="/static/js/creative.min.js"></script>
-  <SCRIPT type="text/javascript" src="/static/js/mode/tendance.js"></SCRIPT>
+            
+            <input type='button' value='manif' id='manif' onclick='graphe("demonstration", "manifestion")'
+            onmouseover='hover("manif")' onmouseout='no_hover("manif")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='météo' id="météo" onclick='graphe("weather", "météo")'
+            onmouseover='hover("météo")' onmouseout='no_hover("météo")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='popu.' id='pop' onclick='graphe("population", "population")'
+            onmouseover='hover("pop")' onmouseout='no_hover("pop")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='pression' id='pression' onclick='graphe("pressure", "pression")'
+            onmouseover='hover("pression")' onmouseout='no_hover("pression")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='saison' id='saison' onclick='graphe("season", "saison")'
+            onmouseover='hover("saison")' onmouseout='no_hover("saison")'>&nbsp;&nbsp;
+            
+            <input type='button' value='vent' id='vent' onclick='graphe("wind", "vent")'
+            onmouseover='hover("vent")' onmouseout='no_hover("vent")'>&nbsp;&nbsp;
+
+            
+            <input type='button' value='weekend' id='weekend' onclick='graphe("weekend", "weekend")'
+            onmouseover='hover("weekend")' onmouseout='no_hover("weekend")'>&nbsp;&nbsp;
+            
+            
+            <input type='button' value='traffique' id='traffique' onclick='graphe("traffic", "traffique")'
+            onmouseover='hover("traffique")' onmouseout='no_hover("traffique")'>&nbsp;&nbsp;
+            
+        </div><br>
+        <p id='savoir'><i></i></p><br>
+        <center><div id='graphique1' class='col-xs-12 col-md-12 col-lg-8'></div></center>
+      </div>
+
+      <div id='texte'>
+
+    
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                Il y a plusieurs consitions qui régissent
+                la polution. Nous vous proposons de voir
+                ces conditions via des graphes parmi les 3
+                villes de Lyon, Paris et Marseille.
+                Nous pouvons par exemple constater par
+                exemple à Lyon la pollution est plus faible
+                durant les épisodes de pluie et pendant les jour de week end.
+                                
+              </div>
+              <div class="col-sm">
+                Nous remarquons aussi que la ville la 
+                plus grande amoindris la pollution.
+                <br><br>
+                Nous voyons cependant plusieurs données
+                contres-intuitives. Les très grands bouchons 
+                n'augmente pas la pollution. Que les heures de pointes
+                non plus ne les incrémentent pas.
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="container">
+            <div class="row">
+
+              <div class="col-sm">
+                On peut constater qu'à Marseille, les manifestations
+                engendrent de la pollution, et que la pluie
+                à l'inverse la fait baisser.<br><br>
+                A paris nous voyons que le weekend augmente
+                la pollution, et que le beau temps aussi.
+
+              </div>
+              <div class="col-sm"><br>
+                Nous ne pensons pas à la fiabilité de
+                ces données car une condition prise toute
+                seule n'est pas très significatifs.
+                Nous ne pensons pas non plus pouvoir les
+                expliquer.
+                <br>Nous manquons de donnée et de connaissance
+                en pollution en circulation, en sociologie ect...
+                Mais nous espérons etre dans le juste !
+
+              </div>
+
+            </div>
+          </div><br>
+
+
+    </div>
+</div>
+</div>
+
+    <div id="reso">
+        {% include "bottom/bottom_page.html" %}
+        {% block content2 %}
+        {% endblock %}
+        <SCRIPT type="text/javascript" src="/static/js/pollution/graphe.js"></SCRIPT>
+    </div>
+
+
+
+
+
 
 
 
@@ -104,6 +223,33 @@
 
 
 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+        
+        
+      
+    
+
+
+
+
+
+  </body>
+
+
+</html>
 
 
 
