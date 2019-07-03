@@ -1,13 +1,11 @@
+menu responsive qui met pas la redirection de graphe
 
-faire le dernier texte + 
+faire le dernier texte sur la pollution parle des facteurs (petrole et mode)
 
 faire mention légale 
 
 traquer les bug
 
-entre tu peux faire greffegreffe 
-
-mettre les cooki v6 avec csrf cookie
 
 # ORGANISATION photo
 
