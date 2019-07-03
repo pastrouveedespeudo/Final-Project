@@ -111,37 +111,37 @@ function enlever_largeur(){
 liste_info_prix = [['bb1' ,'xxx', '<a href="" style="color:white;">www.xxx.fr</a>', '2550 euros', 'en stock', 'xxx', '<img src="/static/img/portfolio/vetement/femme/bas_blanc/1.png">'],
                    ['bb2' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '5520 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/2.2.png style='height:200px'>"],
                    ['bb3' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '280 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/3.png' style='height:200px'>"],
-                   ['bb4' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '25580 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/4.png' style='height:200px'>"],
+                   ['bb4' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '25580 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/4.png' style='height:200px'>"],
                    ['bb5' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '280 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/5.png' style='height:200px'>"],
                    ['bb6' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '290 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/6.png'> style='height:200px'>"],
-                   ['bb7' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '20 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/7.png' style='height:200px'>"],
+                   ['bb7' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '20 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/7.png' style='height:200px'>"],
                    ['bb8' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '20 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/8.png' style='height:200px'>"],
-                   ['bb9' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '290 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/9.png' style='height:200px'>"],
+                   ['bb9' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '290 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/9.png' style='height:200px'>"],
                    ['bb10' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '23660 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_blanc/10.png style='height:200px'>"],
                    ['bbl1' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '20 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/1.png' style='height:200px'>"],
                    ['bbl2' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '280 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/2.png' style='height:200px'>"],
                    ['bbl3' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '47 euros', 'en stock', 'xxx', " <img src='/static/img/portfolio/vetement/femme/bas_bleu/3.png' style='height:200px'>"],
                    ['bbl4' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '240 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/4.png' style='height:200px'>"],
-                   ['bbl5' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '274874 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/5.png' style='height:200px'>"],
+                   ['bbl5' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '274874 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/5.png' style='height:200px'>"],
                    ['bbl6' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '26848 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/6.png' style='height:200px'>"],
                    ['bbl17' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2048 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/7.png' style='height:200px'>"],
                    ['bbl8' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2064548 euros', 'en stock', 'xxx', " <img src='/static/img/portfolio/vetement/femme/bas_bleu/8.png' style='height:200px'>"],
                    ['bbl10' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2588 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/10.png' style='height:200px'>"],
-                   ['bbl11' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '255 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/11.png' style='height:200px'>"],
+                   ['bbl11' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '255 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/11.png' style='height:200px'>"],
                    ['bbl12' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '550 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/bas_bleu/12.png' style='height:200px'>"],
-                   ['hb1' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2088 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/1.png' style='height:200px'>"],
-                   ['hb2' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2000 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/2.png' style='height:200px'>"],
+                   ['hb1' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2088 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/1.png' style='height:200px'>"],
+                   ['hb2' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2000 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/2.png' style='height:200px'>"],
                    ['hb3' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2155 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/3.png' style='height:200px'>"],
                    ['hb4' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2015 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/4.png' style='height:200px'>"],
-                   ['hb5' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '20789 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/5.png' style='height:200px'>"],
-                   ['hb7' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2121 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/6.png' style='height:200px'>"],
+                   ['hb5' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '20789 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/5.png' style='height:200px'>"],
+                   ['hb7' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2121 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/6.png' style='height:200px'>"],
                    ['hb8' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '1987 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/7.png' style='height:200px'>"],
                    ['hb9' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '231 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/9.png' style='height:200px'>"],
                    ['hb10' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '890 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_blanc/10.png' style='height:200px'>"],
                    ['hg1' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '17 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/1.png' style='height:200px'>"],
-                   ['hg2' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '202102 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/2.png' style='height:200px'>"],
+                   ['hg2' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '202102 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/2.png' style='height:200px'>"],
                    ['hg3' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '2084 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/3.png' style='height:200px'>"],
-                   ['hg4' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '200 euros', 'ÈpuisÈ', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/4.png' style='height:200px'>"],
+                   ['hg4' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '200 euros', '√©puis√©', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/4.png' style='height:200px'>"],
                    ['hg5' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '23 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/5.png' style='height:200px'>"],
                    ['hg6' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '15 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/6.png' style='height:200px'>"],
                    ['hg7' ,'xxx', '<a href="" style="color:white;">www.my_profil.com</a>', '17 euros', 'en stock', 'xxx', "<img src='/static/img/portfolio/vetement/femme/haut_gris/7.png' style='height:200px'>"],
@@ -203,7 +203,7 @@ function nom_image(id_im){
 
 function voir_t_longue(){
   
-  document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une catÈgorie d'habit</i></strong></p>"
+  document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une cat√©gorie d'habit</i></strong></p>"
   if(LISTE_INFO_COULEUR == ''){
         document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>S\u00e9lectionnez une couleur de cheveux</i></strong></p>"
         click_t_longue -= 1
@@ -418,3 +418,96 @@ function no_shutdown_info(div, logo1, logo2, div1, div2, div3, logo11, logo22, l
     document.getElementById(logo33).style.display = 'none';
     
 };
+
+$(document).ready(function(){
+
+    
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+
+
+
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+});
+
+
+jQuery("#brune, #blonde, #chatain, #rousse, #noire").on("click", function(e){
+    
+    var a = document.getElementById('couleur').innerHTML;
+    var b = document.getElementById('recherche').innerHTML;
+    
+    
+    document.getElementById('info_oups').innerHTML = "<p id='info_oups'><strong><i>Appuyer sur votre couleur de cheveux, et choississez une cat√©gorie d'habit</i></strong></p>"
+    
+    
+     e.preventDefault();
+     
+      jQuery.ajax({
+          data:{
+            
+              'a':a,
+              'b':b
+          },
+          type:"POST",
+          url:"/photo/habits"
+      })
+      .done(function(data){
+          if (data.error){
+              jQuery("#monCadreAlert").text(data.error);
+              jQuery("#is_save");
+              
+              
+          }
+          else{
+              jQuery("#habit").html(data.data);
+              jQuery("#monCadreAlert");
+              console.log(data);
+              liste1 = [[],[]]
+              var c = 0;
+              for(var i = 0; i < data.length; i ++){
+          
+                liste1[c].push(data[i])
+                if(data[i] == ' '){
+                    c += 1
+                  }
+                }
+              var haut = 'habit_haut_' + liste1[0].join('').slice(0,-1)
+              var bas = 'habit_bas_' + liste1[1].join('')
+              HAUT = haut
+              BAS = bas
+              
+              console.log(liste1[liste1.length - 1].join(''))
+              console.log(liste1[liste1.length - 2].join(''))
+              LISTE_INFO_COULEUR.push(liste1[liste1.length - 1].join(''))
+              LISTE_INFO_COULEUR.push(liste1[liste1.length - 2].join(''))
+            
+          };
+          
+      });
+});
