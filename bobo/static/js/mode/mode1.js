@@ -1469,7 +1469,7 @@ $("#coif2").on("click", function(e){
     e.preventDefault();
     $.ajax({
          data:{
-	       csrfmiddlewaretoken: '{{ csrf_token }}',
+	      
               'hairdresser':a, 
     },
     type:"POST",
@@ -1504,7 +1504,7 @@ jQuery("#declencheur1").on("click", function(e){
           data:{
               'buttony':String(LISTE[0]),
               'country':b,
-              csrfmiddlewaretoken: '{{ csrf_token }}',
+              
 
       },
       type:"POST",
@@ -1548,7 +1548,7 @@ jQuery("#declencheur2").on("click", function(e){
           data:{
               'buttony':String(LISTE[8]),
               'country':b,
-              csrfmiddlewaretoken: '{{ csrf_token }}',
+              
           },
           type:"POST",
           url:"/photo/coupe"
@@ -1596,7 +1596,7 @@ jQuery("#declencheur3").on("click", function(e){
           data:{
               'buttony':String(LISTE[16]),
               'country':b,
-              csrfmiddlewaretoken: '{{ csrf_token }}',
+              
           },
           type:"POST",
           url:"/photo/coupe"
@@ -1636,7 +1636,7 @@ jQuery("#declencheur4").on("click", function(e){
           data:{
                'buttony':String(LISTE[24]),
                'country':b,
-               csrfmiddlewaretoken: '{{ csrf_token }}',
+               
           },
           type:"POST",
           url:"/photo/coupe"
@@ -1680,7 +1680,7 @@ jQuery("#gym2").on("click", function(e){
   jQuery.ajax({
       data:{
           'gymnastic':a,
-          csrfmiddlewaretoken:'{{ csrf_token }}'
+          
       },
       type:"POST",
       url:"/photo/coupe"
@@ -1718,7 +1718,7 @@ jQuery("#declencheur_gym1").on("click", function(e){
           data:{
                'buttony_gym':String(LISTE_GYM[0]),
                'country_gym':b,
-               csrfmiddlewaretoken: '{{ csrf_token }}',
+               
               
        
           },
@@ -1816,7 +1816,7 @@ jQuery("#declencheur_gym3").on("click", function(e){
           data:{
                'buttony_gym':String(LISTE_GYM[16]),
                'country_gym':b,
-               csrfmiddlewaretoken: '{{ csrf_token }}',
+               
           },
           type:"POST",
           url:"/photo/coupe"
@@ -1860,7 +1860,7 @@ jQuery("#declencheur_gym4").on("click", function(e){
           data:{
                'buttony_gym':String(LISTE_GYM[24]),
                'country_m':b,
-               csrfmiddlewaretoken: '{{ csrf_token }}',
+               
               
        
           },
@@ -1891,5 +1891,40 @@ jQuery("#declencheur_gym4").on("click", function(e){
       });
 });
 
+$(document).ready(function(){
 
+    
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
+
+
+
+
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+});
 
