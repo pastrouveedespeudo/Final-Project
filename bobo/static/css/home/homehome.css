@@ -1,0 +1,1009 @@
+#description{
+  height:200px;
+  text-align:justify;
+  width:100%;
+}
+#status{
+  height:50px;
+}
+h3{
+  color:black;
+}
+#paragraphe{
+  text-align:justify;
+  font-size:50%;
+  margin-left:3px;
+  margin-right:3px;
+}
+#div_coiffure{
+  background:#;
+}
+
+#les_coiffeurs_div{
+  background:#;
+}
+#la_mode{
+  background:#;
+}
+#paragraphe2{
+  text-align:justify;
+  font-size:100%;
+  margin-left:3px;
+  margin-right:3px;
+}
+#salle_de_gym{
+  background:#;
+}
+#vetement_row_background{
+  background:#;
+}
+
+
+#separate10{
+  background:#ccccff;
+}
+#article_journal{
+  font-size:80%;
+  margin-top:-60px;
+  text-align:justify;
+}
+
+#tendance_href{
+  color:black;
+}
+#tendance_href:hover{
+  color:#ff8080;
+}
+
+
+a.bouton1 {
+padding: 10px 30px; 
+background: #809fff; 
+color: white; 
+}
+a.bouton1:hover {
+background: #ff8080; 
+}
+
+
+
+#div_mode{
+  height:1150px;
+
+}
+#tendance_href{
+  margin-left:100px;
+}
+
+#edite{
+  font-size:0.9em;
+}
+#coif{
+  width:50%;
+  height:70%;
+}
+#logo{
+  width:15%;
+}
+#titre_created{
+  margin-left:-5%;
+}
+#logo2{
+  margin-top:-50%;
+}
+#mode_picture{
+  width:80%;
+  
+}
+i{
+  color:black;
+}
+#article4,
+#article2{
+  display:none;
+}
+
+@media screen and (min-width: 100px) and (max-width:1000px) {
+  #article{
+    display:none;
+  }
+  #article3{
+    display:none;
+  }
+  #article2{
+    display:block;
+  }
+  #article4{
+    display:block;
+  }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:700px) {
+  #text_vetement{
+    float:left;
+  }
+  #vetement_image{
+    float:left;
+
+  }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:700px) {
+  #invi1{
+    display:none;
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width:1000px) {
+  #vetement_row_background{
+    margin-top:100px;
+  }
+}
+
+
+@media screen and (min-width: 700px) and (max-width:800px) {
+  #vetement_row_background{
+    margin-top:200px;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width:700px) {
+  #vetement_row_background{
+    margin-top:200px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width:600px) {
+  #vetement_row_background{
+    margin-top:190px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width:550px) {
+  #vetement_row_background{
+    margin-top:250px;
+  }
+}
+
+
+
+
+
+
+#h41{
+  margin-left:10px;
+}
+
+
+
+#sec{
+  background:#white;
+}
+#separate1{
+  background:#white;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+#my_popo{
+  font-size: 90px;
+  color:black;
+}
+#MYPROF2{
+  font-size:90px;
+  color:black;
+}
+#MY_POLLU_TITLE:hover{
+  color:white;
+}
+#my_prof_h:hover{
+  color:white;
+}
+#title_mode:hover{
+  color:white;
+}
+
+
+h1{font-family:Comic Sans MS, Comic Sans;
+    color:black;
+}
+h4{
+    font-family:Comic Sans MS, Comic Sans;
+    color:black;
+}
+
+@media screen and (min-width: 1150px) and (max-width:1200px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 1100px) and (max-width:1150px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 1050px) and (max-width:1100px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width:1050px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 990px) and (max-width:1000px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 975px) and (max-width:990px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 950px) and (max-width:975px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 900px) and (max-width:950px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 850px) and (max-width:900px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width:850px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 790px) and (max-width:800px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 790px) and (max-width:800px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 780px) and (max-width:790px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 770px) and (max-width:780px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 760px) and (max-width:770px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 750px) and (max-width:760px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 765px) and (max-width:771px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:771px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 750px) and (max-width:768px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:0px;
+    }
+  #bg4{
+    display:none;
+  
+  }
+}
+@media screen and (min-width: 0px) and (max-width:750px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:0px;
+    }
+  #bg4{
+    display:none;
+  
+  }
+}
+#bg111{
+  height:500px;
+  width:100%;
+  margin-left:-100px;
+  border:3px solid black;
+  background:url("/static/img/parquet1.jpg");
+  color:white;
+}
+@media screen and (min-width: 750px) and (max-width:800px) {
+  #bg111{
+    height:210px;
+    width:73%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:10px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width:750px) {
+  #bg111{
+    height:210px;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:0px;
+    }
+}
+#bg11{
+  height:40%;
+  border:3px solid black;
+}
+
+#image_coiffure_href{
+
+}
+#h_coiffure:hover{
+  color:#ff8080;
+}
+#my_popo{
+  font-size: 40px;  
+}
+
+
+
+#description{
+    text-align:auto;
+}
+
+#oc_alert{
+    width:50%;
+}
+h1{font-family:recursive;
+     color:black;}
+h2{
+  font-family:"Comic Sans MS, Comic Sans, cursive";
+}
+#page-top{
+    margin-top:-50px;
+}
+  
+li{
+   color:black;
+}
+h1{
+    font-family:"recursive";
+    color:black;
+}
+h4,
+h2{
+   color:black;
+}
+#my{
+    width:100px; height:100px;
+}
+#pol{
+    width:100px;
+    height:100px;
+}
+p{
+    color:black;
+}
+#som_po{
+    background:url("/static/img/parquet1.jpg");
+    width:60%; border:2px solid black;
+    border-radius:100px;
+}
+#polution_tilte{
+    color:black;
+}
+
+#som_my{
+     background:url("/static/img/parquet1.jpg");
+     width:60%;
+     border:2px solid black;
+     border-radius:100px;
+}
+#title_mode{
+     color:black;
+}
+#im10{
+  width:100px;
+  height:100px;
+  margin-left:50px;
+}
+#im11{
+  width:100px; 
+  height:100px;
+  margin-left:100px;
+}
+#im12{
+  width:200px; 
+  height:200px;
+  margin-left:100px;
+}
+
+#paragraphe{
+  text-align:justify;
+  font-size:50%;
+  margin-left:3px;
+  margin-right:3px;
+}
+#div_coiffure{
+  background:#;
+}
+
+#les_coiffeurs_div{
+  background:#;
+}
+#la_mode{
+  background:#;
+}
+#paragraphe2{
+  text-align:justify;
+  font-size:100%;
+  margin-left:3px;
+  margin-right:3px;
+}
+#salle_de_gym{
+  background:#;
+}
+#vetement_row_background{
+  background:#;
+}
+
+#div_mode{
+  height:1150px;
+
+}
+#tendance_href{
+  margin-left:100px;
+}
+
+#edite{
+  font-size:0.9em;
+}
+#coif{
+  width:50%;
+  height:70%;
+}
+#logo{
+  width:15%;
+}
+#titre_created{
+  margin-left:-5%;
+}
+#logo2{
+  margin-top:-50%;
+}
+#mode_picture{
+  width:80%;
+  
+}
+#article4,
+#article2{
+  display:none;
+}
+
+
+
+
+@media screen and (min-width: 100px) and (max-width:1000px) {
+  #article{
+    display:none;
+  }
+  #article3{
+    display:none;
+  }
+  #article2{
+    display:block;
+  }
+  #article4{
+    display:block;
+  }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:700px) {
+  #text_vetement{
+    float:left;
+  }
+  #vetement_image{
+    float:left;
+
+  }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:700px) {
+  #invi1{
+    display:none;
+  }
+}
+
+
+@media screen and (min-width: 800px) and (max-width:1000px) {
+  #vetement_row_background{
+    margin-top:100px;
+  }
+}
+
+
+@media screen and (min-width: 700px) and (max-width:800px) {
+  #vetement_row_background{
+    margin-top:200px;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width:700px) {
+  #vetement_row_background{
+    margin-top:200px;
+  }
+}
+@media screen and (min-width: 550px) and (max-width:600px) {
+  #vetement_row_background{
+    margin-top:190px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width:550px) {
+  #vetement_row_background{
+    margin-top:250px;
+  }
+}
+
+
+
+
+
+
+  #h41{
+    margin-left:10px;
+  }
+
+  
+  #header11{
+     background:#ccccff;
+
+  }
+  #sec{
+    background:#white;
+  }
+  #separate1{
+    background:#white;
+  }
+  
+  a:hover{
+    text-decoration: none;
+  }
+
+  #my_popo{
+    font-size: 90px;
+    color:black;
+  }
+  #MYPROF2{
+    font-size:90px;
+    color:black;
+  }
+  #MY_POLLU_TITLE:hover{
+    color:white;
+  }
+  #my_prof_h:hover{
+    color:white;
+  }
+  #title_mode:hover{
+    color:white;
+  }
+
+
+ h1{font-family:Comic Sans MS, Comic Sans;
+    color:black;}
+ h4{
+    font-family:Comic Sans MS, Comic Sans;
+    color:black;
+  }
+
+
+
+
+@media screen and (min-width: 1150px) and (max-width:1200px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 1100px) and (max-width:1150px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 1050px) and (max-width:1100px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width:1050px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 990px) and (max-width:1000px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:80px;
+    }
+}
+@media screen and (min-width: 975px) and (max-width:990px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 950px) and (max-width:975px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 900px) and (max-width:950px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 850px) and (max-width:900px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:60px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width:850px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 790px) and (max-width:800px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 790px) and (max-width:800px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 780px) and (max-width:790px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 770px) and (max-width:780px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 760px) and (max-width:770px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 750px) and (max-width:760px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 765px) and (max-width:771px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:771px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:-230px;
+    margin-left:57px;
+    }
+}
+@media screen and (min-width: 750px) and (max-width:768px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:0px;
+    }
+  #bg4{
+    display:none;
+  
+  }
+}
+@media screen and (min-width: 0px) and (max-width:750px) {
+  #bg3{
+    height:210px;
+    width:110%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:0px;
+    }
+  #bg4{
+    display:none;
+  
+  }
+}
+#bg111{
+  height:500px;
+  width:100%;
+  margin-left:-100px;
+  border:3px solid black;
+  background:url("/static/img/parquet1.jpg");
+  color:white;
+}
+@media screen and (min-width: 750px) and (max-width:800px) {
+  #bg111{
+    height:210px;
+    width:73%;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:10px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width:750px) {
+  #bg111{
+    height:210px;
+    border:3px solid black;
+    background:url("/static/img/parquet1.jpg");
+    color:white;
+    margin-top:0px;
+    margin-left:0px;
+    }
+}
+#bg11{
+  height:40%;
+  border:3px solid black;
+}
