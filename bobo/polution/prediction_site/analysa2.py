@@ -37,8 +37,8 @@ def predi_analysa2(ville):
         d = recup_tag()
         condition.append(d)
       
-##        e = eruption()
-##        condition.append(e)
+        e = eruption()
+        condition.append(e)
      
         g = nuit_jour()
         condition.append(g)
@@ -64,8 +64,8 @@ def predi_analysa2(ville):
 ##        n = industrie(i)
 ##        condition.append(n)
 
-        #o = polenne(i)
-        #condition.append(o)
+        o = polenne(i)
+        condition.append(o)
 
 ##        l = france(i)
 ##        condition.append(l)
@@ -82,8 +82,8 @@ def predi_analysa2(ville):
         b = recuperation_donnée_température(i)
         condition.append(b)
      
-##        f = incendie(i)
-##        condition.append(f)
+        f = incendie(i)
+        condition.append(f)
 
         
     print(condition)
