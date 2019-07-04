@@ -84,7 +84,7 @@ jQuery("#lyon").on("click", function(e){
     jQuery.ajax({
         data:{
             'lyon':'lyon',
-            'csrfmiddlewaretoken': '{{ csrf_token }}',
+            
         },
         type:"POST",
         url:"/polution/prediction"
@@ -123,7 +123,7 @@ jQuery("#paris").on("click", function(e){
     jQuery.ajax({
         data:{
             'paris':'paris',
-            'csrfmiddlewaretoken': '{{ csrf_token }}',
+            
         },
         type:"POST",
         url:"/polution/prediction"
@@ -162,7 +162,7 @@ jQuery("#marseille").on("click", function(e){
     jQuery.ajax({
         data:{
             'marseille':'marseille',
-            'csrfmiddlewaretoken': '{{ csrf_token }}',
+            
         },
         type:"POST",
         url:"/polution/prediction"
