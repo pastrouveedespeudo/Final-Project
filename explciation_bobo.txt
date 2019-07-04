@@ -95,20 +95,22 @@ Peut on poussez le  truk plus loin ?
 
 
 
-Suivre les concept de la mode est crutial aujoudh'ui.
-Vous me dirais oui mais la mode n'est pas forcement la beauté
-et je vous répondrai verriez vous George Clooney avec les sourciles du comte Olaf ou une barbe d'ermit?
-Verriez vous Madonna avec une crete ? Non car ces personne suivent la mode.
+Suivre les concept de la mode est crutial aujoud'hui. 
+La mode est un ensemble de règle qui définisse les critères de la beauté.
+Oui mais... la mode n'est pas forcement la beauté !
+Verriez vous George Clooney avec les sourciles du comte Olaf ou avec une barbe d'ermit?
+Verriez vous Madonna avec une crete verte ? Non car ces personne suivent la mode.
 Elle vous permet
-dassurer votre crédibilité au travail mais aussi votre confiance een vous.
-Il a été démontrer que d'etre beau et bien habillé aumgentait le salaire
+dassurer votre crédibilité au travail mais aussi votre confiance en vous.
+Il a été démontrer scientifiquement que d'etre beau et bien habillé aumgentait le salaire
 les bonnes notes, la sensation d'intelligence et de sympathie. 
 Il est donc très important
-detre bien sur soi tant au niveau vestimentaire qu'au niveau du corps.
-Une coupe tendance ou des vatements des années 50 peut etre révolu aujourd'hui 
-et paraitre moche de nos jours. Il faut
+detre bien sur soi tant au niveau vestimentaire qu'au niveau du corps car l'estime de soi
+augmente la sympathie, le bien etre en somme le bonheur.
+Une coupe tendance ou des vatements des années 50 peuvent etre révolus aujourd'hui 
+et paraitre "moche" de nos jours. Il faut
 donc de suivre la mode et par le biais de conformisme et par notre instrinct grégaire.
-mais la mode, a quel prix ? Au prix des futures générations ?
+mais la mode, à quel prix ? Au prix des futures générations ?
 En effet, la mode est le deuxieme facteur de pollution apres
 le pétrol. Par le non recyclage des vetements, le transport ou bien
 la teinture des vetements le monde de la beauté
@@ -116,7 +118,7 @@ aggrave la qualité de l'air.
 Nous essayons donc d'aider mais aussi d'informer a travers ce site web,
 de donnée les connaissances a l'utilisateur des différents
 aspect de la pollution. Afin de faire cela
-nous avons faire un raisoner de la facon suivante: 
+nous allons raisoner de la facon suivante: 
 nous présentons les informations sur la pollution puis les données
 surlequelles nous nous sommes basés, 
 puis les graphiques et une des solutions qui existe
@@ -125,6 +127,11 @@ Bien sur nous avons fait d'autres fonctionnalités comme
 une carte des vent afin de suivre la pollution et une
 prédiction afin de suivre la pollution en temps réel selon
 des elements bien précis.
+
+La mode est importante pour la confiance en soi mais 
+aussi vis a vis des autres (de maniere insconsciente (impression de sympathie, inlligence...))
+mais elle a plusieurs conséquences nefastes sur la placenete vis a vis de la pollution de l'air par exemple.
+
 
 
 bien sur que ca a l'air horrible les moche les beau on s'en branle de la beauté pffffff 
