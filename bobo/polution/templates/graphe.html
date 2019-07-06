@@ -145,22 +145,22 @@
           <div class="container">
             <div class="row">
               <div class="col-sm">
-                Il y a plusieurs consitions qui régissent
-                la polution. Nous vous proposons de voir
+                Il y a plusieurs conditions qui régissent
+                la pollution. Nous vous proposons de voir
                 ces conditions via des graphes parmi les 3
                 villes de Lyon, Paris et Marseille.
                 Nous pouvons par exemple constater par
                 exemple à Lyon la pollution est plus faible
-                durant les épisodes de pluie et pendant les jour de week end.
+                durant les épisodes de pluie et pendant les jours  de week-end.
                                 
               </div>
               <div class="col-sm">
                 Nous remarquons aussi que la ville la 
-                plus grande amoindris la pollution.
+                plus grande amoindrit la pollution.
                 <br><br>
                 Nous voyons cependant plusieurs données
-                contres-intuitives. Les très grands bouchons 
-                n'augmente pas la pollution. Que les heures de pointes
+                contre-intuitives. Les très grands bouchons 
+                n'augmentent pas la pollution. Que les heures de pointe
                 non plus ne les incrémentent pas.
               </div>
             </div>
@@ -174,19 +174,20 @@
                 On peut constater qu'à Marseille, les manifestations
                 engendrent de la pollution, et que la pluie
                 à l'inverse la fait baisser.<br><br>
-                A paris nous voyons que le weekend augmente
+                À paris nous voyons que le week-end augmente
                 la pollution, et que le beau temps aussi.
 
               </div>
               <div class="col-sm"><br>
-                Nous ne pensons pas à la fiabilité de
-                ces données car une condition prise toute
+                Nous ne pensons pas que la fiabilité de
+                ces données soit de 100% car une condition prise toute
                 seule n'est pas très significatifs.
                 Nous ne pensons pas non plus pouvoir les
                 expliquer.
-                <br>Nous manquons de donnée et de connaissance
-                en pollution en circulation, en sociologie ect...
-                Mais nous espérons etre dans le juste !
+                <br>Nous manquons de données et de connaissance
+                en pollution en circulation, en sociologie ect.
+                Mais nous espérons être dans le juste car certaines
+                de ces données sont très proches des données scientifiques.
 
               </div>
 
@@ -217,35 +218,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-        
-        
-      
-    
-
-
-
-
-
   </body>
 
 
@@ -259,53 +231,6 @@
 
 
 
-
-
-<script>
-
-
-
-//We call the city and graphe to back
-function graphe(legraphe, condition){
-  
-  var a = "<i><a href='/polution/info_pollu' id='sav'>" + "En savoir plus sur la condition: " + condition + "</a></i>";
-
-  
-  document.getElementById('savoir').innerHTML = a;
-
-  LISTE_AJAX_TYPE_GRAPHE.push(legraphe)
-     document.getElementById('graphique1').innerHTML = '';
-     jQuery.ajax({
-       data:{
-           csrfmiddlewaretoken: '{{ csrf_token }}',
-           'city':LISTE_AJAX[LISTE_AJAX.length - 1],
-           'graph':LISTE_AJAX_TYPE_GRAPHE[LISTE_AJAX_TYPE_GRAPHE.length - 1]},
-
-       
-              type:"POST",
-              url:"/polution/graphe"
-          })
-          .done(function(data){
-              if (data.error){
-                  jQuery("#monCadreAlert").text(data.error);
-                  jQuery("#is_save");
-                  
-                  
-              }
-              else{
-                  jQuery("#is_save").html(data.data);
-                  jQuery("#monCadreAlert");
-             
-                  document.getElementById('graphique1').innerHTML = "<img id='dia' src = '/static/popo/" +
-                                                                    data +
-                                                                    "'>"
-
-       };
-              
-   });
-};
-
-</script>
 
 
 
