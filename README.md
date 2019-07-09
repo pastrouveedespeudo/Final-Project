@@ -1,12 +1,14 @@
-menu responsive qui met pas la redirection de graphe
+faire les spé technique 
 
-faire le dernier texte sur la pollution parle des facteurs (petrole et mode)
+faire le diadramme de classe
+
+faire le truk base de donnnée
 
 faire mention légale 
 
 traquer les bug
 
-entrainte toi sur pytouch et re et sur les orderdict(chai pas a quoi ca sert ca) commence pytorch et numpy aussi comme ca truk matricielle jacoco
+
 
 # ORGANISATION photo
 
