@@ -4,7 +4,9 @@
 
 -> pollu section
 
-y'en a encore plus dans pollu ... puréé 
+t'as oublié les templtes... les fleches sont ok.....
+
+grrrrrrrrrrrrrrrrrrrr ok moment détente : initialisation des données, init poids et biais pré acti acti predi entrainement cost et predi (arf dans entrainement faut dire reactu du grad) et jcrois que c bon en plus j'ai un super deck en ce moment
 
 
 
