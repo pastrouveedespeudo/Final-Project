@@ -2,6 +2,8 @@
 
 faire le diadramme de classe -> remplissage data mode
 
+-> dernier truk qui dis 1) remplissage puis 2)views puis 4)tendance
+
 -> remplissage pollu
 
 -> pollu section
