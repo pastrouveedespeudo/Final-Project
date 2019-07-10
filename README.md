@@ -17,6 +17,33 @@ faire mention légale
 traquer les bug
 
 
+
+# Partie mode
+
+<em>La description du processus est expliquer dans le dossier administratif/diagramme de classe</em>
+
+
+Dans un premier temps il faut:
+
+- remplir la database via le dossier remplir database (dans le fichire photo.tendance_file.remplir_database).
+
+
+
+#tendance
+- Une fois la tendance remplis la views (après appel de la page) va afficher/appeler par photo.tendance_site.analyse_database.tendance le fichier
+questionnant la database et l'affiche sur un template.
+
+#coiffure/habits
+
+- cf partie administrative diagramme de classe coiffure_habit
+
+
+
+
+
+
+
+
 # Le dossier administratif
 
 Dans ce dossier nous proposons une solution fonctionnelle et techniques. Afin de la bonne compréhension nous avons mis les diagrammes de base de donnée ainsi que les diagrammes de classe.
