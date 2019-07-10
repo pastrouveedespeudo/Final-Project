@@ -10,19 +10,24 @@ faire le diadramme de classe -> remplissage data mode
 
 
 
-
-
 faire mention légale 
 
 traquer les bug
 
 
+# Le dossier administratif
 
-# ORGANISATION photo
+Dans ce dossier nous proposons une solution fonctionnelle et techniques. Afin de la bonne compréhension nous avons mis les diagrammes de base de donnée ainsi que les diagrammes de classe.
 
-#Il y a les pages principages: coupe, tendance et habits
+# ORGANISATION photo/ORGANISTAION POLLUTION
 
-ces 3 pages contiennent respectivement un haut(haut_page) et une navebarre(menu) ainsi qu'un bottom(bottom)
+#Il y a les pages principages,
+
+ces pages contiennent respectivement un haut(haut_page) et une navebarre(menu) ainsi qu'un bottom(bottom)
+
+
+
+
 
 
 # Final-Project
