@@ -1,8 +1,16 @@
-faire les spé technique 
 
-faire le diadramme de classe
 
-faire le truk base de donnnée
+faire le diadramme de classe -> remplissage data mode
+
+-> remplissage pollu
+
+-> pollu section
+
+...
+
+
+
+
 
 faire mention légale 
 
