@@ -66,6 +66,12 @@ qui est deja utilisées dans plusieurs pays mais qui m'etais inconnue donc j'ai 
 
 mode -> bien etre (enjeu environemental) -> source de pollution -> information -> solution (enjeu environement)
 
+# Les Tests
+
+Se trouvent dans le fichier test.py de chaques application. Nous avons testé les pages et leur status de 200.
+
+Les tests de fonction se trouvent dans le dossier test de chaque composant de viexs_function composant views.py. Dedans nous regroupons les tests des fonctions ainsi que des url et API sollicitées
+
 # RECQUIS
 
 
