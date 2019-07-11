@@ -1,14 +1,19 @@
 .row{
   text-align:center;
 }
-#menumenu{
-    display:none;
-}
 
 i{
     color:white;
 }
-
+#logo{
+ display:none;
+}
+#MENU{
+ display:none;
+}
+menumenu{
+  display:block;
+}
 
 @media screen and (min-width: 0px) and (max-width:374px) {
     #fb{
