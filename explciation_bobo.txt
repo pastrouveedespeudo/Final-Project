@@ -111,6 +111,9 @@ augmente la sympathie, le bien etre en somme le bonheur.
 Une coupe tendance ou des vatements des années 50 peuvent etre révolus aujourd'hui 
 et paraitre "moche" de nos jours. Il faut
 donc de suivre la mode et par le biais de conformisme et par notre instrinct grégaire.
+Pour cela nous proposons des fonctionnalités qui présentent les coloris de la mode au niveau vestimentaire
+mais aussi d'adapté sa coupe selon son cheveux et la forme de son visage par des draggable
+de coupe et de vetement
 mais la mode, à quel prix ? Au prix des futures générations ?
 En effet, la mode est le deuxieme facteur de pollution apres
 le pétrol. Par le non recyclage des vetements, le transport ou bien
