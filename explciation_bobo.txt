@@ -1,4 +1,4 @@
-Aidons et informons, c'est la devise du magazine virtuel... Etre beau est a la portée de tous...
+Aidons et informons, c'est la devise du notre blog personnel le magazine virtuel... Etre beau est a la portée de tous...
 Etre bien habillé est un jeu d'enfant... Vous avez du mal et vous cherchez des excuse a ne pas vous conformer ?
 bien c'est votre force ! Mais cela vous jouera des tours.
 En effet il est démontrée que les chouchou, les mieux payés et ceux qui parraissent plus intelligent, 
@@ -18,7 +18,7 @@ nous proposons de prendre en compte l'importance de la mode mais aussi l'importa
 Par le magazine virtuel vous affirmons que la pollution peut etre baissé par les solutions de la pluie artificelle.
 
 
-Pourquoi faire ces deux applications ? car apres de nombreuses observations j'ai pu voir beaucoup de personne etre
+Pourquoi faire ce blog ? car apres de nombreuses observations j'ai pu voir beaucoup de personne etre
 mis de coté a cause d'une non conformisation et est compris que l'adaptation etait aussi primordiale.
 
 Par exemple, une petite fille aux joues rondes qui est moqué par les autres parcequ'elle aime et porte du rouge pétant et
@@ -44,8 +44,12 @@ pffffff tiens 2010 par exemple fait genre t'as eu grave peur bouaa jvai passé p
 
 
 
-Il m'a donc été difficile de ralier les deux sujets car trop différent.
-Mais j'ai tenu a intégrer la pollution dans ce projet ? car la planete est pour l'instant notre seul habitat que qu'il faut, pour moi 
+Il m'a donc été difficile de ralier les deux sujets car trop différent. J'ai fait dans un premier temps
+un systeme de photo avec un systeme de compte mais je ne connaissais pasmais je me suis heurté a l'importanta libx... 
+(ou il fallait faire un fichier correspondant et utilisé django et des add on). Ensuite j'ai fais un site web
+mais cela n'est pas tres clair et tres bancal. J'ai donc décidé de faire un blog, car dans un blog nous pouvons tous mettre
+et nous pouvons faire autant de section que l'on veut.
+Pourquoi ce projet ? car la planete est pour l'instant notre seul habitat que qu'il faut, pour moi 
 la préservé pour les futures habitants et que ces futures habitants 
 n'ont pas a etre mis a l'écart à cause d'une non connaissance de la mode et à l'inverse s'adapter à notre unicité Humaine
 J'ai aussi voulu montré un ensemble de mes compétences, techniques en developpement web afin d'avoir un bon travail. 
