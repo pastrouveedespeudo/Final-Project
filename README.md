@@ -1,22 +1,6 @@
-mettre un systeme de j'aime sur les commentaires
+en vrai jcrois c ma gueule 
 
-creer une base de donnée sur le projet tablito et s'en servir
-
-mettre toutes les discussions dedans
-
-faire un cadre ou le mec peut ecrire avec un pseudo et oui ou non ces coordonées
-
-quand le mc envoie
-
-python filtre 
-
-mettre un cadre scroll mettre un systeme de j'aime
-
-dans database aussi donc 2 tables
-
-avec le super utilisateur possibilité de supprimer les messages pas sympa
-
-et donc la avec le mot blog c bon
+c meme plus un gitan c tout un village que j'ai du ken dans une autre vie serieux
 
 
 
