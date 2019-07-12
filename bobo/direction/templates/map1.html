@@ -98,7 +98,7 @@
                       'text':a,
                   },
                   type:"POST",
-                  url:"/direction/map"
+                  url:"/direction/map1"
               })
               .done(function(data){
                   if (data.error){
@@ -110,7 +110,12 @@
                   else{
                       jQuery("#habit").html(data.data);
                       jQuery("#monCadreAlert");
-                      document.getElementById('ok').innerHTML = "<em>Votre message à bien été enregistrer !</em>"
+                      if(data == "ok"){
+                          document.getElementById('ok').innerHTML = "<em>Votre message à bien été enregistrer !</em>"
+                      }
+                      else{
+                        document.getElementById('ok').innerHTML = "Votre message comporte des caractères inapropriés recommencez gentillement !"
+                      }
                     
                   };
                   
