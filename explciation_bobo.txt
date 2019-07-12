@@ -39,18 +39,20 @@ que la personne puisse addapter le vetement ou la coiffure selon sa coorpulence
 
 
 
-Pour la partie donnée de la partie pollution, j'ai récupérer sur une dixènes de site différents conditions de pollution comme le 
-temps la pression les bouchons ect par beautifulsoup (donc en utilisant leur code source). Et les afficher sur ma page.
+Pour la partie donnée de la partie pollution, j'ai récupérer sur une dixènes de site différentes conditions de pollution comme le 
+temps la pression les bouchons ect par beautifulsoup en utilisant leur code source. Et les afficher sur ma page.
 
 Ensutie pour la prédiction, j'ai sotcker toutes les informations dans une base de donnée. Et par un input récupere les données des
-sites et compare la condition presente par exemple grand bouchon, beau temps, 1020 hpa de pression a une meme condition en database
-et je prend le taux de particule de chaques condition et en fait une moyenne. Pour les graphiques je récupere
-chaque condition et fais la moyenne de chaque condition par exemple je recupere toutes les données de particules de la condition
-météo (pluie, beau temps nuageux) et affiche la moyenne des aprticules.
+sites et compare la condition presente a une meme condition en database
+puis je prend le taux de particule de chaques condition matchant et en fait une moyenne. 
+
+Pour les graphiques je récupere
+chaque condition et en fais la moyenne par exemple je recupere toutes les données de particules de la condition
+météo (pluie, beau temps nuageux) y associe le taux de pollution et affiche la moyenne des particules.
 
 Pour la carte des vent (une fonctionnalité annexe) je récupere sur un site météo la direction du vent. Je récupere la longitude
 et lattitude et de la ville entrée (la distance en km2 de la ville par récup de wikipédia) et converti le tout en degres
-ce qui me donne une nouvelle longitude et lattide.
+ce qui me donne une nouvelle longitude et lattide en faisant attention a l'inclinaison de la terre.
 
 
 
