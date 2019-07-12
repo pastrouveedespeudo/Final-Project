@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.decorators.cache import cache_page
+from django.views.decorators.csrf import csrf_protect
+
 
 from .carte.direction.vent import *
 
@@ -7,12 +10,29 @@ from .views_function import function_map
 from .views_function import function_map2
 from .views_function import function_map3
 
-
+from .views_function import function_tchat
+from .data_tchat.database import tchat
 
 def navebarre_vent(request):
     return render(request, "menu/navebarre_vent.html")
 
+def map1(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data)
+        return HttpResponse(out)
 
+    message = tchat()
+    print(message)
+    
+    return render(request, "map1.html", {"message":message})
+
+
+
+@cache_page(60 * 15)
+@csrf_protect
 def map(request):
 
     if request.method == "POST":
