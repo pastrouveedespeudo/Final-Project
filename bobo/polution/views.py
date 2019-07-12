@@ -43,12 +43,12 @@ from .views_function import function_data_periode
 
 from .views_function import function_tchat
 
-from .data_tchat.database import database_pollution
-from .data_tchat.database import database_graphe
-from .data_tchat.database import database_donnée
-from .data_tchat.database import database_machine_a_o
-from .data_tchat.database import database_prediction
-from .data_tchat.database import database_info_pollu
+from .data_tchat.database import tchat_polution
+from .data_tchat.database import tchat_graphe
+from .data_tchat.database import tchat_donnée
+from .data_tchat.database import tchat_machine_a_o
+from .data_tchat.database import tchat_prediction
+from .data_tchat.database import tchat_info_pollu
 
 
 def home(request):
@@ -81,7 +81,7 @@ def navebarre_soluce(request):
     return render(request, 'menu/navebarre_soluce.html')
 
 
-def tchat_polution(request):
+def tchat_polution_v(request):
     
     if request.method == "POST":
         
@@ -89,14 +89,14 @@ def tchat_polution(request):
         out = function_tchat(data, 'tchat_polution')
         return HttpResponse(out)
 
-    message = tchat_coupe()
+    message = tchat_polution()
 
     
     return render(request, "tchat_polution.html", {"message":message})
 
 
 
-def tchat_graphe(request):
+def tchat_graphe_v(request):
     
     if request.method == "POST":
         
@@ -104,14 +104,14 @@ def tchat_graphe(request):
         out = function_tchat(data, 'tchat_graphe')
         return HttpResponse(out)
 
-    message = tchat_coupe()
+    message = tchat_graphe()
 
     
     return render(request, "tchat_graphe.html", {"message":message})
 
 
 
-def tchat_donnée(request):
+def tchat_donnée_v(request):
     
     if request.method == "POST":
         
@@ -119,14 +119,12 @@ def tchat_donnée(request):
         out = function_tchat(data, 'tchat_donnée')
         return HttpResponse(out)
 
-    message = tchat_coupe()
-
-    
+    message = tchat_donnée()
     return render(request, "tchat_donnée.html", {"message":message})
 
 
 
-def tchat_machine_a_o(request):
+def tchat_machine_a_o_v(request):
     
     if request.method == "POST":
         
@@ -134,13 +132,13 @@ def tchat_machine_a_o(request):
         out = function_tchat(data, 'tchat_machine_a_o')
         return HttpResponse(out)
 
-    message = tchat_coupe()
+    message = tchat_machine_a_o()
 
     
     return render(request, "tchat_machine_a_o.html", {"message":message})
 
 
-def tchat_prediction(request):
+def tchat_prediction_v(request):
     
     if request.method == "POST":
         
@@ -148,13 +146,13 @@ def tchat_prediction(request):
         out = function_tchat(data, 'tchat_prediction')
         return HttpResponse(out)
 
-    message = tchat_coupe()
+    message = tchat_prediction()
 
     
     return render(request, "tchat_prediction.html", {"message":message})
 
 
-def tchat_info_pollu(request):
+def tchat_info_pollu_v(request):
     
     if request.method == "POST":
         
@@ -162,7 +160,7 @@ def tchat_info_pollu(request):
         out = function_tchat(data, 'tchat_info_pollu')
         return HttpResponse(out)
 
-    message = tchat_coupe()
+    message = tchat_info_pollu()
 
     
     return render(request, "tchat_info_pollu.html", {"message":message})
