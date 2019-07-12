@@ -5,11 +5,20 @@ from .CONFIG import USER
 from .CONFIG import PASSWORD
 from .CONFIG import DATABASE
 
+import datetime
+
 
 
 def database(data):
     
+    date = datetime.datetime.now()
+    day = date.day
+    month = date.month
+    year = date.year
 
+    date = day, month, year
+    date = str(date)
+    
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
@@ -17,10 +26,10 @@ def database(data):
 
     cur = conn.cursor()
     
-    cur.execute("""INSERT INTO tchat_map
-                (message)
-                values(%s)
-                """, (data,))
+    cur.execute("""INSERT INTO tchat_map1
+                (message, date)
+                values(%s, %s)
+                """, (data, date))
     
     conn.commit()
 
@@ -28,7 +37,6 @@ def database(data):
 
 def tchat():
 
-    
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -38,7 +46,7 @@ def tchat():
     cur = conn.cursor()
     
     cur.execute("""
-                select * from tchat_map;
+                select * from tchat_map1;
                 """)
 
     
@@ -46,13 +54,20 @@ def tchat():
     
     rows = cur.fetchall()
     liste = [i for i in rows]
+    
+    liste1, liste2 = traitement(liste)
+    
+    return liste1, liste2
 
-    return liste
 
+def traitement(liste):
+    liste1 = []
+    liste2 = []
+    for i in liste:
+        liste1.append(i[1])
+        liste2.append(i[2])
 
-
-
-
+    return liste1, liste2
 
 
 
