@@ -9,7 +9,8 @@ des conseilles sur les vetements selon votre type de coiffure !
 Ces conseilels sont accompagné 
 de fonctionnalités vous aidant a mettre la théoerie ! en pratique. Mais pour les plus réticent... que 
 provoque ce phénomene de beauté ? quelle conséquence est provoqué ? Est ce que la plenete doit 
-souffrir a cause de notre image ? La mode pollue et elle pollue bien
+souffrir a cause de notre image ? La mode pollue et elle pollue bien car elle est le second facteur de pollution apres
+l'industrie du pétrol
 Nous vous proposons de toute connaitre sur la pollution par des informations, des graphes et des donnée ne temps réel.
 Soyez beau, soyez heureux mais réstez le et le plus longtemps possible en préservant la planete. 
 nous proposons de prendre en compte l'importance de la mode mais aussi l'importance de la pollution.
@@ -63,12 +64,18 @@ Afin de remplir mes databases j'ai fais des dossier a part que je lance a la mai
 et si on rajoute des images dans le dossier approprié, le script mettra ajour la database de la tendance)
 pour la pollution j'ai fais un cron a chaque heure
 
-Enfin toutes les informations sur la mode et la pollution sont vérifiés et validé par des citations ainsi que de leur source
-(hors intro de page
-
+Enfin toutes les informations sur la mode et la pollution sont un long travaille de recherche qui
+sont vérifiés et validé par leur source
+(hors intro de page)
 
 
 trouve des sources qui valide les traumatismes, les ghetto et tout ca pour le debut info_pollu 
+
+
+
+
+
+
 
 
 Le but de cet application est d'aider et d'informer.
