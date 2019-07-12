@@ -20,7 +20,12 @@ urlpatterns = [
     path(r'/navebarre_prediction', views.navebarre_prediction),
     path(r'/navebarre_soluce', views.navebarre_soluce),
     path(r'/navebarre_vent', views.navebarre_vent),
-    
+    path(r'/tchat_polution', views.tchat_polution),
+    path(r'/tchat_graphe', views.tchat_graphe),
+    path(r'/tchat_donnée', views.tchat_donnée),
+    path(r'/tchat_machine_a_o', views.tchat_machine_a_o),
+    path(r'/tchat_prediction', views.tchat_prediction),
+    path(r'/tchat_info_pollu', views.tchat_info_pollu),
 
     
 ]
