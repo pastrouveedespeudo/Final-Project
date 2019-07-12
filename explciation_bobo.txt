@@ -48,7 +48,9 @@ Il m'a donc été difficile de ralier les deux sujets car trop différent. J'ai 
 un systeme de photo avec un systeme de compte mais je ne connaissais pasmais je me suis heurté a l'importanta libx... 
 (ou il fallait faire un fichier correspondant et utilisé django et des add on). Ensuite j'ai fais un site web
 mais cela n'est pas tres clair et tres bancal. J'ai donc décidé de faire un blog, car dans un blog nous pouvons tous mettre
-et nous pouvons faire autant de section que l'on veut.
+et nous pouvons faire autant de section que l'on veut. J'ai aussi décidé de supprimer le systeme de compte
+car j'avais peur que l'on puisse croire par les habits et ses info que je veuille m'orienté ensuite (eventuellement)
+vers un site commerciale. Donc tout le monde peut poster des commentaires sans etre inscrit. 
 Pourquoi ce projet ? car la planete est pour l'instant notre seul habitat que qu'il faut, pour moi 
 la préservé pour les futures habitants et que ces futures habitants 
 n'ont pas a etre mis a l'écart à cause d'une non connaissance de la mode et à l'inverse s'adapter à notre unicité Humaine
