@@ -1,3 +1,6 @@
+mais moi si je dis un truk jme fais ken olalalla chui le chien de pavlov 
+
+
 apres c pas ma faute j'ai pas leur niveau mettre ca sur toutes les pages pffff
 
 
