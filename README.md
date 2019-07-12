@@ -1,4 +1,4 @@
-toutes les pages de converse seront des iframes donc on creer des nouvelle pages
+mettre un systeme de j'aime sur les commentaires
 
 creer une base de donnée sur le projet tablito et s'en servir
 
