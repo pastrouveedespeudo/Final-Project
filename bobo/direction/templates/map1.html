@@ -33,8 +33,6 @@
     
 
         {% for i in message %}
-            {% for j in date %}
-
 
         <div class="container">
             <div class="row">
@@ -44,8 +42,8 @@
                     <center>
                         <div id="pac">
                             <br><br>
-                            {{i}}<br>
-                            <p style='float:right; margin-right:50px;'>{{j}}</p>
+                            {{i.0}}<br>
+                            <p style='float:right; margin-right:50px;'>{{i.1}}</p>
                             <br><br>
                         </div>
                     </center>
@@ -54,9 +52,31 @@
 
           </div>
         </div>
-            
-            {% endfor %}
-        {% endfor %}
+
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         
