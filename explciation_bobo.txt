@@ -55,7 +55,9 @@ et lattitude et de la ville entrée (la distance en km2 de la ville par récup d
 ce qui me donne une nouvelle longitude et lattide en faisant attention a l'inclinaison de la terre.
 
 
-
+Afin de remplir mes databases j'ai fais des dossier a part que je lance a la main (pour la mode je n'ai qu'a le faire une fois
+et si on rajoute des images dans le dossier approprié, le script mettra ajour la database de la tendance)
+pour la pollution j'ai fais un cron a chaque heure
 
 
 
