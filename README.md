@@ -1,3 +1,5 @@
+toutes les pages de converse seront des iframes donc on creer des nouvelle pages
+
 creer une base de donnée sur le projet tablito et s'en servir
 
 mettre toutes les discussions dedans
