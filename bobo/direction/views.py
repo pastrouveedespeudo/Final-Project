@@ -24,10 +24,11 @@ def map1(request):
         out = function_tchat(data)
         return HttpResponse(out)
 
-    message = tchat()
-    print(message)
+    message, date = tchat()
+
     
-    return render(request, "map1.html", {"message":message})
+    return render(request, "map1.html", {"message":message,
+                                         "date":date})
 
 
 
