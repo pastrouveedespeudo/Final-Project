@@ -53,7 +53,7 @@ J'ai aussi codé en annexe une fonctionnalité qui cherche les coiffeur et les s
 google les mot clé coiffeur, salon, coiffure ect
 est pris le nom des sallons, et est pris leur horraire sous un systeme de liste. Enfin j'ai récupérer leur coordonées
 et est transofrmé l'addresse en longitude et lattitude
-afin des les afficher sur une google map.
+afin des les afficher sur une google map. 
 Pour le coté vetement, je me sers de la database pour afficher selon la coupe de chevuex les vetement appropriés. Pour totues les
 draggable coiffure et vetement, j'ai fait un systeme par offset qui permet de mofidier leur longueur et leur largeur afin
 que la personne puisse addapter le vetement ou la coiffure selon sa coorpulence
