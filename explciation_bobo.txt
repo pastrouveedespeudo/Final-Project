@@ -23,7 +23,8 @@ Mais j'ai tenu a intégrer la pollution dans ce projet car la planete est pour l
 le préservé pour les futures habitants
 
 Afin de faire la partie mode, j'ai entre autre codé un script qui permet de récuperer les couleur d'image de vetement (le haut et le
-bas ainsi que la coupe de cheveux apres les avoir détourer) puis de mettre les couleurs les plus récurrente de l'image(hors background qui était un blanc absolu soit 255,255,255) 
+bas ainsi que la coupe de cheveux apres les avoir détourer) puis de mettre les couleurs les plus récurrente de l'image(hors
+background qui était un blanc absolu soit 255,255,255) 
 dans une database. Ensuite j'ai pris toutes les images et est sortie la moyenne la plus réccurente
 des couleurs selon la coupe de cheveux (blond, brun et chatain en considérant le noir comme du brun et le roux comme du chatain).
 Ensuite j'ai fait un syteme de draggable de cheveux afin de les mettre sur une vidéo que l'on peut stopper et donc se visualiser.
