@@ -55,19 +55,19 @@ def tchat():
     rows = cur.fetchall()
     liste = [i for i in rows]
     
-    liste1, liste2 = traitement(liste)
+    liste1 = traitement(liste)
     
-    return liste1, liste2
+    return liste1
 
 
 def traitement(liste):
+    
     liste1 = []
-    liste2 = []
     for i in liste:
-        liste1.append(i[1])
-        liste2.append(i[2])
+        liste1.append([i[1], i[2]])
 
-    return liste1, liste2
+
+    return liste1
 
 
 
