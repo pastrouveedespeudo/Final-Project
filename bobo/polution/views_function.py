@@ -8,6 +8,43 @@ from .data_site.polenne import polenne
 
 from .data_site.pollution import traffic as Traffic
 
+
+from .data_tchat.database import database_pollution
+from .data_tchat.database import database_graphe
+from .data_tchat.database import database_donnée
+from .data_tchat.database import database_machine_a_o
+from .data_tchat.database import database_prediction
+from .data_tchat.database import database_info_pollu
+
+from .data_tchat.CONFIG import GROS_MOTS
+
+
+def function_tchat(data, tchat):
+    liste = data.split()
+    for i in liste:
+        for mot in GROS_MOTS:
+            if mot == i:
+                return "non"
+
+    if data == "":
+        return "non"
+
+    if tchat == "tchat_polution":
+        database_pollution(data)
+    elif tchat == "tchat_graphe":
+        database_graphe(data)
+    elif tchat == "tchat_donnée":
+        database_donnée(data)
+    if tchat == "tchat_machine_a_o":
+        database_machine_a_o(data)
+    elif tchat == "tchat_prediction":
+        database_prediction(data)
+    elif tchat == "tchat_info_pollu":
+        database_info_pollu(data)
+    
+    return data
+
+
 def data_function_particle():
     
     try:
