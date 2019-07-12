@@ -15,11 +15,22 @@ Soyez beau, soyez heureux mais réstez le et le plus longtemps possible en prés
 nous proposons de prendre en compte l'importance de la mode mais aussi l'importance de la pollution.
 Par le magazine virtuel vous affirmons que la pollution peut etre baissé par les solutions de la pluie artificelle.
 Pourquoi faire ces deux applications ? car apres de nombreuses observations j'ai pu voir beaucoup de personne etre
-mis de coté a cause d'une non conformisation. J'ai donc décidé d'essayé d'aider les gens qui n'était pas a l'aise
+mis de coté a cause d'une non conformisation et est compris que l'adaptation etait primordiale
+J'ai donc décidé d'essayé d'aider les gens qui n'était pas a l'aise
 avec la mode (et qui par la meme occasion m'a appris plein de chose). Cependant en creusant j'ai vu que la mode
 était encore plus destructrise par la pollution. Il m'a donc été difficile de ralier les deux sujets car trop différent.
 Mais j'ai tenu a intégrer la pollution dans ce projet car la planete est pour l'instant notre seul habitat que qu'il faut 
 le préservé pour les futures habitants
+
+Afin de faire la partie mode, j'ai entre autre codé un script qui permet de récuperer les couleur d'image de vetement (le haut et le
+bas ainsi que la coupe de cheveux apres les avoir détourer) puis de les mettre dans une database et de prendre la moyenne de
+ces couleurs selon la coupe de cheveux (blond, brun et chatain en considérant le noir comme du brun et le roux comme du chatain).
+Ensuite j'ai fait un syteme de draggable de cheveux afin de les mettre sur une vidéo que l'on peut stopper et donc se visualiser.
+J'ai aussi codé en annexe une fonctionnalité qui cherche les coiffeur et les salle de gym d'une ville.
+Pour le coté vetement, je me sers de la database pour afficher selon la coupe de chevuex les vetement appropriés
+
+
+
 
 
 
