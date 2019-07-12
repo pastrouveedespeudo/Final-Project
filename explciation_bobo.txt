@@ -28,7 +28,11 @@ background qui était un blanc absolu soit 255,255,255)
 dans une database. Ensuite j'ai pris toutes les images et est sortie la moyenne la plus réccurente
 des couleurs selon la coupe de cheveux (blond, brun et chatain en considérant le noir comme du brun et le roux comme du chatain).
 Ensuite j'ai fait un syteme de draggable de cheveux afin de les mettre sur une vidéo que l'on peut stopper et donc se visualiser.
-J'ai aussi codé en annexe une fonctionnalité qui cherche les coiffeur et les salle de gym d'une ville.
+J'ai aussi codé en annexe une fonctionnalité qui cherche les coiffeur et les salle de gym d'une ville en scrappant sur
+google les mot clé coiffeur, salon, coiffure ect
+est pris le nom des sallons, et est pris leur horraire sous un systeme de liste. Enfin j'ai récupérer leur coordonées
+et est transofrmé l'addresse en longitude et lattitude
+afin des les afficher sur une google map.
 Pour le coté vetement, je me sers de la database pour afficher selon la coupe de chevuex les vetement appropriés
 
 
