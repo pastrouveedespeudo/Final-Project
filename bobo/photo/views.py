@@ -18,7 +18,14 @@ from .views_functions import gymm_map_function
 from .views_functions import gymm_function
 from .views_functions import haircut_style_function
 from .views_functions import map_hairdresser_function
- 
+
+from .views_functions import function_tchat
+
+from .data_tchat.database import tchat_coupe
+from .data_tchat.database import tchat_habit
+from .data_tchat.database import tchat_tendance
+
+
 
 def navebarre_admin2(request):
     """Here we return a home html respons"""
@@ -28,10 +35,55 @@ def navebarre_admin2(request):
 def navebarre_coupe(request):
     """Here we return a home html respons"""
     return render(request, 'menu/navebarre_coupe.html')
-
+ 
 def navebarre_habits(request):
     """Here we return a home html respons"""
     return render(request, 'menu/navebarre_habits.html')
+
+
+def coupe_tchat(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, 'tchat_coupe')
+        print(out, "00000000000000000000000000000000000000")
+        return HttpResponse(out)
+
+    message = tchat_coupe()
+
+    
+    return render(request, "coupe_tchat.html", {"message":message})
+
+
+def habit_tchat(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, "tchat_habit")
+        return HttpResponse(out)
+
+    message = tchat_habit()
+
+    
+    return render(request, "habit_tchat.html", {"message":message})
+
+
+def tendance_tchat(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, "tchat_tendance")
+        return HttpResponse(out)
+
+    message = tchat_tendance()
+
+    
+    return render(request, "tendance_tchat.html", {"message":message})
+
+
 
 
 def home(request):
@@ -46,7 +98,7 @@ def coupe(request):
 
     if request.method == "POST":
 
-        #
+        
         image = request.POST.get('posting')
         haircut = request.POST.get('coupe')
         search = request.POST.get('coupedecheveux')
@@ -69,14 +121,14 @@ def coupe(request):
 
 
         if gymm:
-
+            print(gymm)
             #We call gymm_function from views_function
             gym_list = gymm_function(gymm)
             return HttpResponse(gym_list)
 
 
         if haircut_style:
-
+            
             #We call haircut_style_function from views_function
             coif = haircut_style_function(haircut_style)
             return HttpResponse(coif)
