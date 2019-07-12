@@ -12,7 +12,21 @@ grrrrrrrrrrrrrrrrrrrr ok moment détente : initialisation des données, init poi
 
 faire mention légale 
 
-traquer les bug
+finir le texte pollut
+
+rajouter un partie discussion blog, nécéssitant une censure (efface des mots plus analyse des textes a conotation negative)
+
+car pas de compte 
+
+pour chaque pages et dire que c un blog ca résou tout puis sté une reaction normale
+
+je peux voir ton visage mais toi tu ne me vois pas donc je peux faire ce que je veux mias sy yavait sa tronche sur sa photo
+
+ca n'aurait pas été la meme et en face encore moins connar va^^
+
+
+
+
 
 
 
