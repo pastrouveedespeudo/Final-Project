@@ -26,6 +26,29 @@ def database(data):
 
 
 
+def tchat():
+
+    
+
+    conn = psycopg2.connect(database=DATABASE,
+                            user=USER,
+                            host=HOST,
+                            password=PASSWORD) 
+
+    cur = conn.cursor()
+    
+    cur.execute("""
+                select * from tchat_map;
+                """)
+
+    
+    conn.commit()
+    
+    rows = cur.fetchall()
+    liste = [i for i in rows]
+
+    return liste
+
 
 
 
