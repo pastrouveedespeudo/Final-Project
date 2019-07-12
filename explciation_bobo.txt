@@ -25,7 +25,9 @@ avec la mode (et qui par la meme occasion m'a appris plein de chose). Cependant 
 était encore plus destructrise par la pollution. Il m'a donc été difficile de ralier les deux sujets car trop différent.
 Mais j'ai tenu a intégrer la pollution dans ce projet ? car la planete est pour l'instant notre seul habitat que qu'il faut 
 le préservé pour les futures habitants et que ces futures habitants (biensur ce site ne changera pas le monde^^) 
-doivent detruire ce principe de non intégration par la mode
+doivent detruire ce principe de non intégration par la mode et à l'inverse s'adapter
+J'ai aussi voulu montré un ensemble de mes compétences, techniques en developpement web afin d'avoir un bon travail. 
+
 
 
 Afin de faire la partie mode, j'ai entre autre codé un script qui permet de récuperer les couleur d'image de vetement (le haut et le
@@ -71,7 +73,7 @@ sont vérifiés et validé par leur source
 
 
 trouve des sources qui valide les traumatismes, les ghetto et tout ca pour le debut info_pollu 
-
+faut plus travaillé le fait que c bancale mais que sté important pour toi (ouais fin jvoulais juste coder enfete^^)
 
 
 
