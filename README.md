@@ -1,12 +1,27 @@
+creer une base de donnée sur le projet tablito et s'en servir
+
+mettre toutes les discussions dedans
+
+faire un cadre ou le mec peut ecrire avec un pseudo et oui ou non ces coordonées
+
+quand le mc envoie
+
+python filtre 
+
+mettre un cadre scroll mettre un systeme de j'aime
+
+dans database aussi donc 2 tables
+
+avec le super utilisateur possibilité de supprimer les messages pas sympa
+
+et donc la avec le mot blog c bon
+
 
 
 -> remplissage pollu
 
 -> pollu section
 
-t'as oublié les templtes... les fleches sont ok.....
-
-grrrrrrrrrrrrrrrrrrrr ok moment détente : initialisation des données, init poids et biais pré acti acti predi entrainement cost et predi (arf dans entrainement faut dire reactu du grad) et jcrois que c bon en plus j'ai un super deck en ce moment
 
 
 
