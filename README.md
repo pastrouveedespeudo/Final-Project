@@ -1,32 +1,9 @@
-en vrai jcrois c ma gueule 
-
-c meme plus un gitan c tout un village que j'ai du ken dans une autre vie serieux
-
-
-
--> remplissage pollu
-
--> pollu section
-
-
+apres c pas ma faute j'ai pas leur niveau mettre ca sur toutes les pages pffff
 
 
 faire mention légale 
 
 finir le texte pollut
-
-rajouter un partie discussion blog, nécéssitant une censure (efface des mots plus analyse des textes a conotation negative)
-
-car pas de compte 
-
-pour chaque pages et dire que c un blog ca résou tout puis sté une reaction normale
-
-je peux voir ton visage mais toi tu ne me vois pas donc je peux faire ce que je veux mias sy yavait sa tronche sur sa photo
-
-ca n'aurait pas été la meme et en face encore moins connar va^^
-
-
-
 
 
 
