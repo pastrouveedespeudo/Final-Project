@@ -10,16 +10,76 @@
 #they are functions
 #who trait picture
 
+import os
 
 from .tendance_file.analysis_database.tendance import la_tendance
-
-
 
 from .magasins.address import *
 from .magasins.gym import *
 from .magasins.hairdresser import *
 
+from .data_tchat.database import database_coupe
+from .data_tchat.database import database_habit
+from .data_tchat.database import database_tendance
 
+from .data_tchat.CONFIG import GROS_MOTS
+
+
+def function_tchat(data, tchat):
+    liste = data.split()
+    for i in liste:
+        for mot in GROS_MOTS:
+            if mot == i:
+                return "non"
+
+    if data == "":
+        return "non"
+
+    if tchat == "tchat_coupe":
+        database_coupe(data)
+    elif tchat == "tchat_habit":
+        database_habit(data)
+    elif tchat == "tchat_tendance":
+        database_tendance(data)
+    
+    
+    return data
+
+
+def database_mode_function():
+    try:
+        os.chdir('/app/static/bobo')
+    except:
+        os.chdir(r'C:\Users\jeanbaptiste\bobo\bobo\static\bobo')
+
+
+    liste = os.listdir()
+
+    liste1 = []
+    theliste1 = []
+
+    for i in liste:
+        theliste1.append(i)
+
+    theliste1 = sorted(theliste1)
+
+    counter = 0
+    for i in theliste1:
+        try:
+            liste1.append((str(theliste1[counter]),
+                           str(theliste1[counter + 1]),
+                           int(str(counter) + str(counter))))
+            counter += 2
+        except:
+            pass
+
+    return liste1
+
+
+def tendance_function():
+    
+    liste10 = la_tendance()
+    return liste10
 
 def the_colors_function(color):
 
