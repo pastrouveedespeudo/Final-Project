@@ -41,6 +41,15 @@ from .views_function import function_data_fire
 from .views_function import function_data_ferti
 from .views_function import function_data_periode
 
+from .views_function import function_tchat
+
+from .data_tchat.database import database_pollution
+from .data_tchat.database import database_graphe
+from .data_tchat.database import database_donnée
+from .data_tchat.database import database_machine_a_o
+from .data_tchat.database import database_prediction
+from .data_tchat.database import database_info_pollu
+
 
 def home(request):
     """Here we return html home response"""
@@ -70,6 +79,97 @@ def navebarre_vent(request):
 def navebarre_soluce(request):
     """Here we return html home response"""
     return render(request, 'menu/navebarre_soluce.html')
+
+
+def tchat_polution(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, 'tchat_polution')
+        return HttpResponse(out)
+
+    message = tchat_coupe()
+
+    
+    return render(request, "tchat_polution.html", {"message":message})
+
+
+
+def tchat_graphe(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, 'tchat_graphe')
+        return HttpResponse(out)
+
+    message = tchat_coupe()
+
+    
+    return render(request, "tchat_graphe.html", {"message":message})
+
+
+
+def tchat_donnée(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, 'tchat_donnée')
+        return HttpResponse(out)
+
+    message = tchat_coupe()
+
+    
+    return render(request, "tchat_donnée.html", {"message":message})
+
+
+
+def tchat_machine_a_o(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, 'tchat_machine_a_o')
+        return HttpResponse(out)
+
+    message = tchat_coupe()
+
+    
+    return render(request, "tchat_machine_a_o.html", {"message":message})
+
+
+def tchat_prediction(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, 'tchat_prediction')
+        return HttpResponse(out)
+
+    message = tchat_coupe()
+
+    
+    return render(request, "tchat_prediction.html", {"message":message})
+
+
+def tchat_info_pollu(request):
+    
+    if request.method == "POST":
+        
+        data = request.POST.get('text')
+        out = function_tchat(data, 'tchat_info_pollu')
+        return HttpResponse(out)
+
+    message = tchat_coupe()
+
+    
+    return render(request, "tchat_info_pollu.html", {"message":message})
+
+
+
+
 
 
 def polution(request):
