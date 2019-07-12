@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+  <html lang="fr">
+
+    <!-- Head section - Loading CDN -->
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="jb" content="">
+      <title>Magazine virtuel</title>
+
+      <!-- Font Awesome Icons -->
+      <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+      <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+      <!-- Plugin CSS -->
+      <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/static/css/direction/map_haut.css">
+
+      <!-- Theme CSS - Includes Bootstrap -->
+      <link href="/static/css/creative.min.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+    </head>
+
+    <body>
+
+        <br><br>
+        <input type='button' value='Tendance' id='carte' onclick="document.location.href='/photo/tendance'">
+        <center><h1>Echangez sur la Tendance !!</h1></center><br><br>
+
+        {% for i in message %}
+
+        <div class="container">
+            <div class="row">
+          
+                <div class="col-sm">
+
+                    <center>
+                        <div id="pac">
+                            <br><br>
+                            {{i.0}}<br>
+                            <p style='float:right; margin-right:50px;'>{{i.1}}</p>
+                            <br><br>
+                        </div>
+                    </center>
+                </div><br><br><br><br><br><br>
+                
+
+          </div>
+        </div>
+
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <center>
+            <div id='tchat'>
+                <br>
+                <div id="ok"></div>
+                <br>
+                <textarea placeholder="Entrez votre message..." id="text"></textarea>
+                <br><br>
+                <input type='button' value='Poster' id="poster">
+            </div>
+        </center>
+
+    </body>
+
+
+
+
+
+
+
+
+    <style>
+    #carte{
+        border:none;
+        background:none;
+        margin-left:50px;
+        font-weight:bold;
+        height:100px;
+        width:100px;
+        font-size:20px;
+    }
+    #carte:hover{
+        border:1px solid black;
+    }
+    #tchat{
+        margin-top:200px;
+        border:4px solid black;
+        background:#6a767d;
+        height:400px;
+        width:60%;
+    }
+    textarea{
+        width:80%;
+        height:60%;
+        resize : none;
+    }
+    #poster{
+        border:none;
+        background:none;
+        font-size:20px;
+        font-weight:bold
+    }
+    #poster:hover{
+        border:1px solid black;
+        
+    }
+    #pac{
+        width:100%;
+        height:100%;
+        border:1px solid black;
+        text-shadow:0.5px 0.5px black;
+        margin:20px;
+        font-weight:bold;
+        background:#6a767d;
+        
+    }
+    </style>
+
+
+    <script>
+
+
+
+
+        jQuery("#poster").on("click", function(e){
+            
+            var a = document.getElementById('text').value;
+             e.preventDefault();
+             
+              jQuery.ajax({
+                  data:{
+                      'text':a,
+                  },
+                  type:"POST",
+                  url:"/photo/tendance_tchat/"
+              })
+              .done(function(data){
+                  if (data.error){
+                      jQuery("#monCadreAlert").text(data.error);
+                      jQuery("#is_save");
+                      
+                      
+                  }
+                  else{
+                      jQuery("#habit").html(data.data);
+                      jQuery("#monCadreAlert");
+                      if(data == "non"){
+                          document.getElementById('ok').innerHTML = "Votre message comporte des caractères inapropriés recommencez gentillement ! ou, ce message existe deja, evite le spam !"
+                      }
+                      else{
+                          document.location.href="/photo/tendance_tchat/"
+                      }
+                    
+                  };
+                  
+              });
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        $(document).ready(function(){
+
+            
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = cookies[i].trim();
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+            var csrftoken = getCookie('csrftoken');
+
+            function csrfSafeMethod(method) {
+                // these HTTP methods do not require CSRF protection
+                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+            }
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                    }
+                }
+            });
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
