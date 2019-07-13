@@ -1,14 +1,9 @@
-"""BS4, requests, datatime 16/04/2019"""
-
-
-
+"""This is polenne function
+    we take polenne data from plumairlab"""
 
 import requests
-
 import urllib.request
 from bs4 import *
-
-
 
 from .CONFIG_DATA_SITE import PATH_PARIS_POLENNE
 from .CONFIG_DATA_SITE import PATH_LYON_POLENNE
@@ -20,15 +15,14 @@ def path_function(city):
     """Here we define the path"""
     
     city = city.lower()
-
     path = ''
-    
+
     if city == 'lyon':
         path = PATH_LYON_POLENNE
 
     elif city == 'paris':
         path = PATH_PARIS_POLENNE
-        
+
     elif city == 'marseille':
         path = PATH_MARSEILLE_POLENNE
 
@@ -46,7 +40,6 @@ def soup_function(city):
     soup_html = BeautifulSoup(page, "html.parser")
     Property = soup_html.find_all("div")
 
-
     liste = []
     liste.append(str(Property))
     
@@ -55,10 +48,10 @@ def soup_function(city):
 
     return liste
 
+
 def polenne(city):
     """we are looking for the rate of polenne"""
 
-    #soup_function()
     liste = soup_function(city)
 
     word = ''
@@ -81,31 +74,3 @@ def polenne(city):
             word += i
 
     return "".join(liste2[:-1])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
