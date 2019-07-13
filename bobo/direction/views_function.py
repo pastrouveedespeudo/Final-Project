@@ -7,7 +7,7 @@ from .carte.direction.vent import *
 from .carte.direction.superficie import superficie_ville
 from .carte.direction.addresse import dress_to_ville
 
-from .data_tchat.database import *
+from .data_tchat.database import database
 
 from .CONFIG import GROS_MOTS
 
@@ -19,8 +19,11 @@ def function_tchat(data):
             if mot == i:
                 return "non"
 
+    if data == "":
+        return "non"
+
     database(data)
-    return 'ok'
+    return data
     
 def function_map(data):
     """Calling all function"""
@@ -90,27 +93,3 @@ def function_map3(lat, long, listee, index, data):
 
 
     return nouvelle_position, lat, long
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
