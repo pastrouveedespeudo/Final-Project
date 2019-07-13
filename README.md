@@ -1,9 +1,14 @@
+refaire le schéma des acteur (le dev modo)
+
+mettre les fichier js et css des fofo
+
+faire le trello
 
 faire mention légale 
 
 finir le texte pollut
 
-ouais fin j'ai relu sté pas du tout gentil ^^ aps de mention legale pour eux
+
 
 
 
