@@ -1,10 +1,8 @@
-refaire le schéma des acteur (le dev modo)
+faire le trello
+
 
 mettre les fichier js et css des fofo
 
-spé fonctionnelle du dev modo
-
-faire le trello
 
 faire mention légale 
 
