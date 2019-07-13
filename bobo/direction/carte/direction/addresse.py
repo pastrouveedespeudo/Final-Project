@@ -34,5 +34,3 @@ def dress_to_ville(lat, long):
     out = str(liste[0]+'+'+liste[1])
 
     return liste[0], out
-
-#6.45/10
