@@ -1,14 +1,13 @@
-"""here we try to lighten the views in code"""
+"""here we try to lighten the views in code
+    We trying or pass because
+    it's a function who calling the database
+    if the database is empty
+    it return an error
+    All of this
+    is content into static.bobo becase
+    they are functions
+    who trait picture"""
 
-#We trying or pass because
-#it's a function who calling the database
-#if the database is empty
-#it return an error
-
-#All of this
-#is content into static.bobo becase
-#they are functions
-#who trait picture
 
 import os
 
@@ -26,6 +25,8 @@ from .data_tchat.CONFIG import GROS_MOTS
 
 
 def function_tchat(data, tchat):
+    """Function for tchat"""
+
     liste = data.split()
     for i in liste:
         for mot in GROS_MOTS:
@@ -41,17 +42,17 @@ def function_tchat(data, tchat):
         database_habit(data)
     elif tchat == "tchat_tendance":
         database_tendance(data)
-    
-    
+
     return data
 
 
 def database_mode_function():
+    """This function for database"""
+
     try:
         os.chdir('/app/static/bobo')
     except:
         os.chdir(r'C:\Users\jeanbaptiste\bobo\bobo\static\bobo')
-
 
     liste = os.listdir()
 
@@ -77,37 +78,38 @@ def database_mode_function():
 
 
 def tendance_function():
-    
+    """This is tendance function"""
+
     liste10 = la_tendance()
     return liste10
 
+
 def the_colors_function(color):
+    """This is color function we return colors"""
 
     liste10 = la_tendance()
 
     if color == 'blonde':
         coul_analyse_haut = liste10[1][0]
         coul_analyse_bas = liste10[1][1]
-         
+
     elif color == 'brune' or color == 'noire':
         coul_analyse_haut = liste10[0][0]
         coul_analyse_bas = liste10[0][1]
 
     elif color == 'chatain' or color == 'rousse':
-        
+
         coul_analyse_haut = liste10[2][0]
         coul_analyse_bas = liste10[2][1]
 
     return coul_analyse_haut, coul_analyse_bas
 
 
-
-
 def gymm_map_function(gymm_map, gym_pays):
     """here we retrieve the name of the
     gym sought by the user and
     seek his address"""
-    
+
     the_address = address_geo(gymm_map, gym_pays)
     lat_long = city_geo(the_address)
 
@@ -119,9 +121,9 @@ def gymm_map_function(gymm_map, gym_pays):
         return data
 
 
-
 def gymm_function(gymm):
-    
+    """This is gym function we return gym list"""
+
     gym_list = []
 
     the_cities = big_city_gym(gymm)
@@ -140,11 +142,13 @@ def gymm_function(gymm):
 
 
 def haircut_style_function(haircut_style):
-    
+    """This is haircut_style_function function
+    we return hairdressers"""
+
     coif = []
-  
+
     the_hairdressers = cities(haircut_style)
-    
+
     for i in the_hairdressers: 
         schedule1 = schedule_hair(i, haircut_style)
 
@@ -152,7 +156,7 @@ def haircut_style_function(haircut_style):
            or schedule1 == "" or schedule1 == " "\
            or schedule1 == None:
             the_hairdressers.remove(i)
-            
+
         else:
             coif.append([i, schedule1, ""])
             the_hairdressers.remove(i)
@@ -161,40 +165,15 @@ def haircut_style_function(haircut_style):
 
 
 def map_hairdresser_function(map_hairdresser, vivile):
-    
+    """This is map_hairdresser_function function"""
+
     the_address = address_geo(map_hairdresser, vivile)
-    
+
     lat_long = city_geo(the_address)
     if lat_long == "Oups nous n'avons rien trouvé":
         data =  "Oups nous n'avons rien trouvé"
-        
+
     else:
         data = str(lat_long[0]) + ' ' + str(lat_long[1])
-    
+
     return data
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
