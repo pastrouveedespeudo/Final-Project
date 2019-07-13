@@ -2,6 +2,7 @@ pep8 a fond mtn (efface les essais oups)
 
 mettre les fichier js et css des fofo
 
+y'a map vent stop -> s'enleve pas 
 
 faire mention légale 
 
