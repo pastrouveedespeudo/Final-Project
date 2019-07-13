@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.views.decorators.csrf import ensure_csrf_cookie
 from .carte.direction.vent import *
 
 from .views_function import function_map
@@ -26,8 +26,7 @@ def map1(request):
     
     return render(request, "map1.html", {"message":message})
 
-
-
+@ensure_csrf_cookie
 def map(request):
 
     if request.method == "POST":
