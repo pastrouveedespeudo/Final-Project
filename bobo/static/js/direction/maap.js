@@ -272,7 +272,7 @@ $(document).ready(function(){
     });
   });
 
-alert('salur')
+
 $(document).ready(function(){
 
     
