@@ -1,8 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.decorators.cache import cache_page
-from django.views.decorators.csrf import csrf_protect
-
 
 from .carte.direction.vent import *
 
@@ -24,16 +21,13 @@ def map1(request):
         out = function_tchat(data)
         return HttpResponse(out)
 
-    message, date = tchat()
+    message = tchat()
 
     
-    return render(request, "map1.html", {"message":message,
-                                         "date":date})
+    return render(request, "map1.html", {"message":message})
 
 
 
-@cache_page(60 * 15)
-@csrf_protect
 def map(request):
 
     if request.method == "POST":
