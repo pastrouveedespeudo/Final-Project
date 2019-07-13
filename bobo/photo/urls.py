@@ -1,3 +1,5 @@
+"""This is URL for MVT model"""
+
 from django.urls import path
 from . import views
 from django.conf.urls import include
@@ -15,6 +17,4 @@ urlpatterns = [
     path(r'/coupe_tchat/', views.coupe_tchat, name = 'coupe_tchat'),
     path(r'/habit_tchat/', views.habit_tchat, name = 'habit_tchat'),
     path(r'/tendance_tchat/', views.tendance_tchat, name = 'tendance_tchat'),
-    
-    
     ]
