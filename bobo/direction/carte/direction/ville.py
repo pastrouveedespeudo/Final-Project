@@ -1,10 +1,6 @@
 """We call coordinate"""
 
 from geopy.geocoders import Nominatim
-import requests
-from bs4 import *
-from math import *
-
 
 def ville(parametre):
     """Here we searching from Python modul(geopy.geocoders)"""
@@ -12,53 +8,14 @@ def ville(parametre):
 
     geocoder = Nominatim(user_agent="app.py")
     #parametre is data recup from data()
-    
+
     location = geocoder.geocode(parametre, True, 30)
     localisation = location.address
     localisation = str(localisation)
 
     #define data from geopy.geocoders into var
 
-    b = location.latitude
-    c = location.longitude
+    lati = location.latitude
+    longi = location.longitude
 
-    
-
-    return b, c
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return lati, longi
