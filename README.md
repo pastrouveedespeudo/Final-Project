@@ -1,10 +1,9 @@
-bon mtn faut refaire tous les diagrammes ou juste view et diagramme sinon
-
 
 faire mention légale 
 
 finir le texte pollut
 
+ouais fin j'ai relu sté pas du tout gentil ^^ aps de mention legale pour eux
 
 
 
