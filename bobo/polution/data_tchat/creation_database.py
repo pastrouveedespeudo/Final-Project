@@ -121,39 +121,11 @@ def tchat_info_pollu():
     conn.commit()
 
 
+if __name__ == "__main__":
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-tchat_polution()
-tchat_graphe()
-tchat_donnée()
-tchat_machine_a_o()
-tchat_prediction()
-tchat_info_pollu()
-
-
-
-
-
+    tchat_polution()
+    tchat_graphe()
+    tchat_donnée()
+    tchat_machine_a_o()
+    tchat_prediction()
+    tchat_info_pollu()
