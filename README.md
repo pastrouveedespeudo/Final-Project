@@ -2,6 +2,8 @@ mettre les fichier js et css des fofo
 
 y'a map vent stop -> s'enleve pas 
 
+faire les pages html
+
 faire mention légale 
 
 finir le texte pollut 
