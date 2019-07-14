@@ -1,3 +1,5 @@
+"""We recup fire data"""
+
 import os
 import cv2
 import json
@@ -13,6 +15,7 @@ PATH_PARIS = 'https://www.20minutes.fr/search?q=incendie+paris'
 
 
 def incendie(ville):
+    """Define the day and recup on web site the data"""
 
     date = datetime.datetime.now()
     
@@ -96,45 +99,4 @@ def incendie(ville):
 
     if b >= 0 or c >= 0 or d >=0:
         return 'oui'
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
