@@ -1,7 +1,5 @@
 finir le texte pollut 
 
-y'a map vent stop -> s'enleve pas 
-
 faire les pages html
 
 faire mention légale 
