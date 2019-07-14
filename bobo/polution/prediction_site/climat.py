@@ -9,7 +9,6 @@ from bs4 import *
 from .CONFIG import *
 
 
-
 def recuperation_donnée_température(lieu):
     """We recuperate the temperature"""
     
@@ -60,8 +59,3 @@ def saison():
     elif mois == 10 or mois == 11\
          or mois == 12:
         return 'automne'
-
-
-
-
-
