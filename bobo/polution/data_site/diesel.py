@@ -1,3 +1,5 @@
+"""Here we define tendance of diesel and dollars"""
+
 import requests
 import urllib.request
 from bs4 import *
@@ -109,16 +111,3 @@ def recup_tag():
          gasplus == True and\
          dol == 'dollars baisse  ':
         return 'fort'
-
-
-    
-    
-
-
-
-
-
-
-
-
-
