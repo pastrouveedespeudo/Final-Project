@@ -1,3 +1,5 @@
+"""We recup fire eruption data"""
+
 import requests
 import urllib.request
 from bs4 import *
@@ -74,32 +76,3 @@ def eruption():
 
     if liste2 != []:
         return 'oui'
-    
-
-print(eruption())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
