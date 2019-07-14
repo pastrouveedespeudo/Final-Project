@@ -5,12 +5,6 @@ import datetime
 import urllib.request
 from bs4 import *
 
-
-
-
-
-
-
 def habitant(lieu):
     """We define variables"""
 
@@ -27,17 +21,3 @@ def habitant(lieu):
     if lieu == 'marseille':
         return 'sup500K'
     #population active de 15 a 59 ans
-
-
-
-
-
-
-
-
-
-
-
-
-
-
