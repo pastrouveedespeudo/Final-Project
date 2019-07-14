@@ -1,33 +1,28 @@
+"""We recup traffic"""
+
 import os
-import cv2
-import json
 import requests
 import datetime
 import urllib.request
 from bs4 import *
-from colour import Color
-from PIL import Image, ImageDraw, ImageChops
 
 from CONFIG import DEAPARTURE
 
 def trafique_circulation():
+    """We recup if it's a deaparture day"""
 
     date = datetime.datetime.now()
-    
     jour = date.day
     mois = date.month
     année = date.year
-
     heure = date.hour
     minute = date.minute
-
 
     dep = ""
     pointe = ""
     normale = ""
     non_pointe = ""
 
-    
     for i in DEAPARTURE:
         if (jour, mois) == i :
             dep = True
@@ -47,27 +42,22 @@ def trafique_circulation():
 
 
 def heure_de_pointe():
+"""We recup if it's a trafic hour"""
 
     dep = ""
     pointe = ""
     normale = ""
     non_pointe = ""
-
-
-    date = datetime.datetime.now()
     
+    date = datetime.datetime.now()
     jour = date.day
     mois = date.month
     année = date.year
-
     heure = date.hour
     minute = date.minute
 
-
     heure_pointe_semaine = [7,8,9,16,17,18,19]
 
-
-       
     for i in heure_pointe_semaine:
         if i == heure:
             pointe = True
@@ -86,11 +76,10 @@ def heure_de_pointe():
 
 
 def habitude():
-
+    """We recup if it's weeknd or week"""
 
     jour = ['samedi', 'dimanche']
 
-    
     date = datetime.datetime.now()
 
     heure = date.hour
@@ -104,6 +93,7 @@ def habitude():
 
 
 def function_plugs_lyon(city):
+    """We recup plugs"""
     
     path = "https://www.moncoyote.com/fr/info-trafic-{}.html".format(city)
   
@@ -120,71 +110,73 @@ def function_plugs_lyon(city):
     return Property
 
 def plugs_lyon(city):
+    """We recup plugs"""
+        
+    liste = []
+    km = ''
+    
+    Property = function_plugs_lyon(city)
+    
+    for i in Property:
+        for j in i:
+            if j == 'K' or j == 'k':
+                km = True
 
-        liste = []
-        km = ''
-        
-        Property = function_plugs_lyon(city)
-        
+    try:
         for i in Property:
             for j in i:
-                if j == 'K' or j == 'k':
-                    km = True
+                if j == ',':
+                    liste.append(str('.'))
+                try:
+                    j = int(j)
+                    if j == int(j):
+                        liste.append(str(j))
+                except:
+                    pass
+
+
+        liste = "".join(liste)
 
         try:
-            for i in Property:
-                for j in i:
-                    if j == ',':
-                        liste.append(str('.'))
-                    try:
-                        j = int(j)
-                        if j == int(j):
-                            liste.append(str(j))
-                    except:
-                        pass
-
-
-            liste = "".join(liste)
-
-            try:
-                b = float(liste)
-                print(b)
-            except:
-                b = int(liste)
-                print(b)
-
+            b = float(liste)
+            print(b)
         except:
-            b = 0
-            
-        if km != True:
-            b = 0
-            
-        if b == 0 or\
-           b == 0.0:
-            return 'non'
+            b = int(liste)
+            print(b)
 
-        elif b > 0  and\
-             b <= 5:
-            return 'petit'
+    except:
+        b = 0
+        
+    if km != True:
+        b = 0
+        
+    if b == 0 or\
+       b == 0.0:
+        return 'non'
 
-        elif b > 5 and\
-             b <= 9:
-            return 'moyen'
+    elif b > 0  and\
+         b <= 5:
+        return 'petit'
 
-        elif b > 9 and\
-             b <= 15:
-            return 'grand'
+    elif b > 5 and\
+         b <= 9:
+        return 'moyen'
 
-        elif b > 15 and\
-             b <= 20:
-            return 'assez grand' 
+    elif b > 9 and\
+         b <= 15:
+        return 'grand'
 
-        elif b > 20:
-            return 'tres grand' 
+    elif b > 15 and\
+         b <= 20:
+        return 'assez grand' 
+
+    elif b > 20:
+        return 'tres grand' 
 
 
 
 def plugs_paris():
+    """We recup plugs"""
     
     path = "http://www.sytadin.fr/sys/barometre_courbe_cumul.jsp.html#"
 
@@ -290,6 +282,7 @@ def traffic_lyon_request(path):
 
 
 def traffic_paris_function_request(path):
+    """We recup demonstration"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -312,7 +305,8 @@ def traffic_paris_function_request(path):
 
 
 def traffic_paris_function_reuqest1(path):
-    
+    """We recup demonstration"""
+
     Property, date, day, day_week = traffic_paris_function_request(path)
    
     date = str(date)
@@ -412,13 +406,3 @@ def activité_execptionnelle(city):
         finding = traffic_marseille_request(path)
 
         return finding
-
-
-
-
-
-
-
-
-
-
