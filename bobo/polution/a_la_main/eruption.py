@@ -1,3 +1,5 @@
+"""We recup eruption data"""
+
 import requests
 import urllib.request
 from bs4 import *
@@ -6,7 +8,8 @@ import datetime
 from CONFIG import MONTH_DICO_EN
 
 def date():
-    
+    """Define the current day"""
+
     date = datetime.datetime.now()
 
     day = date.day
@@ -27,6 +30,7 @@ def date():
     return day, this_month, year
 
 def soup_search():
+    """We call bs4"""
     
     path = "https://www.volcanodiscovery.com/fr/volcanoes/today.html"
     r = requests.get(path)
@@ -74,32 +78,3 @@ def eruption():
 
     if liste2 != []:
         return 'oui'
-    
-
-print(eruption())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
