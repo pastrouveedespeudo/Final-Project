@@ -1,14 +1,9 @@
-"""BS4, requests, datatime 16/04/2019"""
-
-
+"""We define polenne data"""
 
 
 import requests
-
 import urllib.request
 from bs4 import *
-
-
 
 from .CONFIG import PATH_PARIS_POLENNE
 from .CONFIG import PATH_LYON_POLENNE
@@ -81,31 +76,3 @@ def polenne(city):
             word += i
 
     return "".join(liste2[:-1])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
