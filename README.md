@@ -1,14 +1,10 @@
-mettre les fichier js et css des fofo
-
-caracetere spéciaux pour map et coiffure, habits (retour habit doit etre en blanc)
+finir le texte pollut 
 
 y'a map vent stop -> s'enleve pas 
 
 faire les pages html
 
 faire mention légale 
-
-finir le texte pollut 
 
 finir le readme
 
