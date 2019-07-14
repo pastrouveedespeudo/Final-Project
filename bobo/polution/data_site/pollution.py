@@ -432,6 +432,7 @@ def socio(city):
 
 
 def function_plugs_lyon(city):
+    """bs4 lyon fplugs function"""
     
     path = "https://www.moncoyote.com/fr/info-trafic-{}.html".format(city)
   
@@ -448,7 +449,7 @@ def function_plugs_lyon(city):
     return Property
 
 
-def function_plugs_lyon(plugs, km):
+def function_plugs(plugs, km):
     """function for factoring plug function"""
 
     if km != True:
@@ -515,8 +516,7 @@ def plugs_lyon(city):
     except:
         b = 0
         
-    plug = function_plugs_lyon(b, km)
-    
+    plug = function_plugs(plugs, km)
     return plug
 
 
@@ -553,10 +553,10 @@ def plugs_paris():
         kmplug = int(kmplug)
     except:
         pass
-    
-    b = kmplug
-       
-    return b
+  
+    plug = function_plugs(kmplug, "")
+    return plug
+
 
 def plugs(city):
     """From this site web we get plugs into this city"""
@@ -564,8 +564,6 @@ def plugs(city):
     if city == "lyon":
         plugs1 = plugs_lyon(city)
         return plugs1
-
-
 
     elif city == "paris":
         plugs2 = plugs_paris()
