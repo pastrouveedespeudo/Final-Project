@@ -1,3 +1,5 @@
+"""We create database for tchat"""
+
 import psycopg2
 
 from CONFIG import HOST
@@ -8,7 +10,7 @@ from CONFIG import DATABASE
 
 
 def create_database_coupe():
-    
+    """We create database_coupe for tchat"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -26,7 +28,7 @@ def create_database_coupe():
     conn.commit()
 
 def create_database_habit():
-    
+    """We create database_habit for tchat"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -45,7 +47,7 @@ def create_database_habit():
 
 
 def create_database_tendance():
-    
+    """We create tchat_tendance for tchat"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -62,11 +64,10 @@ def create_database_tendance():
     
     conn.commit()
 
-create_database_coupe()
-create_database_habit()
-create_database_tendance()
 
+if __name__ == "__main__":
 
-
-
+    create_database_coupe()
+    create_database_habit()
+    create_database_tendance()
 
