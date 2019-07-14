@@ -10,6 +10,7 @@ finir le readme
 
 
 
+#BLOG sur la mode et la pollution, Le magazine virtuel
 
 # Partie mode
 
