@@ -1,3 +1,5 @@
+"""Here we call database for tchat data"""
+
 import psycopg2
 
 from .CONFIG import HOST
@@ -10,7 +12,8 @@ import datetime
 
 
 def database_pollution(data):
-    
+    """We insert new text on tchat_polution"""
+
     date = datetime.datetime.now()
     day = date.day
     month = date.month
@@ -34,6 +37,7 @@ def database_pollution(data):
     conn.commit()
 
 def database_graphe(data):
+    """We insert new text on tchat_graphe"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -59,6 +63,7 @@ def database_graphe(data):
 
 
 def database_donnée(data):
+    """We insert new text on tchat_donnée"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -84,6 +89,7 @@ def database_donnée(data):
 
 
 def database_machine_a_o(data):
+    """We insert new text on tchat_machine_a_o"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -108,6 +114,7 @@ def database_machine_a_o(data):
     conn.commit()
 
 def database_prediction(data):
+    """We insert new text on tchat_prediction"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -133,6 +140,7 @@ def database_prediction(data):
 
 
 def database_info_pollu(data):
+    """We insert new text on tchat_info_pollu"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -168,7 +176,7 @@ def database_info_pollu(data):
 
 
 def tchat_polution():
-
+    """We insert new text on tchat_polution"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -194,7 +202,7 @@ def tchat_polution():
 
 
 def tchat_graphe():
-
+    """We insert new text on tchat_graphe"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -219,7 +227,7 @@ def tchat_graphe():
 
 
 def tchat_donnée():
-
+    """We insert new text on tchat_donnée"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -247,7 +255,7 @@ def tchat_donnée():
 
 
 def tchat_machine_a_o():
-
+    """We insert new text on tchat_machine_a_o"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -273,7 +281,7 @@ def tchat_machine_a_o():
 
 
 def tchat_prediction():
-
+    """We insert new text on tchat_prediction"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -298,7 +306,7 @@ def tchat_prediction():
 
 
 def tchat_info_pollu():
-
+    """We insert new text on tchat_info_pollu"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -323,31 +331,12 @@ def tchat_info_pollu():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def traitement(liste):
-    
+    """We recup datetime and the text"""
+
     liste1 = []
     for i in liste:
         liste1.append([i[1], i[2]])
 
 
     return liste1
-
-
-
-
-    
