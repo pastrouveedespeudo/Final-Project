@@ -168,6 +168,8 @@ def traffic(city):
     for i in DEAPARTURE:
         if (day, month) == i :
             dep = 'Oui'
+            normal = 'Non'
+            break
 
         elif (day, month) != i :
             normal = 'Oui'
@@ -185,7 +187,7 @@ def traffic(city):
         point = 'Non'
         no_point = 'Oui'
 
-
+        
     return dep, point, normal, no_point
 
 
@@ -449,8 +451,10 @@ def function_plugs_lyon(city):
     return Property
 
 
-def function_plugs(plugs, km):
-    """function for factoring plug function"""
+
+
+def plugs_lyon_function(km, plugs):
+    """We define if size of plugs"""
 
     if km != True:
         plugs = 0
@@ -507,17 +511,46 @@ def plugs_lyon(city):
         liste = "".join(liste)
 
         try:
-            b = float(liste)
-            print(b)
+            plugs = float(liste)
+        
         except:
-            b = int(liste)
-            print(b)
+            plugs = int(liste)
+      
 
     except:
-        b = 0
-        
-    plug = function_plugs(plugs, km)
-    return plug
+        plugs = 0
+
+    plus = plugs_lyon_function(km, plugs)
+    return plus
+
+
+
+
+def plugs_paris_function(plugs):
+    """We define if size of plugs"""
+    
+    if plugs == 0 or\
+       plugs == 0.0:
+        return 'non'
+
+    elif plugs > 0  and\
+         plugs <= 5:
+        return 'petit'
+
+    elif plugs > 5 and\
+         plugs <= 9:
+        return 'moyen'
+
+    elif plugs > 9 and\
+         plugs <= 15:
+        return 'grand'
+
+    elif plugs > 15 and\
+         plugs <= 20:
+        return 'assez grand' 
+
+    elif plugs > 20:
+        return 'tres grand' 
 
 
 def plugs_paris():
@@ -547,15 +580,16 @@ def plugs_paris():
         except:
             pass
 
-    kmplug = "".join(kmplug)
+    plugs = "".join(kmplug)
 
     try:
-        kmplug = int(kmplug)
+        plugs = int(plugs)
     except:
         pass
-  
-    plug = function_plugs(kmplug, "")
-    return plug
+
+    plus = plugs_paris_function(plugs)
+    return plus
+
 
 
 def plugs(city):
