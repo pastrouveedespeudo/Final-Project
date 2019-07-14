@@ -33,8 +33,7 @@ def particule2(lieu):
                     nb.append(str(j))
             except:
                 pass
-
-            
+  
     nb = ''.join(nb)
     nb = int(nb)
     polution = nb
@@ -44,10 +43,9 @@ def particule2(lieu):
 
     
 def france(place):
-
+    """France ranking"""
 
     liste = ["lyon", "marseille","paris","roubaix"]
-
 
     counter = 0
     for i in liste:
@@ -74,10 +72,8 @@ def france(place):
         counter += 1
     
 
-
-
 def industrie(place):
-
+    """Industrie cities"""
 
     if place == 'lyon':
         return 'oui'
@@ -85,7 +81,3 @@ def industrie(place):
         return 'non'
     elif place == 'marseille':
         return 'oui'
-    
-
-
-
