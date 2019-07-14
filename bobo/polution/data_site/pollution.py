@@ -1,3 +1,8 @@
+"""Here we recup particle rate,
+    pressure of cities,
+    climate, traffic
+    season, habits data"""
+
 import requests
 import urllib.request
 from bs4 import *
@@ -134,7 +139,7 @@ def season():
 
 
 def traffic_function():
-    
+    """We recup the current time"""
 
     date = datetime.datetime.now()
     
@@ -235,8 +240,6 @@ def industrial_area(city):
 
     site = ''
     
-
-
     #BS4 stuff
     path = PATH_WIKI.format(city) 
     r = requests.get(path)
@@ -283,7 +286,8 @@ def traffic_lyon_request(path):
 
 
 def traffic_paris_function_request(path):
-    
+    """This is paris function"""
+
     date = datetime.datetime.now()
     day = date.day
     day_week = date.weekday()
@@ -305,13 +309,13 @@ def traffic_paris_function_request(path):
 
 
 def traffic_paris_function_reuqest1(path):
-    
+    """This is paris function"""
+
     Property, date, day, day_week = traffic_paris_function_request(path)
    
     date = str(date)
     the_day  = ''
 
-    
     monday = str(date).find("lundi")
     tuesday = str(date).find("mardi")
     wednesday = str(date).find("mercredi")
@@ -443,72 +447,82 @@ def function_plugs_lyon(city):
 
     return Property
 
-def plugs_lyon(city):
 
-        liste = []
-        km = ''
-        Property = function_plugs_lyon(city)
+def function_plugs_lyon(plugs, km):
+    """function for factoring plug function"""
+
+    if km != True:
+        plugs = 0
         
+    if plugs == 0 or\
+       plugs == 0.0:
+        return 'non'
+
+    elif plugs > 0  and\
+         plugs <= 5:
+        return 'petit'
+
+    elif plugs > 5 and\
+         plugs <= 9:
+        return 'moyen'
+
+    elif plugs > 9 and\
+         plugs <= 15:
+        return 'grand'
+
+    elif plugs > 15 and\
+         plugs <= 20:
+        return 'assez grand' 
+
+    elif plugs > 20:
+        return 'tres grand' 
+
+
+def plugs_lyon(city):
+    """Here we recup plugs from lyon"""
+
+    liste = []
+    km = ''
+    Property = function_plugs_lyon(city)
+    
+    for i in Property:
+        for j in i:
+            if j == 'K' or j == 'k':
+                km = True
+
+    try:
         for i in Property:
             for j in i:
-                if j == 'K' or j == 'k':
-                    km = True
+                if j == ',':
+                    liste.append(str('.'))
+                try:
+                    j = int(j)
+                    if j == int(j):
+                        liste.append(str(j))
+                except:
+                    pass
+
+
+        liste = "".join(liste)
 
         try:
-            for i in Property:
-                for j in i:
-                    if j == ',':
-                        liste.append(str('.'))
-                    try:
-                        j = int(j)
-                        if j == int(j):
-                            liste.append(str(j))
-                    except:
-                        pass
-
-
-            liste = "".join(liste)
-
-            try:
-                b = float(liste)
-                print(b)
-            except:
-                b = int(liste)
-                print(b)
-
+            b = float(liste)
+            print(b)
         except:
-            b = 0
-            
-        if km != True:
-            b = 0
-            
-        if b == 0 or\
-           b == 0.0:
-            return 'non'
+            b = int(liste)
+            print(b)
 
-        elif b > 0  and\
-             b <= 5:
-            return 'petit'
-
-        elif b > 5 and\
-             b <= 9:
-            return 'moyen'
-
-        elif b > 9 and\
-             b <= 15:
-            return 'grand'
-
-        elif b > 15 and\
-             b <= 20:
-            return 'assez grand' 
-
-        elif b > 20:
-            return 'tres grand' 
-
+    except:
+        b = 0
+        
+    plug = function_plugs_lyon(b, km)
+    
+    return plug
 
 
 def plugs_paris():
-    
+    """ plugs paris function"""
+
     path = "http://www.sytadin.fr/sys/barometre_courbe_cumul.jsp.html#"
 
     r = requests.get(path)
@@ -559,6 +573,3 @@ def plugs(city):
 
     elif city == "marseille":
         return 'moyen'
-
-
-
