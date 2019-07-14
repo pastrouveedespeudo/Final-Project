@@ -1,3 +1,6 @@
+"""This views function here we lighter
+    the views"""
+
 from .data_site.pollution import *
 from .data_site.fertilizer import period_fertilizer
 from .data_site.diesel import recup_tag, course_dollars
@@ -5,7 +8,6 @@ from .data_site.eruption import eruption
 from .data_site.fire import fire_city
 from .data_site.day_night import night_day
 from .data_site.polenne import polenne
-
 from .data_site.pollution import traffic as Traffic
 
 
@@ -20,6 +22,8 @@ from .data_tchat.CONFIG import GROS_MOTS
 
 
 def function_tchat(data, tchat):
+    """Function for tchat"""
+
     liste = data.split()
     for i in liste:
         for mot in GROS_MOTS:
@@ -46,7 +50,8 @@ def function_tchat(data, tchat):
 
 
 def data_function_particle():
-    
+    """We recup particle of cites"""
+
     try:
         data_lyon = particle_rate('lyon')
         data_paris = particle_rate('paris')
@@ -60,6 +65,8 @@ def data_function_particle():
 
 
 def data_function_weather():
+    """We recup weather of cites"""
+
     try:
         weather_lyon = weather_city('lyon', 'météo')
         weather_paris = weather_city('paris', 'météo')
@@ -77,6 +84,8 @@ def data_function_weather():
 
 
 def data_function_wind():
+    """We recup wind of cites"""
+    
     try:
         wind_lyon = weather_city('lyon', 'vent')
         wind_paris = weather_city('paris', 'vent')
@@ -92,6 +101,8 @@ def data_function_wind():
 
     
 def data_function_temperature():
+    """We recup temperate of cites"""
+    
     try:
         temperature_lyon = climate_city('lyon')
         temperature_paris = climate_city('paris')
@@ -106,6 +117,8 @@ def data_function_temperature():
            temperature_marseille
 
 def data_function_season():
+    """We recup season of cites"""
+    
     try:
         current_season =  season()
     except:
@@ -116,6 +129,8 @@ def data_function_season():
 
 
 def data_function_departure():
+    """We recup deaparture of cites"""
+    
     no_point_lyon = ""
     departure = Traffic('lyon')
     
@@ -145,6 +160,8 @@ def data_function_departure():
 
 
 def data_function_day():
+    """We recup habit of person"""
+    
     try:
         habitt = habit()
         weekend = habitt[0]
@@ -160,6 +177,8 @@ def data_function_day():
 
 
 def data_function_ranking():
+    """We recup ranking of cites"""
+    
     try:
         ranking_lyon = city_ranking_pollute('lyon')
         ranking_paris = city_ranking_pollute('paris')
@@ -176,6 +195,8 @@ def data_function_ranking():
 
 
 def data_function_pole():
+    """We recup pole of cites"""
+    
     try:
         pole_lyon = industrial_area('lyon')
         pole_paris = industrial_area('paris')
@@ -189,7 +210,11 @@ def data_function_pole():
     return pole_lyon, pole_paris,\
            pole_marseille
 
+
+
 def data_function_pressure():
+    """We recup pressure of cites"""
+    
     try:
         pressure_lyon = pressure_city('lyon')
         pressure_paris = pressure_city('paris')
@@ -204,7 +229,10 @@ def data_function_pressure():
            pressure_marseille
 
 
+
 def data_function_demonstration():
+    """We recup demonstration of cites"""
+    
     try:
         demonstration_lyon = exceptional_activity('lyon')
         demonstration_paris = exceptional_activity('paris')
@@ -221,6 +249,8 @@ def data_function_demonstration():
 
 
 def function_data_socio():
+    """We recup socio of cites"""
+    
     try:
         socio_lyon = socio('lyon')
         socio_paris = socio('paris')
@@ -234,7 +264,11 @@ def function_data_socio():
     return socio_lyon, socio_paris,\
            socio_marseille
 
+
+
 def function_data_plugs():
+    """We recup plugs of cites"""
+    
     try:
         plugs_lyon = plugs('lyon')
         plugs_paris = plugs('paris') 
@@ -245,7 +279,10 @@ def function_data_plugs():
 
     return plugs_lyon, plugs_paris
 
+
 def function_data_erup():
+    """We recup erruption of world"""
+    
     try:
         errup = eruption()
         if errup == 'oui':
@@ -259,6 +296,8 @@ def function_data_erup():
 
 
 def function_data_dollars():
+    """We recup dollard tendance of cites"""
+    
     try:
         diesel = recup_tag()
         dollars = course_dollars()
@@ -272,6 +311,8 @@ def function_data_dollars():
 
 
 def function_data_fire():
+    """We recup fire of cites"""
+    
     try:
         fire_lyon = fire_city('lyon')
         
@@ -300,7 +341,11 @@ def function_data_fire():
     return fire_lyon, fire_marseille,\
            fire_paris
 
+
+
 def function_data_ferti():
+    """We recup fertilizer of cites"""
+
     try:
         fertilizer = period_fertilizer()
     except:
@@ -308,7 +353,11 @@ def function_data_ferti():
 
     return fertilizer
 
+
+
 def function_data_periode():
+    """We recup period of journey"""
+
     try:
         periode = night_day()
         po_lyon = polenne('lyon')
@@ -323,41 +372,3 @@ def function_data_periode():
 
     return periode, po_lyon, po_marseille,\
            po_paris
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
