@@ -1,6 +1,7 @@
 pep8 a fond mtn (efface les essais oups)
 
-jtai chaud mais la.... la page donnée faut remettre les gabarit et mettre ensure crf sur tous les truks...
+jtai chaud mais la.... la page donnée faut remettre les gabarit et mettre ensure crf sur tous les truks... ca doit etre
+a cause d'une copie du code source ptin et en plus y'a les cadres responsive olalalala
 
 
 mettre les fichier js et css des fofo
