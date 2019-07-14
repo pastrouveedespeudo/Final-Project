@@ -125,7 +125,7 @@ def tchat_donnée_v(request):
         return HttpResponse(out)
 
     message = tchat_donnée()
-    return render(request, "tchat_donnée.html", {"message":message})
+    return render(request, "tchat_donnee.html", {"message":message})
 
 
 
@@ -499,3 +499,23 @@ def particle(lieu):
     pollute = liste_e[0][31:34]
 
     return pollute
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
