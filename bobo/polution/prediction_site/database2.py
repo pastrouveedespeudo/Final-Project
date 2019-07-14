@@ -1,3 +1,6 @@
+"""Database """
+
+
 import psycopg2
 
 from .CONFIG import DATABASE
@@ -7,8 +10,7 @@ from .CONFIG import PASSWORD
 
 
 def creation_table():
-
-
+    """We create tables"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -332,6 +334,7 @@ def creation_table():
 
 def insertion_voisin_vent_pollution(nom_ville,  direction_vent, force_vent,
                                     pollution, heure_donnée, date):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -356,6 +359,7 @@ def insertion_voisin_vent_pollution(nom_ville,  direction_vent, force_vent,
 
 
 def insertion_angrais(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -375,6 +379,7 @@ def insertion_angrais(i,  donnée, date, heure, particule):
 
 
 def insertion_saison(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -393,6 +398,7 @@ def insertion_saison(i,  donnée, date, heure, particule):
 
 
 def insertion_diesel(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -411,6 +417,7 @@ def insertion_diesel(i,  donnée, date, heure, particule):
 
 
 def insertion_eruption(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -431,6 +438,7 @@ def insertion_eruption(i,  donnée, date, heure, particule):
 
 
 def insertion_nuit_jour(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -449,6 +457,7 @@ def insertion_nuit_jour(i,  donnée, date, heure, particule):
 
 
 def insertion_trafique_circulation(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -467,6 +476,7 @@ def insertion_trafique_circulation(i,  donnée, date, heure, particule):
 
 
 def insertion_heure_de_pointe(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -486,6 +496,7 @@ def insertion_heure_de_pointe(i,  donnée, date, heure, particule):
 
 
 def insertion_habitude(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -505,6 +516,7 @@ def insertion_habitude(i,  donnée, date, heure, particule):
 
 
 def insertion_bouchon(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -526,6 +538,7 @@ def insertion_bouchon(i,  donnée, date, heure, particule):
 
 
 def insertion_activité_execptionnelle(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -544,6 +557,7 @@ def insertion_activité_execptionnelle(i,  donnée, date, heure, particule):
 
 
 def insertion_habitant(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -561,6 +575,7 @@ def insertion_habitant(i,  donnée, date, heure, particule):
     conn.commit()
 
 def insertion_industrie(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -579,6 +594,7 @@ def insertion_industrie(i,  donnée, date, heure, particule):
 
 
 def insertion_polenne(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -597,6 +613,7 @@ def insertion_polenne(i,  donnée, date, heure, particule):
 
 
 def insertion_france(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -615,6 +632,7 @@ def insertion_france(i,  donnée, date, heure, particule):
 
 
 def insertion_météo(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -634,6 +652,7 @@ def insertion_météo(i,  donnée, date, heure, particule):
 
 
 def insertion_vent(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -652,6 +671,7 @@ def insertion_vent(i,  donnée, date, heure, particule):
 
 
 def insertion_pression(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -669,6 +689,7 @@ def insertion_pression(i,  donnée, date, heure, particule):
     conn.commit()
 
 def insertion_température(i,  donnée, date, heure, particule):
+    """We insert data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -688,7 +709,7 @@ def insertion_température(i,  donnée, date, heure, particule):
 
 
 def insertion_incendie(i,  donnée, date, heure, particule):
-    
+    """We insert data""" 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
@@ -710,6 +731,7 @@ def insertion_incendie(i,  donnée, date, heure, particule):
 
 
 def clean_data():
+    """We clean data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -727,6 +749,7 @@ def clean_data():
 
 
 def clean_data2():
+    """We clean data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -745,6 +768,7 @@ def clean_data2():
 
 
 def clean_data3():
+    """We clean data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -762,6 +786,7 @@ def clean_data3():
     print('données nulles effacées')
 
 def clean_data4():
+    """We clean data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -778,7 +803,8 @@ def clean_data4():
     print('données nulles effacées')
 
 def visualisation(ville):
-    
+    """visualisation data"""
+     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
@@ -806,7 +832,8 @@ def visualisation(ville):
 
 
 def visualisation_without_time(ville):
-
+    """visualisation data"""
+    
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
@@ -837,6 +864,7 @@ def recuperate_particle(ville, pression, météo, vent, climat,
                       POPULATION_ACTIVE_HABITANT, TRAFIQUE, HEURE,
                       WEEKEND, BOUCHON, ACTIVITE_EXEPTIONNELLE):
 
+    """recuperate particle data"""
     
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -873,136 +901,4 @@ def recuperate_particle(ville, pression, météo, vent, climat,
     liste = [i for i in rows]
 
     return liste
-
-
-
-
-
-
-
-
-
-
-
-
-
-#creation_table()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
