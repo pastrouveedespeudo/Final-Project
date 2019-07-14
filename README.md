@@ -1,8 +1,4 @@
-pep8 a fond mtn (efface les essais oups)
-
-jtai chaud mais la.... la page donnée faut remettre les gabarit et mettre ensure crf sur tous les truks... ca doit etre
-a cause d'une copie du code source ptin et en plus y'a les cadres responsive olalalala
-
+pep8 "a la main" jtai persuader de l'avoir fait
 
 mettre les fichier js et css des fofo
 
@@ -12,6 +8,7 @@ faire mention légale
 
 finir le texte pollut
 
+finir le readme
 
 
 
