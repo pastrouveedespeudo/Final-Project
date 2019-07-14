@@ -1,13 +1,10 @@
 """We recup fertilizer data for increment database"""
 
 
-import requests
-import datetime
-import urllib.request
-from bs4 import *
 import datetime
 
 def periode_angrais():
+    """Here we define fertilizer period"""
 
     mois_angrais = [5,6]
 
@@ -22,9 +19,3 @@ def periode_angrais():
         if mois == i:
             return 'oui'
             break
-
-
-
-
-
-
