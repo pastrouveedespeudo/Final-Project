@@ -1,13 +1,17 @@
+"""We define the traffic for prediction functionnality"""
 
 import requests
 import datetime
 import urllib.request
 from bs4 import *
 
-
 from .CONFIG import DEAPARTURE
 
+
+
 def trafique_circulation():
+    """define the current day and
+    deaparture"""
 
     date = datetime.datetime.now()
     
@@ -40,9 +44,8 @@ def trafique_circulation():
 
 
 
-
-
 def heure_de_pointe():
+    """Define hour of circulation"""
 
     dep = ""
     pointe = ""
@@ -51,11 +54,9 @@ def heure_de_pointe():
 
 
     date = datetime.datetime.now()
-    
     jour = date.day
     mois = date.month
     année = date.year
-
     heure = date.hour
     minute = date.minute
 
@@ -81,6 +82,8 @@ def heure_de_pointe():
 
 
 def habitude():
+    """We define if the current day is
+    a week or weekend"""
 
     jour = ['samedi', 'dimanche']
 
@@ -97,7 +100,8 @@ def habitude():
 
 
 def function_plugs_lyon(city):
-    
+    """We define plugs"""
+
     path = "https://www.moncoyote.com/fr/info-trafic-{}.html".format(city)
   
     r = requests.get(path)
@@ -113,72 +117,74 @@ def function_plugs_lyon(city):
     return Property
 
 def plugs_lyon(city):
+    """We define plugs"""
 
-        liste = []
-        km = ''
-        
-        Property = function_plugs_lyon(city)
-        
+    liste = []
+    km = ''
+    
+    Property = function_plugs_lyon(city)
+    
+    for i in Property:
+        for j in i:
+            if j == 'K' or j == 'k':
+                km = True
+
+    try:
         for i in Property:
             for j in i:
-                if j == 'K' or j == 'k':
-                    km = True
+                if j == ',':
+                    liste.append(str('.'))
+                try:
+                    j = int(j)
+                    if j == int(j):
+                        liste.append(str(j))
+                except:
+                    pass
+
+
+        liste = "".join(liste)
 
         try:
-            for i in Property:
-                for j in i:
-                    if j == ',':
-                        liste.append(str('.'))
-                    try:
-                        j = int(j)
-                        if j == int(j):
-                            liste.append(str(j))
-                    except:
-                        pass
-
-
-            liste = "".join(liste)
-
-            try:
-                b = float(liste)
-                print(b)
-            except:
-                b = int(liste)
-                print(b)
-
+            b = float(liste)
+            print(b)
         except:
-            b = 0
-            
-        if km != True:
-            b = 0
-            
-        if b == 0 or\
-           b == 0.0:
-            return 'non'
+            b = int(liste)
+            print(b)
 
-        elif b > 0  and\
-             b <= 5:
-            return 'petit'
+    except:
+        b = 0
+        
+    if km != True:
+        b = 0
+        
+    if b == 0 or\
+       b == 0.0:
+        return 'non'
 
-        elif b > 5 and\
-             b <= 9:
-            return 'moyen'
+    elif b > 0  and\
+         b <= 5:
+        return 'petit'
 
-        elif b > 9 and\
-             b <= 15:
-            return 'grand'
+    elif b > 5 and\
+         b <= 9:
+        return 'moyen'
 
-        elif b > 15 and\
-             b <= 20:
-            return 'assez grand' 
+    elif b > 9 and\
+         b <= 15:
+        return 'grand'
 
-        elif b > 20:
-            return 'tres grand' 
+    elif b > 15 and\
+         b <= 20:
+        return 'assez grand' 
+
+    elif b > 20:
+        return 'tres grand' 
 
 
 
 def plugs_paris():
-    
+    """We define plugs"""
+
     path = "http://www.sytadin.fr/sys/barometre_courbe_cumul.jsp.html#"
 
     r = requests.get(path)
@@ -280,6 +286,7 @@ def traffic_lyon_request(path):
 
 
 def traffic_paris_function_request(path):
+    """we search demonstration Paris"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -302,6 +309,7 @@ def traffic_paris_function_request(path):
 
 
 def traffic_paris_function_reuqest1(path):
+    """we search demonstration paris"""
     
     Property, date, day, day_week = traffic_paris_function_request(path)
    
@@ -402,15 +410,3 @@ def activité_execptionnelle(city):
         finding = traffic_marseille_request(path)
 
         return finding
-
-
-
-
-
-
-
-
-
-
-
-
