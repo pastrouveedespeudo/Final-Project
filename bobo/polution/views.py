@@ -1,6 +1,8 @@
+"""Views from MVT model"""
+
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 import requests
 import urllib.request
@@ -82,7 +84,8 @@ def navebarre_soluce(request):
 
 
 def tchat_polution_v(request):
-    
+    """Tchat pollution"""
+
     if request.method == "POST":
         
         data = request.POST.get('text')
@@ -97,6 +100,7 @@ def tchat_polution_v(request):
 
 
 def tchat_graphe_v(request):
+    """Tchat graphe"""
     
     if request.method == "POST":
         
@@ -112,6 +116,7 @@ def tchat_graphe_v(request):
 
 
 def tchat_donnée_v(request):
+    """Tchat data"""
     
     if request.method == "POST":
         
@@ -125,6 +130,7 @@ def tchat_donnée_v(request):
 
 
 def tchat_machine_a_o_v(request):
+    """Tchat soluce"""
     
     if request.method == "POST":
         
@@ -139,6 +145,7 @@ def tchat_machine_a_o_v(request):
 
 
 def tchat_prediction_v(request):
+    """Tchat prediction"""
     
     if request.method == "POST":
         
@@ -153,6 +160,7 @@ def tchat_prediction_v(request):
 
 
 def tchat_info_pollu_v(request):
+    """Tchat information"""
     
     if request.method == "POST":
         
@@ -166,14 +174,9 @@ def tchat_info_pollu_v(request):
     return render(request, "tchat_info_pollu.html", {"message":message})
 
 
-
-
-
-
 def polution(request):
     """we return html pollution response"""
     return render(request, 'polution.html')
-
 
 
 def donnée(request):
@@ -197,6 +200,7 @@ def donnée(request):
     fire = function_data_fire()
     fertilizer = function_data_ferti()
     periode = function_data_periode()
+    print(periode)
     pole = data_function_pole()
 
 
@@ -215,8 +219,8 @@ def donnée(request):
                                            'temperature_marseille':round(temperature[2]),
                                            'current_season':season,
                                            'departure_lyon':deaparture[0],
-                                           'hour_point_lyon':deaparture[1],
                                            'regular_day_lyon':deaparture[2],
+                                           'hour_point_lyon':deaparture[1],
                                            'no_point_lyon':deaparture[3],
                                            'departure_marseille':deaparture[0],
                                            'hour_point_paris':deaparture[1],
@@ -270,7 +274,7 @@ def machine_a_o(request):
     
     return render(request, 'machine_a_o.html')
 
-
+@ensure_csrf_cookie
 def prediction(request):
     """Our predict page. By Ajax call
     We recup this cities and ask database by aide_analysa.py
@@ -495,23 +499,3 @@ def particle(lieu):
     pollute = liste_e[0][31:34]
 
     return pollute
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
