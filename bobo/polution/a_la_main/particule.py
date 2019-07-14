@@ -86,19 +86,3 @@ def industrie(lieu):
         return 'non'
     elif lieu == 'marseille':
         return 'oui'
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
