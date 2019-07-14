@@ -12,7 +12,6 @@ finir le readme
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
 
-<em>Un blog avec des applications, ca existe ca ?</em> ben non donc c pas un blog
 
 # Partie mode
 
