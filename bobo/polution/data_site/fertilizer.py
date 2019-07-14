@@ -1,13 +1,10 @@
-import os
-import requests
-import datetime
-import urllib.request
-from bs4 import *
-import datetime
+"""We return fetilizer period"""
 
+
+import datetime
 
 def period_fertilizer():
-
+    """Fertilizer period is between May and June"""
     month_fertilizer = [5,6]
 
     date = datetime.datetime.now()
@@ -20,9 +17,4 @@ def period_fertilizer():
         if month == i:
             return 'oui'
 
-
-
-
-
-
-
+    return 'non'
