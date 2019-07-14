@@ -1,3 +1,5 @@
+"""Here we create database for tchat"""
+
 import psycopg2
 
 from CONFIG import HOST
@@ -8,7 +10,7 @@ from CONFIG import DATABASE
 
 
 def tchat_polution():
-    
+    """We creating tchat_polution table"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -26,8 +28,8 @@ def tchat_polution():
     conn.commit()
 
 def tchat_graphe():
+    """We creating tchat_graphe table"""
     
-
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
@@ -45,7 +47,7 @@ def tchat_graphe():
 
 
 def tchat_donnée():
-    
+    """We creating tchat_donnée table"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -66,7 +68,7 @@ def tchat_donnée():
 
 
 def tchat_machine_a_o():
-    
+    """We creating tchat_machine_a_o table"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -84,7 +86,7 @@ def tchat_machine_a_o():
     conn.commit()
 
 def tchat_prediction():
-    
+    """We creating tchat_prediction table"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -103,7 +105,7 @@ def tchat_prediction():
 
 
 def tchat_info_pollu():
-    
+    """We creating tchat_info_pollu table"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
