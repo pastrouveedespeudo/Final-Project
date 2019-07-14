@@ -1,5 +1,7 @@
 mettre les fichier js et css des fofo
 
+caracetere spéciaux pour map et coiffure, habits (retour habit doit etre en blanc)
+
 y'a map vent stop -> s'enleve pas 
 
 faire les pages html
