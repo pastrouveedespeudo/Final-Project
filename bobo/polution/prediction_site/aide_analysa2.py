@@ -1,3 +1,5 @@
+"""We calling database for prediction"""
+
 import psycopg2
 from statistics import *
 
@@ -8,7 +10,8 @@ from .CONFIG import PASSWORD
 
 
 def vision(ville):
-    
+    """Calling database and return it"""
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
@@ -39,31 +42,3 @@ def vision(ville):
 
     
     return liste
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
