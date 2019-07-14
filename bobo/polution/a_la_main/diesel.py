@@ -1,3 +1,5 @@
+"""We recup diesel data"""
+
 import requests
 import urllib.request
 from bs4 import *
@@ -109,16 +111,3 @@ def recup_tag():
          gasplus == True and\
          dol == 'dollars baisse  ':
         return 'fort'
-
-
-    
-    
-
-
-
-
-
-
-
-
-
