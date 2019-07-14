@@ -54,44 +54,20 @@ ces pages contiennent respectivement un haut(haut_page) et une navebarre(menu) a
 
 # Final-Project
 
-attention certain texte ne sont pas cité et ne sont pas une vérité vraie. Nous n'avons en aucun cas affirmé la justesse des textes
-d'introduction, ne sommes pas expert en mode ni expert en pollution. 
 
 https://myprofilmypollution.herokuapp.com
 
-Ceci est un site web opensource. Ce site opensource et est un enjeu sociétal car: 
+Résumé (la note d'intention se trouve dans livrable)
 
-opensource veut dire code source ouvert et sociétal veut dire aspect de la vie en société. La pollution est son information est un aspect de la vie sociétale par son danger. La mode est un aspect de la vie sociétale par son indicateur social. 
 
-Une des plus grande fracture sociétale de ce monde est la mode. Nous avons tenté d'y lutter via les blouses a l'école afin de masquer
-les différences et de s'unifier par exemple. Aujourdh'ui les marques, les logo ainsi que les slogans sont omni présents.
-Ce site web cherche a aider les personnes 
-Il vise a aider les personnes par des conseils mais aussi des applications a essayer des coupes de cheveux mais aussi des habits.
+Suivre les concept de la mode est crutial aujoud'hui. La mode est un ensemble de règle qui définisse les critères de la beauté. Oui mais... la mode n'est pas forcement la beauté ! ici nous parlerons de non négligence de soi. En effet, Verriez vous George Clooney avec les sourciles du comte Olaf ou avec une barbe d'ermit? Verriez vous Madonna avec une crete verte ? Non car ces personne suivent la mode.Elle vous permet dassurer votre crédibilité au travail mais aussi votre confiance en vous. Il a été démontrer scientifiquement que  d'etre beau et bien habillé aumgentait le salaire les bonnes notes, la sensation d'intelligence et de sympathie.  Il est donc très important detre bien sur soi tant au niveau vestimentaire qu'au niveau du corps car l'estime de soi augmente la sympathie, le bien etre en somme le bonheur. Une coupe tendance ou des vatements des années 50 peuvent etre révolus aujourd'hui  et paraitre "moche" de nos jours. Il faut donc de suivre la mode et par le biais de conformisme et par notre instrinct grégaire. Pour cela nous proposons des fonctionnalités qui présentent les coloris de la mode au niveau vestimentaire mais aussi d'adapté sa coupe selon son cheveux et la forme de son visage par des draggable de coupe et de vetement mais la mode, à quel prix ? Au prix des futures générations ? En effet, la mode est le deuxieme facteur de pollution apres le pétrol. Par le non recyclage des vetements, le transport ou bien la teinture des vetements le monde de la beauté aggrave la qualité de l'air. Nous essayons donc d'aider mais aussi d'informer a travers ce site web, de donnée les connaissances a l'utilisateur des différents aspect de la pollution. Afin de faire cela nous allons raisoner de la facon suivante:  nous présentons les informations sur la pollution puis les données surlequelles nous nous sommes basés,  puis les graphiques et une des solutions qui existe pour lutter contre la polluiton.  Bien sur nous avons fait d'autres fonctionnalités comme
+une carte des vent afin de suivre la pollution et une prédiction afin de suivre la pollution en temps réel selon
+des elements bien précis.
 
-Par les coupes de cheveux ils peuvent essayer des coupes de cheveux via leur caméra. Mais il y a aussi des conseilles selon leur figure. 
-Nous leur proposons aussi de trouver les coiffeurs ainsi que les salle de gym (aproximativement...) dans leur ville avec un rayon de la su-
-perficie de leur ville.
+La mode est importante pour la confiance en soi mais 
+aussi vis a vis des autres (de maniere insconsciente (impression de sympathie, inlligence...))
+mais elle a plusieurs conséquences nefastes sur la placenete vis a vis de la pollution de l'air par exemple.
 
-Nous leur proposons aussi d'essayer des habits et fictivement des lieux ou les acheter. Notre site n'a pas de but de vente. C'est pour 
-cela que nous avons enlevé le systeme d'account qui pourraient potentiellement donner l'impression que nous pourrions nous
-orienté vers de la vente. Nous proposons aussi de leur données sommairement les couleurs primaires de la mode actuelle par des images
-récupérées sur internet.
-
-Cependant etre bien dans son corps connaitre les couleurs de la mode, avoir a disposition l'adresse d'un coiffeur ainsi que d'une salle de gym.
-n'était pas suffisant car,
-
-La mode est la secodne source de pollution. Par les industrie du textile, le jettage des habits mais aussi par le transport. On apelle ca
-l'envers du décors.
-
-Nous avons donc décidé de prés ou de loin de rapproché la mode et la pollution. Nous avons donc une page d'information sur la pollution
-une page de diagramme construit par le recueille de donnée de différent site. Par ces données nous avons pu essayer de faire une sorte de
-prédiction (qui s'etend au moment et non a la semaine). De plus nous avons fait une map qui suit (plus ou moins) la direction du vent.
-Plus ou moins car nous avons a disposition des prédictions du vent et nos données ne sont alors valide a l'heure. Ensuite nous avons cher-
-ché des solutions possibles. La meilleurs que nous ayons trouvé (HORS action collective) et la production de pluie artificielle par
-différentes techniques...
-qui est deja utilisées dans plusieurs pays mais qui m'etais inconnue donc j'ai voulu la promouvoir a travers ce site.
-
-mode -> bien etre (enjeu environemental) -> source de pollution -> information -> solution (enjeu environement)
 
 # Les Tests
 
