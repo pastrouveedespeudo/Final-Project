@@ -1,6 +1,7 @@
+"""We lunch and recup all data"""
+
 import psycopg2
 import datetime
-
 
 from angrais import *
 from climat import *
@@ -169,17 +170,3 @@ for i in liste:
 
     cursor.execute(sql, values)    
     conn.commit()
-
-        
-
- 
-    
-
-
-
-
-
-
-
-
-
