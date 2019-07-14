@@ -18,7 +18,8 @@
 
       <!-- Plugin CSS -->
       <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="/static/css/direction/map_haut.css">
+      <link rel="stylesheet" type="text/css" href="/static/css/coupe/coupe/coupe_haut.css">
+      <link rel="stylesheet" type="text/css" href="/static/css/tchat/coupe.css">
 
       <!-- Theme CSS - Includes Bootstrap -->
       <link href="/static/css/creative.min.css" rel="stylesheet">
@@ -57,30 +58,6 @@
 
     {% endfor %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
         <center>
             <div id='tchat'>
@@ -94,163 +71,5 @@
         </center>
 
     </body>
-
-
-
-
-
-
-
-
-    <style>
-    #carte{
-        border:none;
-        background:none;
-        margin-left:50px;
-        font-weight:bold;
-        height:100px;
-        width:100px;
-        font-size:20px;
-    }
-    #carte:hover{
-        border:1px solid black;
-    }
-    #tchat{
-        margin-top:200px;
-        border:4px solid black;
-        background:#6a767d;
-        height:400px;
-        width:60%;
-    }
-    textarea{
-        width:80%;
-        height:60%;
-        resize : none;
-    }
-    #poster{
-        border:none;
-        background:none;
-        font-size:20px;
-        font-weight:bold
-    }
-    #poster:hover{
-        border:1px solid black;
-        
-    }
-    #pac{
-        width:100%;
-        height:100%;
-        border:1px solid black;
-        text-shadow:0.5px 0.5px black;
-        margin:20px;
-        font-weight:bold;
-        background:#6a767d;
-        
-    }
-    </style>
-
-
-    <script>
-
-
-
-
-        jQuery("#poster").on("click", function(e){
-            
-            var a = document.getElementById('text').value;
-             e.preventDefault();
-             
-              jQuery.ajax({
-                  data:{
-                      'text':a,
-                  },
-                  type:"POST",
-                  url:"/photo/coupe_tchat/"
-              })
-              .done(function(data){
-                  if (data.error){
-                      jQuery("#monCadreAlert").text(data.error);
-                      jQuery("#is_save");
-                      
-                      
-                  }
-                  else{
-                      jQuery("#habit").html(data.data);
-                      jQuery("#monCadreAlert");
-                      if(data == "non"){
-                          document.getElementById('ok').innerHTML = "Votre message comporte des caractères inapropriés recommencez gentillement ! ou, ce message existe deja, evite le spam !"
-                      }
-                      else{
-                          document.location.href="/photo/coupe_tchat/"
-                      }
-                    
-                  };
-                  
-              });
-        });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        $(document).ready(function(){
-
-            
-            function getCookie(name) {
-                var cookieValue = null;
-                if (document.cookie && document.cookie !== '') {
-                    var cookies = document.cookie.split(';');
-                    for (var i = 0; i < cookies.length; i++) {
-                        var cookie = cookies[i].trim();
-                        // Does this cookie string begin with the name we want?
-                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                            break;
-                        }
-                    }
-                }
-                return cookieValue;
-            }
-            var csrftoken = getCookie('csrftoken');
-
-            function csrfSafeMethod(method) {
-                // these HTTP methods do not require CSRF protection
-                return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
-            }
-            $.ajaxSetup({
-                beforeSend: function(xhr, settings) {
-                    if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
-                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
-                    }
-                }
-            });
-        });
-
-
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
+<script src="/static/js/tchat/coupe.js"></script>
