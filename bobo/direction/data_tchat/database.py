@@ -1,3 +1,5 @@
+"""Database, we insert, and call data"""
+
 import psycopg2
 
 from .CONFIG import HOST
@@ -10,6 +12,7 @@ import datetime
 
 
 def database(data):
+    """We define time for template response (he post it the 2/2/2019)"""
     
     date = datetime.datetime.now()
     day = date.day
@@ -36,7 +39,7 @@ def database(data):
 
 
 def tchat():
-
+    """We call data"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
@@ -61,15 +64,11 @@ def tchat():
 
 
 def traitement(liste):
-    
+    """We insert data into a list"""
+
     liste1 = []
     for i in liste:
         liste1.append([i[1], i[2]])
 
 
     return liste1
-
-
-
-
-    
