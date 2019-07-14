@@ -4,6 +4,8 @@ for increment database"""
 import datetime
 
 def nuit_jour():
+    """We define if it's day or night"""
+
     nuit = [22, 23, 24, 1, 2, 3, 4, 5, 6, 7, 8]
 
 
@@ -29,6 +31,3 @@ def nuit_jour():
             non_nuit = 'jour'
 
     return non_nuit
-
-    
-
