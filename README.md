@@ -1,5 +1,8 @@
 pep8 a fond mtn (efface les essais oups)
 
+jtai chaud mais la.... la page donnée faut remettre les gabarit et mettre ensure crf sur tous les truks...
+
+
 mettre les fichier js et css des fofo
 
 y'a map vent stop -> s'enleve pas 
