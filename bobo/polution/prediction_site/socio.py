@@ -21,18 +21,3 @@ def habitant(lieu):
 
     if lieu == 'marseille':
         return 'sup500K'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
