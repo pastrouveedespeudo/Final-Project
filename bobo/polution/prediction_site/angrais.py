@@ -21,9 +21,3 @@ def periode_angrais():
         if mois == i:
             return 'oui'
             break
-
-
-
-
-
-
