@@ -83,7 +83,7 @@
             <!-- Input Section Lyon-->
             <div class="col-lg-3 col-sm-4 col-md-3" id="Lyon"><br>
               <h5>Taux de pollution de particules fines à<br>Lyon</h5><br><br>
-              <center><strong><h5 id='lyon_pol'>43</h5>AQI</strong></center><br>
+              <center><strong><h5 id='lyon_pol'>{{lyon}}</h5>AQI</strong></center><br>
               <center><input type='button' id='voir_lyon' value='Voir les données' onclick='donnee_lyon()'></center><br>
             </div>
 
@@ -95,25 +95,25 @@
               <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
                 <div class="row">
                   <div class="col-sm">
-                    <span style='color:black;'>Météo</span><br>Beau temps<br>
+                    <span style='color:black;'>Météo</span><br>{{weather_lyon}}<br>
                   </div>
                   <div class="col-sm">
-                    <span>Vent</span><br>2.1 m/s<br>
+                    <span>Vent</span><br>{{wind_lyon}} m/s<br>
                   </div>
                   <div class="col-sm">
-                    <span>Température</span><br>30 degrès<br>
+                    <span>Température</span><br>{{temperature_lyon}} degrès<br>
                   </div>
                   <div class="col-sm">
-                   <span>Pression</span><br>1016 hpa<br>
+                   <span>Pression</span><br>{{pressure_lyon}} hpa<br>
                   </div>
                   <div class="col-sm">
-                    <span>Saison</span><br>été<br>
+                    <span>Saison</span><br>{{current_season}}<br>
                   </div>
                   <div class="col-sm">
-                    <span>Départ routier</span><br>Non<br>
+                    <span>Départ routier</span><br>{{departure_lyon}}<br>
                   </div>
                   <div class="col-sm">
-                    <span>Non départ</span><br>Oui<br>
+                    <span>Non départ</span><br>{{regular_day_lyon}}<br>
                   </div>
                 </div>
               </div><br><br>
@@ -124,22 +124,22 @@
               <div class="row">
               
                 <div class="col-sm">
-                  <span>Heure pointe</span><br>oui
+                  <span>Heure pointe</span><br>{{hour_point_lyon}}
                 </div>
                 <div class="col-sm">
-                  <span>Jour Weekend</span><br>Weekend
+                  <span>Jour Weekend</span><br>{{weekend}}
                 </div>
                 <div class="col-sm">
-                  <span>Jour de semaine</span><br>Non
+                  <span>Jour de semaine</span><br>{{week_day}}
                 </div>
                 <div class="col-sm">
-                  <span >Bouchons Lyon</span><br>petit
+                  <span >Bouchons Lyon</span><br>{{plugs_lyon}}
                 </div>
                 <div class="col-sm">
-                 <span>Rang pollution</span><br>7 / 20
+                 <span>Rang pollution</span><br>{{ranking_lyon}}/20
                 </div>
                 <div class="col-sm">
-                  <span>Site industrielle</span><br>oui
+                  <span>Site industrielle</span><br>{{pole_lyon}}
                 </div>
                 <div class="col-sm">
                   <span>Pop. active</span><br>328469 pers.
@@ -153,25 +153,25 @@
               <div class="row">
               
                 <div class="col-sm">
-                  <span>Erruption volicanique</span><br>non<br> 
+                  <span>Erruption volicanique</span><br>{{eruption}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Vente du diesel Lyon</span><br>fort<br>
+                  <span>Vente du diesel Lyon</span><br>{{diesel}}<br>
                 </div>
                 <div class="col-sm">
-                  <span>Incendie à Lyon</span><br>non<br>
+                  <span>Incendie à Lyon</span><br>{{fire_lyon}}<br>
                 </div>
                  <div class="col-sm">
-                  <span>Période d'angrais</span><br>oui<br> 
+                  <span>Période d'angrais</span><br>{{fertilizer}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Moment journée</span><br>jour<br> 
+                  <span>Moment journée</span><br>{{periode}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Taux de polenne</span><br>Bon<br> 
+                  <span>Taux de polenne</span><br>{{po_lyon}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Le cours dollars</span><br>dollars baisse  <br>
+                  <span>Le cours dollars</span><br>{{dollars}}<br>
                 </div>
               </div>
             </div><br><br>
@@ -220,11 +220,13 @@
 
 
 
+
+
           
           <!-- Input Section Paris-->
           <div class="col-lg-3 col-sm-4 col-md-3" id="Paris"><br>                   
               <h5>Taux de pollution de particules fines à<br>Paris</h5><br><br>
-              <center><strong><h5 id='paris_pol'>29</h5>AQI</strong></center><br>
+              <center><strong><h5 id='paris_pol'>{{paris}}</h5>AQI</strong></center><br>
               <center><input type='button' id='voir_paris' value='Voir les données' onclick='donnee_paris()'></center><br>
           </div>
 
@@ -237,25 +239,25 @@
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Météo</span><br>Beau temps<br>
+              <span>Météo</span><br>{{weather_paris}}<br>
             </div>
             <div class="col-sm">
-              <span>Vent</span><br>2.6 m/s<br>
+              <span>Vent</span><br>{{wind_paris}} m/s<br>
             </div>
             <div class="col-sm">
-              <span>Température</span><br>23 degrès
+              <span>Température</span><br>{{temperature_paris}} degrès
             </div>
             <div class="col-sm">
-             <span>Pression</span><br>1017 hpa
+             <span>Pression</span><br>{{pressure_paris}} hpa
             </div>
             <div class="col-sm">
-              <span>Saison</span><br>été
+              <span>Saison</span><br>{{current_season}}
             </div>
             <div class="col-sm">
-              <span>Départ routier</span><br>Non
+              <span>Départ routier</span><br>{{departure_marseille}}
             </div>
             <div class="col-sm">
-              <span>Non départ</span><br>Oui
+              <span>Non départ</span><br>{{regular_day_marseille}}
             </div>
           </div>
         </div><br><br>
@@ -266,25 +268,25 @@
          <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Heure pointe</span><br>oui
+              <span>Heure pointe</span><br>{{hour_point_paris}}
             </div>
             <div class="col-sm">
-              <span>Jour Weekend</span><br>Weekend
+              <span>Jour Weekend</span><br>{{weekend}}
             </div>
             <div class="col-sm">
-              <span>Jour de Semaine</span><br>Non
+              <span>Jour de Semaine</span><br>{{week_day}}
             </div>
             <div class="col-sm">
-              <span>Bouchons Paris</span><br>53
+              <span>Bouchons Paris</span><br>{{plugs_paris}} km
             </div>
             <div class="col-sm">
-              <span>Site industrielle</span><br>non
+              <span>Site industrielle</span><br>{{pole_paris}}
             </div>
             <div class="col-sm">
               <span>Pop. active</span><br>1350800 personnes
             </div>
             <div class="col-sm">
-             <span>Rang pollution</span><br>1 / 20
+             <span>Rang pollution</span><br>{{ranking_paris}} / 20
             </div>
           </div>
         </div><br><br>
@@ -295,25 +297,25 @@
        <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Erruption volicanique</span><br>non 
+              <span>Erruption volicanique</span><br>{{eruption}} 
             </div>
              <div class="col-sm">
-              <span>Vente du diesel Paris</span><br>fort 
+              <span>Vente du diesel Paris</span><br>{{diesel}} 
             </div>
             <div class="col-sm">
-              <span>Incendie à Paris</span><br>non
+              <span>Incendie à Paris</span><br>{{fire_paris}}
             </div>
              <div class="col-sm">
-              <span>Période d'angrais</span><br>oui 
+              <span>Période d'angrais</span><br>{{fertilizer}} 
             </div>
              <div class="col-sm">
-              <span>Le jour ou la nuit</span><br>jour 
+              <span>Le jour ou la nuit</span><br>{{periode}} 
             </div>
              <div class="col-sm">
-              <span>Taux de polenne</span><br>Très bien 
+              <span>Taux de polenne</span><br>{{po_paris}}
             </div>
              <div class="col-sm">
-              <span>Le cours dollars</span><br>dollars baisse   
+              <span>Le cours dollars</span><br>{{dollars}}
             </div>
           </div>
         </div><br><br>
@@ -386,7 +388,7 @@
           <div class="col-lg-3 col-sm-4 col-md-3" id="Marseille"><br>
               
               <h5>Taux de pollution de particules fines à Marseille</h5><br><br>
-              <center><strong><h5 id='marseille_pol'>62</h5>AQI</strong></center><br>
+              <center><strong><h5 id='marseille_pol'>{{marseille}}</h5>AQI</strong></center><br>
               <center><input type='button' id='voir_marseille' value='Voir les données' onclick='donnee_marseille()'></center> 
           </div>
 
@@ -396,25 +398,25 @@
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Météo</span><br>Beau temps
+              <span>Météo</span><br>{{weather_marseille}}
             </div>
             <div class="col-sm">
-              <span>Vent</span><br>3.1 m/s
+              <span>Vent</span><br>{{wind_marseille}} m/s
             </div>
             <div class="col-sm">
-              <span>Température</span><br> degrès
+              <span>Température</span><br>{{temperature_marseille}} degrès
             </div>
             <div class="col-sm">
-             <span>Pression</span><br>1018 hpa
+             <span>Pression</span><br>{{pressure_marseille}} hpa
             </div>
             <div class="col-sm">
-              <span>Saison</span><br>été
+              <span>Saison</span><br>{{current_season}}
             </div>
             <div class="col-sm">
-              <span>Départ routier </span><br>Non
+              <span>Départ routier </span><br>{{departure_paris}}
             </div>
             <div class="col-sm">
-              <span>Non départ</span><br>Oui
+              <span>Non départ</span><br>{{regular_day_paris}}
             </div>
           </div>
         </div><br><br>
@@ -425,25 +427,25 @@
          <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Heure pointe</span><br>oui
+              <span>Heure pointe</span><br>{{hour_point_marseille}}
             </div>
             <div class="col-sm">
-              <span>Jour Weekend</span><br>Weekend
+              <span>Jour Weekend</span><br>{{weekend}}
             </div>
             <div class="col-sm">
-              <span>Jour de semaine</span><br>Non
+              <span>Jour de semaine</span><br>{{week_day}}
             </div>
             <div class="col-sm">
               <span>Bouchons Marseille</span><br>moyen
             </div>
             <div class="col-sm">
-              <span>Site industrielle</span><br>oui
+              <span>Site industrielle</span><br>{{pole_marseille}}
             </div>
             <div class="col-sm">
               <span>Pop. active</span><br>762480 personnes
             </div>
             <div class="col-sm">
-             <span>Rang pollution</span><br>2 / 20
+             <span>Rang pollution</span><br>{{ranking_marseille}} / 20
             </div>
           </div>
         </div><br><br>
@@ -454,25 +456,25 @@
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
             <div class="row">
               <div class="col-sm">
-                <span>Erruption volicanique</span><br>non 
+                <span>Erruption volicanique</span><br>{{eruption}} 
               </div>
                <div class="col-sm">
-                <span>Vente diesel Marseille</span><br>fort 
+                <span>Vente diesel Marseille</span><br>{{diesel}} 
               </div>
               <div class="col-sm">
-                <span>Incendie à Marseille</span><br>non 
+                <span>Incendie à Marseille</span><br>{{fire_marseille}} 
               </div>
                <div class="col-sm">
-                <span>Période d'angrais</span><br>oui 
+                <span>Période d'angrais</span><br>{{fertilizer}} 
               </div>
                <div class="col-sm">
-                <span>Moment journée</span><br>jour 
+                <span>Moment journée</span><br>{{periode}} 
               </div>
                <div class="col-sm">
-                <span>Taux de polenne</span><br>Très bien 
+                <span>Taux de polenne</span><br>{{po_marseille}}
               </div>
                <div class="col-sm">
-                <span>Le cours dollars</span><br>dollars baisse   
+                <span>Le cours dollars</span><br>{{dollars}} 
               </div>
             </div>
           </div><br><br>
@@ -515,31 +517,43 @@
 
 
       </div></center>   
+
+
+
+
+
+
+
+
+
+
+
+
  
    <!-- Input Section Lyon Number 1 -->
        <div id='info1' >
         <div class="container" style='background:url("/static/img/parquet1.jpg");'>
           <div class="row">
             <div class="col-sm">
-              <span style='color:black;'>Météo</span><br>Beau temps<br>
+              <span style='color:black;'>Météo</span><br>{{weather_lyon}}<br>
             </div>
             <div class="col-sm">
-              <span>Vent</span><br>2.1 m/s<br>
+              <span>Vent</span><br>{{wind_lyon}} m/s<br>
             </div>
             <div class="col-sm">
-              <span>Température</span><br>30 degrès<br>
+              <span>Température</span><br>{{temperature_lyon}} degrès<br>
             </div>
             <div class="col-sm">
-             <span>Pression</span><br>1016 hpa<br>
+             <span>Pression</span><br>{{pressure_lyon}} hpa<br>
             </div>
             <div class="col-sm">
-              <span>Saison</span><br>été<br>
+              <span>Saison</span><br>{{current_season}}<br>
             </div>
             <div class="col-sm">
-              <span>Départ routier</span><br>Non<br>
+              <span>Départ routier</span><br>{{departure_lyon}}<br>
             </div>
             <div class="col-sm">
-              <span>Non départ</span><br>Oui<br>
+              <span>Non départ</span><br>{{regular_day_lyon}}<br>
             </div>
           </div>
         </div><br><br>
@@ -550,22 +564,22 @@
           <div class="row">
           
             <div class="col-sm">
-              <span>Heure pointe</span><br>oui
+              <span>Heure pointe</span><br>{{hour_point_lyon}}
             </div>
             <div class="col-sm">
-              <span>Jour Weekend</span><br>Weekend
+              <span>Jour Weekend</span><br>{{weekend}}
             </div>
             <div class="col-sm">
-              <span>Jour de semaine</span><br>Non
+              <span>Jour de semaine</span><br>{{week_day}}
             </div>
             <div class="col-sm">
-              <span >Bouchons Lyon</span><br>petit
+              <span >Bouchons Lyon</span><br>{{plugs_lyon}}
             </div>
             <div class="col-sm">
-             <span>Rang pollution</span><br>7 / 20
+             <span>Rang pollution</span><br>{{ranking_lyon}}/20
             </div>
             <div class="col-sm">
-              <span>Site industrielle</span><br>oui
+              <span>Site industrielle</span><br>{{pole_lyon}}
             </div>
             <div class="col-sm">
               <span>Pop. active</span><br>328469 pers.
@@ -579,25 +593,25 @@
           <div class="row">
           
             <div class="col-sm">
-              <span>Erruption volicanique</span><br>non<br> 
+              <span>Erruption volicanique</span><br>{{eruption}}<br> 
             </div>
              <div class="col-sm">
-              <span>Vente du diesel Lyon</span><br>fort<br>
+              <span>Vente du diesel Lyon</span><br>{{diesel}}<br>
             </div>
             <div class="col-sm">
-              <span>Incendie à Lyon</span><br>non<br>
+              <span>Incendie à Lyon</span><br>{{fire_lyon}}<br>
             </div>
              <div class="col-sm">
-              <span>Période d'angrais</span><br>oui<br> 
+              <span>Période d'angrais</span><br>{{fertilizer}}<br> 
             </div>
              <div class="col-sm">
-              <span>Moment journée</span><br>jour<br> 
+              <span>Moment journée</span><br>{{periode}}<br> 
             </div>
              <div class="col-sm">
-              <span>Taux de polenne</span><br>Bon<br> 
+              <span>Taux de polenne</span><br>{{po_lyon}}<br> 
             </div>
              <div class="col-sm">
-              <span>Le cours dollars</span><br>dollars baisse  <br>
+              <span>Le cours dollars</span><br>{{dollars}}<br>
             </div>
           </div>
         </div><br><br>
@@ -632,30 +646,45 @@
 
       </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <!-- Input Section Paris Number 1 -->
         <div id='info2' style='display:none;'>
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Météo</span><br>Beau temps<br>
+              <span>Météo</span><br>{{weather_paris}}<br>
             </div>
             <div class="col-sm">
-              <span>Vent</span><br>2.6 m/s<br>
+              <span>Vent</span><br>{{wind_paris}} m/s<br>
             </div>
             <div class="col-sm">
-              <span>Température</span><br>23 degrès
+              <span>Température</span><br>{{temperature_paris}} degrès
             </div>
             <div class="col-sm">
-             <span>Pression</span><br>1017 hpa
+             <span>Pression</span><br>{{pressure_paris}} hpa
             </div>
             <div class="col-sm">
-              <span>Saison</span><br>été
+              <span>Saison</span><br>{{current_season}}
             </div>
             <div class="col-sm">
-              <span>Départ routier</span><br>Non
+              <span>Départ routier</span><br>{{departure_marseille}}
             </div>
             <div class="col-sm">
-              <span>Non départ</span><br>Oui
+              <span>Non départ</span><br>{{regular_day_marseille}}
             </div>
           </div>
         </div><br><br>
@@ -666,25 +695,25 @@
          <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Heure pointe</span><br>oui
+              <span>Heure pointe</span><br>{{hour_point_paris}}
             </div>
             <div class="col-sm">
-              <span>Jour Weekend</span><br>Weekend
+              <span>Jour Weekend</span><br>{{weekend}}
             </div>
             <div class="col-sm">
-              <span>Jour de Semaine</span><br>Non
+              <span>Jour de Semaine</span><br>{{week_day}}
             </div>
             <div class="col-sm">
-              <span>Bouchons Paris</span><br>53
+              <span>Bouchons Paris</span><br>{{plugs_paris}} km
             </div>
             <div class="col-sm">
-              <span>Site industrielle</span><br>non
+              <span>Site industrielle</span><br>{{pole_paris}}
             </div>
             <div class="col-sm">
               <span>Pop. active</span><br>1350800 personnes
             </div>
             <div class="col-sm">
-             <span>Rang pollution</span><br>1 / 20
+             <span>Rang pollution</span><br>{{ranking_paris}} / 20
             </div>
           </div>
         </div><br><br>
@@ -695,25 +724,25 @@
        <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Erruption volicanique</span><br>non 
+              <span>Erruption volicanique</span><br>{{eruption}}  
             </div>
              <div class="col-sm">
-              <span>Vente du diesel Paris</span><br>fort 
+              <span>Vente du diesel Paris</span><br>{{diesel}}  
             </div>
             <div class="col-sm">
-              <span>Incendie à Paris</span><br>non
+              <span>Incendie à Paris</span><br>{{fire_paris}}
             </div>
              <div class="col-sm">
-              <span>Période d'angrais</span><br>oui 
+              <span>Période d'angrais</span><br>{{fertilizer}}  
             </div>
              <div class="col-sm">
-              <span>Le jour ou la nuit</span><br>jour 
+              <span>Le jour ou la nuit</span><br>{{periode}}  
             </div>
              <div class="col-sm">
-              <span>Taux de polenne</span><br>Très bien 
+              <span>Taux de polenne</span><br>{{po_paris}}
             </div>
              <div class="col-sm">
-              <span>Le cours dollars</span><br>dollars baisse   
+              <span>Le cours dollars</span><br>{{dollars}}   
             </div>
           </div>
         </div><br><br>
@@ -753,25 +782,25 @@
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Météo</span><br>Beau temps
+              <span>Météo</span><br>{{weather_marseille}}
             </div>
             <div class="col-sm">
-              <span>Vent</span><br>3.1 m/s
+              <span>Vent</span><br>{{wind_marseille}} m/s
             </div>
             <div class="col-sm">
-              <span>Température</span><br> degrès
+              <span>Température</span><br>{{temperature_marseille}} degrès
             </div>
             <div class="col-sm">
-             <span>Pression</span><br>1018 hpa
+             <span>Pression</span><br>{{pressure_marseille}} hpa
             </div>
             <div class="col-sm">
-              <span>Saison</span><br>été
+              <span>Saison</span><br>{{current_season}}
             </div>
             <div class="col-sm">
-              <span>Départ routier </span><br>Non
+              <span>Départ routier </span><br>{{departure_paris}}
             </div>
             <div class="col-sm">
-              <span>Non départ</span><br>Oui
+              <span>Non départ</span><br>{{regular_day_paris}}
             </div>
           </div>
         </div><br><br>
@@ -782,25 +811,25 @@
          <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Heure pointe</span><br>oui
+              <span>Heure pointe</span><br>{{hour_point_marseille}}
             </div>
             <div class="col-sm">
-              <span>Jour Weekend</span><br>Weekend
+              <span>Jour Weekend</span><br>{{weekend}}
             </div>
             <div class="col-sm">
-              <span>Jour de semaine</span><br>Non
+              <span>Jour de semaine</span><br>{{week_day}}
             </div>
             <div class="col-sm">
               <span>Bouchons Marseille</span><br>moyen
             </div>
             <div class="col-sm">
-              <span>Site industrielle</span><br>oui
+              <span>Site industrielle</span><br>{{pole_marseille}}
             </div>
             <div class="col-sm">
               <span>Pop. active</span><br>762480 personnes
             </div>
             <div class="col-sm">
-             <span>Rang pollution</span><br>2 / 20
+             <span>Rang pollution</span><br>{{ranking_marseille}} / 20
             </div>
           </div>
         </div><br><br>
@@ -811,25 +840,25 @@
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
             <div class="row">
               <div class="col-sm">
-                <span>Erruption volicanique</span><br>non 
+                <span>Erruption volicanique</span><br>{{eruption}}  
               </div>
                <div class="col-sm">
-                <span>Vente diesel Marseille</span><br>fort 
+                <span>Vente diesel Marseille</span><br>{{diesel}}  
               </div>
               <div class="col-sm">
-                <span>Incendie à Marseille</span><br>non 
+                <span>Incendie à Marseille</span><br>{{fire_marseille}}  
               </div>
                <div class="col-sm">
-                <span>Période d'angrais</span><br>oui 
+                <span>Période d'angrais</span><br>{{fertilizer}}  
               </div>
                <div class="col-sm">
-                <span>Moment journée</span><br>jour 
+                <span>Moment journée</span><br>{{periode}}  
               </div>
                <div class="col-sm">
-                <span>Taux de polenne</span><br>Très bien 
+                <span>Taux de polenne</span><br>{{po_marseille}}
               </div>
                <div class="col-sm">
-                <span>Le cours dollars</span><br>dollars baisse   
+                <span>Le cours dollars</span><br>{{dollars}}   
               </div>
             </div>
           </div><br><br>
@@ -875,6 +904,7 @@
 
 
 
+
           
             <!-- Input Section Lyon Number 1 -->
             <center>
@@ -882,25 +912,25 @@
               <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
                 <div class="row">
                   <div class="col-sm">
-                    <span style='color:black;'>Météo</span><br>Beau temps<br>
+                    <span style='color:black;'>Météo</span><br>{{weather_lyon}}<br>
                   </div>
                   <div class="col-sm">
-                    <span>Vent</span><br>2.1 m/s<br>
+                    <span>Vent</span><br>{{wind_lyon}} m/s<br>
                   </div>
                   <div class="col-sm">
-                    <span>Température</span><br>30 degrès<br>
+                    <span>Température</span><br>{{temperature_lyon}} degrès<br>
                   </div>
                   <div class="col-sm">
-                   <span>Pression</span><br>1016 hpa<br>
+                   <span>Pression</span><br>{{pressure_lyon}} hpa<br>
                   </div>
                   <div class="col-sm">
-                    <span>Saison</span><br>été<br>
+                    <span>Saison</span><br>{{current_season}}<br>
                   </div>
                   <div class="col-sm">
-                    <span>Départ routier</span><br>Non<br>
+                    <span>Départ routier</span><br>{{departure_lyon}}<br>
                   </div>
                   <div class="col-sm">
-                    <span>Non départ</span><br>Oui<br>
+                    <span>Non départ</span><br>{{regular_day_lyon}}<br>
                   </div>
                 </div>
               </div><br><br>
@@ -911,22 +941,22 @@
               <div class="row">
               
                 <div class="col-sm">
-                  <span>Heure pointe</span><br>oui
+                  <span>Heure pointe</span><br>{{hour_point_lyon}}
                 </div>
                 <div class="col-sm">
-                  <span>Jour Weekend</span><br>Weekend
+                  <span>Jour Weekend</span><br>{{weekend}}
                 </div>
                 <div class="col-sm">
-                  <span>Jour de semaine</span><br>Non
+                  <span>Jour de semaine</span><br>{{week_day}}
                 </div>
                 <div class="col-sm">
-                  <span >Bouchons Lyon</span><br>petit
+                  <span >Bouchons Lyon</span><br>{{plugs_lyon}}
                 </div>
                 <div class="col-sm">
-                 <span>Rang pollution</span><br>7 / 20
+                 <span>Rang pollution</span><br>{{ranking_lyon}}/20
                 </div>
                 <div class="col-sm">
-                  <span>Site industrielle</span><br>oui
+                  <span>Site industrielle</span><br>{{pole_lyon}}
                 </div>
                 <div class="col-sm">
                   <span>Pop. active</span><br>328469 pers.
@@ -940,25 +970,25 @@
               <div class="row">
               
                 <div class="col-sm">
-                  <span>Erruption volicanique</span><br>non<br> 
+                  <span>Erruption volicanique</span><br>{{eruption}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Vente du diesel Lyon</span><br>fort<br>
+                  <span>Vente du diesel Lyon</span><br>{{diesel}}<br>
                 </div>
                 <div class="col-sm">
-                  <span>Incendie à Lyon</span><br>non<br>
+                  <span>Incendie à Lyon</span><br>{{fire_lyon}}<br>
                 </div>
                  <div class="col-sm">
-                  <span>Période d'angrais</span><br>oui<br> 
+                  <span>Période d'angrais</span><br>{{fertilizer}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Moment journée</span><br>jour<br> 
+                  <span>Moment journée</span><br>{{periode}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Taux de polenne</span><br>Bon<br> 
+                  <span>Taux de polenne</span><br>{{po_lyon}}<br> 
                 </div>
                  <div class="col-sm">
-                  <span>Le cours dollars</span><br>dollars baisse  <br>
+                  <span>Le cours dollars</span><br>{{dollars}}<br>
                 </div>
               </div>
             </div><br><br>
@@ -1001,31 +1031,39 @@
 
 
 
+
+
+
+
+
+
+
+
         
 
         <div id='no_respon_paris'>
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Météo</span><br>Beau temps<br>
+              <span>Météo</span><br>{{weather_paris}}<br>
             </div>
             <div class="col-sm">
-              <span>Vent</span><br>2.6 m/s<br>
+              <span>Vent</span><br>{{wind_paris}} m/s<br>
             </div>
             <div class="col-sm">
-              <span>Température</span><br>23 degrès
+              <span>Température</span><br>{{temperature_paris}} degrès
             </div>
             <div class="col-sm">
-             <span>Pression</span><br>1017 hpa
+             <span>Pression</span><br>{{pressure_paris}} hpa
             </div>
             <div class="col-sm">
-              <span>Saison</span><br>été
+              <span>Saison</span><br>{{current_season}}
             </div>
             <div class="col-sm">
-              <span>Départ routier</span><br>Non
+              <span>Départ routier</span><br>{{departure_marseille}}
             </div>
             <div class="col-sm">
-              <span>Non départ</span><br>Oui
+              <span>Non départ</span><br>{{regular_day_marseille}}
             </div>
           </div>
         </div><br><br>
@@ -1036,25 +1074,25 @@
          <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Heure pointe</span><br>oui
+              <span>Heure pointe</span><br>{{hour_point_paris}}
             </div>
             <div class="col-sm">
-              <span>Jour Weekend</span><br>Weekend
+              <span>Jour Weekend</span><br>{{weekend}}
             </div>
             <div class="col-sm">
-              <span>Jour de Semaine</span><br>Non
+              <span>Jour de Semaine</span><br>{{week_day}}
             </div>
             <div class="col-sm">
-              <span>Bouchons Paris</span><br>53
+              <span>Bouchons Paris</span><br>{{plugs_paris}} km
             </div>
             <div class="col-sm">
-              <span>Site industrielle</span><br>non
+              <span>Site industrielle</span><br>{{pole_paris}}
             </div>
             <div class="col-sm">
               <span>Pop. active</span><br>1350800 personnes
             </div>
             <div class="col-sm">
-             <span>Rang pollution</span><br>1 / 20
+             <span>Rang pollution</span><br>{{ranking_paris}} / 20
             </div>
           </div>
         </div><br><br>
@@ -1065,25 +1103,25 @@
        <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
-              <span>Erruption volicanique</span><br>non 
+              <span>Erruption volicanique</span><br>{{eruption}}  
             </div>
              <div class="col-sm">
-              <span>Vente du diesel Paris</span><br>fort 
+              <span>Vente du diesel Paris</span><br>{{diesel}}  
             </div>
             <div class="col-sm">
-              <span>Incendie à Paris</span><br>non
+              <span>Incendie à Paris</span><br>{{fire_paris}}
             </div>
              <div class="col-sm">
-              <span>Période d'angrais</span><br>oui 
+              <span>Période d'angrais</span><br>{{fertilizer}}  
             </div>
              <div class="col-sm">
-              <span>Le jour ou la nuit</span><br>jour 
+              <span>Le jour ou la nuit</span><br>{{periode}}  
             </div>
              <div class="col-sm">
-              <span>Taux de polenne</span><br>Très bien 
+              <span>Taux de polenne</span><br>{{po_paris}}
             </div>
              <div class="col-sm">
-              <span>Le cours dollars</span><br>dollars baisse   
+              <span>Le cours dollars</span><br>{{dollars}}
             </div>
           </div>
         </div><br><br>
@@ -1170,45 +1208,4 @@
 
     
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
