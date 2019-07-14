@@ -22,7 +22,7 @@ jQuery("#poster").on("click", function(e){
               jQuery("#habit").html(data.data);
               jQuery("#monCadreAlert");
               if(data == "non"){
-                  document.getElementById('ok').innerHTML = "Votre message comporte des caractères inapropriés recommencez gentillement ! ou, ce message existe deja, evite le spam !"
+                  document.getElementById('ok').innerHTML = "Votre message comporte des caracteres inapropries recommencez gentillement ! ou, ce message existe deja, evite le spam !"
               }
               else{
                   document.location.href="/polution/tchat_donnee"
