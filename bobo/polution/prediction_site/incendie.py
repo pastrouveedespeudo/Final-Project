@@ -1,3 +1,5 @@
+"""We recup fire data"""
+
 import os
 import cv2
 import json
@@ -13,13 +15,14 @@ PATH_PARIS = 'https://www.20minutes.fr/search?q=incendie+paris'
 
 
 def incendie(ville):
+    """We define the current day,
+    transform it in english
+    and try to match it with the site web"""
 
     date = datetime.datetime.now()
-    
     jour = date.day
     mois = date.month
     année = date.year
-
 
     dico = {'1':'janvier','2':'fevrier','3':'mars','4':'avril',
             '5':'mai','6':'juin','7':'juillet','8':'août',
@@ -30,8 +33,6 @@ def incendie(ville):
         if str(mois) == cle:
             mois = valeur
 
-
-    
     ville = ville.lower()
 
     if ville == 'lyon':
@@ -92,45 +93,3 @@ def incendie(ville):
 
     if b >= 0 or c >= 0 or d >=0:
         return 'oui'
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
