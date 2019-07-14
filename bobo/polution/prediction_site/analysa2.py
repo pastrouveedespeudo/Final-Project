@@ -1,5 +1,8 @@
+"""We matching with database"""
+
 import psycopg2
 import datetime
+from statistics import *
 
 from .angrais import *
 from .climat import *
@@ -15,10 +18,14 @@ from .trafique import *
 
 from .aide_analysa2 import *
 
-from statistics import *
+
 
 def predi_analysa2(ville):
-    
+    """We insert data into a list
+    and compare it with database
+    we mean it
+    and retur it"""
+
     liste = [ville]
 
     condition = []
@@ -118,32 +125,3 @@ def predi_analysa2(ville):
         moyenne = 'pas de donnée'
 
     return moyenne
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
