@@ -1,12 +1,10 @@
-pep8 "a la main" jtai persuader de l'avoir fait
-
 mettre les fichier js et css des fofo
 
 y'a map vent stop -> s'enleve pas 
 
 faire mention légale 
 
-finir le texte pollut
+finir le texte pollut 
 
 finir le readme
 
