@@ -35,6 +35,7 @@ def recuperation_donnée_météo(lieu):
     elif méteo == "Clear":
         return 'beau_temps'
 
+
 def vent(lieu):
     """We recuperate wind with API"""
     
@@ -64,6 +65,7 @@ def vent(lieu):
     elif vent >= 8:
         return 'tres fort'
 
+
 def pression(lieu):
     """We recuperate pressure with API"""
 
@@ -85,40 +87,3 @@ def pression(lieu):
 
     else:
         return 'normale'
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
