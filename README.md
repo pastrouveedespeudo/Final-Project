@@ -12,7 +12,7 @@ finir le readme
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
 
-<em>Un blog qui se veut etre différent des aute, Un blog application, Le Magazine Virtuel</em>
+<em>Un blog qui se veut etre différent des autres, Un blog application, Le Magazine Virtuel</em>
 
 # Partie mode
 
