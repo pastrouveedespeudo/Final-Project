@@ -1,3 +1,5 @@
+"""We define if it's day or night"""
+
 import datetime
 
 def night_day():
@@ -28,7 +30,3 @@ def night_day():
             no_night = 'jour'
 
     return no_night
-
-    
-
-
