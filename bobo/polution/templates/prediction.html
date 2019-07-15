@@ -6,14 +6,12 @@
 <link rel="stylesheet" type="text/css" href="/static/css/pollution/prediction/prediction.css">
 <link rel="stylesheet" type="text/css" href="/static/css/pollution/prediction/prediction_haut.css">
  
-
-
-    <input type='button' value='Tchat'
-      style='border:1px solid black;background:none;
-      float:right;margin-right:50px;' onclick="document.location.href='/polution/tchat_prediction'">
-  <input type='button' value='Menu' id='menu_res' onclick="document.location.href='/polution/navebarre_prediction'">
+<input type='button' value='Tchat'
+    style='border:1px solid black;background:none;
+    float:right;margin-right:50px;' onclick="document.location.href='/polution/tchat_prediction'">
+<input type='button' value='Menu' id='menu_res' onclick="document.location.href='/polution/navebarre_prediction'">
     
-  <div id='text'>
+<div id='text'>
     <h1>La prédiction</h1><br>
     Nous récupérons: les bouchons de la ville,
     le temps, le taux de polenne, les incendies,
@@ -29,201 +27,102 @@
     Ainsi nous faisons la moyenne de toutes
     les données en base de données et
     estimons le taux de pollution avec une précision approximative.
-    
-    
-    
-  </div>
+</div>
   
 
-
-  <!-- Prediction Section -->
-  <div>
-
-
-
-
-
-
-      <br><br><br><br><br><br>
+<div>
+    <br><br><br><br><br><br>
       
-      <div class="container" id="conteneur">
+    <div class="container" id="conteneur">
         <div class="row">
 
-          <div class="col-sm" id='p_ville1'>
+            <div class="col-sm" id='p_ville1'>
+                <center><div id="info1" style='width:100px; height:50px;'></div></center>
+                <center><div id='separate_line1'></div>
+                <input type='button' id='lyon'
+                onmouseover="one('separate_line1', 'info1')"
+                onmouseout="two('separate_line1', 'info1')"
+                value='Lyon'></center>
+            </div>
 
-            <center><div id="info1" style='width:100px; height:50px;'></div></center>
-
-            <center><div id='separate_line1'></div>
-
-            <input type='button' id='lyon'
-              onmouseover="one('separate_line1', 'info1')"
-              onmouseout="two('separate_line1', 'info1')"
-              value='Lyon'></center>
-
-
-          </div>
-
-
-
-
-
-
-
-
-
-          
-          <div class="col-sm" id='p_ville2'>
+        <div class="col-sm" id='p_ville2'>
 
             <center><div id="info2" style='width:200px; height:50px;'></div></center>
-            
             <center><div id='separate_line2'></div>
-            
-            
             <input type='button' id='marseille'
-            onmouseover="one('separate_line2', 'info2')"
-              onmouseout="two('separate_line2', 'info2')"
-              value='Marseille'>
-            </p></center>
+                onmouseover="one('separate_line2', 'info2')"
+                onmouseout="two('separate_line2', 'info2')"
+                value='Marseille'>
+        </div>
 
-            
-          </div>
-
-
-          
-          <div class="col-sm" id='p_ville3'>
-
-
+        <div class="col-sm" id='p_ville3'>
             <center><div id="info3" style='width:100px; height:50px;'></div></center>
-
-      
             <center><div id='separate_line3'></div>
-            
             <input type='button' id='paris'
                 onmouseover="one('separate_line3', 'info3')"
                 onmouseout="two('separate_line3', 'info3')"
                 value='Paris'>
             </p></center>
-
-            
-          </div>
-         </div>
-
-   
-        <br>
-        <p id='choix'></p>
-        <center><p id='chargement' style='display:none'><img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80'></p></center>
-        <div id='pred'></div>
-
-          
         </div>
+    </div>
 
-        <div><br>
+    <br>
+    <p id='choix'></p>
+    <center><p id='chargement' style='display:none'><img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80'></p></center>
+    <div id='pred'></div>   
+    </div>
+    <div><br>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+    <!-- Explication Section -->
 
-
-
-  </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  
-
-
- 
-
-
-
-  <!-- Explication Section -->
-
-  <center>
-  <section class="page-section bg-dark text-white" id='section_info'>
-    <div class="container">
-      <h2 class="text-center mt-0" style='color:black;'>Nos Prévoyances</h2>
-      <br><br>
-      <div class="row">
-        <div class="col-lg-8 col-md-6 text-center" id="resumText">
-         <h3>Son fonctionnement</h3>
-         <br>
-         <p id="resum">Afin de faire notre prévoyance nous avons récupéré à partir de différentes sources
-         plusieurs informations que vous pouvez voir sous la rubrique sos données.<br><br>
-         Chaque jour et à chaque heure par une tache cron nous avons alimenté notre base de données.
-         Nous récupérons alors chaque condition en temps réel lorsque vous appuyez sur une des entrées.
-         Nous les comparons à notre base de données. Faisons ressortir toutes les situations identiques
-         à la situation présente et récupérons les données de pollution lui associé.
-         Puis en faisons une moyenne.</p>
-        </div>
-        <div class="col-lg-8 col-md-6 text-center" id="resumText">
-        <br><br>
-         <h3>Son interet</h3>
-         <br>
-         <p id="resum">Par cela nous pouvons vous tenir informé du taux de pollution dans ces villes. Mais aussi
-         de pouvoir comprendre d'où vient la pollution/<br><br>
-         Bien sur, nos données peuvent être fausse et ne sont pas complètes.</p>
-        </div>
-        <div class="col-lg-8 col-md-6 text-center" id="resumText">
-         <br><br>
-         <h3>Son amélioration</h3>
-         <br>
-         <p id="resum">Bien sur, nos prédictions ne semblent pas être fiables.
-         Par le manque de données et de connaissance en pollution et en développement.<br><br>
-         Nous avons tenté une approche où l'on coterait chaque condition mais nous n'avons pas assez
-         de données pour le moment.</p>
+    <center>
+        <section class="page-section bg-dark text-white" id='section_info'>
+            <div class="container">
+            <h2 class="text-center mt-0" style='color:black;'>Nos Prévoyances</h2>
+            <br><br>
+            <div class="row">
+                <div class="col-lg-8 col-md-6 text-center" id="resumText">
+                    <h3>Son fonctionnement</h3>
+                    <br>
+                    <p id="resum">Afin de faire notre prévoyance nous avons récupéré à partir de différentes sources
+                        plusieurs informations que vous pouvez voir sous la rubrique sos données.<br><br>
+                        Chaque jour et à chaque heure par une tache cron nous avons alimenté notre base de données.
+                        Nous récupérons alors chaque condition en temps réel lorsque vous appuyez sur une des entrées.
+                        Nous les comparons à notre base de données. Faisons ressortir toutes les situations identiques
+                        à la situation présente et récupérons les données de pollution lui associé.
+                        Puis en faisons une moyenne.
+                    </p>
+                </div>
+                <div class="col-lg-8 col-md-6 text-center" id="resumText">
+                <br><br>
+                <h3>Son interet</h3>
+                <br>
+                <p id="resum">Par cela nous pouvons vous tenir informé du taux de pollution dans ces villes. Mais aussi
+                    de pouvoir comprendre d'où vient la pollution/<br><br>
+                    Bien sur, nos données peuvent être fausse et ne sont pas complètes.
+                </p>
+            </div>
+            <div class="col-lg-8 col-md-6 text-center" id="resumText">
+            <br><br>
+            <h3>Son amélioration</h3>
+            <br>
+            <p id="resum">Bien sur, nos prédictions ne semblent pas être fiables.
+                Par le manque de données et de connaissance en pollution et en développement.<br><br>
+                Nous avons tenté une approche où l'on coterait chaque condition mais nous n'avons pas assez
+                de données pour le moment.
+            </p>
         </div>
       </div>
     </div>
-  </section></center><br><br>
+</section></center><br><br>
    
 
-
-
-
-
-  <section class="page-section" id="reso">
+<section class="page-section" id="reso">
     <div>
         {% include "bottom/bottom_page.html" %}
         {% block content2 %}
         {% endblock %}
         <SCRIPT type="text/javascript" src="/static/js/pollution/pred.js"></SCRIPT>
     </div>
-  </section >
-
-
-
-
-
-
-
-
-
-
-
-
-    </body>
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</section >
