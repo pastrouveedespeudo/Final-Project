@@ -2,6 +2,8 @@ faire mention légale
 
 les menu qui deborde les mettre en fermer
 
+Tous rechanger ce n'est pas un blog
+
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
 
