@@ -1,52 +1,30 @@
-            {% include "menu/menu/menu.html" %}
-            {% block content %}
-            {% endblock %}
+{% include "menu/menu/menu.html" %}
+{% block content %}
+{% endblock %}
   
-            <link href="/static/css/pollution/données/nav_données.css" rel="stylesheet">
-
-            <div id="deux" class="col-sm">
-              <center><span><u>Page</u></h1></span><br><br><br>
-
-                      <a href="/polution/donnée#row1">
-                          <p id="Données" class="Données" style='color:white;'
-                              onmouseover="un('Données')" onmouseout="deux('Données')">
-                              Les Données
-                          </p>
-                      </a>
+ <link href="/static/css/pollution/données/nav_données.css" rel="stylesheet">
+<div id="deux" class="col-sm">
+    <center><span><u>Page</u></h1></span><br><br><br>
+        <a href="/polution/donnée#row1">
+            <p id="Données" class="Données" style='color:white;'
+                onmouseover="un('Données')" onmouseout="deux('Données')">
+                Les Données
+            </p>
+        </a> 
+        <a href="/polution/donnée#separate">
+            <p id="Vent" class="Vent"
+                onmouseover="un('Vent')" onmouseout="deux('Vent')">
+                La carte du Vent
+            </p>
+        </a>    
                       
-                      <a href="/polution/donnée#separate">
-                          <p id="Vent" class="Vent"
-                              onmouseover="un('Vent')" onmouseout="deux('Vent')">
-                              La carte du Vent
-                          </p>
-                      </a>    
-                      
-                      <p id="Retour" class="Retour"
-                          onmouseover="un('Retour')" onmouseout="deux('Retour')"
-                          onclick="retour_page('/polution/donnée#sec1')">Retour
-                      </p>
-
-
-
-                      <center><div id="separate_page"></div></center>
-
-
-
-
-
-              
-            </div>
-
-            
-          </div>
-        </div>
-        
+        <p id="Retour" class="Retour"
+            onmouseover="un('Retour')" onmouseout="deux('Retour')"
+            onclick="retour_page('/polution/donnée#sec1')">Retour
+        </p>
+        <center><div id="separate_page"></div></center>      
     </div>
-
-
 </body>
-
-
 
 <script>
     function retour_page(page){
