@@ -1,211 +1,161 @@
+<!-- Navebarre or Menu Including -->
 {% include "haut_page/map_haut.html" %}
 {% block content %}
 {% endblock %}
+<!-- END -->
 
+        <!-- Load static -->
+        <link rel="stylesheet" type="text/css" href="/static/css/direction/map.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/direction/map_haut.css">
+        <!-- END -->
 
-  <link rel="stylesheet" type="text/css" href="/static/css/direction/map.css">
-  <link rel="stylesheet" type="text/css" href="/static/css/direction/map_haut.css">
-
-  <header>
-    <input type='button' value='Tchat' style='float:right;
-    border:none;background:none;'
-    onclick="location.href='map1'"><br><br>
-    
-    <title>Map functionality is a script for follow the wind.</title>
-    <input type='button' id="menu_res" value="Menu"
-        onclick="location.href = '/direction/navebarre_vent'">
-    <div id='textes'>
-        <div id='texte1'>
-          <h1>Notre carte du vent</h1><br>
-          Il y a deux sortes de vent, le vent verticale et horrizontale.
-          Il existe plusieurs vents régional c'est a dire plusieurs
-          vent qui auront une certaine vitesse et un certain angle
-          par les  régions régit par les situations topographiques.
-          Par exemple Il y a le mistral, la tramontane, le marin...
-          Mais il y a aussi des vent globaux. Par exemple il y a
-          Hadley (N-E),Ferrel (O). Nous nous sommes adaptés au vent
-          par divers outils que ce soit par la navigation, par 
-          l'énergie mais aussi par le divertissement. Nous nous 
-          sommes adaptés.
-
-        </div>
-      </div>
-      <div id='texte2'class="col-lg-8 align-self-baseline">
-          La pollution et le vent<br>
-          Le vent est le phénomène naturel qui
-          est régit par la différence de température
-          entre les deux poles qui se traduit une différence de pression. Mais
-          aussi par la rotation de la planete.
-          transporte la pollution. Elle permet son
-          évacuation mais aussi son moyen de 
-          locomotion. Le vent a plusieurs mouvement.<br>
-          En suivant le vent nous pouvons
-          suivre la pollution. 
-      </div>
-    </div>
-  </header>
-
-  <section>
-    <div class="container">
-
-
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-center">
-          <h2 class="text-white mt-0"></h2>
-
-
-
-
-          
-          <div id="map2"></div>
-          <br><br><br>
-
-          
-
-
-          <div id='secret' value=''>
-
-          
-          <div id="map"></div><br><br>
-          <div class='container' id='inputs'>
-          <input type='text' placeholder='Placez une ville'
-              id='input_text'><br><br>
-          
-          <input type='button' value='valider' id='button_valider' style='border:2px solid black;'>
-  
-            <div>
+        <!-- Header of current page -->
+        <section>
+            <input type='button' value='Tchat' style='float:right;
+                border:none;background:none; margin-right:50px;
+                margin-top:20px;'
+                onclick="location.href='map1'"><br><br>
             
-            <center><input style='display:none;'
-            type='button' value='valider'
-              id='button_valider2'>
-            <br>
-            <input style='display:none;'
-            type='button' value='stop'
-              id='button_valider3'
-              onclick='stop()'></center>
+            <title>Map functionality is a script for follow the wind.</title>
+            <input type='button' id="menu_res" value="Menu"
+                onclick="location.href = '/direction/navebarre_vent'">
+            <div id='textes'>
+                <div id='texte1'>
+                    <h1>Notre carte du vent</h1><br>
+                    Il y a deux sortes de vent, le vent verticale et horrizontale.
+                    Il existe plusieurs vents régional c'est a dire plusieurs
+                    vent qui auront une certaine vitesse et un certain angle
+                    par les  régions régit par les situations topographiques.
+                    Par exemple Il y a le mistral, la tramontane, le marin...
+                    Mais il y a aussi des vent globaux. Par exemple il y a
+                    Hadley (N-E),Ferrel (O). Nous nous sommes adaptés au vent
+                    par divers outils que ce soit par la navigation, par 
+                    l'énergie mais aussi par le divertissement. Nous nous 
+                    sommes adaptés.
+
+                </div>
             </div>
-          </div>
-
-         
-   
-      </div>
-    </section><br><br><br><br><br><br>
-
-
-
-  <center>
-  <!-- Services Section -->
-  <section id='section_info'>
-  
-    <div class="container">
-    
-      <h2 class="text-center mt-0">Notre carte</h2><br><br>
-
-      <div class="row">
-
-        <div id="trois" class="col-xs-12 col-md-4 col-lg-4 text-center">
-          <strong>Son fonctionement</strong>
-          <br><br>
-          <p style='color:black'>Afin de la pouvoir visualiser le vent depuis notre carte google map.
-          Nous nous servons de plusieurs sources.<br><br>
-          
-          La première est un site web sur la météo sur lequel nous prenons le sens du vent
-          par identification de la ville et du code postal que nous prenons sur Wikipédial.<br><br>
-          
-          Ensuite nous utilisons le service de google map afin de pouvoir afficher la carte.
-          <brAfin de pouvoir utiliser cette map, nous utilisons des coordonées GPS par
-          Nominatim Geocoder. Et utilisons Google pour récupérer la superficie de la ville pour
-          calculer les nouvelles coordonées.</p><br><br><br>
-
-          <span style='float:left; color:black;'><i>*www.Wikipédia.fr</i></span><br>
-          <span style='float:left; color:black;'><i>*www.google.fr</i></span><br>
-          <span style='float:left; color:black;'><i>*https://pypi.org/project/geopy/</i></span><br>
-          <span style='float:left; color:black;'><i>*https://www.lameteoagricole.net/</i></span><br>
-          <span style='float:left; color:black;'><i>*https://www.google.fr/maps/</i></span><br>
-    
-        </div>
-
-     
+            <div id='texte2'class="col-lg-8 align-self-baseline">
+                La pollution et le vent<br>
+                Le vent est le phénomène naturel qui
+                est régit par la différence de température
+                entre les deux poles qui se traduit une différence de pression. Mais
+                aussi par la rotation de la planete.
+                transporte la pollution. Elle permet son
+                évacuation mais aussi son moyen de 
+                locomotion. Le vent a plusieurs mouvement.<br>
+                En suivant le vent nous pouvons
+                suivre la pollution. 
+            </div>
+        </section>
+        <!-- END -->
 
 
-        <div id="un" class="col-xs-6 col-md-4 col-lg-4 text-center">
-          <strong>Son Interet</strong><br><br>
-          
-          <p style='color:black'>La pollution est transportable par les airs.
-          De ce fait le vent la transporte. Nous pensons que cet carte permet de pouvoir savoir
-          si le vent nous amène ou nous enelève la pollution et de pouvoir par une simple visualisation
-          constater le mouvement du vent et donc de la pollution.<br><br>
-          Nous pouvons donc voir la pollution et son déplacement.</p>
-        </div>
+        <!-- Main section of current page -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="text-white mt-0"></h2>
+                        <div id="map2"></div>
+                        <br><br><br>
 
-        <div id="deux" class="col-xs-6 col-md-4 col-lg-4  text-center">
-          <strong>Son utilisation</strong><br><br>
+                        <div id='secret' value=''>
 
-          <p style='color:#black'>Entrez une ville de France, laissez charger,
-          et regardez !
-          <br><br> Appuyer sur stop arrete le processus. Les marqueures ne seront pas
-          réinitialisés.
-
-          </p>
-        </div>
-
+                        <div id="map"></div><br><br>
+                        <div class='container' id='inputs'>
+                        <input type='text' placeholder='Placez une ville'
+                            id='input_text'><br><br>
+                        <input type='button' value='valider' id='button_valider' style='border:2px solid black;'>
         
-      </div>
+                        <div>
+                            <center><input style='display:none;'
+                                type='button' value='valider'
+                                id='button_valider2'>
+                            <br>
+                            <input style='display:none;'
+                                type='button' value='stop'
+                                id='button_valider3'
+                                onclick='stop()'></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><br><br><br><br><br><br>
+        <!-- END -->
 
-        
-      
-    </div>
-  </section>
-  </center>
+        <!-- Explications Section -->
+        <center>
+            <section id='section_info'>
+
+                <div class="container">
+
+                    <h2 class="text-center mt-0">Notre carte</h2><br><br>
+                    <div class="row">
+                        <div id="trois" class="col-xs-12 col-md-4 col-lg-4 text-center">
+                            <strong>Son fonctionement</strong>
+                            <br><br>
+                            <p style='color:black'>Afin de la pouvoir visualiser le vent depuis notre carte google map.
+                                Nous nous servons de plusieurs sources.<br><br>
+                                La première est un site web sur la météo sur lequel nous prenons le sens du vent
+                                par identification de la ville et du code postal que nous prenons sur Wikipédial.<br><br>
+                                Ensuite nous utilisons le service de google map afin de pouvoir afficher la carte.
+                                <brAfin de pouvoir utiliser cette map, nous utilisons des coordonées GPS par
+                                Nominatim Geocoder. Et utilisons Google pour récupérer la superficie de la ville pour
+                                calculer les nouvelles coordonées.
+                            </p><br><br><br>
+
+                            <span style='float:left; color:black;'><i>*www.Wikipédia.fr</i></span><br>
+                            <span style='float:left; color:black;'><i>*www.google.fr</i></span><br>
+                            <span style='float:left; color:black;'><i>*https://pypi.org/project/geopy/</i></span><br>
+                            <span style='float:left; color:black;'><i>*https://www.lameteoagricole.net/</i></span><br>
+                            <span style='float:left; color:black;'><i>*https://www.google.fr/maps/</i></span><br>
+                        
+                        </div>
+
+                        <div id="un" class="col-xs-6 col-md-4 col-lg-4 text-center">
+                            <strong>Son Interet</strong><br><br>
+                        
+                            <p style='color:black'>La pollution est transportable par les airs.
+                                De ce fait le vent la transporte. Nous pensons que cet carte permet de pouvoir savoir
+                                si le vent nous amène ou nous enelève la pollution et de pouvoir par une simple visualisation
+                                constater le mouvement du vent et donc de la pollution.<br><br>
+                                Nous pouvons donc voir la pollution et son déplacement.
+                            </p>
+                        </div>
+
+                        <div id="deux" class="col-xs-6 col-md-4 col-lg-4  text-center">
+                            <strong>Son utilisation</strong><br><br>
+
+                            <p style='color:#black'>Entrez une ville de France, laissez charger,
+                                et regardez !
+                                <br><br> Appuyer sur stop arrete le processus. Les marqueures ne seront pas
+                                réinitialisés.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </center>
+        <!-- END -->
 
 
+        <!-- Bottom section, we including bottom -->
+        <section class="page-section" id="reso">
+            {% include "bottom/bottom_page.html" %}
+            {% block content2 %}
+            {% endblock %}
+        </section>
+        <!-- END -->
 
 
-
-
-
-  <section class="page-section" id="reso">
-      {% include "bottom/bottom_page.html" %}
-      {% block content2 %}
-      {% endblock %}
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-      </body>
-
+    </body>
 </html>
 
 
+<!-- We load js -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqJf5bBiufgiWCK34KcdmPt4Zhsp4oRCc&callback=initMap"
   async defer></script>
-
 <script type="text/javascript" src="/static/js/direction/maap.js"></script>
-
-
-
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- END -->
