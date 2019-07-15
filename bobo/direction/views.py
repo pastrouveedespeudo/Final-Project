@@ -4,8 +4,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 
-from .carte.direction.vent import *
-
 from .views_function import function_map
 from .views_function import function_map2
 from .views_function import function_map3
@@ -50,7 +48,7 @@ def map(request):
 
         if data2:
 
-            lat, long, listee, index = function_map2(data2)     
+            lat, long, listee, index = function_map2(data2)
             nouvelle_position, lat, long = function_map3(lat,
                                                          long,
                                                          listee,
@@ -65,6 +63,5 @@ def map(request):
 
 
 if __name__ == "__main__":
-    """runner function need __name__ == "__main__" """
 
     map(request)
