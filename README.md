@@ -4,7 +4,7 @@ faire mention légale
 
 finir le readme
 
-les menu qui deborde les enelver
+les menu qui deborde les mettre en fermer
 
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
