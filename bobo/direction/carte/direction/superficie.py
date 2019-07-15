@@ -30,25 +30,23 @@ def function_superficie_ville1(propriete):
 
     for i in liste:
         number = ''
-        numbe = ''
-
         counter = 0
+
         for j in i:
             counter1 = 0
-            if j == ',' or j == '.':
+            if j in (',', '.'):
                 number += str('.')
             try:
                 j = int(j)
                 if j == int(j):
                     number += str(j)
-                    numbe = True
-            except:
+            except ValueError:
                 pass
             if j == '²' and number != '':
                 kilometre_carre = True
                 break
             counter1 += 1
-        if kilometre_carre == True:
+        if kilometre_carre is True:
             break
     counter += 1
 
@@ -76,11 +74,10 @@ def superficie_ville(ville):
             i = int(i)
             if i == int(i):
                 number_final += str(i)
-        except:
+        except ValueError:
             pass
 
         counter2 += 1
-
 
     try:
         number_final = float(number_final)
@@ -88,7 +85,9 @@ def superficie_ville(ville):
         try:
             if number_final[0] == '.':
                 number_final = float(number_final[1:])
-        except:
+        except ValueError:
+            number_final = 20.0
+        except TypeError:
             number_final = 20.0
 
     return number_final
