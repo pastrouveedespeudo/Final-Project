@@ -402,29 +402,13 @@
             width:40%;
             height:350px;
         }
+	#shut{
+            visibility: hidden;
+	}
     
     
      }
-    
-     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     #notshut_color{
         width:300%;
         float:right;
@@ -1117,12 +1101,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
+
     @media screen and (min-width: 1000px) and (max-width:1500px) {
         #fb{
             font-size:150px;
@@ -1141,4 +1120,3 @@
             
         }
     }
-    
