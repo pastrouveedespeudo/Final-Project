@@ -53,7 +53,7 @@ def code_postal(lieu):
                     if k == int(k):
                         code += str(k)
 
-                except:
+                except ValueError:
                     if code != '':
                         liste_code.append(code)
                         code = ''
@@ -63,44 +63,55 @@ def code_postal(lieu):
 
     return liste_code[0]
 
+def function_vent_deux_pep(mot):
+    """pep 8 function"""
 
+    direction = ''
+
+    if mot == 'SE':
+        direction = 'sudest'
+    if mot == 'SSE':
+        direction = 'sudsudest'
+    if mot == 'S':
+        direction = 'sud'
+    if mot == 'SSO':
+        direction = 'sudsudouest'
+    if mot == 'SO':
+        direction = 'sudouest'
+    if mot == 'OSO':
+        direction = 'ouestsudouest'
+    if mot == 'O':
+        direction = 'ouest'
+    if mot == 'ONO':
+        direction = 'ouestnordouest'
+    if mot == 'NO':
+        direction = 'nordouest'
+    if mot == 'NNO':
+        direction = 'nordnordouest'
+
+    return direction
 
 def function_vent_deux(mot):
     """We return str"""
 
-    if mot == 'N':
-        return 'nord'
-    if mot == 'NNE':
-        return 'nordnordest'
-    if mot == 'NE':
-        return 'nordest'
-    if mot == 'ENE':
-        return 'estnordest'
-    if mot == 'E':
-        return 'est'
-    if mot == 'ESE':
-        return 'estsudest'
-    if mot == 'SE':
-        return 'sudest'
-    if mot == 'SSE':
-        return 'sudsudest'
-    if mot == 'S':
-        return 'sud'
-    if mot == 'SSO':
-        return 'sudsudouest'
-    if mot == 'SO':
-        return 'sudouest'
-    if mot == 'OSO':
-        return 'ouestsudouest'
-    if mot == 'O':
-        return 'ouest'
-    if mot == 'ONO':
-        return 'ouestnordouest'
-    if mot == 'NO':
-        return 'nordouest'
-    if mot == 'NNO':
-        return 'nordnordouest'
+    direction = ''
 
+    if mot == 'N':
+        direction = 'nord'
+    if mot == 'NNE':
+        direction = 'nordnordest'
+    if mot == 'NE':
+        direction = 'nordest'
+    if mot == 'ENE':
+        direction = 'estnordest'
+    if mot == 'E':
+        direction = 'est'
+    if mot == 'ESE':
+        direction = 'estsudest'
+    else:
+        direction = function_vent_deux_pep(mot)
+
+    return direction
 
 def vent_deux(lieu):
     """We scrapping into site web weather"""
@@ -122,8 +133,8 @@ def vent_deux(lieu):
             finding = str(j).find(VENT_DEUX_RECHERCHE)
             if finding >= 0:
                 for k in j:
-                    for l in k:
-                        mot += l
+                    for l_in_k in k:
+                        mot += l_in_k
                 break
 
     situation = function_vent_deux(mot)
