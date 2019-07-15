@@ -6,7 +6,7 @@ les menu qui deborde les mettre en fermer
 # BLOG sur la mode et la pollution, Le magazine virtuel
 
 <em>Un blog qui se veut etre différent des autres, Un blog application, Le Magazine Virtuel</em>
-<br>
+<br><br><br>
 
 
 
@@ -31,13 +31,13 @@ questionnant la database et l'affiche sur un template.
 - cf partie administrative diagramme de classe coiffure_habit
 
 
-
+<br><br>
 # Partie pollution
 
 Remplir la database à la main ou par tache cron depuis le dossier (pollution/a_la_main/main)
 
 
-
+<br><br><br>
 # Le dossier administratif
 
 Dans ce dossier nous proposons une solution fonctionnelle et techniques. Afin de la bonne compréhension nous avons mis les diagrammes de base de donnée ainsi que les diagrammes de classe.
