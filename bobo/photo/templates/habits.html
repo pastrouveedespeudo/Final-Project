@@ -3,646 +3,517 @@
 {% endblock %}
 
      
-            <link rel="stylesheet" type="text/css" href="/static/css/coupe/habits/habits1.css" media="all" />
-
-
-            
-             <input type='button' value='Tchat'
-            style='border:1px solid white;background:none;
-            float:right;margin-right:50px;color:white;' onclick="document.location.href='/photo/habit_tchat'">
-            <input type='button' value='Menu' id="menu_res">
-
-            
-            <center>
-            <section id="text_top">
-
-
-                  
-                 
-
-          
-                  <div id="les_textes">
-             
-                        Vois-tu un agneau approcher un groupe de lion?
-                        Non tout est question d'apparence. Parmi les Humains,
-                        Nous, il existe une multitude de groupe social.
-                        De la famille au groupe de sport tout est codé.
-                        La facon d'etre à la facon de s'habiller.
-                        Chaque condition à son code que ce soit le dimanche matin
-                        au réveil, les soirs en boite ou au travaille.<br>
-                        Afin de pouvoir te rapprocher de certaine personne
-                        il faut te codifier selon leur coutume.
-                        Non pas te conformer mais trouver la ressemblance.
-                        Nous te proposons de pouvoir essayer
-                        des vetements et de te faire Ta propre Mode selon
-                        la tendance du moment.
-                        <br><br>
-                        <em>Sais-tu que de ne pas recycler ces vetements
-                        leur teinture ainsi que leur transport
-                        pollu gravement l'air ?
-                        <a href='/polution/info_pollu' style='color:white;'> Consulter</a>
-                        </em>
-                        
-         
-                 
-                </div>
-               
-                  
-            </section>
-            </center>
-
-
-
-
-      <section id="section_info1">
+<link rel="stylesheet" type="text/css" href="/static/css/coupe/habits/habits1.css" media="all" />
       
-        <div class="container text-center">
-        
-
-            <div id="CONTENEUR_INFO">
-            
-                <p id='info_oups'><strong><i>Appuyez sur votre couleur
-                de cheveux, et choisissez une catégorie d'habit</i></strong></p><br><br>
-                
-                <p id='info_p'><strong>Les informations des habits</strong></p>
-                
-                <i class="fas fa-angle-down" id="shut_info"
-                onclick="no_shutdown_info('info_cloths_like_price', 'no_shut_info', 'shut_info')"></i>
-                
-                <i class="fas fa-angle-up" id="no_shut_info"
-                onclick="shutdown_info('info_cloths_like_price', 'no_shut_info' , 'shut_info')"></i>
-
-                
-            </div>
-
-
-            <center>
-            
-                  <div id="info_cloths_like_price"><br>
-                  
-                      <strong><center><p id="nos_info_habits">Nos info habits</p></center></strong>
-                      
-                      <div id='infofo'>
-                      
-             
-                            <p id='mage'></p>
-               
-                            
-                            <p id='name'></p>
-                            <p id='store'></p>
-                            <p id='online'></p>
-                            <p id='price'></p>
-                            <p id='stock'></p>
-                        
-                      </div>
-                      
-                </div><br>
-                
-             </center>
-      
-            </div><br>
-
-
-
-
-
-
-
-            
-                <div id="barre">
-
-                  
-                    <p id="p_hair_color"><strong>Les couleurs de cheveux</strong></p><br><br>
-                    
-                    <i class="fas fa-angle-right" id="shut_color_hair"
-                    onclick="shutdown_info('input_color_hair', 'shut_color_hair', 'no_shut_color_hair',
-                                            'p_panta_p', 'tshirt_p_p', 'p_size_p',
-                                            'no_shut_color_pantalon', 'no_shut_tshirt', 'no_shut_size')"></i>
-                    
-                    <i class="fas fa-angle-left" id="no_shut_color_hair"
-                    onclick="no_shutdown_info('input_color_hair', 'shut_color_hair', 'no_shut_color_hair',
-                                              'p_panta_p', 'tshirt_p_p', 'p_size_p',
-                                              'no_shut_color_pantalon', 'no_shut_tshirt', 'no_shut_size')"></i><br><br><br><br>
-
-                                              
-                    
-
-                    <div id="input_color_hair" style='float:right;margin-right:50px;display:none;border:10px solid transparent;width:100px;' >
-                      <input type='button' id='brune' value="Brune" onclick='coul("brune")'><br><br>
-                      <input type='button' id='blonde' value='Blonde' onclick='coul("blonde")'><br><br>
-                      <input type='button' id='chatain' value='Chatain' onclick='coul("chatain")'><br><br>
-                      <input type='button' id='rousse' value='Rousse' onclick='coul("rousse")'><br><br>
-                      <input type='button' id='noire' value='Noire' onclick='coul("noire")'><br><br>
-                    </div>
-               
-
-
-
-                    <div>
-                        <p id="p_panta_p" style='color:white;'><strong>Pantalon</strong></p><br>
-
-                        <i class="fas fa-angle-right" id="shut_color_pantalon"
-                        onclick="shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
-                                                'p_hair_color', 'tshirt_p_p', 'p_size_p',
-                                                'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')"></i>
-                        
-                        <i class="fas fa-angle-left" id="no_shut_color_pantalon"
-                        onclick="no_shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
-                                                'p_hair_color', 'tshirt_p_p', 'p_size_p',
-                                                'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')"></i><br><br><br>
-                        
-                    </div>
-
-
-
-
-                        
-                    <div id="div_pantalon_menu" style='display:none;width:200px;text-align:center;'>
-                        <input type='button' value='Salopette' id='salopette'
-                            style=" border:3px solid black;font-family:segoe print;"
-                            onclick='voir_salopette()'><br><br>
-
-                         <input type='button' value='Jeans' id='jean' 
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_jean()'><br><br>
-
-                         <input type='button' value='Toile' id='toile'
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_toile()'><br><br>
-                    </div>
-                                               
-
-               
-                
-                    <p id='tshirt_p_p' style='color:white;border:10px solid transparent;width:200px;'><strong>T-shirt</strong></p><br>
-
-
-                    <i class="fas fa-angle-left" id="no_shut_tshirt"
-                    onclick="no_shutdown_info('div_input_tshirt', 'shut_tshirt', 'no_shut_tshirt',
-                                                'p_hair_color', 'p_panta_p', 'p_size_p',
-                                                'no_shut_size', 'no_shut_color_pantalon', 'no_shut_color_hair')"></i>
-                    
-                    <i class="fas fa-angle-right" id="shut_tshirt"
-                    onclick="shutdown_info('div_input_tshirt', 'shut_tshirt', 'no_shut_tshirt',
-                                            'p_hair_color', 'p_panta_p', 'p_size_p',
-                                            'no_shut_size', 'no_shut_color_pantalon', 'no_shut_color_hair')"></i>
-                    <br><br><br>
-                    
-
-                    <div id="div_input_tshirt" style='display:none;'>                                                    
-                        <input type='button' value='manche longue' id='longue'
-                            style=" border:3px solid black;font-family:segoe print;"
-                            onclick='voir_t_longue()'><br><br>
-                                                                                                                               
-                        <input type='button' value='manche courte' id='courte'
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_t_courte()'><br><br>
-                                                                         
-                                                                        
-                        <input type='button' value='laine' id='laine'
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_t_laine()'><br><br>
-                    </div>                                         
-            
-
-                
-                   
-
-
-
-
-
-
-                    <p id='p_size_p' style='color:white;border:10px solid transparent;'><strong>Modifier la taille</strong></p><br>
-
-                
-                    <i class="fas fa-angle-left" id="no_shut_size" 
-                    onclick="no_shutdown_info('input_size_bro', 'shut_size', 'no_shut_size',
-                                            'p_hair_color', 'p_panta_p', 'tshirt_p_p',
-                                            'no_shut_tshirt', 'no_shut_color_pantalon', 'no_shut_color_hair')"></i>
-                    
-                    <i class="fas fa-angle-right" id="shut_size"
-                    onclick="shutdown_info('input_size_bro', 'shut_size', 'no_shut_size',
-                                            'p_hair_color', 'p_panta_p', 'tshirt_p_p',
-                                            'no_shut_tshirt', 'no_shut_color_pantalon', 'no_shut_color_hair')"></i>
-                    <br><br><br>
-
-
-                    <div id="input_size_bro" style='display:none;'>
-                      <input type='button' value='Ajouter de la longueur?' id="add1" style='width:200px;'
-                          onclick='ajout_longueur()'><br><br>
-                    
-          
-                      <input type='button' value='Ajouter de la largeur?' id="add2" style='width:200px;'
-                        onclick='ajout_largeur()'><br><br>
-                  
-               
-                      <input type='button' value='Enlever de la longueur?' id="no_add1" style='width:200px;'
-                        onclick='enlever_longueur()'><br><br>
-               
-              
-                      <input type='button' value='Enlever de la largeur?' id="no_add2" style='width:200px;'
-                        onclick='enlever_largeur()'><br><br>
-                   </div>
-
-
-                    
-
-
-
-                    
-                </div>
-         
+<input type='button' value='Tchat'
+    style='border:1px solid white;background:none;
+    float:right;margin-right:50px;color:white;' 
+    onclick="document.location.href='/photo/habit_tchat'">
+<input type='button' value='Menu' id="menu_res">
      
-            </div>
+<center>
+    <section id="text_top">
 
-
-          <div class="container" id="responsive_cont">
-            <div class="row">
-
-
-                
-                <div class="col-sm col-xs-12" style='text-align:center;'>
-                 <p id="p_hair_color2" style='color:white;'><strong>Les couleurs de cheveux</strong></p>
-                    <i class="fas fa-angle-right" id="shut_color_hair2"
-                    onclick="shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
-                                            'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
-                                            'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')"></i>
-                    <i class="fas fa-angle-left" id="no_shut_color_hair2"
-                    onclick="no_shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
-                                              'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
-                                              'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')"></i>
-                    <div id="input_color_hair2" style='display:none;'>
-                      <input type='button' id='brune' value="Brune" onclick='coul("brune")'>
-                      <input type='button' id='blonde' value='Blonde' onclick='coul("blonde")'>
-                      <input type='button' id='chatain' value='Chatain' onclick='coul("chatain")'>
-                      <input type='button' id='rousse' value='Rousse' onclick='coul("rousse")'>
-                      <input type='button' id='noire' value='Noire' onclick='coul("noire")'>
-                    </div>
-                </div>
-                <div class="col-sm col-xs-12" style='text-align:center;'>
-                    <p id="p_panta_p2" style='color:white;'><strong>Pantalon</strong></p>
-                    <i class="fas fa-angle-right" id="shut_color_pantalon2"
-                    onclick="shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
-                                            'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
-                                            'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')"></i>
-                    <i class="fas fa-angle-left" id="no_shut_color_pantalon2"
-                    onclick="no_shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
-                                            'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
-                                            'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')"></i>
-                    <div id="div_pantalon_menu2" style='display:none;text-align:center;'>
-                        <input type='button' value='Salopette' id='salopette'
-                            style=" border:3px solid black;font-family:segoe print;"
-                            onclick='voir_salopette()'><br><br>
-                         <input type='button' value='Jeans' id='jean' 
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_jean()'><br><br>
-                         <input type='button' value='Toile' id='toile'
-                            style="border:3px solid black;font-family:segoe print;"
-                            onclick='voir_toile()'></center><br><br>
-                    </div>
-                </div>
-                    <div class="col-sm col-xs-12" style='text-align:center;'>
-                         <p id='tshirt_p_p2' style='color:white;'><strong>T-shirt</strong></p>
-                            <i class="fas fa-angle-left" id="no_shut_tshirt2"
-                            onclick="no_shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
-                                                        'p_hair_color2', 'p_panta_p2', 'p_size_p2',
-                                                        'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                            <i class="fas fa-angle-right" id="shut_tshirt2"
-                            onclick="shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
-                                                        'p_hair_color2', 'p_panta_p2', 'p_size_p2',
-                                                        'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                            <div id="div_input_tshirt2" style='display:none;'>                                                    
-                                <input type='button' value='manche longue' id='longue'
-                                    style=" border:3px solid black;font-family:segoe print;"
-                                    onclick='voir_t_longue()'><br><br>                                                                                                   
-                                <input type='button' value='manche courte' id='courte'
-                                    style="border:3px solid black;font-family:segoe print;"
-                                    onclick='voir_t_courte()'><br><br>                                             
-                                <input type='button' value='laine' id='laine'
-                                    style="border:3px solid black;font-family:segoe print;"
-                                    onclick='voir_t_laine()'><br><br>
-                            </div>                                         
-                    </div>
-                    <div class="col-sm col-xs-12" style='text-align:center;'>
-                        <p id='p_size_p2' style='color:white;'><strong>Modifier la taille</strong></p>  
-                        <i class="fas fa-angle-left" id="no_shut_size2" 
-                        onclick="no_shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
-                                                'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
-                                                'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                        <i class="fas fa-angle-right" id="shut_size2"
-                        onclick="shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
-                                                'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
-                                                'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')"></i>
-                     
-                        <div id="input_size_bro2" style='display:none;'>
-                          <input type='button' value='Ajouter de la longueur?' id="add1" style='width:200px;'
-                              onclick='ajout_longueur()'><br><br>
-                        
-                          <input type='button' value='Ajouter de la largeur?' id="add2" style='width:200px;'
-                            onclick='ajout_largeur()'><br><br>
-                      
-                   
-                          <input type='button' value='Enlever de la longueur?' id="no_add1" style='width:200px;'
-                            onclick='enlever_longueur()'><br><br>
-                   
-                  
-                          <input type='button' value='Enlever de la largeur?' id="no_add2" style='width:200px;'
-                            onclick='enlever_largeur()'><br><br>
-                       </div>
-                </div>
-                
-                </div>
-            </div>
-
-
-
-
-
-
-              <div id='couleur' style='display:none;'></div>
-              <div id='info_mode'><br><br></div>
-              <div id='recherche' style='display:none;' value=''></div>
-              <div id='profil'></div>
-              <div id ='ess'></div>
-
-              <!-- Clothes Jean White Section -->
-              <div class='container' id='habit_bas_blanc'>
-                <div class='row'>
-
-                    <div id='1' onclick='nom_image("bb1")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/1.png' width='200' height ='250' id='bb1'
-                      style='display:none;'>
-                    </div>
-                    <div id='2' onclick='nom_image("bb2")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/2.2.png' width='200' height ='300' id='bb2'
-                      style='display:none;'>
-                    </div>
-                    <div id='3' onclick='nom_image("bb3")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/3.png'  width='250' height ='300' id='bb3'
-                      style='display:none;'>
-                    </div>
-                    <div id='4' onclick='nom_image("bb4")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/4.png'  width='240' height ='300' id='bb4'
-                      style='display:none;'>
-                    </div>
-                    <div id='5' onclick='nom_image("bb5")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/5.png'  width='250' height ='300' id='bb5'
-                      style='display:none;'>
-                    </div>
-                    <div id='6' onclick='nom_image("bb6")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/6.png'  width='250' height ='250' id='bb6'
-                      style='display:none;'>
-                    </div>
-                    <div id='7' onclick='nom_image("bb7")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/7.png'  width='200' height ='300' id='bb7'
-                      style='display:none;'>
-                    </div>
-                    <div id='8' onclick='nom_image("bb8")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/8.png'  width='300' height ='250' id='bb8'
-                      style='display:none;'>
-                    </div>
-                    <div id='9' onclick='nom_image("bb9")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/9.png'  width='200' height ='250' id='bb9'
-                      style='display:none;'>
-                    </div>
-                    <div id='10' onclick='nom_image("bb10")'>
-                    <img src='/static/img/portfolio/vetement/femme/bas_blanc/10.png'  width='300' height ='250' id='bb10'
-                      style='display:none;'>
-                    </div>
-
-                </div>
-              </div>
-
-
-              <!-- Clothes Jean Blue Section -->
-              <div class='container' id='habit_bas_bleu'>
-                <div class='row'>
-
-                    <div id='11' onclick='nom_image("bbl1")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/1.png' width='150' height='250' id='bbl1'
-                        style='display:none;'>
-                    </div>
-                    <div id='22' onclick='nom_image("bbl2")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/2.png' width='150' height='250' id='bbl2'
-                        style='display:none;'>
-                    </div>
-                    <div id='33' onclick='nom_image("bbl3")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/3.png' width='190' height='250' id='bbl3'
-                        style='display:none;'>
-                    </div>
-                    <div id='44' onclick='nom_image("bbl4")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/4.png' width='190' height='250' id='bbl4'
-                        style='display:none;'>
-                    </div>
-                    <div id='55'onclick='nom_image("bbl5")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/5.png' width='150' height='250' id='bbl5'
-                        style='display:none;'>
-                    </div>
-                    <div id='66' onclick='nom_image("bbl6")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/6.png' width='150' height='250' id='bbl6'
-                        style='display:none;'>
-                    </div>
-
-                    <div id='77' onclick='nom_image("bbl17")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/7.png' width='150' height='250' id='bbl17'
-                        style='display:none;'>
-                    </div>
-                    <div id='88' onclick='nom_image("bbl8")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/8.png' width='150' height='250' id='bbl8'
-                        style='display:none;'>
-                    </div>
-                    <div id='1010' onclick='nom_image("bbl10")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/10.png' width='150' height='250' id='bbl10'
-                      style='display:none;'>
-                    </div>
-                    <div id='1111' onclick='nom_image("bbl11")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/11.png' width='150' height='250' id='bbl11'
-                        style='display:none;'>
-                    </div>
-                    <div id='1212' onclick='nom_image("bbl12")'>
-                      <img src='/static/img/portfolio/vetement/femme/bas_bleu/12.png' width='150' height='250' id='bbl12'
-                        style='display:none;'>
-                    </div>
-
-                </div>
-              </div>
-
-              <!-- Clothes Tshirt White Section -->
-              <div class='container' id='habit_haut_blanc'>
-                  <div class='row'>
-              
-                  <div id='111' onclick='nom_image("hb1")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/1.png' width='150' height='200' id='hb1'
-                    style='display:none;'>
-                  </div>
-                  <div id='222' onclick='nom_image("hb2")'> 
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/2.png' width='150' height='200' id='hb2'
-                    style='display:none;'>
-                  </div>
-                  <div id='333' onclick='nom_image("hb3")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/3.png' width='150' height='200' id='hb3'
-                    style='display:none;'>
-                  </div>
-                  <div id='444' onclick='nom_image("hb4")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/4.png' width='150' height='200' id='hb4'
-                    style='display:none;'>
-                  </div>
-                  <div id='555' onclick='nom_image("hb5")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/5.png' width='150' height='200' id='hb5'
-                    style='display:none;'>
-                  </div>
-                  <div id='666' onclick='nom_image("hb7")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/6.png' width='150' height='200' id='hb7'
-                    style='display:none;'>
-                  </div>
-                  <div id='777' onclick='nom_image("hb8")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/7.png' width='150' height='200' id='hb8'
-                    style='display:none;'>
-                  </div>
-                  <div id='999' onclick='nom_image("hb9")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/9.png' width='150' height='200' id='hb9'
-                    style='display:none;'>
-                  </div>
-                  <div id='101010' onclick='nom_image("hb10")'>
-                  <img src='/static/img/portfolio/vetement/femme/haut_blanc/10.png' width='150' height='200' id='hb10'
-                    style='display:none;'>
-                  </div>
-
-                </div>
-              </div>
-
-
-              <!-- Clothes Tshirt Blue Section -->
-              <div class='container' id='habit_haut_gris'>
-                  <div class='row'>
-                    
-                    <div id='1111' onclick='nom_image("hg1")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/1.png' width='150' height='200' id='hg1'
-                        style='display:none;'>
-                    </div>
-                    <div id='2222' onclick='nom_image("hg2")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/2.png' width='150' height='200' id='hg2'
-                        style='display:none;'>
-                    </div>
-                    <div id='3333' onclick='nom_image("hg3")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/3.png' width='150' height='200' id='hg3'
-                        style='display:none;'>
-                    </div>
-                    <div id='4444' onclick='nom_image("hg4")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/4.png' width='150' height='200' id='hg4'
-                      style='display:none;'>
-                    </div>
-                    <div id='5555' onclick='nom_image("hg5")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/5.png' width='150' height='200' id='hg5'
-                      style='display:none;'>
-                    </div>
-                    <div id='6666' onclick='nom_image("hg6")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/6.png' width='150' height='200' id='hg6'
-                        style='display:none;'>
-                    </div>
-                    <div id='7777' onclick='nom_image("hg7")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/7.png' width='150' height='200' id='hg7'
-                      style='display:none;'>
-                    </div>
-                    <div id='8888' onclick='nom_image("hg8")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/8.png' width='150' height='200' id='hg8'
-                        style='display:none;'>
-                    </div>
-                    <div id='9999' onclick='nom_image("hg9")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/9.png' width='150' height='200' id='hg9'
-                        style='display:none;'>
-                    </div>
-                    <div id='10101010' onclick='nom_image("hg10")'>
-                      <img src='/static/img/portfolio/vetement/femme/haut_gris/10.png' width='150' height='200' id='hg10'
-                        style='display:none;'>
-                    </div>
-
-                </div>
-              </div>
-                  
-                      
-              <div id='image'></div>
-                      
-        
-              <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-                      
-          </div>
+        <div id="les_textes">
+             
+            Vois-tu un agneau approcher un groupe de lion?
+            Non tout est question d'apparence. Parmi les Humains,
+            Nous, il existe une multitude de groupe social.
+            De la famille au groupe de sport tout est codé.
+            La facon d'etre à la facon de s'habiller.
+            Chaque condition à son code que ce soit le dimanche matin
+            au réveil, les soirs en boite ou au travaille.<br>
+            Afin de pouvoir te rapprocher de certaine personne
+            il faut te codifier selon leur coutume.
+            Non pas te conformer mais trouver la ressemblance.
+            Nous te proposons de pouvoir essayer
+            des vetements et de te faire Ta propre Mode selon
+            la tendance du moment.
+            <br><br>
+            <em>Sais-tu que de ne pas recycler ces vetements
+            leur teinture ainsi que leur transport
+            pollu gravement l'air ?
+            <a href='/polution/info_pollu' style='color:white;'> Consulter</a>
+            </em>     
         </div>
-      </div>
+               
+                  
     </section>
+</center>
+
+<section id="section_info1">
+      
+    <div class="container text-center">
+        <div id="CONTENEUR_INFO">
+            
+            <p id='info_oups'><strong><i>Appuyez sur votre couleur
+                de cheveux, et choisissez une catégorie d'habit</i></strong>
+            </p><br><br>
+            <p id='info_p'><strong>Les informations des habits</strong></p>
+                
+            <i class="fas fa-angle-down" id="shut_info"
+                onclick="no_shutdown_info('info_cloths_like_price', 'no_shut_info', 'shut_info')"></i>
+            <i class="fas fa-angle-up" id="no_shut_info"
+                onclick="shutdown_info('info_cloths_like_price', 'no_shut_info' , 'shut_info')"></i>   
+        </div>
+
+
+        <center>
+            <div id="info_cloths_like_price"><br> 
+                <strong><center><p id="nos_info_habits">Nos info habits</p></center></strong>
+                <div id='infofo'>
+                    <p id='mage'></p>
+                    <p id='name'></p>
+                    <p id='store'></p>
+                    <p id='online'></p>
+                    <p id='price'></p>
+                    <p id='stock'></p> 
+                </div>   
+             </div><br>
+                
+        </center>
+    </div><br>
+
+    <div id="barre">     
+        <p id="p_hair_color"><strong>Les couleurs de cheveux</strong></p><br><br>
+                    
+        <i class="fas fa-angle-right" id="shut_color_hair"
+            onclick="shutdown_info('input_color_hair', 'shut_color_hair', 'no_shut_color_hair',
+            'p_panta_p', 'tshirt_p_p', 'p_size_p',
+            'no_shut_color_pantalon', 'no_shut_tshirt', 'no_shut_size')">
+        </i>
+                    
+        <i class="fas fa-angle-left" id="no_shut_color_hair"
+            onclick="no_shutdown_info('input_color_hair', 'shut_color_hair', 'no_shut_color_hair',
+            'p_panta_p', 'tshirt_p_p', 'p_size_p',
+            'no_shut_color_pantalon', 'no_shut_tshirt', 'no_shut_size')">
+        </i><br><br><br><br>
+
+        <div id="input_color_hair" style='float:right;margin-right:50px;display:none;
+            border:10px solid transparent;width:100px;'>
+            <input type='button' id='brune' value="Brune" onclick='coul("brune")'><br><br>
+            <input type='button' id='blonde' value='Blonde' onclick='coul("blonde")'><br><br>
+            <input type='button' id='chatain' value='Chatain' onclick='coul("chatain")'><br><br>
+            <input type='button' id='rousse' value='Rousse' onclick='coul("rousse")'><br><br>
+            <input type='button' id='noire' value='Noire' onclick='coul("noire")'><br><br>
+        </div>
+               
+        <div>
+            <p id="p_panta_p" style='color:white;'><strong>Pantalon</strong></p><br>
+
+            <i class="fas fa-angle-right" id="shut_color_pantalon"
+                onclick="shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
+                    'p_hair_color', 'tshirt_p_p', 'p_size_p',
+                    'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')">
+            </i>
+                        
+            <i class="fas fa-angle-left" id="no_shut_color_pantalon"
+                onclick="no_shutdown_info('div_pantalon_menu', 'shut_color_pantalon', 'no_shut_color_pantalon',
+                'p_hair_color', 'tshirt_p_p', 'p_size_p',
+                'no_shut_size', 'no_shut_tshirt', 'no_shut_color_hair')">
+            </i><br><br><br>             
+        </div>
+                        
+        <div id="div_pantalon_menu" style='display:none;width:200px;text-align:center;'>
+            <input type='button' value='Salopette' id='salopette'
+                style=" border:3px solid black;font-family:segoe print;"
+                onclick='voir_salopette()'><br><br>
+
+            <input type='button' value='Jeans' id='jean' 
+                style="border:3px solid black;font-family:segoe print;"
+                onclick='voir_jean()'><br><br>
+
+            <input type='button' value='Toile' id='toile'
+                style="border:3px solid black;font-family:segoe print;"
+                onclick='voir_toile()'><br><br>
+        </div>
+                                               
+        <p id='tshirt_p_p' style='color:white;border:10px solid transparent;width:200px;'>
+            <strong>T-shirt</strong>
+        </p><br>
+
+        <i class="fas fa-angle-left" id="no_shut_tshirt"
+            onclick="no_shutdown_info('div_input_tshirt', 'shut_tshirt', 'no_shut_tshirt',
+            'p_hair_color', 'p_panta_p', 'p_size_p',
+            'no_shut_size', 'no_shut_color_pantalon', 'no_shut_color_hair')">
+        </i>
+                    
+        <i class="fas fa-angle-right" id="shut_tshirt"
+             onclick="shutdown_info('div_input_tshirt', 'shut_tshirt', 'no_shut_tshirt',
+            'p_hair_color', 'p_panta_p', 'p_size_p',
+            'no_shut_size', 'no_shut_color_pantalon', 'no_shut_color_hair')">
+        </i>
+        <br><br><br>
+                    
+
+        <div id="div_input_tshirt" style='display:none;'>                                                    
+            <input type='button' value='manche longue' id='longue'
+                style=" border:3px solid black;font-family:segoe print;"
+                onclick='voir_t_longue()'><br><br>
+                                                                                                                               
+            <input type='button' value='manche courte' id='courte'
+                style="border:3px solid black;font-family:segoe print;"
+                onclick='voir_t_courte()'><br><br>
+                                                                                                                        
+            <input type='button' value='laine' id='laine'
+                style="border:3px solid black;font-family:segoe print;"
+                onclick='voir_t_laine()'><br><br>
+        </div>                                         
+            
+
+        <p id='p_size_p' style='color:white;border:10px solid transparent;'><strong>Modifier la taille</strong></p><br>
+  
+            <i class="fas fa-angle-left" id="no_shut_size" 
+                onclick="no_shutdown_info('input_size_bro', 'shut_size', 'no_shut_size',
+                'p_hair_color', 'p_panta_p', 'tshirt_p_p',
+                'no_shut_tshirt', 'no_shut_color_pantalon', 'no_shut_color_hair')">
+            </i>
+                    
+            <i class="fas fa-angle-right" id="shut_size"
+                onclick="shutdown_info('input_size_bro', 'shut_size', 'no_shut_size',
+                'p_hair_color', 'p_panta_p', 'tshirt_p_p',
+                'no_shut_tshirt', 'no_shut_color_pantalon', 'no_shut_color_hair')">
+            </i>
+            <br><br><br>
+
+            <div id="input_size_bro" style='display:none;'>
+                <input type='button' value='Ajouter de la longueur?' id="add1" style='width:200px;'
+                    onclick='ajout_longueur()'><br><br>
+                    
+                <input type='button' value='Ajouter de la largeur?' id="add2" style='width:200px;'
+                    onclick='ajout_largeur()'><br><br>
+                  
+                <input type='button' value='Enlever de la longueur?' id="no_add1" style='width:200px;'
+                    onclick='enlever_longueur()'><br><br>
+               
+                <input type='button' value='Enlever de la largeur?' id="no_add2" style='width:200px;'
+                    onclick='enlever_largeur()'><br><br>
+            </div>
+     
+        </div>
+    </div>
+
+
+    <div class="container" id="responsive_cont">
+        <div class="row">
+   
+            <div class="col-sm col-xs-12" style='text-align:center;'>
+                <p id="p_hair_color2" style='color:white;'><strong>Les couleurs de cheveux</strong></p>
+                <i class="fas fa-angle-right" id="shut_color_hair2"
+                    onclick="shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
+                    'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
+                    'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')">
+                </i>
+                <i class="fas fa-angle-left" id="no_shut_color_hair2"
+                    onclick="no_shutdown_info('input_color_hair2', 'shut_color_hair2', 'no_shut_color_hair2',
+                    'p_panta_p2', 'tshirt_p_p2', 'p_size_p2',
+                    'no_shut_color_pantalon2', 'no_shut_tshirt2', 'no_shut_size2')">
+                </i>
+
+                <div id="input_color_hair2" style='display:none;'>
+                    <input type='button' id='brune' value="Brune" onclick='coul("brune")'>
+                    <input type='button' id='blonde' value='Blonde' onclick='coul("blonde")'>
+                    <input type='button' id='chatain' value='Chatain' onclick='coul("chatain")'>
+                    <input type='button' id='rousse' value='Rousse' onclick='coul("rousse")'>
+                    <input type='button' id='noire' value='Noire' onclick='coul("noire")'>
+                </div>
+            </div>
+            <div class="col-sm col-xs-12" style='text-align:center;'>
+                <p id="p_panta_p2" style='color:white;'><strong>Pantalon</strong></p>
+                <i class="fas fa-angle-right" id="shut_color_pantalon2"
+                    onclick="shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
+                    'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
+                    'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')">
+                </i>
+                <i class="fas fa-angle-left" id="no_shut_color_pantalon2"
+                    onclick="no_shutdown_info('div_pantalon_menu2', 'shut_color_pantalon2', 'no_shut_color_pantalon2',
+                    'p_hair_color2', 'tshirt_p_p2', 'p_size_p2',
+                    'no_shut_size2', 'no_shut_tshirt2', 'no_shut_color_hair2')">
+                </i>
+                
+                <div id="div_pantalon_menu2" style='display:none;text-align:center;'>
+                    <input type='button' value='Salopette' id='salopette'
+                        style=" border:3px solid black;font-family:segoe print;"
+                        onclick='voir_salopette()'><br><br>
+                    <input type='button' value='Jeans' id='jean' 
+                        style="border:3px solid black;font-family:segoe print;"
+                        onclick='voir_jean()'><br><br>
+                    <input type='button' value='Toile' id='toile'
+                        style="border:3px solid black;font-family:segoe print;"
+                        onclick='voir_toile()'></center><br><br>
+                </div>
+            </div>
+
+            <div class="col-sm col-xs-12" style='text-align:center;'>
+                <p id='tshirt_p_p2' style='color:white;'><strong>T-shirt</strong></p>
+                <i class="fas fa-angle-left" id="no_shut_tshirt2"
+                    onclick="no_shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
+                    'p_hair_color2', 'p_panta_p2', 'p_size_p2',
+                    'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')">
+                </i>
+                <i class="fas fa-angle-right" id="shut_tshirt2"
+                     onclick="shutdown_info('div_input_tshirt2', 'shut_tshirt2', 'no_shut_tshirt2',
+                    'p_hair_color2', 'p_panta_p2', 'p_size_p2',
+                    'no_shut_size2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')">
+                </i>
+
+                <div id="div_input_tshirt2" style='display:none;'>                                                    
+                    <input type='button' value='manche longue' id='longue'
+                        style=" border:3px solid black;font-family:segoe print;"
+                        onclick='voir_t_longue()'><br><br>                                                                                                   
+                    <input type='button' value='manche courte' id='courte'
+                        style="border:3px solid black;font-family:segoe print;"
+                        onclick='voir_t_courte()'><br><br>                                             
+                    <input type='button' value='laine' id='laine'
+                        style="border:3px solid black;font-family:segoe print;"
+                        onclick='voir_t_laine()'><br><br>
+                </div>                                         
+            </div>
+            <div class="col-sm col-xs-12" style='text-align:center;'>
+                <p id='p_size_p2' style='color:white;'><strong>Modifier la taille</strong></p>  
+                <i class="fas fa-angle-left" id="no_shut_size2" 
+                    onclick="no_shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
+                    'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
+                    'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')">
+                </i>
+                <i class="fas fa-angle-right" id="shut_size2"
+                    onclick="shutdown_info('input_size_bro2', 'shut_size2', 'no_shut_size2',
+                    'p_hair_color2', 'p_panta_p2', 'tshirt_p_p2',
+                    'no_shut_tshirt2', 'no_shut_color_pantalon2', 'no_shut_color_hair2')">
+                </i>
+                     
+                <div id="input_size_bro2" style='display:none;'>
+                    <input type='button' value='Ajouter de la longueur?' id="add1" style='width:200px;'
+                        onclick='ajout_longueur()'><br><br>
+                        
+                    <input type='button' value='Ajouter de la largeur?' id="add2" style='width:200px;'
+                        onclick='ajout_largeur()'><br><br>
+                      
+                    <input type='button' value='Enlever de la longueur?' id="no_add1" style='width:200px;'
+                        onclick='enlever_longueur()'><br><br>
+
+                    <input type='button' value='Enlever de la largeur?' id="no_add2" style='width:200px;'
+                        onclick='enlever_largeur()'><br><br>
+                </div>
+            </div>
+                
+        </div>
+    </div>
+
+    <div id='couleur' style='display:none;'></div>
+    <div id='info_mode'><br><br></div>
+    <div id='recherche' style='display:none;' value=''></div>
+    <div id='profil'></div>
+    <div id ='ess'></div>
+
+    <!-- Clothes Jean White Section -->
+    <div class='container' id='habit_bas_blanc'>
+        <div class='row'>
+            <div id='1' onclick='nom_image("bb1")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/1.png' width='200' height ='250' id='bb1'
+                    style='display:none;'>
+            </div>
+            <div id='2' onclick='nom_image("bb2")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/2.2.png' width='200' height ='300' id='bb2'
+                    style='display:none;'>
+            </div>
+            <div id='3' onclick='nom_image("bb3")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/3.png'  width='250' height ='300' id='bb3'
+                    style='display:none;'>
+            </div>
+            <div id='4' onclick='nom_image("bb4")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/4.png'  width='240' height ='300' id='bb4'
+                    style='display:none;'>
+            </div>
+            <div id='5' onclick='nom_image("bb5")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/5.png'  width='250' height ='300' id='bb5'
+                    style='display:none;'>
+            </div>
+            <div id='6' onclick='nom_image("bb6")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/6.png'  width='250' height ='250' id='bb6'
+                    style='display:none;'>
+            </div>
+            <div id='7' onclick='nom_image("bb7")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/7.png'  width='200' height ='300' id='bb7'
+                    style='display:none;'>
+            </div>
+            <div id='8' onclick='nom_image("bb8")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/8.png'  width='300' height ='250' id='bb8'
+                    style='display:none;'>
+            </div>
+            <div id='9' onclick='nom_image("bb9")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/9.png'  width='200' height ='250' id='bb9'
+                    style='display:none;'>
+            </div>
+            <div id='10' onclick='nom_image("bb10")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_blanc/10.png'  width='300' height ='250' id='bb10'
+                    style='display:none;'>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Clothes Jean Blue Section -->
+    <div class='container' id='habit_bas_bleu'>
+        <div class='row'>
+            <div id='11' onclick='nom_image("bbl1")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/1.png' width='150' height='250' id='bbl1'
+                    style='display:none;'>
+            </div>
+            <div id='22' onclick='nom_image("bbl2")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/2.png' width='150' height='250' id='bbl2'
+                    style='display:none;'>
+             </div>
+            <div id='33' onclick='nom_image("bbl3")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/3.png' width='190' height='250' id='bbl3'
+                    style='display:none;'>
+            </div>
+            <div id='44' onclick='nom_image("bbl4")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/4.png' width='190' height='250' id='bbl4'
+                    style='display:none;'>
+            </div>
+            <div id='55'onclick='nom_image("bbl5")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/5.png' width='150' height='250' id='bbl5'
+                    style='display:none;'>
+            </div>
+            <div id='66' onclick='nom_image("bbl6")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/6.png' width='150' height='250' id='bbl6'
+                    style='display:none;'>
+            </div>
+            <div id='77' onclick='nom_image("bbl17")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/7.png' width='150' height='250' id='bbl17'
+                    style='display:none;'>
+            </div>
+            <div id='88' onclick='nom_image("bbl8")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/8.png' width='150' height='250' id='bbl8'
+                    style='display:none;'>
+            </div>
+            <div id='1010' onclick='nom_image("bbl10")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/10.png' width='150' height='250' id='bbl10'
+                    style='display:none;'>
+            </div>
+            <div id='1111' onclick='nom_image("bbl11")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/11.png' width='150' height='250' id='bbl11'
+                    style='display:none;'>
+            </div>
+            <div id='1212' onclick='nom_image("bbl12")'>
+                <img src='/static/img/portfolio/vetement/femme/bas_bleu/12.png' width='150' height='250' id='bbl12'
+                    style='display:none;'>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Clothes Tshirt White Section -->
+    <div class='container' id='habit_haut_blanc'>
+        <div class='row'>   
+            <div id='111' onclick='nom_image("hb1")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/1.png' width='150' height='200' id='hb1'
+                    style='display:none;'>
+            </div>
+            <div id='222' onclick='nom_image("hb2")'> 
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/2.png' width='150' height='200' id='hb2'
+                    style='display:none;'>
+            </div>
+            <div id='333' onclick='nom_image("hb3")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/3.png' width='150' height='200' id='hb3'
+                    style='display:none;'>
+            </div>
+            <div id='444' onclick='nom_image("hb4")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/4.png' width='150' height='200' id='hb4'
+                    style='display:none;'>
+            </div>
+            <div id='555' onclick='nom_image("hb5")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/5.png' width='150' height='200' id='hb5'
+                    style='display:none;'>
+            </div>
+            <div id='666' onclick='nom_image("hb7")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/6.png' width='150' height='200' id='hb7'
+                    style='display:none;'>
+            </div>
+            <div id='777' onclick='nom_image("hb8")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/7.png' width='150' height='200' id='hb8'
+                    style='display:none;'>
+            </div>
+            <div id='999' onclick='nom_image("hb9")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/9.png' width='150' height='200' id='hb9'
+                    style='display:none;'>
+            </div>
+            <div id='101010' onclick='nom_image("hb10")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_blanc/10.png' width='150' height='200' id='hb10'
+                    style='display:none;'>
+             </div>
+
+        </div>
+    </div>
+
+    <!-- Clothes Tshirt Blue Section -->
+    <div class='container' id='habit_haut_gris'>
+        <div class='row'>
+                    
+            <div id='1111' onclick='nom_image("hg1")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/1.png' width='150' height='200' id='hg1'
+                    style='display:none;'>
+            </div>
+            <div id='2222' onclick='nom_image("hg2")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/2.png' width='150' height='200' id='hg2'
+                    style='display:none;'>
+            </div>
+            <div id='3333' onclick='nom_image("hg3")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/3.png' width='150' height='200' id='hg3'
+                    style='display:none;'>
+            </div>
+            <div id='4444' onclick='nom_image("hg4")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/4.png' width='150' height='200' id='hg4'
+                    style='display:none;'>
+            </div>
+            <div id='5555' onclick='nom_image("hg5")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/5.png' width='150' height='200' id='hg5'
+                    style='display:none;'>
+            </div>
+            <div id='6666' onclick='nom_image("hg6")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/6.png' width='150' height='200' id='hg6'
+                    style='display:none;'>
+            </div>
+            <div id='7777' onclick='nom_image("hg7")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/7.png' width='150' height='200' id='hg7'
+                    style='display:none;'>
+            </div>
+            <div id='8888' onclick='nom_image("hg8")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/8.png' width='150' height='200' id='hg8'
+                    style='display:none;'>
+            </div>
+            <div id='9999' onclick='nom_image("hg9")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/9.png' width='150' height='200' id='hg9'
+                    style='display:none;'>
+            </div>
+            <div id='10101010' onclick='nom_image("hg10")'>
+                <img src='/static/img/portfolio/vetement/femme/haut_gris/10.png' width='150' height='200' id='hg10'
+                    style='display:none;'>
+            </div>
+
+        </div>
+    </div>
+                                
+    <div id='image'></div> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                      
+</div>
+</div>
+</div>
+</section>
 
   
-
-
-
-
 <footer>
     <!-- Bottom Section number 2 -->
     <div id='bottom'> 
-
         {% include "bottom/bottom_page.html" %}
         {% block content2 %}
         {% endblock %}
         <SCRIPT type="text/javascript" src="/static/js/mode/habits.js"></SCRIPT>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    
+    </div>
   </footer>
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
-
-
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
