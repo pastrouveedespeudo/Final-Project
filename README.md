@@ -1,3 +1,5 @@
+et encore ya les import qui bug du coup chez un autre ca doit faire 9.5
+
 faire mention légale 
 
 les menu qui deborde les mettre en fermer
