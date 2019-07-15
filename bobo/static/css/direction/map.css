@@ -1,3 +1,13 @@
+#MENU{
+    display:none;
+}
+#logo{
+    display:none;
+}
+#menu_res{
+    display:block;
+}
+
 #map{
       margin-left:0px;
       padding:10px;
