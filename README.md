@@ -21,7 +21,7 @@ les menu qui deborde les mettre en fermer
 Dans un premier temps il faut:
 
 - remplir la database via le dossier remplir database (dans le fichire photo.tendance_file.remplir_database).
-<br><br><br>
+
 
 
 #tendance
