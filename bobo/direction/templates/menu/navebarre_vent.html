@@ -1,62 +1,34 @@
-            {% include "menu/menu/menu.html" %}
-            {% block content %}
-            {% endblock %}
+{% include "menu/menu/menu.html" %}
+{% block content %}
+{% endblock %}
 
 
-            <link href="/static/css/direction/navebarre.css" rel="stylesheet">
-            <div id="deux" class="col-sm">
-              <center><span><u>Page</u></h1></span>
+<link href="/static/css/direction/navebarre.css" rel="stylesheet">
+<div id="deux" class="col-sm">
+    <center><span><u>Page</u></h1></span>
 
-                      <a href="/direction/map#texte2">
-                          <p id="Carte" class="Carte"
-                              onmouseover="un('Carte')" onmouseout="deux('Carte')">
-                              La Carte
-                          </p>
-                      </a>
+        <a href="/direction/map#texte2">
+            <p id="Carte" class="Carte"
+                onmouseover="un('Carte')" onmouseout="deux('Carte')">
+                La Carte
+            </p>
+        </a>
                       
-
-                      <a href="/direction/map#trois">
-                          <p id="Explications" class="Explications"
-                              onmouseover="un('Explications')" onmouseout="deux('Explications')">
-                              Les Explications
-                          </p>
-                      </a>
+        <a href="/direction/map#trois">
+            <p id="Explications" class="Explications"
+                onmouseover="un('Explications')" onmouseout="deux('Explications')">
+                Les Explications
+            </p>
+        </a>
                       
-                      <p id="Retour" class="Retour"
-                          onmouseover="un('Retour')" onmouseout="deux('Retour')"
-                          onclick="retour_page('/direction/map')">Retour
-                      </p>
+        <p id="Retour" class="Retour"
+            onmouseover="un('Retour')" onmouseout="deux('Retour')"
+            onclick="retour_page('/direction/map')">Retour
+        </p>
 
-
-
-                      <center><div id="separate_page"></div></center>
-
-
-
-
-
-              
-            </div>
-
-            
-          </div>
-        </div>
-        
-    </div>
-
-
-</body>
-
-
-
-
-
-
-
-
-
-
-
+        <center><div id="separate_page"></div></center>
+    </center>
+</div>
 
 <script>
     function retour_page(page){
