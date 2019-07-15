@@ -1,73 +1,62 @@
-
 <!DOCTYPE html>
   <html lang="fr">
-
     <!-- Head section - Loading CDN -->
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <meta name="description" content="">
-      <meta name="jb" content="">
-      <br><br>
-      <title>Magazine virtuel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="jb" content="">
+        <br><br>
+        <title>Magazine virtuel</title>
 
-      <!-- Font Awesome Icons -->
-      <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- Font Awesome Icons -->
+        <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-      <!-- Google Fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-      <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-      <!-- Plugin CSS -->
-      <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="/static/css/pollution/prediction/prediction_haut.css">
+        <!-- Plugin CSS -->
+        <link href="/static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/static/css/pollution/prediction/prediction_haut.css">
 
-      <!-- Theme CSS - Includes Bootstrap -->
-      <link href="/static/css/creative.min.css" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-
-
-      
+        <!-- Theme CSS - Includes Bootstrap -->
+        <link href="/static/css/creative.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
     </head>
 
     <body>
 
-    
-    <style>
-      body {
-          background:url('/static/v2/pred.jpg') no-repeat fixed center;
-          -webkit-background-size: cover;
-          background-size: cover;
-        }
-        #logo{
-            position:fixed;
-            float:left;
-            margin-left:10px;
-            margin-top:-90px;
+        <style>
+        body {
+            background:url('/static/v2/pred.jpg') no-repeat fixed center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            }
+            #logo{
+                position:fixed;
+                float:left;
+                margin-left:10px;
+                margin-top:-90px;
+                
+            }
             
-        }
+            #shut{
+                font-size:300%;
+                color:black;
         
-        #shut{
-            font-size:300%;
-            color:black;
-    
-        }
-        #notshut{
-            font-size:300%;
-            display:none;
-            color:black;
-        }
-    </style>
-
+            }
+            #notshut{
+                font-size:300%;
+                display:none;
+                color:black;
+            }
+        </style>
         <img id="logo" src="/static/v2/logo2.png">
-
-        
         <div style="float:left; margin-left:50px;z-index: 2; margin-top:-100px;position:fixed;" id="MENU">
              <br><br><br><br><br><br><br>
             <i class="fas fa-angle-right" id="notshut" onclick="notshutdown()" style="z-index: 1;position:static;"></i>
             <i class="fas fa-angle-left" id="shut" onclick="shutdown()"></i><br><br>
-
-            
             <div id='contain' style='position:absolute'>
                 <p id="menu"
                     onMouseOver = "sous_menu1('menu', 'hrefmenu', '#91A8A4')"         
@@ -76,8 +65,6 @@
                 </p>
                 
             </div><br><br>
-
-
             <div id='contain1' style='position:absolute'>
                 <p id="sommaire"
                     onMouseOver = "sous_menu1('sommaire', 'hrefsommaire', '#91A8A4')"         
@@ -86,9 +73,6 @@
                 </p>
                 
             </div><br><br>
-
-
-
             <div id='contain2' style='position:absolute'>
                 <p id="menu1"
                     onMouseOver = "sous_menu1('menu1', 'tendancee', '#91A8A4')"         
@@ -97,29 +81,21 @@
                 </p>
                 
             </div><br><br>
-              
-
             <div id='contain3' style='position:absolute'>
             
                 <p id="menu2"
                     onMouseOver = "sous_menu1('menu2', 'book', '#91A8A4')"         
                     onMouseOut = "sous_menu2('menu2', 'book')">
                     <a href="/polution/prediction#section_info" id="book"><strong>Explications</strong></a>
-                </p>
-                    
+                </p> 
             </div><br><br>
-       
-
             <div id='contain4' style='position:absolute'>
                 <p id="menu3"
                     onMouseOver = "sous_menu1('menu3', 'reseaux', '#91A8A4')"         
                     onMouseOut = "sous_menu2('menu3', 'reseaux')">
                     <a href="/polution/prediction#reso" id="reseaux"><strong>Réseaux</strong></a>
                 </p>
-                
             </div><br><br>
-
-
             <div id='contain5' style="position:absolute;">
                 <p id="menu4"
                     onMouseOver = "sous_menu1('menu4', 'contacter', '#91A8A4')"         
@@ -127,11 +103,8 @@
                     <a href="/#my_project" id="contacter"><strong>Contact</strong></a>
                 </p>
             </div><br>
-
         </div>
         
-
-
     <script>
         function sous_menu1(div, text, couleur1){
             document.getElementById(div).style.width = '130%';
@@ -176,6 +149,3 @@
 
 
     </script>
-
-
-
