@@ -1,400 +1,322 @@
-
 {% include "haut_page/données_haut.html" %}
 {% block content %}
 {% endblock %}
-
 <link rel="stylesheet" type="text/css" href="/static/css/pollution/données/données.css" media="all" />
 <link rel="stylesheet" type="text/css" href="/static/css/pollution/données/données_haut.css" media="all" />
 
 <header>
-
     <input type='button' value='Tchat'
     style='border:1px solid black;background:none;
     float:right;margin-right:50px;' onclick="document.location.href='/polution/tchat_donnee'">
-
-
     <div id='sec1'>
-    
         <div id='texte1'>
-          <h1>Notre carte du vent</h1><br>
-          Vous vous demandez quelles sont les causes de la
-          pollution de l'air? les voitures,
-          les cheminées des usines, le beau temps ?
-          Nous n'avons pas pu tout mettre mais saviez-vous que
-          les chantiers, les tempêtes de sable,
-          la pression atmosphérique,
-          les incendies, les éruptions volcaniques et la mode sont
-          quelques causes de la pollution.<br>
-          Vous vivez à Paris, Marseille ou Paris ?
-          Voici quelques données qui pourraient vous etre utiles.
-        </div>
-
-          
-    </div>
-
-    
+            <h1>Notre carte du vent</h1><br>
+            Vous vous demandez quelles sont les causes de la
+            pollution de l'air? les voitures,
+            les cheminées des usines, le beau temps ?
+            Nous n'avons pas pu tout mettre mais saviez-vous que
+            les chantiers, les tempêtes de sable,
+            la pression atmosphérique,
+            les incendies, les éruptions volcaniques et la mode sont
+            quelques causes de la pollution.<br>
+            Vous vivez à Paris, Marseille ou Paris ?
+            Voici quelques données qui pourraient vous etre utiles.
+        </div>   
+    </div> 
 </header><br><br>
 
 
-  <div id='section_ninja' >
-
-
+<div id='section_ninja' >
     <div id="les_info">
- 
-      <p id="info_aqi" style="margin:auto;">
-        <i>*AQI signifie indice de qualité de l'air<br> par la mesure de l'O3, le SO2, le NO2 et PM10.</i>
-      </p><br>
-      <p id="info_dollard" style="margin:auto;"><i>*le cours du dollars et le taux de vente du diesel<br>
-        représentent le taux de présence des voitures diesels en circulation</i>
-      </p><br>
-      <p id="info_pop" style="margin:auto;"><i>*Population active de 16-59 ans</i>
-      </p><br>
-    
+        <p id="info_aqi" style="margin:auto;">
+            <i>*AQI signifie indice de qualité de l'air<br> par la mesure de l'O3, le SO2, le NO2 et PM10.</i>
+        </p><br>
+        <p id="info_dollard" style="margin:auto;"><i>*le cours du dollars et le taux de vente du diesel<br>
+            représentent le taux de présence des voitures diesels en circulation</i>
+        </p><br>
+        <p id="info_pop" style="margin:auto;"><i>*Population active de 16-59 ans</i>
+        </p><br>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Data Section City-->
-    <div class="container" id='cities'>
-      <div>
+<!-- Data Section City-->
+<div class="container" id='cities'>
+    <div>
         <div class="col-lg-12 col-md-12 col-xs-12 text-center">
-          <div class="row" id='row1'>
-
-            <!-- Input Section Lyon-->
-            <div class="col-lg-3 col-sm-4 col-md-3" id="Lyon"><br>
-              <h5>Taux de pollution de particules fines à<br>Lyon</h5><br><br>
-              <center><strong><h5 id='lyon_pol'>{{lyon}}</h5>AQI</strong></center><br>
-              <center><input type='button' id='voir_lyon' value='Voir les données' onclick='donnee_lyon()'></center><br>
+            <div class="row" id='row1'>
+                <!-- Input Section Lyon-->
+                <div class="col-lg-3 col-sm-4 col-md-3" id="Lyon"><br>
+                <h5>Taux de pollution de particules fines à<br>Lyon</h5><br><br>
+                <center><strong><h5 id='lyon_pol'>{{lyon}}</h5>AQI</strong></center><br>
+                <center><input type='button' id='voir_lyon' value='Voir les données' onclick='donnee_lyon()'></center><br>
             </div>
-
-
 
             <!-- Input Section Lyon Number 1 -->
             <center>
-             <div id='info1' style='display:none; border:2px solid green;'>
-              <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-                <div class="row">
-                  <div class="col-sm">
-                    <span style='color:black;'>Météo</span><br>{{weather_lyon}}<br>
-                  </div>
-                  <div class="col-sm">
-                    <span>Vent</span><br>{{wind_lyon}} m/s<br>
-                  </div>
-                  <div class="col-sm">
-                    <span>Température</span><br>{{temperature_lyon}} degrès<br>
-                  </div>
-                  <div class="col-sm">
-                   <span>Pression</span><br>{{pressure_lyon}} hpa<br>
-                  </div>
-                  <div class="col-sm">
-                    <span>Saison</span><br>{{current_season}}<br>
-                  </div>
-                  <div class="col-sm">
-                    <span>Départ routier</span><br>{{departure_lyon}}<br>
-                  </div>
-                  <div class="col-sm">
-                    <span>Non départ</span><br>{{regular_day_lyon}}<br>
-                  </div>
-                </div>
-              </div><br><br>
-             
+                <div id='info1' style='display:none; border:2px solid green;'>
+                    <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+                        <div class="row">
+                            <div class="col-sm">
+                            <span style='color:black;'>Météo</span><br>{{weather_lyon}}<br>
+                        </div>
+                        <div class="col-sm">
+                            <span>Vent</span><br>{{wind_lyon}} m/s<br>
+                        </div>
+                        <div class="col-sm">
+                            <span>Température</span><br>{{temperature_lyon}} degrès<br>
+                        </div>
+                        <div class="col-sm">
+                        <span>Pression</span><br>{{pressure_lyon}} hpa<br>
+                        </div>
+                        <div class="col-sm">
+                            <span>Saison</span><br>{{current_season}}<br>
+                        </div>
+                        <div class="col-sm">
+                            <span>Départ routier</span><br>{{departure_lyon}}<br>
+                        </div>
+                        <div class="col-sm">
+                            <span>Non départ</span><br>{{regular_day_lyon}}<br>
+                        </div>
+                        </div>
+                    </div><br><br>
+                    
 
-            <!-- Input Section Lyon Number 2 -->
+                    <!-- Input Section Lyon Number 2 -->
+                    <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+                    <div class="row">
+                    
+                        <div class="col-sm">
+                        <span>Heure pointe</span><br>{{hour_point_lyon}}
+                        </div>
+                        <div class="col-sm">
+                        <span>Jour Weekend</span><br>{{weekend}}
+                        </div>
+                        <div class="col-sm">
+                        <span>Jour de semaine</span><br>{{week_day}}
+                        </div>
+                        <div class="col-sm">
+                        <span >Bouchons Lyon</span><br>{{plugs_lyon}}
+                        </div>
+                        <div class="col-sm">
+                        <span>Rang pollution</span><br>{{ranking_lyon}}/20
+                        </div>
+                        <div class="col-sm">
+                        <span>Site industrielle</span><br>{{pole_lyon}}
+                        </div>
+                        <div class="col-sm">
+                        <span>Pop. active</span><br>328469 pers.
+                        </div>
+                    </div>
+                    </div><br><br>
+
+
+                <!-- Input Section Lyon Number 3 -->
+                <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+                    <div class="row">
+                    
+                        <div class="col-sm">
+                        <span>Erruption volicanique</span><br>{{eruption}}<br> 
+                        </div>
+                        <div class="col-sm">
+                        <span>Vente du diesel Lyon</span><br>{{diesel}}<br>
+                        </div>
+                        <div class="col-sm">
+                        <span>Incendie à Lyon</span><br>{{fire_lyon}}<br>
+                        </div>
+                        <div class="col-sm">
+                        <span>Période d'angrais</span><br>{{fertilizer}}<br> 
+                        </div>
+                        <div class="col-sm">
+                        <span>Moment journée</span><br>{{periode}}<br> 
+                        </div>
+                        <div class="col-sm">
+                        <span>Taux de polenne</span><br>{{po_lyon}}<br> 
+                        </div>
+                        <div class="col-sm">
+                        <span>Le cours dollars</span><br>{{dollars}}<br>
+                        </div>
+                    </div>
+                    </div><br><br>
+
+
+                    <!-- Input Section Lyon Number 4 -->
+                    <br><br>
+                    <center><input type='button' value='fermer' onclick='fermer()'></center>
+
+                    <div id='info_donnée'>
+                    
+                        <br><br><br><br>
+                        <div style='float:left;'><i>Donnée fournis par openweathermap :
+                        <a href="https://openweathermap.org/" style='color:black;'> <i>openweathermap</i>
+                        </a></i></div><br>
+
+                        <div style='float:left;'>
+                        <i>Classement de 1 a 7 des villes les plus polluée :</i>
+                        <a href="http://www.linternaute.com/ville/c-ville-pollution-de-l-air"
+                        style='color:black;'><i>Internaute</a></i></div><br>
+
+
+                        <div style='float:left;'><i>Classement des sites industriels les plus pollués : 
+                        </i><a href="https://www.greenunivers.com/2009/05/quinze-sites-industriels-plus-pollueurs-de-france-6981/"
+                        style='color:black;'><i>Grenunivers</a></i></div><br>
+
+                        <div style='float:left;'><i>Manifestation à lyon : </i>
+                        <a href="https://www.onlymoov.com/trafic/" style='color:black;'><i>onlymoov</a></i></div><br>
+
+                        <div style='float:left;'><i>Bouchons à lyon : </i>
+                        <a href="https://www.moncoyote.com/fr/info-trafic-lyon.html"
+                        style='color:black;'><i>moncoyote</a></i></div><br>  
+                
+                        <div style='float:left;'><i>Pollution onnées issuent de <a href='http://www.airlab.solutions/fr'
+                            style='color:black;'>plumairlab
+                            </a></i> 
+                        </div>
+                    </div>
+                </div></center>   
+
+                <!-- Input Section Paris-->
+                <div class="col-lg-3 col-sm-4 col-md-3" id="Paris"><br>                   
+                    <h5>Taux de pollution de particules fines à<br>Paris</h5><br><br>
+                    <center><strong><h5 id='paris_pol'>{{paris}}</h5>AQI</strong></center><br>
+                    <center><input type='button' id='voir_paris' value='Voir les données' onclick='donnee_paris()'></center><br>
+                </div>
+
+            <center>   
+        <!-- Input Section Paris Number 1 -->
+            <div id='info2'>
             <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-              <div class="row">
-              
+            <div class="row">
                 <div class="col-sm">
-                  <span>Heure pointe</span><br>{{hour_point_lyon}}
+                <span>Météo</span><br>{{weather_paris}}<br>
                 </div>
                 <div class="col-sm">
-                  <span>Jour Weekend</span><br>{{weekend}}
+                <span>Vent</span><br>{{wind_paris}} m/s<br>
                 </div>
                 <div class="col-sm">
-                  <span>Jour de semaine</span><br>{{week_day}}
+                <span>Température</span><br>{{temperature_paris}} degrès
                 </div>
                 <div class="col-sm">
-                  <span >Bouchons Lyon</span><br>{{plugs_lyon}}
+                <span>Pression</span><br>{{pressure_paris}} hpa
                 </div>
                 <div class="col-sm">
-                 <span>Rang pollution</span><br>{{ranking_lyon}}/20
+                <span>Saison</span><br>{{current_season}}
                 </div>
                 <div class="col-sm">
-                  <span>Site industrielle</span><br>{{pole_lyon}}
+                <span>Départ routier</span><br>{{departure_marseille}}
                 </div>
                 <div class="col-sm">
-                  <span>Pop. active</span><br>328469 pers.
+                <span>Non départ</span><br>{{regular_day_marseille}}
                 </div>
-              </div>
+            </div>
             </div><br><br>
 
 
-          <!-- Input Section Lyon Number 3 -->
-           <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-              <div class="row">
-              
+
+            <!-- Input Section Paris Number 2 -->
+            <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+            <div class="row">
                 <div class="col-sm">
-                  <span>Erruption volicanique</span><br>{{eruption}}<br> 
-                </div>
-                 <div class="col-sm">
-                  <span>Vente du diesel Lyon</span><br>{{diesel}}<br>
+                <span>Heure pointe</span><br>{{hour_point_paris}}
                 </div>
                 <div class="col-sm">
-                  <span>Incendie à Lyon</span><br>{{fire_lyon}}<br>
+                <span>Jour Weekend</span><br>{{weekend}}
                 </div>
-                 <div class="col-sm">
-                  <span>Période d'angrais</span><br>{{fertilizer}}<br> 
+                <div class="col-sm">
+                <span>Jour de Semaine</span><br>{{week_day}}
                 </div>
-                 <div class="col-sm">
-                  <span>Moment journée</span><br>{{periode}}<br> 
+                <div class="col-sm">
+                <span>Bouchons Paris</span><br>{{plugs_paris}} km
                 </div>
-                 <div class="col-sm">
-                  <span>Taux de polenne</span><br>{{po_lyon}}<br> 
+                <div class="col-sm">
+                <span>Site industrielle</span><br>{{pole_paris}}
                 </div>
-                 <div class="col-sm">
-                  <span>Le cours dollars</span><br>{{dollars}}<br>
+                <div class="col-sm">
+                <span>Pop. active</span><br>1350800 personnes
                 </div>
-              </div>
+                <div class="col-sm">
+                <span>Rang pollution</span><br>{{ranking_paris}} / 20
+                </div>
+            </div>
             </div><br><br>
 
 
-            <!-- Input Section Lyon Number 4 -->
-             <br><br>
-             <center><input type='button' value='fermer' onclick='fermer()'></center>
 
-              <div id='info_donnée'>
-              
-                <br><br><br><br>
-                <div style='float:left;'><i>Donnée fournis par openweathermap :
-                <a href="https://openweathermap.org/" style='color:black;'> <i>openweathermap</i>
-                </a></i></div><br>
-
-                <div style='float:left;'>
-                <i>Classement de 1 a 7 des villes les plus polluée :</i>
-                <a href="http://www.linternaute.com/ville/c-ville-pollution-de-l-air"
-                 style='color:black;'><i>Internaute</a></i></div><br>
-
-
-                <div style='float:left;'><i>Classement des sites industriels les plus pollués : 
-                </i><a href="https://www.greenunivers.com/2009/05/quinze-sites-industriels-plus-pollueurs-de-france-6981/"
-                style='color:black;'><i>Grenunivers</a></i></div><br>
-
-                <div style='float:left;'><i>Manifestation à lyon : </i>
-                <a href="https://www.onlymoov.com/trafic/" style='color:black;'><i>onlymoov</a></i></div><br>
-
-                <div style='float:left;'><i>Bouchons à lyon : </i>
-                <a href="https://www.moncoyote.com/fr/info-trafic-lyon.html"
-                  style='color:black;'><i>moncoyote</a></i></div><br>  
-        
-                <div style='float:left;'><i>Pollution onnées issuent de <a href='http://www.airlab.solutions/fr'
-                style='color:black;'>plumairlab
-                </a></i> 
-                </div>
-                </div>
-            </div></center>   
-
-
-
-
-
-
-
-
-
-
-
-          
-          <!-- Input Section Paris-->
-          <div class="col-lg-3 col-sm-4 col-md-3" id="Paris"><br>                   
-              <h5>Taux de pollution de particules fines à<br>Paris</h5><br><br>
-              <center><strong><h5 id='paris_pol'>{{paris}}</h5>AQI</strong></center><br>
-              <center><input type='button' id='voir_paris' value='Voir les données' onclick='donnee_paris()'></center><br>
-          </div>
-
-
-
-
-        <center>   
-       <!-- Input Section Paris Number 1 -->
-        <div id='info2'>
+        <!-- Input Section Paris Number 3 -->
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-          <div class="row">
-            <div class="col-sm">
-              <span>Météo</span><br>{{weather_paris}}<br>
+            <div class="row">
+                <div class="col-sm">
+                <span>Erruption volicanique</span><br>{{eruption}} 
+                </div>
+                <div class="col-sm">
+                <span>Vente du diesel Paris</span><br>{{diesel}} 
+                </div>
+                <div class="col-sm">
+                <span>Incendie à Paris</span><br>{{fire_paris}}
+                </div>
+                <div class="col-sm">
+                <span>Période d'angrais</span><br>{{fertilizer}} 
+                </div>
+                <div class="col-sm">
+                <span>Le jour ou la nuit</span><br>{{periode}} 
+                </div>
+                <div class="col-sm">
+                <span>Taux de polenne</span><br>{{po_paris}}
+                </div>
+                <div class="col-sm">
+                <span>Le cours dollars</span><br>{{dollars}}
+                </div>
             </div>
-            <div class="col-sm">
-              <span>Vent</span><br>{{wind_paris}} m/s<br>
-            </div>
-            <div class="col-sm">
-              <span>Température</span><br>{{temperature_paris}} degrès
-            </div>
-            <div class="col-sm">
-             <span>Pression</span><br>{{pressure_paris}} hpa
-            </div>
-            <div class="col-sm">
-              <span>Saison</span><br>{{current_season}}
-            </div>
-            <div class="col-sm">
-              <span>Départ routier</span><br>{{departure_marseille}}
-            </div>
-            <div class="col-sm">
-              <span>Non départ</span><br>{{regular_day_marseille}}
-            </div>
-          </div>
-        </div><br><br>
+            </div><br><br>
+
+
+            
+            <!-- Input Section Paris Number 4 -->
+            <br><br>
+            <div id="info_donnée">
+            <center><input type='button' value='fermer' onclick='fermer()'></center>
+            <br><br><br><br>
+
+
+            <div style='float:left;'><i>Donnée fournis par openweathermap :
+            <a href="https://openweathermap.org/" style='color:black;'> <i>openweathermap</i>
+            </a></i></div><br>
+
+            <div style='float:left;'>
+            <i>Classement de 1 a 7 des villes les plus polluée :</i>
+            <a href="http://www.linternaute.com/ville/c-ville-pollution-de-l-air"
+            style='color:black;'><i>Internaute</a></i></div><br>
+
+
+            <div style='float:left;'><i>Classement des sites industriels les plus pollués : 
+            </i><a href="https://www.greenunivers.com/2009/05/quinze-sites-industriels-plus-pollueurs-de-france-6981/"
+            style='color:black;'><i>Grenunivers</a></i></div><br>
+
+            <div style='float:left;'><i>Manifestation à Paris : </i>
+            <a href="https://www.onlymoov.com/trafic/" style='color:black;'><i>onlymoov</a></i></div><br>
+
+            <div style='float:left;'><i>Bouchons à Paris : </i>
+            <a href="https://www.moncoyote.com/fr/info-trafic-lyon.html"
+                style='color:black;'><i>moncoyote</a></i></div><br>
+
+            <div style='float:left;'><i>Pollution onnées issuent de <a href='http://www.airlab.solutions/fr'
+            style='color:black;'>plumairlab
+            </a></i> 
+        </div>
+    </div>
+</div></center>   
 
 
 
-         <!-- Input Section Paris Number 2 -->
-         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-          <div class="row">
-            <div class="col-sm">
-              <span>Heure pointe</span><br>{{hour_point_paris}}
-            </div>
-            <div class="col-sm">
-              <span>Jour Weekend</span><br>{{weekend}}
-            </div>
-            <div class="col-sm">
-              <span>Jour de Semaine</span><br>{{week_day}}
-            </div>
-            <div class="col-sm">
-              <span>Bouchons Paris</span><br>{{plugs_paris}} km
-            </div>
-            <div class="col-sm">
-              <span>Site industrielle</span><br>{{pole_paris}}
-            </div>
-            <div class="col-sm">
-              <span>Pop. active</span><br>1350800 personnes
-            </div>
-            <div class="col-sm">
-             <span>Rang pollution</span><br>{{ranking_paris}} / 20
-            </div>
-          </div>
-        </div><br><br>
+<!-- Input Section Marseille-->
+<div class="col-lg-3 col-sm-4 col-md-3" id="Marseille"><br>        
+    <h5>Taux de pollution de particules fines à Marseille</h5><br><br>
+    <center><strong><h5 id='marseille_pol'>{{marseille}}</h5>AQI</strong></center><br>
+    <center><input type='button' id='voir_marseille' value='Voir les données' onclick='donnee_marseille()'></center> 
+</div>
 
-
-
-      <!-- Input Section Paris Number 3 -->
-       <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-          <div class="row">
-            <div class="col-sm">
-              <span>Erruption volicanique</span><br>{{eruption}} 
-            </div>
-             <div class="col-sm">
-              <span>Vente du diesel Paris</span><br>{{diesel}} 
-            </div>
-            <div class="col-sm">
-              <span>Incendie à Paris</span><br>{{fire_paris}}
-            </div>
-             <div class="col-sm">
-              <span>Période d'angrais</span><br>{{fertilizer}} 
-            </div>
-             <div class="col-sm">
-              <span>Le jour ou la nuit</span><br>{{periode}} 
-            </div>
-             <div class="col-sm">
-              <span>Taux de polenne</span><br>{{po_paris}}
-            </div>
-             <div class="col-sm">
-              <span>Le cours dollars</span><br>{{dollars}}
-            </div>
-          </div>
-        </div><br><br>
-
-
-        
-        <!-- Input Section Paris Number 4 -->
-        <br><br>
-        <div id="info_donnée">
-        <center><input type='button' value='fermer' onclick='fermer()'></center>
-          <br><br><br><br>
-
-
-          <div style='float:left;'><i>Donnée fournis par openweathermap :
-          <a href="https://openweathermap.org/" style='color:black;'> <i>openweathermap</i>
-          </a></i></div><br>
-
-          <div style='float:left;'>
-          <i>Classement de 1 a 7 des villes les plus polluée :</i>
-          <a href="http://www.linternaute.com/ville/c-ville-pollution-de-l-air"
-           style='color:black;'><i>Internaute</a></i></div><br>
-
-
-          <div style='float:left;'><i>Classement des sites industriels les plus pollués : 
-          </i><a href="https://www.greenunivers.com/2009/05/quinze-sites-industriels-plus-pollueurs-de-france-6981/"
-          style='color:black;'><i>Grenunivers</a></i></div><br>
-
-          <div style='float:left;'><i>Manifestation à Paris : </i>
-          <a href="https://www.onlymoov.com/trafic/" style='color:black;'><i>onlymoov</a></i></div><br>
-
-          <div style='float:left;'><i>Bouchons à Paris : </i>
-          <a href="https://www.moncoyote.com/fr/info-trafic-lyon.html"
-            style='color:black;'><i>moncoyote</a></i></div><br>
-
-          <div style='float:left;'><i>Pollution onnées issuent de <a href='http://www.airlab.solutions/fr'
-          style='color:black;'>plumairlab
-          </a></i> 
-          </div>
-          </div>
-      
-
-
-        
-      </div></center>   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!-- Input Section Marseille-->
-          <div class="col-lg-3 col-sm-4 col-md-3" id="Marseille"><br>
-              
-              <h5>Taux de pollution de particules fines à Marseille</h5><br><br>
-              <center><strong><h5 id='marseille_pol'>{{marseille}}</h5>AQI</strong></center><br>
-              <center><input type='button' id='voir_marseille' value='Voir les données' onclick='donnee_marseille()'></center> 
-          </div>
-
-      <center>   
-      <!-- Input Section Marseille Number 1 -->
-      <div id='info3' style='display:none;'>
+<center>   
+    <!-- Input Section Marseille Number 1 -->
+    <div id='info3' style='display:none;'>
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
@@ -420,8 +342,6 @@
             </div>
           </div>
         </div><br><br>
-
-
 
         <!-- Input Section Marseille Number 2 -->
          <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
@@ -450,8 +370,6 @@
           </div>
         </div><br><br>
 
-
-
         <!-- Input Section Marseille Number 3 -->
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
             <div class="row">
@@ -478,8 +396,6 @@
               </div>
             </div>
           </div><br><br>
-
-
 
           <!-- Input Section Marseille Number 4 -->
           <br><br>
@@ -514,22 +430,8 @@
           </a></i> 
           </div>
           </div>
-
-
       </div></center>   
 
-
-
-
-
-
-
-
-
-
-
-
- 
    <!-- Input Section Lyon Number 1 -->
        <div id='info1' >
         <div class="container" style='background:url("/static/img/parquet1.jpg");'>
@@ -646,23 +548,8 @@
 
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Input Section Paris Number 1 -->
-        <div id='info2' style='display:none;'>
+    <!-- Input Section Paris Number 1 -->
+    <div id='info2' style='display:none;'>
         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
           <div class="row">
             <div class="col-sm">
@@ -899,18 +786,11 @@
 </center>
 
    
-
-
-
-
-
-
-          
-            <!-- Input Section Lyon Number 1 -->
-            <center>
-             <div id='no_respon_lyon'>
-              <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-                <div class="row">
+ <!-- Input Section Lyon Number 1 -->
+<center>
+    <div id='no_respon_lyon'>
+        <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+            <div class="row">
                   <div class="col-sm">
                     <span style='color:black;'>Météo</span><br>{{weather_lyon}}<br>
                   </div>
@@ -932,12 +812,12 @@
                   <div class="col-sm">
                     <span>Non départ</span><br>{{regular_day_lyon}}<br>
                   </div>
-                </div>
-              </div><br><br>
+            </div>
+        </div><br><br>
              
 
-            <!-- Input Section Lyon Number 2 -->
-            <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+        <!-- Input Section Lyon Number 2 -->
+        <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
               <div class="row">
               
                 <div class="col-sm">
@@ -1026,145 +906,126 @@
                 style='color:black;'>plumairlab
                 </a></i> 
                 </div>
-                </div>
-            </div></center>   
+            </div>
+        </div></center>   
 
-
-
-
-
-
-
-
-
-
-
-        
 
         <div id='no_respon_paris'>
-        <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-          <div class="row">
-            <div class="col-sm">
-              <span>Météo</span><br>{{weather_paris}}<br>
-            </div>
-            <div class="col-sm">
-              <span>Vent</span><br>{{wind_paris}} m/s<br>
-            </div>
-            <div class="col-sm">
-              <span>Température</span><br>{{temperature_paris}} degrès
-            </div>
-            <div class="col-sm">
-             <span>Pression</span><br>{{pressure_paris}} hpa
-            </div>
-            <div class="col-sm">
-              <span>Saison</span><br>{{current_season}}
-            </div>
-            <div class="col-sm">
-              <span>Départ routier</span><br>{{departure_marseille}}
-            </div>
-            <div class="col-sm">
-              <span>Non départ</span><br>{{regular_day_marseille}}
-            </div>
-          </div>
-        </div><br><br>
+            <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+                <div class="row">
+                    <div class="col-sm">
+                    <span>Météo</span><br>{{weather_paris}}<br>
+                    </div>
+                    <div class="col-sm">
+                    <span>Vent</span><br>{{wind_paris}} m/s<br>
+                    </div>
+                    <div class="col-sm">
+                    <span>Température</span><br>{{temperature_paris}} degrès
+                    </div>
+                    <div class="col-sm">
+                    <span>Pression</span><br>{{pressure_paris}} hpa
+                    </div>
+                    <div class="col-sm">
+                    <span>Saison</span><br>{{current_season}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Départ routier</span><br>{{departure_marseille}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Non départ</span><br>{{regular_day_marseille}}
+                    </div>
+                </div>
+                </div><br><br>
 
 
 
-         <!-- Input Section Paris Number 2 -->
-         <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-          <div class="row">
-            <div class="col-sm">
-              <span>Heure pointe</span><br>{{hour_point_paris}}
-            </div>
-            <div class="col-sm">
-              <span>Jour Weekend</span><br>{{weekend}}
-            </div>
-            <div class="col-sm">
-              <span>Jour de Semaine</span><br>{{week_day}}
-            </div>
-            <div class="col-sm">
-              <span>Bouchons Paris</span><br>{{plugs_paris}} km
-            </div>
-            <div class="col-sm">
-              <span>Site industrielle</span><br>{{pole_paris}}
-            </div>
-            <div class="col-sm">
-              <span>Pop. active</span><br>1350800 personnes
-            </div>
-            <div class="col-sm">
-             <span>Rang pollution</span><br>{{ranking_paris}} / 20
-            </div>
-          </div>
-        </div><br><br>
+                <!-- Input Section Paris Number 2 -->
+                <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+                <div class="row">
+                    <div class="col-sm">
+                    <span>Heure pointe</span><br>{{hour_point_paris}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Jour Weekend</span><br>{{weekend}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Jour de Semaine</span><br>{{week_day}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Bouchons Paris</span><br>{{plugs_paris}} km
+                    </div>
+                    <div class="col-sm">
+                    <span>Site industrielle</span><br>{{pole_paris}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Pop. active</span><br>1350800 personnes
+                    </div>
+                    <div class="col-sm">
+                    <span>Rang pollution</span><br>{{ranking_paris}} / 20
+                    </div>
+                </div>
+                </div><br><br>
 
 
 
-      <!-- Input Section Paris Number 3 -->
-       <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
-          <div class="row">
-            <div class="col-sm">
-              <span>Erruption volicanique</span><br>{{eruption}}  
-            </div>
-             <div class="col-sm">
-              <span>Vente du diesel Paris</span><br>{{diesel}}  
-            </div>
-            <div class="col-sm">
-              <span>Incendie à Paris</span><br>{{fire_paris}}
-            </div>
-             <div class="col-sm">
-              <span>Période d'angrais</span><br>{{fertilizer}}  
-            </div>
-             <div class="col-sm">
-              <span>Le jour ou la nuit</span><br>{{periode}}  
-            </div>
-             <div class="col-sm">
-              <span>Taux de polenne</span><br>{{po_paris}}
-            </div>
-             <div class="col-sm">
-              <span>Le cours dollars</span><br>{{dollars}}
-            </div>
-          </div>
-        </div><br><br>
+            <!-- Input Section Paris Number 3 -->
+            <div class="container" style='background:url("/static/img/parquet1.jpg"); border:2px solid black;'>
+                <div class="row">
+                    <div class="col-sm">
+                    <span>Erruption volicanique</span><br>{{eruption}}  
+                    </div>
+                    <div class="col-sm">
+                    <span>Vente du diesel Paris</span><br>{{diesel}}  
+                    </div>
+                    <div class="col-sm">
+                    <span>Incendie à Paris</span><br>{{fire_paris}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Période d'angrais</span><br>{{fertilizer}}  
+                    </div>
+                    <div class="col-sm">
+                    <span>Le jour ou la nuit</span><br>{{periode}}  
+                    </div>
+                    <div class="col-sm">
+                    <span>Taux de polenne</span><br>{{po_paris}}
+                    </div>
+                    <div class="col-sm">
+                    <span>Le cours dollars</span><br>{{dollars}}
+                    </div>
+                </div>
+                </div><br><br>
+
+                <!-- Input Section Paris Number 4 -->
+                <br><br>
+                <div id='info_donnée'>
+                <center><input type='button' value='fermer' onclick='fermer()'></center>
+                <br><br><br><br>
+                <div style='float:left;'><i>Donnée fournis par openweathermap :
+                <a href="https://openweathermap.org/" style='color:black;'> <i>openweathermap</i>
+                </a></i></div><br>
+
+                <div style='float:left;'>
+                <i>Classement de 1 a 7 des villes les plus polluée :</i>
+                <a href="http://www.linternaute.com/ville/c-ville-pollution-de-l-air"
+                style='color:black;'><i>Internaute</a></i></div><br>
 
 
-        
-        <!-- Input Section Paris Number 4 -->
-        <br><br>
-        <div id='info_donnée'>
-        <center><input type='button' value='fermer' onclick='fermer()'></center>
-          <br><br><br><br>
-          <div style='float:left;'><i>Donnée fournis par openweathermap :
-          <a href="https://openweathermap.org/" style='color:black;'> <i>openweathermap</i>
-          </a></i></div><br>
+                <div style='float:left;'><i>Classement des sites industriels les plus pollués : 
+                </i><a href="https://www.greenunivers.com/2009/05/quinze-sites-industriels-plus-pollueurs-de-france-6981/"
+                style='color:black;'><i>Grenunivers</a></i></div><br>
 
-          <div style='float:left;'>
-          <i>Classement de 1 a 7 des villes les plus polluée :</i>
-          <a href="http://www.linternaute.com/ville/c-ville-pollution-de-l-air"
-           style='color:black;'><i>Internaute</a></i></div><br>
+                <div style='float:left;'><i>Manifestation à Paris : </i>
+                <a href="https://www.onlymoov.com/trafic/" style='color:black;'><i>onlymoov</a></i></div><br>
 
-
-          <div style='float:left;'><i>Classement des sites industriels les plus pollués : 
-          </i><a href="https://www.greenunivers.com/2009/05/quinze-sites-industriels-plus-pollueurs-de-france-6981/"
-          style='color:black;'><i>Grenunivers</a></i></div><br>
-
-          <div style='float:left;'><i>Manifestation à Paris : </i>
-          <a href="https://www.onlymoov.com/trafic/" style='color:black;'><i>onlymoov</a></i></div><br>
-
-          <div style='float:left;'><i>Bouchons à Paris : </i>
-          <a href="https://www.moncoyote.com/fr/info-trafic-lyon.html"
-            style='color:black;'><i>moncoyote</a></i></div><br>
+                <div style='float:left;'><i>Bouchons à Paris : </i>
+                <a href="https://www.moncoyote.com/fr/info-trafic-lyon.html"
+                    style='color:black;'><i>moncoyote</a></i></div><br>
+                </div>
+            </div>
         </div>
-      </div>
-
     </div>
-  
-    </div>
-  </section>
-
-  <center>
-
-
-
+</section>
+<center>
 
   <div id="separate"><br><br>
       <center>
@@ -1184,28 +1045,10 @@
   </div>
 
 
-
-
-
-
     <div id="reso">
         {% include "bottom/bottom_page.html" %}
         {% block content2 %}
         {% endblock %}
         <SCRIPT type="text/javascript" src="/static/js/pollution/donnee.js"></SCRIPT>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    
 </html>
-
