@@ -4,239 +4,148 @@
 
 <link rel="stylesheet" type="text/css" href="/static/css/pollution/graphe/graphe.css">
 <link rel="stylesheet" type="text/css" href="/static/css/pollution/graphe/graphe_haut.css">
-
-    <link rel="stylesheet" type="text/css" href="/static/css/graphe.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/static/css/graphe.css" media="all" />
     
-      <style>input{background:transparent;border:transparent;}</style>
-      <br><br><br><br><br><br>
-      <div id="section_graphe">
-
-      <div>
-      <input type='button' value='Tchat'
-        style='border:1px solid black;background:none;
-        float:right;margin-right:50px;' onclick="document.location.href='/polution/tchat_graphe'">
-      <span id='menumenu'>Menu</span>
-      <div class="container">
-      <br><br>
-      <p id="information_click"><i><strong>*Choisis une ville et clique sur une des conditions</strong></i></p>
+<style>input{background:transparent;border:transparent;}</style>
+<br><br><br><br><br><br>
+<div id="section_graphe">
+    <div>
+        <input type='button' value='Tchat'
+            style='border:1px solid black;background:none;
+            float:right;margin-right:50px;' onclick="document.location.href='/polution/tchat_graphe'">
+        <span id='menumenu'>Menu</span>
+        <div class="container">
+        <br><br>
+        <p id="information_click"><i><strong>*Choisis une ville et clique sur une des conditions</strong></i></p>
         <div class="row">
-
-          
-     
-        
-          <div class="col-sm" id='p_ville1'>
-
+        <div class="col-sm" id='p_ville1'>
             <center><div id="info1" style='width:200px; height:50px; font-size:3vw;'></div></center>
-
-          
             <center><div id='separate_line1'></div>
-
             <input type='button' id='lyon1'
               onmouseover="one('separate_line1', 'info1')"
               onmouseout="two('separate_line1', 'info1')"
               onclick='lyon()'
               value='Lyon'></center>
-
-
-
-
-            
-          </div>
-          
-          <div class="col-sm" id='p_ville2'>
-
+        </div>
+        <div class="col-sm" id='p_ville2'>
             <center><div id="info2" style='width:300px; height:50px;'></div></center>
-            
             <center><div id='separate_line2'></div>
-            
-            
+        
             <input type='button' id='marseille1'
-            onmouseover="one('separate_line2', 'info2')"
-              onmouseout="two('separate_line2', 'info2')"
-              onclick='marseille()'
-              value='Marseille'>
-            </p></center>
+                onmouseover="one('separate_line2', 'info2')"
+                onmouseout="two('separate_line2', 'info2')"
+                onclick='marseille()'
+                value='Marseille'>
+                </p></center>
+        </div>
 
-            
-          </div>
-
-
-          
-          <div class="col-sm" id='p_ville3'>
-
-            
+        <div class="col-sm" id='p_ville3'>
             <center><div id="info3" style='width:200px; height:50px;'></div></center>
-
-      
             <center><div id='separate_line3'></div>
-            
             <input type='button' id='paris1'
                 onmouseover="one('separate_line3', 'info3')"
                 onmouseout="two('separate_line3', 'info3')"
                 onclick='paris()'
                 value='Paris'>
             </p></center>
-
-            
-          </div>
-
-
-        
-
-          
         </div>
 
-        <div><br>
-
-        
-          <center><p id='choix'></p></center><br><br>
-
-          
-
-
-
-
-      <div class="container text-center" id='inputs'>
+    </div>
+    <div><br>
+    <center><p id='choix'></p></center><br><br>
+ 
+    <div class="container text-center" id='inputs'>
         <div class="row justify-content-center">
         
             <input type='button' id='bouchon' value='bouchon' onclick='graphe("plugs", "bouchon")'
-            onmouseover='hover("bouchon")' onmouseout='no_hover("bouchon")'>&nbsp;&nbsp;&nbsp;
+                onmouseover='hover("bouchon")' onmouseout='no_hover("bouchon")'>&nbsp;&nbsp;&nbsp;
 
-            
             <input type='button' value='heure' id='heure' onclick='graphe("hour", "heure")'
-            onmouseover='hover("heure")' onmouseout='no_hover("heure")'>&nbsp;&nbsp;
+                onmouseover='hover("heure")' onmouseout='no_hover("heure")'>&nbsp;&nbsp;
 
-            
             <input type='button' value='manif' id='manif' onclick='graphe("demonstration", "manifestion")'
-            onmouseover='hover("manif")' onmouseout='no_hover("manif")'>&nbsp;&nbsp;
+                onmouseover='hover("manif")' onmouseout='no_hover("manif")'>&nbsp;&nbsp;
 
-            
             <input type='button' value='météo' id="météo" onclick='graphe("weather", "météo")'
-            onmouseover='hover("météo")' onmouseout='no_hover("météo")'>&nbsp;&nbsp;
+                onmouseover='hover("météo")' onmouseout='no_hover("météo")'>&nbsp;&nbsp;
 
-            
             <input type='button' value='popu.' id='pop' onclick='graphe("population", "population")'
-            onmouseover='hover("pop")' onmouseout='no_hover("pop")'>&nbsp;&nbsp;
+                onmouseover='hover("pop")' onmouseout='no_hover("pop")'>&nbsp;&nbsp;
 
-            
             <input type='button' value='pression' id='pression' onclick='graphe("pressure", "pression")'
-            onmouseover='hover("pression")' onmouseout='no_hover("pression")'>&nbsp;&nbsp;
+                onmouseover='hover("pression")' onmouseout='no_hover("pression")'>&nbsp;&nbsp;
 
-            
             <input type='button' value='saison' id='saison' onclick='graphe("season", "saison")'
-            onmouseover='hover("saison")' onmouseout='no_hover("saison")'>&nbsp;&nbsp;
+                onmouseover='hover("saison")' onmouseout='no_hover("saison")'>&nbsp;&nbsp;
             
             <input type='button' value='vent' id='vent' onclick='graphe("wind", "vent")'
-            onmouseover='hover("vent")' onmouseout='no_hover("vent")'>&nbsp;&nbsp;
+                onmouseover='hover("vent")' onmouseout='no_hover("vent")'>&nbsp;&nbsp;
 
-            
             <input type='button' value='weekend' id='weekend' onclick='graphe("weekend", "weekend")'
-            onmouseover='hover("weekend")' onmouseout='no_hover("weekend")'>&nbsp;&nbsp;
-            
+                onmouseover='hover("weekend")' onmouseout='no_hover("weekend")'>&nbsp;&nbsp;
             
             <input type='button' value='traffique' id='traffique' onclick='graphe("traffic", "traffique")'
-            onmouseover='hover("traffique")' onmouseout='no_hover("traffique")'>&nbsp;&nbsp;
+                onmouseover='hover("traffique")' onmouseout='no_hover("traffique")'>&nbsp;&nbsp;
             
         </div><br>
         <p id='savoir'><i></i></p><br>
         <center><div id='graphique1' class='col-xs-12 col-md-12 col-lg-8'></div></center>
-      </div>
+    </div>
 
-      <div id='texte'>
-
-    
-          <div class="container">
+    <div id='texte'>
+        <div class="container">
             <div class="row">
-              <div class="col-sm">
-                Il y a plusieurs conditions qui régissent
-                la pollution. Nous vous proposons de voir
-                ces conditions via des graphes parmi les 3
-                villes de Lyon, Paris et Marseille.
-                Nous pouvons par exemple constater par
-                exemple à Lyon la pollution est plus faible
-                durant les épisodes de pluie et pendant les jours  de week-end.
-                                
-              </div>
-              <div class="col-sm">
-                Nous remarquons aussi que la ville la 
-                plus grande amoindrit la pollution.
-                <br><br>
-                Nous voyons cependant plusieurs données
-                contre-intuitives. Les très grands bouchons 
-                n'augmentent pas la pollution. Que les heures de pointe
-                non plus ne les incrémentent pas.
-              </div>
+                <div class="col-sm">
+                    Il y a plusieurs conditions qui régissent
+                    la pollution. Nous vous proposons de voir
+                    ces conditions via des graphes parmi les 3
+                    villes de Lyon, Paris et Marseille.
+                    Nous pouvons par exemple constater par
+                    exemple à Lyon la pollution est plus faible
+                    durant les épisodes de pluie et pendant les jours  de week-end.      
+                </div>
+                <div class="col-sm">
+                    Nous remarquons aussi que la ville la 
+                    plus grande amoindrit la pollution.
+                    <br><br>
+                    Nous voyons cependant plusieurs données
+                    contre-intuitives. Les très grands bouchons 
+                    n'augmentent pas la pollution. Que les heures de pointe
+                    non plus ne les incrémentent pas.
+                </div>
             </div>
-          </div>
+        </div>
 
-        
-          <div class="container">
+        <div class="container">
             <div class="row">
 
-              <div class="col-sm">
-                On peut constater qu'à Marseille, les manifestations
-                engendrent de la pollution, et que la pluie
-                à l'inverse la fait baisser.<br><br>
-                À paris nous voyons que le week-end augmente
-                la pollution, et que le beau temps aussi.
-
-              </div>
-              <div class="col-sm"><br>
-                Nous ne pensons pas que la fiabilité de
-                ces données soit de 100% car une condition prise toute
-                seule n'est pas très significatifs.
-                Nous ne pensons pas non plus pouvoir les
-                expliquer.
-                <br>Nous manquons de données et de connaissance
-                en pollution en circulation, en sociologie ect.
-                Mais nous espérons être dans le juste car certaines
-                de ces données sont très proches des données scientifiques.
-
-              </div>
-
+                <div class="col-sm">
+                    On peut constater qu'à Marseille, les manifestations
+                    engendrent de la pollution, et que la pluie
+                    à l'inverse la fait baisser.<br><br>
+                    À paris nous voyons que le week-end augmente
+                    la pollution, et que le beau temps aussi.
+                </div>
+                <div class="col-sm"><br>
+                    Nous ne pensons pas que la fiabilité de
+                    ces données soit de 100% car une condition prise toute
+                    seule n'est pas très significatifs.
+                    Nous ne pensons pas non plus pouvoir les
+                    expliquer.
+                    <br>Nous manquons de données et de connaissance
+                    en pollution en circulation, en sociologie ect.
+                    Mais nous espérons être dans le juste car certaines
+                    de ces données sont très proches des données scientifiques.
+                </div>
             </div>
-          </div><br>
-
-
+        </div><br>
     </div>
 </div>
 </div>
 
-    <div id="reso">
-        {% include "bottom/bottom_page.html" %}
-        {% block content2 %}
-        {% endblock %}
-        <SCRIPT type="text/javascript" src="/static/js/pollution/graphe.js"></SCRIPT>
-    </div>
-
-
-
-
-
-
-
-
-</html>
-
-
-
-
-  </body>
-
-
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="reso">
+    {% include "bottom/bottom_page.html" %}
+    {% block content2 %}
+    {% endblock %}
+    <SCRIPT type="text/javascript" src="/static/js/pollution/graphe.js"></SCRIPT>
+</div>
