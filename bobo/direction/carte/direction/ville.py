@@ -3,8 +3,8 @@
 from geopy.geocoders import Nominatim
 
 def ville(parametre):
-    """Here we searching from Python modul(geopy.geocoders)"""
-    """address from the input from html page"""
+    """Here we searching from Python modul(geopy.geocoders)
+    address from the input from html page"""
 
     geocoder = Nominatim(user_agent="app.py")
     #parametre is data recup from data()
