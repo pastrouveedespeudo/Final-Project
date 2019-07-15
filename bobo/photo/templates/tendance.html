@@ -8,20 +8,20 @@
 
 <header>
     <input type='button' value='Tchat'
-    style='border:1px solid black;background:none;
-    float:right;margin-right:50px;width:80px;' onclick="document.location.href='/photo/tendance_tchat'">
+        style='border:1px solid black;background:none;
+        float:right;margin-right:50px;width:80px;' 
+        onclick="document.location.href='/photo/tendance_tchat'">
     <section id="top_text">
         <div id="fond_tendance"> 
             <div id ="texte_in_texte">
-                <h1 id="titre1">La tendance du moment</h1><br>
-                       
-                  Les vêtements sont l'oeuvre d'une erreur
-                  pour les uns, un atout pour les autres,
-                  un signe de distinction, de séparation;
-                  nous vous proposons de voir les coloris
-                  de la mode actuelle.<br>
-                  Ne soyez pas conforme aux règles ! Sans pour
-                  autant vous en affranchir ! 
+                <h1 id="titre1">La tendance du moment</h1><br> 
+                Les vêtements sont l'oeuvre d'une erreur
+                pour les uns, un atout pour les autres,
+                un signe de distinction, de séparation;
+                nous vous proposons de voir les coloris
+                de la mode actuelle.<br>
+                Ne soyez pas conforme aux règles ! Sans pour
+                autant vous en affranchir ! 
             </div>    
         </div>      
         <div id='latendance'></div>
@@ -29,32 +29,21 @@
 </header>
 
 
-
-
-
 <body> 
 
-
     <section id='section_mode'>
-      <center><div id="cart_color">
-
-        <center><h1 id="cart_h1">Notre tendance</h1></center>
-        
         <center>
-          <div id='brun'></div>
-          <div id='blond'></div>
-          <div id='chatain'></div>
-          <br>
+            <div id="cart_color">
+                <center><h1 id="cart_h1">Notre tendance</h1></center> 
+                <center>
+                    <div id='brun'></div>
+                    <div id='blond'></div>
+                    <div id='chatain'></div>
+                    <br>
+                </center>
+            </div>
         </center>
-            
-       
-      </div></center>
     </section>
-
-
-
-
-
 
     <section id="iframe_section">
         <!-- Iframe from an other page. Give feeling to consult a book -->
@@ -69,64 +58,23 @@
     </section>
 
 
+    <footer id="botttom">
+        {% include "bottom/bottom_page.html" %}
+        {% block content2 %}
+        {% endblock %}
+    </footer>
+
 </body>
 
-<footer id="botttom">
+<!-- Bootstrap core JavaScript -->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-{% include "bottom/bottom_page.html" %}
-{% block content2 %}
-{% endblock %}
+<!-- Plugin JavaScript -->
+<script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-</footer>
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="/static/vendor/jquery/jquery.min.js"></script>
-  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="/static/js/creative.min.js"></script>
-  <SCRIPT type="text/javascript" src="/static/js/mode/tendance.js"></SCRIPT>
-
-
-
+<!-- Custom scripts for this template -->
+<script src="/static/js/creative.min.js"></script>
+<SCRIPT type="text/javascript" src="/static/js/mode/tendance.js"></SCRIPT>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
