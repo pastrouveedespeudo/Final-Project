@@ -1,13 +1,11 @@
 """We calling database for prediction"""
 
 import psycopg2
-from statistics import *
 
 from .CONFIG import DATABASE
 from .CONFIG import USER
 from .CONFIG import HOST
 from .CONFIG import PASSWORD
-
 
 def vision(ville):
     """Calling database and return it"""
@@ -17,10 +15,7 @@ def vision(ville):
                             host=HOST,
                             password=PASSWORD)
 
-    
     cursor = conn.cursor()
-    
-
     cursor.execute("""select angrais,
                     saison, diesel, eruption,
                     jour_nuit,
@@ -35,10 +30,7 @@ def vision(ville):
 
 
     conn.commit()
-
-
     rows = cursor.fetchall()
     liste = [i for i in rows]
 
-    
     return liste
