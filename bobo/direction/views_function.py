@@ -2,8 +2,7 @@
 
 from .carte.direction.ville import ville
 from .carte.direction.nouvel_pos import long_lat
-from .carte.direction.boussole import calcul_vent
-from .carte.direction.vent import *
+from .carte.direction.vent import vent_deux
 from .carte.direction.superficie import superficie_ville
 from .carte.direction.addresse import dress_to_ville
 
@@ -13,6 +12,8 @@ from .CONFIG import GROS_MOTS
 
 
 def function_tchat(data):
+    """Tchat function"""
+
     liste = data.split()
     for i in liste:
         for mot in GROS_MOTS:
@@ -24,31 +25,26 @@ def function_tchat(data):
 
     database(data)
     return data
-    
+
 def function_map(data):
     """Calling all function"""
-    
+
     lat, long = ville(data)
-
     adresse = dress_to_ville(lat, long)
-
     position_vent = vent_deux(data)
-
     vent = superficie_ville(adresse[1])
-
     nouvelle_position = long_lat(lat, long, vent, position_vent)
-
     return nouvelle_position, lat, long
 
 
 def function_map2(data2):
     """Transform , to ."""
-    
+
     lat = ''
     long = ''
     index = ''
     listee = []
-    
+
     for i in data2:
         if i == ',':
             break
@@ -56,16 +52,16 @@ def function_map2(data2):
             lat += i
         else:
             lat += i
-            
+
     listee = []
-    c = 0
+    counter = 0
     for i in data2:
-        
+
         if i == ',':
-            index = c
+            index = counter
         else:
             listee.append(i)
-        c+=1
+        counter += 1
 
     return lat, long, listee, index
 
@@ -75,20 +71,14 @@ def function_map3(lat, long, listee, index, data):
     the first one"""
 
     lat = float(lat)
-    
     long = listee[index:-1]
-    
     long = "".join(long)
     long = float(long)
 
 
     adresse = dress_to_ville(lat, long)
-
-    
     position_vent = vent_deux(data)
-
     vent = superficie_ville(adresse[1])
-
     nouvelle_position = long_lat(lat, long, vent, position_vent)
 
 
