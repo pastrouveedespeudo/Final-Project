@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html lang="fr">
+<html lang="fr">
 
     <!-- Head section - Loading CDN -->
     <head>
@@ -26,7 +26,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-
     </head>
 
     <body>
@@ -35,31 +34,24 @@
         <input type='button' value='Données' id='carte' style='color:black;'
             onclick="document.location.href='/polution/donnée'">
         <center><h1 style='color:black;'>Echangez sur les Données !!</h1></center><br><br>
-
         {% for i in message %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
 
-        <div class="container">
-            <div class="row">
-          
-                <div class="col-sm">
+                        <center>
+                            <div id="pac">
+                                <br><br>
+                                {{i.0}}<br>
+                                <p style='float:right; margin-right:50px;'>{{i.1}}</p>
+                                <br><br>
+                            </div>
+                        </center>
+                    </div><br><br><br><br><br><br>
+                </div>
+            </div>
+        {% endfor %}
 
-                    <center>
-                        <div id="pac">
-                            <br><br>
-                            {{i.0}}<br>
-                            <p style='float:right; margin-right:50px;'>{{i.1}}</p>
-                            <br><br>
-                        </div>
-                    </center>
-                </div><br><br><br><br><br><br>
-                
-
-          </div>
-        </div>
-
-    {% endfor %}
-
-        
         <center>
             <div id='tchat'>
                 <br>
@@ -72,17 +64,5 @@
         </center>
 
     </body>
-    <script src="/static/js/tchat/données.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
+<script src="/static/js/tchat/données.js"></script>
