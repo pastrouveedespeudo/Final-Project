@@ -1,56 +1,25 @@
-            {% include "menu/menu/menu.html" %}
-            {% block content %}
-            {% endblock %}
+{% include "menu/menu/menu.html" %}
+{% block content %}
+{% endblock %}
 
+<link href="/static/css/pollution/graphe/navebarre.css" rel="stylesheet">
+    <div id="deux" class="col-sm">
+        <center><span><u>Page</u></h1></span>
 
-            <link href="/static/css/pollution/graphe/navebarre.css" rel="stylesheet">
-            <div id="deux" class="col-sm">
-              <center><span><u>Page</u></h1></span>
-
-                      <a href="/polution/graphe#pop">
-                          <p id="Graphiques" class="Graphiques"
-                              onmouseover="un('Graphiques')" onmouseout="deux('Graphiques')">
-                              Les Graphiques
-                          </p>
-                      </a>
-
-
-                                            
-                      <p id="Retour" class="Retour"
-                          onmouseover="un('Retour')" onmouseout="deux('Retour')"
-                          onclick="retour_page('/polution/graphe#information_click')">Retour
-                      </p>
-
-
-
-                      <center><div id="separate_page"></div></center>
-
-
-
-
-
-              
-            </div>
-
-            
-          </div>
-        </div>
-        
+            <a href="/polution/graphe#pop">
+                <p id="Graphiques" class="Graphiques"
+                    onmouseover="un('Graphiques')" onmouseout="deux('Graphiques')">
+                    Les Graphiques
+                </p>
+            </a>
+                           
+            <p id="Retour" class="Retour"
+                onmouseover="un('Retour')" onmouseout="deux('Retour')"
+                onclick="retour_page('/polution/graphe#information_click')">Retour
+            </p>
+            <center><div id="separate_page"></div></center>
     </div>
-
-
 </body>
-
-
-
-
-
-
-
-
-
-
-
 
 <script>
     function retour_page(page){
