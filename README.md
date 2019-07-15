@@ -34,8 +34,9 @@ questionnant la database et l'affiche sur un template.
 
 
 
+# Partie pollution
 
-
+Remplir la database à la main ou par tache cron depuis le dossier (pollution/a_la_main/main)
 
 
 
