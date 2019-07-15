@@ -8,7 +8,7 @@ les menu qui deborde les mettre en fermer
 # BLOG sur la mode et la pollution, Le magazine virtuel
 
 <em>Un blog qui se veut etre différent des autres, Un blog application, Le Magazine Virtuel</em>
-<br><br><br>
+<br>
 
 
 
