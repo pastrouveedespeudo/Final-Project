@@ -1,5 +1,3 @@
-la page home
-
 faire mention légale 
 
 finir le readme
