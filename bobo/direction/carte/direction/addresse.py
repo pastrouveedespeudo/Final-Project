@@ -1,14 +1,13 @@
-"""Here we search latitude and longititude
-from a city"""
+"""Here we search latitude and longititude from a city"""
+
+import reverse_geocoder as rervers_g
 
 
-import reverse_geocoder as rg
-
-def reverseGeocode(coordinates):
+def reverse_geocoderr(coordinates):
     """We reverse from have an address
        and not coordinates"""
 
-    result = rg.search(coordinates)
+    result = rervers_g.search(coordinates)
     return result
 
 
@@ -17,7 +16,7 @@ def dress_to_ville(lat, long):
        and not coordinates (second technic)"""
 
     coordinates = (lat, long)
-    revers = reverseGeocode(coordinates)
+    revers = reverse_geocoderr(coordinates)
 
     liste = []
     counter = 0
