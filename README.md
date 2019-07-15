@@ -14,13 +14,14 @@ les menu qui deborde les mettre en fermer
 
 # Partie mode
 
-<em>La description du processus est expliquer dans le dossier administratif/diagramme de classe</em>
-
-
+<em>La description de l'architecture de ce blog est expliquer dans le dossier administratif/diagramme de classe</em>
+<br><br>
+<u>remplir la database</u>
+<br>
 Dans un premier temps il faut:
 
 - remplir la database via le dossier remplir database (dans le fichire photo.tendance_file.remplir_database).
-
+<br><br><br>
 
 
 #tendance
