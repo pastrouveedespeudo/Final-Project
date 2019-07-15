@@ -1,10 +1,6 @@
 """Here we calculate the new
-   direction"""
-
-from math import *
-
-
-"""We have calculate
+   direction
+   We have calculate
    a 1 degree = 111.11 km
    so we *0.009 the number of
    km for have degrees to km and add it to lat
@@ -12,106 +8,105 @@ from math import *
    east or west we * by degrees
    of circle trigo"""
 
+from math import cos
+from math import radians
+
+def long_lat_1(sens, lat, long, kilometre):
+    """Function for pep8"""
+
+    if sens == 'sudsudouest':
+        lat = lat + kilometre
+        long = long + kilometre * cos(radians(67.7))
+
+    if sens == 'sudouest':
+        lat = lat + kilometre
+        long = long + kilometre * cos(radians(45))
+
+    if sens == 'ouestsudouest':
+        lat = lat + kilometre
+        long = long + kilometre * cos(radians(22.5))
+
+    if sens == 'ouestnordouest':
+        lat = lat - kilometre
+        long = long - kilometre * cos(radians(157.5))
+
+    if sens == 'nordouest':
+        lat = lat - kilometre
+        long = long - kilometre * cos(radians(135))
+
+    if sens == 'nordnordouest':
+        lat = lat - kilometre
+        long = long - kilometre * cos(radians(112.5))
+
+    if sens == 'estsudest':
+        lat = lat + kilometre
+        long = long - kilometre * cos(radians(337))
+
+    if sens == 'sudest':
+        lat = lat + kilometre
+        long = long - kilometre * cos(radians(315))
+
+    if sens == 'sudsudest':
+        lat = lat + kilometre
+        long = long - kilometre * cos(radians(292.5))
+
+    return lat, long
 
 
-def long_lat(lat, long, km, sens):
+def long_lat(lat, long, kiloms, sens):
     """We calculate new direction"""
 
     #In case where superficie.py
     #fail or an exception is present
-    
+
     try:
-        km = float(km)
-    except:
-        km = 20.0
-        km = float(km)
+        kiloms = float(kiloms)
+    except TypeError:
+        kiloms = 20.0
+        kiloms = float(kiloms)
+    except ValueError:
+        kiloms = 20.0
+        kiloms = float(kiloms)
 
-    if km > 500:
-        km = 20.0
+    if kiloms > 500:
+        kiloms = 20.0
 
-    print(km, sens)
-    
-    kilometre = km * 0.009
-    
+    print(kiloms, sens)
+
+    kilometre = kiloms * 0.009
 
     if sens == 'sud':
         lat1 = kilometre
         nouvel_lat = lat + lat1
         return nouvel_lat, long
 
-    elif sens == 'sudsudouest':
-        lat = lat + kilometre
-        long = long + kilometre * cos(radians(67.7))
-        return lat, long
-
-    elif sens == 'sudouest':
-        lat = lat + kilometre
-        long = long + kilometre * cos(radians(45))
-        return lat, long
-        
-    elif sens == 'ouestsudouest':
-        lat = lat + kilometre
-        long = long + kilometre * cos(radians(22.5))
-        return lat, long
-
-    elif sens == 'ouest':
-        long = long + kilometre
-        return lat, long
-        
-    elif sens == 'ouestnordouest':
-        lat = lat - kilometre
-        long = long - kilometre * cos(radians(157.5))
-        return lat, long
-        
-    elif sens == 'nordouest':
-        lat = lat - kilometre
-        long = long - kilometre * cos(radians(135))
-        return lat, long
-        
-    elif sens == 'nordnordouest':
-        lat = lat - kilometre
-        long = long - kilometre * cos(radians(112.5))
-        return lat, long
-
-    elif sens == 'nord':
+    if sens == 'nord':
         lat1 = kilometre
         nouvel_lat = lat - lat1
         return nouvel_lat, long
 
-    elif sens == 'nordnordest':
-        lat = lat - kilometre
-        long = long - kilometre * cos(radians(337))
-        return lat, long
+    if sens == 'ouest':
+        long = long + kilometre
 
-    elif sens == 'nordest':
-        lat = lat - kilometre
-        long = long - kilometre * cos(radians(315))
-        return lat, long
-        
-    elif sens == 'estnordest':
-        lat = lat - kilometre
-        long = long - kilometre * cos(radians(292.5))
-        return lat, long
-
-    elif sens == 'est':
+    if sens == 'est':
         kilo = kilometre
         long1 = long - kilo
-      
         return lat, long1
 
-    elif sens == 'estsudest':
-        lat = lat + kilometre
+    if sens == 'nordnordest':
+        lat = lat - kilometre
         long = long - kilometre * cos(radians(337))
-        return lat, long
-        
-    elif sens == 'sudest':
-        lat = lat + kilometre
-        long = long - kilometre * cos(radians(315))
-        return lat, long
-        
-    elif sens == 'sudsudest':
-        lat = lat + kilometre
-        long = long - kilometre * cos(radians(292.5))
-        return lat, long
 
-print(long_lat(44.5, 4.25, 10, 'nord'))
+    if sens == 'nordest':
+        lat = lat - kilometre
+        long = long - kilometre * cos(radians(315))
+
+    if sens == 'estnordest':
+        lat = lat - kilometre
+        long = long - kilometre * cos(radians(292.5))
+
+
+    else:
+        lat, long = long_lat_1(sens, lat, long, kilometre)
+
+    return lat, long
