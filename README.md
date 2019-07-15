@@ -1,6 +1,4 @@
-j'ai la dale
-
-faire les pages html
+la page home
 
 faire mention légale 
 
