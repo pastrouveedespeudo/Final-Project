@@ -228,6 +228,9 @@ def function_donnee_pep():
     return particles, weather, wind, temperature, season, deaparture,\
            day, rank, pressure, demonstration
 
+
+
+@ensure_csrf_cookie
 def donnée(request):
     """Here we call all API recup data, and display it on HTML page
     We need exception in case there are error from ur script (for call API)"""
@@ -351,28 +354,28 @@ def graphe_function(city, graph):
                                  'diagramme.png')
         the_graphe = graph_o
 
-    if graph == 'wind':
+    elif graph == 'wind':
         graph_p = visu_wind(city)
         data = treatment_wind(graph_p)
         graph_q = diagram_wind(data[0], data[1], data[2], data[3], data[4],
                                data[5], data[6], data[7], 'diagramme.png')
         the_graphe = graph_q
 
-    if graph == 'weekend':
+    elif graph == 'weekend':
         graph_r = visu_weekend(city)
         data = treatment_weekend(graph_r)
         graph_s = diagram_weekend(data[0], data[1], data[2], data[3],
                                   'diagramme.png')
         the_graphe = graph_s
 
-    if graph == 'traffic':
+    elif graph == 'traffic':
         graph_t = visu_traffic(city)
         data = treatment_traffic(graph_t)
         graph_u = diagram_traffic(data[0], data[1], data[2], data[3],
                                   'diagramme.png')
         the_graphe = graph_u
 
-    if graph == 'pressure':
+    elif graph == 'pressure':
         graph_l = visu_pressure(city)
         data = treatment_pressure(graph_l)
         graph_m = diagram_pressure(data[0], data[1], data[2], data[3], data[4],
@@ -382,6 +385,8 @@ def graphe_function(city, graph):
 
 
     return HttpResponse(the_graphe)
+
+
 
 def graphe(request):
     """Graphic page. Here we ask database by Ajax call
@@ -409,21 +414,21 @@ def graphe(request):
             the_graphe = graph_b
 
 
-        if graph == 'hour':
+        elif graph == 'hour':
             schedule = treatment_hour(city)
             graph_e = diagram_hour(schedule[0], schedule[1], schedule[2], schedule[3],
                                    'diagramme.png')
             the_graphe = graph_e
 
 
-        if graph == 'demonstration':
+        elif graph == 'demonstration':
             graph_f = visu_demonstration(city)
             data = treatement_demonstration(graph_f)
             graph_g = diagram_demonstration(data[0], data[1],
                                             data[2], data[3], 'diagramme.png')
             the_graphe = graph_g
 
-        if graph == 'weather':
+        elif graph == 'weather':
             graph_h = visu_weater(city)
             data = treatement_weather(graph_h)
             graph_i = diagram_weather(data[0], data[1], data[2], data[3], data[4],
@@ -431,16 +436,16 @@ def graphe(request):
             the_graphe = graph_i
 
 
-        if graph == 'population':
+        elif graph == 'population':
             graph_j = visu_population()
             data = treatement_population(graph_j)
             graph_k = diagram_population(data[0], data[1], data[2], data[3], data[4],
                                          data[5], 'diagramme.png')
             the_graphe = graph_k
 
-
         else:
             the_graphe = graphe_function(city, graph)
+
 
 
         return HttpResponse(the_graphe)
