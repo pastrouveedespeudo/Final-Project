@@ -1,6 +1,5 @@
 <!DOCTYPE html>
   <html lang="fr">
-
     <!-- Head section - Loading CDN -->
     <head>
       <meta charset="UTF-8">
@@ -24,22 +23,14 @@
       <!-- Theme CSS - Includes Bootstrap -->
       <link href="/static/css/creative.min.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
-
-
-      
     </head>
 
     <body>
-
-
         <img id="logo" src="/static/v2/logo2.png">
-
-        
         <div style="float:left; margin-left:50px;z-index: 2; margin-top:-100px;position:fixed;" id="MENU">
              <br><br><br><br><br><br><br>
             <i class="fas fa-angle-right" id="notshut" onclick="notshutdown()" style="z-index: 1;position:static;"></i>
             <i class="fas fa-angle-left" id="shut" onclick="shutdown()"></i><br><br>
-
             
             <div id='contain' style='position:absolute'>
                 <p id="menu"
@@ -47,9 +38,7 @@
                     onMouseOut = "sous_menu2('menu', 'hrefmenu')">
                     <a href="/polution/navebarre_info" id="hrefmenu"><strong>Menu</strong></a>
                 </p>
-                
             </div><br><br>
-
 
             <div id='contain1' style='position:absolute'>
                 <p id="sommaire"
@@ -57,19 +46,15 @@
                     onMouseOut = "sous_menu2('sommaire', 'hrefsommaire')">
                     <a href="/" id="hrefsommaire"><strong>Sommaire</strong></a>
                 </p>
-                
             </div><br><br>
  
-
             <div id='contain4' style='position:absolute'>
                 <p id="menu1"
                     onMouseOver = "sous_menu1('menu1', 'reseaux', '#91A8A4')"         
                     onMouseOut = "sous_menu2('menu1', 'reseaux')">
                     <a href="/polution/info_pollu#reso" id="reseaux"><strong>Réseaux</strong></a>
                 </p>
-                
             </div><br><br>
-
 
             <div id='contain5' style="position:absolute;">
                 <p id="menu2"
@@ -78,15 +63,8 @@
                     <a href="/#my_project" id="contacter"><strong>Contact</strong></a>
                 </p>
             </div><br>
-
         </div>
-        
-
-
-
-
-
-
+  
     <script>
         function sous_menu1(div, text, couleur1){
             document.getElementById(div).style.width = '130%';
@@ -110,9 +88,7 @@
 
             document.getElementById('shut').style.display = "none";
             document.getElementById('notshut').style.display = "block";
-       
-            
-           
+
         };
 
         function notshutdown(){
@@ -125,11 +101,4 @@
             document.getElementById('notshut').style.display = "none";
         };
 
-
     </script>
-
-
-
-
-
-
