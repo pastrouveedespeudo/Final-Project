@@ -2,8 +2,7 @@
 
 from ville import ville
 from nouvel_pos import long_lat
-from boussole import calcul_vent
-from vent import *
+from vent import vent_deux
 from superficie import superficie_ville
 from addresse import dress_to_ville
 
