@@ -1,461 +1,421 @@
 
-    {% include "haut_page/coupe_haut.html" %}
-    {% block content %}
-    {% endblock %}
+{% include "haut_page/coupe_haut.html" %}
+{% block content %}
+{% endblock %}
 
-    <link rel="stylesheet" type="text/css" href="/static/css/coupe.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="/static/css/coupe/coupe/coupe.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/static/css/coupe.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/static/css/coupe/coupe/coupe.css" media="all" />
 
-
-
-    <input type='button' value='Tchat'
+<input type='button' value='Tchat'
     style='border:1px solid black;background:none;
     float:right;margin-right:50px;' onclick="document.location.href='/photo/coupe_tchat'">
-    <input type='button' id="menu_res" value="Menu" onclick="redirection()"><br><br>
-    <center>
+<input type='button' id="menu_res" value="Menu" onclick="redirection()"><br><br>
+
+<center>
     <section id="text_top">
-
-       
-       
-          Les coupes de cheveux ont beaucoup de
-          significations et d'importance.<br><br>Les cheveux longs
-          servent à plaire à tout le monde (mais attention à la longueur !).
-          Les cheveux courts représentent la
-          confiance en soi, les cheveux rouges
-          attirent l'attention
-          (l'oeil Humain capte plus facilement le rouge !),
-          la queue-de-cheval
-          sert à mettre son  visage en avant et 
-          à tirer son visage. La liste est longue
-          et varier. Toutes nos coutumes sont 
-          codées et sont donc inconsciemments
-           significatifs.
-          <br>Nous vous proposons de pouvoir
-          vous voir avec différentes coiffures 
-          et ainsi faire VOTRE mode !<br><br>
-          <em>Savais-tu que la mode est une source
-          importante de pollution ?
-          <a href="/polution/info_pollu" style='color:black;'>
-           Consulter</a></em>
-        
-            
-         
-        
-
+        Les coupes de cheveux ont beaucoup de
+        significations et d'importance.<br><br>Les cheveux longs
+        servent à plaire à tout le monde (mais attention à la longueur !).
+        Les cheveux courts représentent la
+        confiance en soi, les cheveux rouges
+        attirent l'attention
+        (l'oeil Humain capte plus facilement le rouge !),
+        la queue-de-cheval
+        sert à mettre son  visage en avant et 
+        à tirer son visage. La liste est longue
+        et varier. Toutes nos coutumes sont 
+        codées et sont donc inconsciemments
+        significatifs.
+        <br>Nous vous proposons de pouvoir
+        vous voir avec différentes coiffures 
+        et ainsi faire VOTRE mode !<br><br>
+        <em>Savais-tu que la mode est une source
+        importante de pollution ?
+        <a href="/polution/info_pollu" style='color:black;'>
+        Consulter</a></em>
     </section>
+</center>
+
+<setion id="the_picture_section">
+           
+    <center>
+        <div id="container_photo">
+            <div class="row" id='basic'>
+                <div class="col-sm-12 col-md-5 col-lg-6" id="basic_in">
+                    <h3 id="titre_salon"><strong>Notre salon de coiffure</strong></h3><br><br>
+                    <video class="videostream" autoplay></video><br><br>
+                    <button class="capture-button" id='StartVideo' style='border:2px solid black;'>Start</button>&nbsp;&nbsp;
+                    <button id="stop-button" style="border:2px solid black;">Stop</button></br>
+                    <br>
+                    <p><button id="cssfilters-apply" style='border:2px solid black;'> Mettre en noir et blanc conseillé</button>
+                    <div id="screenshot" style="text-align:center;" style='display:none;'>
+                        <video class="videostream" autoplay style='display:none;'></video>
+                        <img id="screenshot-img" style='display:none;'>
+                        <p><button class="capture-button" style='display:none;'>Démarrer</button></p>
+                        <p><button id="screenshot-button" disabled style='display:none;'> Take screenshot</button></p>
+                    </div>
+                    <div id="cssfilters" style="text-align:center;" style='display:none;'>
+                        <video class="videostream" autoplay title="Click me to apply CSS Filters" alt="Click me to apply CSS Filters"
+                            style='display:none;'>
+                        </video>
+                        <p><button class="capture-button" style='display:none;'>Capture video</button><p>
+                        <button id="cssfilters-apply" style='display:none;'>Mettre en noir et blanc (Recommandé)</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </center>
 
-
-    <setion id="the_picture_section">
-           
+    <div id="the_inputs" class="col-sm-6 col-md-3 col-lg-3">
         <center>
-        <div id="container_photo">
-              <div class="row" id='basic'>
-                   <div class="col-sm-12 col-md-5 col-lg-6" id="basic_in">
-                           <h3 id="titre_salon"><strong>Notre salon de coiffure</strong></h3><br><br>
-                           <video class="videostream" autoplay></video><br><br>
-                            <button class="capture-button" id='StartVideo' style='border:2px solid black;'>Start</button>&nbsp;&nbsp;
-                            <button id="stop-button" style="border:2px solid black;">Stop</button></br>
-                            <br>
-                            <p><button id="cssfilters-apply" style='border:2px solid black;'> Mettre en noir et blanc conseillé</button>
-                            <div id="screenshot" style="text-align:center;" style='display:none;'>
-                              <video class="videostream" autoplay style='display:none;'></video>
-                              <img id="screenshot-img" style='display:none;'>
-                              <p><button class="capture-button" style='display:none;'>Démarrer</button></p>
-                              <p><button id="screenshot-button" disabled style='display:none;'> Take screenshot</button></p>
-                            </div>
-                            <div id="cssfilters" style="text-align:center;" style='display:none;'>
-                                <video class="videostream" autoplay title="Click me to apply CSS Filters" alt="Click me to apply CSS Filters"
-                                    style='display:none;'>
-                                </video>
-                                <p><button class="capture-button" style='display:none;'>Capture video</button><p>
-                                <button id="cssfilters-apply" style='display:none;'>Mettre en noir et blanc (Recommandé)</button></p>
-                            </div>
-                  </div>
-               </div>
-          </div>
-          </center>
+            <input type='button' value='ajouter de la longueur?'
+                style=" border:3px solid black"
+                onclick='ajout_longueur()' id="input1"/><br><br>
 
-         
-       <div id="the_inputs" class="col-sm-6 col-md-3 col-lg-3">
-           <center>
+            <input type='button' value='ajouter de la largeur?'
+                style=" border:3px solid black; text-align:center;"
+                onclick='ajout_largeur()' id="input2" /><br><br>
+
+            <input type='button' value='enlever de la longueur?'
+                style=" border:3px solid black;"
+                onclick='enlever_longueur()' id="input3" /><br><br>
+
+            <input type='button' value='enlever de la largeur?'
+                style="border:3px solid black; text-align:center;"
+                onclick='enlever_largeur()' id="input4" /><br>
            
-           
-           <input type='button' value='ajouter de la longueur?'
-             style=" border:3px solid black"
-             onclick='ajout_longueur()' id="input1"/><br><br>
-
-             
-           <input type='button' value='ajouter de la largeur?'
-             style=" border:3px solid black; text-align:center;"
-             onclick='ajout_largeur()' id="input2" /><br><br>
-
-             
-           <input type='button' value='enlever de la longueur?'
-             style=" border:3px solid black;"
-             onclick='enlever_longueur()' id="input3" /><br><br>
-
-             
-           <input type='button' value='enlever de la largeur?'
-             style="border:3px solid black; text-align:center;"
-             onclick='enlever_largeur()' id="input4" /><br>
-           
-          </center>
-     </div>
-
+        </center>
+    </div>
 
      <div class="col-sm-6 col-md-3 col-lg-3" id="div_placement">
-
-         <center>
-         
-           <div id='placement'>
-             <center><strong><p id="p_coupe" style='color:black;'><strong>Coupes</strong></p></strong></center><br>
+        <center>
+            <div id='placement'>
+                <center><strong>
+                    <p id="p_coupe" style='color:black;'><strong>Coupes</strong></p></strong></center><br>
                
-              <input type='button' value='Fond' id='fond'
-               onclick="put_background()">
-               <input type='button' value='Enlever le fond' id='fond1'
-               onclick="get_background()"><br><br>
-               <input type='button' value='coupe longue' id='longue_but' onclick='coupe_longue()' style='border:3px solid black;'><br><br>
-               <input type='button' value='coupe courte' id='coute_but' onclick='coupe_courte()' style='border:3px solid black;'><br><br>
-               <input type='button' value='coupe couleur longue' id="longue_coul" onclick='coupe_longue_coul()' style='border:3px solid black;'><br><br>
-               <input type='button' value='coupe couleur courte' id="courte_coul" onclick='coupe_courte_coul()' style='border:3px solid black;'><br><br>
-               <input type='button' value='barbe' onclick='barbe()' id="barbe_button" style='border:3px solid black;'><br><br>
-           </div>
+               <input type='button' value='Fond' id='fond'
+                    onclick="put_background()">
+                <input type='button' value='Enlever le fond' id='fond1'
+                    onclick="get_background()"><br><br>
+                <input type='button' value='coupe longue' id='longue_but' onclick='coupe_longue()' style='border:3px solid black;'><br><br>
+                <input type='button' value='coupe courte' id='coute_but' onclick='coupe_courte()' style='border:3px solid black;'><br><br>
+                <input type='button' value='coupe couleur longue' id="longue_coul" onclick='coupe_longue_coul()' style='border:3px solid black;'><br><br>
+                <input type='button' value='coupe couleur courte' id="courte_coul" onclick='coupe_courte_coul()' style='border:3px solid black;'><br><br>
+                <input type='button' value='barbe' onclick='barbe()' id="barbe_button" style='border:3px solid black;'><br><br>
+            </div>
 
-
-               <input type='button' id='bout_fermer_longue' value='fermer' onclick='fermer1()'
-                   style='display:none; border:3px solid black;z-index:1;'><br><br>
+            <input type='button' id='bout_fermer_longue' value='fermer' onclick='fermer1()'
+                style='display:none; border:3px solid black;z-index:1;'><br><br>
                    
-               <input type='button' id='bout_fermer_court' value='fermer' onclick='fermer2()'
-                   style='display:none;border:3px solid black;z-index:1;'><br><br>
+            <input type='button' id='bout_fermer_court' value='fermer' onclick='fermer2()'
+                style='display:none;border:3px solid black;z-index:1;'><br><br>
                    
-               <input type='button' id='bout_fermer_longue_coul' value='fermer' onclick='fermer3()'
-                   style='display:none;border:3px solid black;z-index:1;'><br><br>
+            <input type='button' id='bout_fermer_longue_coul' value='fermer' onclick='fermer3()'
+                style='display:none;border:3px solid black;z-index:1;'><br><br>
                    
-               <input type='button' id='bout_fermer_court_coul' value='fermer' onclick='fermer4()'
-                   style='display:none;border:3px solid black;z-index:1;'><br><br>
+            <input type='button' id='bout_fermer_court_coul' value='fermer' onclick='fermer4()'
+                style='display:none;border:3px solid black;z-index:1;'><br><br>
 
-               <input type='button' id='bout_fermer_barbe' value='fermer' onclick='fermer5()'
-                   style='display:none;border:3px solid black;z-index:1;'><br><br>    
-             </center>
+            <input type='button' id='bout_fermer_barbe' value='fermer' onclick='fermer5()'
+                style='display:none;border:3px solid black;z-index:1;'><br><br>    
+        </center>
 
-           </div>
-         </div>    
-     </div>
+    </div>
+    </div>    
+    </div>
  </section>
 
-
-  <div class="col-sm-12 col-md-12 col-lg-12" id="coucoupe">
-  <center>
-    <div id="draggable19" class="ui-widget-content" value='coupe21'
-    onclick="nom_image('coupe21', 250, 150)";
-      style='z-index: 1; display:none;'>
-        <img src="/static/img/portfolio/coupe/1.4.png"
-          width='150' height='250'
-          id="coupe21"/>
-    </div>
-    <div id="draggable18" class="ui-widget-content" value='coupe20'
-    onclick="nom_image('coupe20', 250, 150)";
-        style='z-index: 1; display:none;'>
-        <img src="/static/img/portfolio/coupe/11.3.png"
-          width='150' height='250'
-          id="coupe20"/>
-    </div>
-    <div id="draggable" name="coucou" value='coupe1'
-      class="ui-widget-content"
-      onclick="nom_image('coupe1', 200, 150)";
-      style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/bbbbbbb.png"
-            width='150' height='200'
-            id="coupe1" />
-      </div>
-      <div id="draggable4" class="ui-widget-content" value='coupe5'
-      onclick="nom_image('coupe5', 150, 100)";
-      style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/bbbbbbb.png"
-          width='100' height='150'
-          id="coupe5" />
-      </div>
-      <div id="draggable15" class="ui-widget-content"  value='coupe17'
-        onclick="nom_image('coupe17', 250, 150)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/bbb.png"
-            width='150' height='250'
-            id="coupe17"/>
-      </div>
-      <div id="draggable5" class="ui-widget-content" value='coupe6'
-        onclick="nom_image('coupe6', 300, 130)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/1.5.png"
-            width='130' height='300'
-            id="coupe6"/>
-      </div>
-      <div id="draggable14" class="ui-widget-content"  value='coupe16'
-        onclick="nom_image('coupe16', 160, 100)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/bbbb.png"
-            width='100' height='160'
-            id="coupe16"/>
-      </div>
-      <div id="draggable16" class="ui-widget-content"  value='coupe18'
-        onclick="nom_image('coupe18', 160, 140)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/1.1.png"
-            width='140' height='160'
-            id="coupe18" />
-      </div>
-      <div id="draggable10" class="ui-widget-content" value='coupe12'
-        onclick="nom_image('coupe12', 250, 150)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/aa.png"
-            width='150' height='250'
-            id="coupe12"/>
-      </div>
-      <div id="draggable11" class="ui-widget-content" value='coupe13'
-        onclick="nom_image('coupe13', 250, 150)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/aaaaa.png"
-            width='150' height='250'
-            id="coupe13"/>
-      </div>
-      <div id="draggable6" class="ui-widget-content" value='coupe2'
-        onclick="nom_image('coupe2', 300, 130)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/coucou3.png"
-            width='130' height='300'
-            id="coupe2"/>
-      </div>
-      <div id="draggable3" class="ui-widget-content" value='coupe4'
-        onclick="nom_image('coupe4', 150, 150)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/image849849849.png"
-            width='150' height='150'
-            id="coupe4"/>
-      </div>
-      <div id="draggable9" class="ui-widget-content" value='coupe9'
-        onclick="nom_image('coupe9', 160, 140)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/coif.png"
-          width='140' height='160'
-          id="coupe9"/>
-      </div>
-      <div id="draggable12" class="ui-widget-content"  value='coupe14'
-        onclick="nom_image('coupe14', 160, 100)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/bb.png"
-            width='100' height='160'
-            id="coupe14"/>
-      </div>
-      <div id="draggable7" class="ui-widget-content" value='coupe22'
-        onclick="nom_image('coupe22', 100, 70)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/coucou22.png"
-            width='70' height='100'
-            id="coupe22"/>
-      </div>
-      <div id="draggable8" class="ui-widget-content" value='coupe8'
-        onclick="nom_image('coupe8', 50, 70)";
-        style='z-index: 1; display:none;'>
-          <img src="/static/img/portfolio/coupe/coucou22.png"
-            width='70' height='50'
-            id="coupe8"/>
-      </div>
-
+<div class="col-sm-12 col-md-12 col-lg-12" id="coucoupe">
+    <center>
+        <div id="draggable19" class="ui-widget-content" value='coupe21'
+            onclick="nom_image('coupe21', 250, 150)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/1.4.png"
+                width='150' height='250'
+                id="coupe21"/>
+        </div>
+        <div id="draggable18" class="ui-widget-content" value='coupe20'
+            onclick="nom_image('coupe20', 250, 150)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/11.3.png"
+                width='150' height='250'
+                id="coupe20"/>
+        </div>
+        <div id="draggable" name="coucou" value='coupe1'
+            class="ui-widget-content"
+            onclick="nom_image('coupe1', 200, 150)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/bbbbbbb.png"
+                width='150' height='200'
+                id="coupe1" />
+         </div>
+        <div id="draggable4" class="ui-widget-content" value='coupe5'
+            onclick="nom_image('coupe5', 150, 100)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/bbbbbbb.png"
+                width='100' height='150'
+                id="coupe5" />
+        </div>
+        <div id="draggable15" class="ui-widget-content"  value='coupe17'
+            onclick="nom_image('coupe17', 250, 150)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/bbb.png"
+                width='150' height='250'
+                id="coupe17"/>
+        </div>
+        <div id="draggable5" class="ui-widget-content" value='coupe6'
+            onclick="nom_image('coupe6', 300, 130)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/1.5.png"
+                width='130' height='300'
+                id="coupe6"/>
+        </div>
+        <div id="draggable14" class="ui-widget-content"  value='coupe16'
+            onclick="nom_image('coupe16', 160, 100)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/bbbb.png"
+                width='100' height='160'
+                id="coupe16"/>
+        </div>
+        <div id="draggable16" class="ui-widget-content"  value='coupe18'
+            onclick="nom_image('coupe18', 160, 140)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/1.1.png"
+                width='140' height='160'
+                id="coupe18" />
+        </div>
+        <div id="draggable10" class="ui-widget-content" value='coupe12'
+            onclick="nom_image('coupe12', 250, 150)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/aa.png"
+                width='150' height='250'
+                id="coupe12"/>
+        </div>
+        <div id="draggable11" class="ui-widget-content" value='coupe13'
+            onclick="nom_image('coupe13', 250, 150)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/aaaaa.png"
+                width='150' height='250'
+                id="coupe13"/>
+        </div>
+        <div id="draggable6" class="ui-widget-content" value='coupe2'
+            onclick="nom_image('coupe2', 300, 130)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/coucou3.png"
+                width='130' height='300'
+                id="coupe2"/>
+        </div>
+        <div id="draggable3" class="ui-widget-content" value='coupe4'
+            onclick="nom_image('coupe4', 150, 150)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/image849849849.png"
+                width='150' height='150'
+                id="coupe4"/>
+         </div>
+        <div id="draggable9" class="ui-widget-content" value='coupe9'
+            onclick="nom_image('coupe9', 160, 140)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/coif.png"
+                width='140' height='160'
+                id="coupe9"/>
+        </div>
+        <div id="draggable12" class="ui-widget-content"  value='coupe14'
+            onclick="nom_image('coupe14', 160, 100)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/bb.png"
+                width='100' height='160'
+                id="coupe14"/>
+        </div>
+        <div id="draggable7" class="ui-widget-content" value='coupe22'
+            onclick="nom_image('coupe22', 100, 70)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/coucou22.png"
+                width='70' height='100'
+                id="coupe22"/>
+        </div>
+        <div id="draggable8" class="ui-widget-content" value='coupe8'
+            onclick="nom_image('coupe8', 50, 70)";
+            style='z-index: 1; display:none;'>
+            <img src="/static/img/portfolio/coupe/coucou22.png"
+                width='70' height='50'
+                id="coupe8"/>
+        </div>
 
      </center>
 </div>
 
 
-
-
-
-
-
-  <section id="textes_transition">
-      <center>
-      <div  id="container2">
-      
-        <div class="row" style='width:90%;'>
-        
-          <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack">
-
-            <h1 id="titre_re">Les visages</h1><br>
-            Nous voyant les choses structurées afin d'éviter le chaos.
-            Notre cerveau nous permet de voir choses géométriquement.
-            Tout est une question de géométrie et même pour les figures !
-            Nous te proposons des conseils pour ta coupe de cheveux !
-            Une coupe de cheveux ? oui mais laquelle ?<br>
-            Tu as <strong>un visage</strong> assez large ou de <strong>grosses joues</strong> ?
-            On parle alors de visage rond. Evite les carrés et  essaie de longues coiffures.
-            Cela va pouvoir permettre d'd'atténuer la rondeur et de pouvoir donner une sensation
-            de longueur et d'affinage.
-            <br>
-            <strong>Tu as un visage ovale ?</strong> Toutes les coupes te vont bien.
-            Mais évite alors les coupes trop courtes car
-            cela pourrais casser le carré structuré.<br>
-            <strong>Tu as un visage carré ?</strong> Il te faut alors une coupe longue.
-            Evite le volume car il n'adoucit pas le visage.
-            Le but est d'adoucir ton visage par une frange
-            ou des ondulations de coiffure.<br>
-            Tu as un <strong>visage triangulaire</strong> ?
-            Il te faut une coupe de cheveux qui tend vers le bas.
-            Mais aussi éviter les frange.
-            Tu as une figure <strong>triangulaire vers le bas</strong> ?
-            Il te faut un carré plongeant ou des longueurs ondulées.
-            Évite les cheveux tirés en arrière !
-            <br><em>http://www.doctissimo.fr/html/beaute/coiffure/articles/forme-visage.
-            htm#quelles-coupes-pour-un-visage-carre-nbsp</em>
-            <br><br>
-
-          
-
-            
-            <br><br>
-            
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack1">
-            <h1 id="titre_re">Prenez soin de vos cheveux !</h1><br>
-            Que votre coupe de cheveux soit
-            "bouclée, raide comme des baguettes ou colorée"
-            n'utilisez pas n'importe quel shampoing. Adaptez-le
-            à votre style de cheveux.<br>
-            Ne les lavez pas trop souvent, cela permet de
-            les enduire de graisse et donc de les protéger !
-            Lavez-les à l'eau tiède ! et utilisez un 
-            après-shampoing. Cela permet de mieux les
-            brosser et "favorise la fermeture des 
-            écailles"<br><em>
-            http://www.madmoizelle.com/conseils-beaute-soin-cheveux-337708</em>
-            <br><br>
-          </div>
-          
-          <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack2">
-           <h1 id="titre_re">Type de cheveux !</h1><br>
-           Les coupes de cheveux courte peuvent révéler vos traits du visage.
-           Les coupes à zéro sont devenues très à la mode dans les années 2010.
-           Si vous avez les cheveux courts vous pouvez
-           opter pour des accessoires du style turbans, barrettes, foulards ou
-           même serre-tete. N'ayez pas peur d'utiliser du gel ou de la cire !
-           <br><br>
-           Il faut savoir que les types de cheveux ont leur type de coiffure.
-           - Les cheveux plat préfères une coupe au carré.<br>
-           - Les cheveux volumineux préfères un dégradé.<br>
-           - Les cheveux épais préfères les coues courtes.<br>
-           - Les cheveux fins préfères les coupes au niveau du cou<br>
-           - Les cheveux bouclés préfères les coupes longues dégradés
-           <br><em>https://www.femmesdaujourdhui.be/beaute/coiffure/quelle-coupe-pour-votre-type-de-cheveux/</em>
-            
-            
-            
-          </div>
-        </div>
-        </center>
-      </div><br><br>
-    </section>
-
-
-    <section class="page-section" id="services" style='text-align:center'>
-          <div id='coifcoif' style='display:none;text-align:center;width:100%;'><br>
-                <center>
-                <div id="coifcoif_recherche"><br>
-                    <div style='position: absolute; left: 50%;'>
-                        <img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80' id='gifou'
-                            style='position:relative; display:none;left: -50%;'>
-                    </div><br><br><br><br>
-                    <input type='text' id='coif1' placeholder='Votre ville'><br><br>
-                    <center><input type='button' id="input_coif2"
-                     onclick='menuuu()' value='Retour au menu'>&nbsp;&nbsp;&nbsp;
-                    <input type='button' id='coif2' value='valider'></center><br><br><br><br><br>
-               </div>   
-          </div></center>
-          <div id='gymgym' style='display:none;text-align:center;'>
-                <center>
-                 <div id="gymgym_div_prestation"><br>
-                     <div style='position: absolute; left: 50%;'>
-                       <img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80' id='gifou_gym'
-                         style='position:relative; display:none;left: -50%;'>
-                    </div><br><br><br><br><br>
-                     <input type='text' id='gym1'
-                     style='text-align:center; border:3px solid black; width:70%;'
-                      placeholder='Votre ville'><br><br>
-                     <center><input type='button' onclick='menuuu()'
-                     value='Retour au menu' style='border:2px solid black;'>&nbsp;&nbsp;&nbsp;
-                     <input type='button' id='gym2' value='valider' style='border:2px solid black;'>
-                     </center><br><br><br><br><br>
-
+<section id="textes_transition">
+    <center>
+        <div  id="container2">
+            <div class="row" style='width:90%;'>
+                <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack">
+                    <h1 id="titre_re">Les visages</h1><br>
+                    Nous voyant les choses structurées afin d'éviter le chaos.
+                    Notre cerveau nous permet de voir choses géométriquement.
+                    Tout est une question de géométrie et même pour les figures !
+                    Nous te proposons des conseils pour ta coupe de cheveux !
+                    Une coupe de cheveux ? oui mais laquelle ?<br>
+                    Tu as <strong>un visage</strong> assez large ou de <strong>grosses joues</strong> ?
+                    On parle alors de visage rond. Evite les carrés et  essaie de longues coiffures.
+                    Cela va pouvoir permettre d'd'atténuer la rondeur et de pouvoir donner une sensation
+                    de longueur et d'affinage.
+                    <br>
+                    <strong>Tu as un visage ovale ?</strong> Toutes les coupes te vont bien.
+                    Mais évite alors les coupes trop courtes car
+                    cela pourrais casser le carré structuré.<br>
+                    <strong>Tu as un visage carré ?</strong> Il te faut alors une coupe longue.
+                    Evite le volume car il n'adoucit pas le visage.
+                    Le but est d'adoucir ton visage par une frange
+                    ou des ondulations de coiffure.<br>
+                    Tu as un <strong>visage triangulaire</strong> ?
+                    Il te faut une coupe de cheveux qui tend vers le bas.
+                    Mais aussi éviter les frange.
+                    Tu as une figure <strong>triangulaire vers le bas</strong> ?
+                    Il te faut un carré plongeant ou des longueurs ondulées.
+                    Évite les cheveux tirés en arrière !
+                    <br><em>http://www.doctissimo.fr/html/beaute/coiffure/articles/forme-visage.
+                    htm#quelles-coupes-pour-un-visage-carre-nbsp</em>
+                    <br><br><br><br>
                 </div>
 
-        
-         </div></center>
-           
-         <div id='mapmap' style='text-align:center;display:none;'>
-           <div class="container">
-             <center><h3 id='aucas_ou_coif'></h3></center>
-             <h3 id='coifcoifcoif' style='color:white;display:none;' id='info'>Nous avons trouvé quelques coiffeurs près de chez vous</h3><br><br>
-             <p id='cons'style='margin-right:80%; display:none;margin-top:-10px;' id='p_am_pm'><i>* a.m et
-             p.m signifient horraires du matin et de l'après-midi</i></p><br><br>
-             <div class="row">
-                 <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
-                 <div class="col-xs-4 col-md-4 col-lg-4"
-                   id ='info1'>
+                <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack1">
+                    <h1 id="titre_re">Prenez soin de vos cheveux !</h1><br>
+                    Que votre coupe de cheveux soit
+                    "bouclée, raide comme des baguettes ou colorée"
+                    n'utilisez pas n'importe quel shampoing. Adaptez-le
+                    à votre style de cheveux.<br>
+                    Ne les lavez pas trop souvent, cela permet de
+                    les enduire de graisse et donc de les protéger !
+                    Lavez-les à l'eau tiède ! et utilisez un 
+                    après-shampoing. Cela permet de mieux les
+                    brosser et "favorise la fermeture des 
+                    écailles"<br><em>
+                    http://www.madmoizelle.com/conseils-beaute-soin-cheveux-337708</em>
+                    <br><br>
+                </div>
+          
+                <div class="col-sm-12 col-md-4 col-lg-4" style='text-align:justify;' id="blackblack2">
+                    <h1 id="titre_re">Type de cheveux !</h1><br>
+                    Les coupes de cheveux courte peuvent révéler vos traits du visage.
+                    Les coupes à zéro sont devenues très à la mode dans les années 2010.
+                    Si vous avez les cheveux courts vous pouvez
+                    opter pour des accessoires du style turbans, barrettes, foulards ou
+                    même serre-tete. N'ayez pas peur d'utiliser du gel ou de la cire !
+                    <br><br>
+                    Il faut savoir que les types de cheveux ont leur type de coiffure.
+                    - Les cheveux plat préfères une coupe au carré.<br>
+                    - Les cheveux volumineux préfères un dégradé.<br>
+                    - Les cheveux épais préfères les coues courtes.<br>
+                    - Les cheveux fins préfères les coupes au niveau du cou<br>
+                    - Les cheveux bouclés préfères les coupes longues dégradés
+                    <br><em>https://www.femmesdaujourdhui.be/beaute/coiffure/quelle-coupe-pour-votre-type-de-cheveux/</em>
+                        
                  </div>
-                 <div class="col-xs-1 col-md-1 col-lg-2"></div><br>
-                 <div class="col-xs-4 col-md-4 col-lg-4"
-                   id ='info2'>
-                 </div>
-                 <div class="col-xs-1 col-md-1 col-lg-1"></div>
-             </div>
-             <br><br><br><br><br>
-           
-             <div class="row">
-                 <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
-                 <div class="col-xs-1 col-md-4 col-lg-4"
-                   id ='info3'>
-                 </div>
-                 <div class="col-xs-1 col-md-1 col-lg-2"></div><br>
-                 <div class="col-xs-1 col-md-4 col-lg-4"
-                   id ='info4'>
-                 </div>
-                 <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
-             </div>    
-           </div>
-           <center><input type='button' style='border:2px solid black;' value='Retour au menu' onclick='menu_map()'></center><br><br>
-         </div>
-       </div>
-     </div>
+            </div>
+        </center>
+    </div><br><br>
+</section>
 
+<section class="page-section" id="services" style='text-align:center'>
+    <div id='coifcoif' style='display:none;text-align:center;width:100%;'><br>
+        <center>
+            <div id="coifcoif_recherche"><br>
+                <div style='position: absolute; left: 50%;'>
+                    <img src='/static/img/portfolio/icone/chargement1.gif' width='80' height='80' id='gifou'
+                        style='position:relative; display:none;left: -50%;'>
+                </div><br><br><br><br>
+                <input type='text' id='coif1' placeholder='Votre ville'><br><br>
+                <center><input type='button' id="input_coif2"
+                    onclick='menuuu()' value='Retour au menu'>&nbsp;&nbsp;&nbsp;
+                <input type='button' id='coif2' value='valider'></center><br><br><br><br><br>
+            </div>   
+            </div></center>
+            <div id='gymgym' style='display:none;text-align:center;'>
+                <center>
+                    <div id="gymgym_div_prestation"><br>
+                        <div style='position: absolute; left: 50%;'>
+                            <img src='/static/img/portfolio/icone/chargement1.gif'
+                                width='80' height='80' id='gifou_gym'
+                                style='position:relative; display:none;left: -50%;'>
+                        </div><br><br><br><br><br>
+                        <input type='text' id='gym1'
+                            style='text-align:center; border:3px solid black; width:70%;'
+                            placeholder='Votre ville'><br><br>
+                        <center><input type='button' onclick='menuuu()'
+                            value='Retour au menu' style='border:2px solid black;'>&nbsp;&nbsp;&nbsp;
+                            <input type='button' id='gym2' value='valider' style='border:2px solid black;'>
+                        </center><br><br><br><br><br>
+
+                    </div>
+                </div></center>
+           
+                <div id='mapmap' style='text-align:center;display:none;'>
+                    <div class="container">
+                        <center><h3 id='aucas_ou_coif'></h3></center>
+                        <h3 id='coifcoifcoif' style='color:white;display:none;' id='info'>Nous avons trouvé quelques coiffeurs près de chez vous</h3><br><br>
+                        <p id='cons'style='margin-right:80%; display:none;margin-top:-10px;' id='p_am_pm'><i>* a.m et
+                            p.m signifient horraires du matin et de l'après-midi</i></p><br><br>
+                    <div class="row">
+                    <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
+                    <div class="col-xs-4 col-md-4 col-lg-4"
+                        id ='info1'>
+                    </div>
+                    <div class="col-xs-1 col-md-1 col-lg-2"></div><br>
+                    <div class="col-xs-4 col-md-4 col-lg-4"
+                        id ='info2'>
+                    </div>
+                    <div class="col-xs-1 col-md-1 col-lg-1"></div>
+                </div>
+                <br><br><br><br><br>
+           
+                <div class="row">
+                    <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
+                    <div class="col-xs-1 col-md-4 col-lg-4"
+                        id ='info3'>
+                    </div>
+                    <div class="col-xs-1 col-md-1 col-lg-2"></div><br>
+                    <div class="col-xs-1 col-md-4 col-lg-4"
+                        id ='info4'>
+                    </div>
+                    <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
+                </div>    
+            </div>
+           <center><input type='button' style='border:2px solid black;' 
+            value='Retour au menu' onclick='menu_map()'></center><br><br>
+        </div>
+    </div>
+    </div>
     <div id='the_map' style='display:none;'>
-         <p id='oups'><h3><center></center></h3></p>
-         <br><br>
-         <center><div id='map'></div></center>
-         <br><br>
-         <center><input type='button' value='Retour au menu' style='border:2px solid black;' onclick='return_choice_coif()' id='button_lamap'></center>
-         <center><input type='button' value='Retour au menu' style='border:2px solid black;' onclick='return_choice_gym()' id='button_lamap_gym'></center>
-   </div>
+        <p id='oups'><h3><center></center></h3></p>
+        <br><br>
+        <center><div id='map'></div></center>
+        <br><br>
+        <center><input type='button' value='Retour au menu' style='border:2px solid black;' onclick='return_choice_coif()' id='button_lamap'></center>
+        <center><input type='button' value='Retour au menu' style='border:2px solid black;' onclick='return_choice_gym()' id='button_lamap_gym'></center>
+    </div>
 
-   <div id='mapmap_gym' style='text-align:center;display:none;'><br><br><br><br>
-      <div class="container">
-        <center><h3 id='aucas_ou'></h3></center>
-        <h3 style='color:white;display:none;' id='info'>Nous avons trouvé quelques salles de gym près de chez vous</h3><br><br>
-        <p style='margin-right:80%; display:none;margin-top:-10px;' id='p_am_pm'><i>* a.m et
-        p.m signifient horraires du matin et de l'après-midi</i></p><br><br>
-           
-        <div class="row">
-            <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
-            <div class="col-xs-4 col-md-4 col-lg-4"
-              id ='info1_gym'
-              style='border:5px solid black;border-radius: 20px; 
-              height:450px; background:url("/static/img/parquet1.jpg");'>
-            </div>
-            <div class="col-xs-1 col-md-1 col-lg-2"></div><br>
-            <div class="col-xs-4 col-md-4 col-lg-4"
-              id ='info2_gym' style='border:5px solid black;border-radius: 20px;
-              height:450px; background:url("/static/img/parquet1.jpg");'>
-            </div>
+    <div id='mapmap_gym' style='text-align:center;display:none;'><br><br><br><br>
+        <div class="container">
+            <center><h3 id='aucas_ou'></h3></center>
+            <h3 style='color:white;display:none;' id='info'>Nous avons trouvé quelques salles de gym près de chez vous</h3><br><br>
+            <p style='margin-right:80%; display:none;margin-top:-10px;' id='p_am_pm'><i>* a.m et
+                p.m signifient horraires du matin et de l'après-midi</i></p><br><br>
+            <div class="row">
+                <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
+                <div class="col-xs-4 col-md-4 col-lg-4"
+                    id ='info1_gym'
+                    style='border:5px solid black;border-radius: 20px; 
+                    height:450px; background:url("/static/img/parquet1.jpg");'>
+                </div>
+                <div class="col-xs-1 col-md-1 col-lg-2"></div><br>
+                <div class="col-xs-4 col-md-4 col-lg-4"
+                    id ='info2_gym' style='border:5px solid black;border-radius: 20px;
+                    height:450px; background:url("/static/img/parquet1.jpg");'>
+                </div>
             <div class="col-xs-1 col-md-1 col-lg-1"></div>
         </div><br><br>
 
-          
         <div class="row">
             <div class="col-xs-1 col-md-1 col-lg-1"></div><br>
             <div class="col-xs-1 col-md-4 col-lg-4"
@@ -476,90 +436,83 @@
   </div>
 </div>
 
-
-     <script>
-
-       function redirection(){
-         document.location.href="/photo/navebarre_coupe"
-       };
-     </script>
+<script>
+    function redirection(){
+        document.location.href="/photo/navebarre_coupe"
+    };
+</script>
 
 
-
-
-
-
-    <div class="container" id='CONTENEUR'>
+<div class="container" id='CONTENEUR'>
     <br><br>
-      <h2 class="text-center mt-0">Mes services</h2><br>
-      <p id="aide">Cliquez sur une des images pour profiter des services.</p>
-      <hr class="divider my-4">
-      <div class="row">
+    <h2 class="text-center mt-0">Mes services</h2><br>
+    <p id="aide">Cliquez sur une des images pour profiter des services.</p>
+    <hr class="divider my-4">
+    <div class="row">
         <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-           <style>#im6{width:100px; height:100px;}</style>
-           <img onclick="coiffeur()" src="/static/img/portfolio/icone/coiffeur.png"
-             onmouseover="stop('im6', '/static/img/portfolio/icone/coiffeur2.png')"
-             onmouseout="start('im6', '/static/img/portfolio/icone/coiffeur.png')"
-             id="im6">
+            <div class="mt-5">
+            <style>#im6{width:100px; height:100px;}</style>
+            <img onclick="coiffeur()" src="/static/img/portfolio/icone/coiffeur.png"
+                onmouseover="stop('im6', '/static/img/portfolio/icone/coiffeur2.png')"
+                onmouseout="start('im6', '/static/img/portfolio/icone/coiffeur.png')"
+                id="im6">
             <h3 class="h4 mb-2">Coiffeurs</h3>
             <br>
-          </div>
-        </div><br><br>
+        </div>
+    </div><br><br>
 
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-           <style>#im4{width:100px; height:100px;}</style>
-           <img onclick="gym()" src = "/static/img/portfolio/icone/gym.png"/
-             onmouseover="stop('im4', '/static/img/portfolio/icone/gym2.png' )"
-             onmouseout="start('im4', '/static/img/portfolio/icone/gym.png')"
-             id="im4">
+    <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+            <style>#im4{width:100px; height:100px;}</style>
+            <img onclick="gym()" src = "/static/img/portfolio/icone/gym.png"/
+                onmouseover="stop('im4', '/static/img/portfolio/icone/gym2.png' )"
+                onmouseout="start('im4', '/static/img/portfolio/icone/gym.png')"
+                id="im4">
             <h3 class="h4 mb-2" >Salle de gym</h3>
             <br>
-          </div>
-        </div><br><br>
-
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-           <style>#im7{width:100px; height:100px;}</style>
-           <a href="/photo/habits"><img onclick="vetements()" src="/static/img/portfolio/icone/vetements.png"/
-             onmouseover="stop('im7', '/static/img/portfolio/icone/vetements22.png')"
-             onmouseout="start('im7', '/static/img/portfolio/icone/vetements.png')"
-             id="im7"></a>
-            <h3 class="h4 mb-2">Essayer des vêtements</h3>
-          </div>
         </div>
+    </div><br><br>
 
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-           <style>#im8{width:100px; height:100px;}</style>
-           <a href="/photo/tendance">
-             <img onclick="dresshaircutbodyup()" src="/static/img/portfolio/icone/dresshaircutbodyup.png"/
-                 onmouseover="stop('im8','/static/img/portfolio/icone/dresshaircutbodyup2.png')"
-                 onmouseout="start('im8', '/static/img/portfolio/icone/dresshaircutbodyup.png')"
-             id="im8">
-           </a>
+    <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+            <style>#im7{width:100px; height:100px;}</style>
+            <a href="/photo/habits"><img onclick="vetements()" src="/static/img/portfolio/icone/vetements.png"/
+                onmouseover="stop('im7', '/static/img/portfolio/icone/vetements22.png')"
+                onmouseout="start('im7', '/static/img/portfolio/icone/vetements.png')"
+                id="im7"></a>
+            <h3 class="h4 mb-2">Essayer des vêtements</h3>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 text-center">
+        <div class="mt-5">
+            <style>#im8{width:100px; height:100px;}</style>
+            <a href="/photo/tendance">
+            <img onclick="dresshaircutbodyup()" src="/static/img/portfolio/icone/dresshaircutbodyup.png"/
+                onmouseover="stop('im8','/static/img/portfolio/icone/dresshaircutbodyup2.png')"
+                onmouseout="start('im8', '/static/img/portfolio/icone/dresshaircutbodyup.png')"
+            id="im8">
+            </a>
             <h3 class="h4 mb-2">
             Voir notre tendance</h3>
-          </div>
         </div>
-      </div>
-      <br><br><br><br>
     </div>
-  </section>
+    </div>
+    <br><br><br><br>
+    </div>
+</section>
 
 
-  <input type='button' style='display:none;' id='bubuton' style='border:2px solid black;'>
-  <input type='button' style='display:none;' id='bubuton_gym' style='border:2px solid black;'>
-  <input type='button' value='a' id='declencheur1' style='display:none;'>
-  <input type='button' value='aa' id='declencheur2' style='display:none;'>
-  <input type='button' value='a' id='declencheur3' style='display:none;'>
-  <input type='button' value='aa' id='declencheur4' style='display:none;'>
-  <input type='button' value='a' id='declencheur_gym1' style='display:none;'>
-  <input type='button' value='aa' id='declencheur_gym2' style='display:none;'>
-  <input type='button' value='a' id='declencheur_gym3' style='display:none;'>
-  <input type='button' value='aa' id='declencheur_gym4' style='display:none;'>
-
+<input type='button' style='display:none;' id='bubuton' style='border:2px solid black;'>
+<input type='button' style='display:none;' id='bubuton_gym' style='border:2px solid black;'>
+<input type='button' value='a' id='declencheur1' style='display:none;'>
+<input type='button' value='aa' id='declencheur2' style='display:none;'>
+<input type='button' value='a' id='declencheur3' style='display:none;'>
+<input type='button' value='aa' id='declencheur4' style='display:none;'>
+<input type='button' value='a' id='declencheur_gym1' style='display:none;'>
+<input type='button' value='aa' id='declencheur_gym2' style='display:none;'>
+<input type='button' value='a' id='declencheur_gym3' style='display:none;'>
+<input type='button' value='aa' id='declencheur_gym4' style='display:none;'>
 
 <footer>
     <!-- Bottom Section number 2 -->
@@ -569,8 +522,6 @@
     {% endblock %}
     </div>
 </footer>
-
-
 
 
 </html>
@@ -594,8 +545,3 @@
 <SCRIPT type="text/javascript" src="/static/js/mode/mode1.js"></SCRIPT>
            
 </html>
-
-
-
-
-
