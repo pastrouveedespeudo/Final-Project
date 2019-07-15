@@ -13,16 +13,16 @@ def create_database():
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
+
     cur.execute("""CREATE TABLE tchat_map1(
                 id serial PRIMARY KEY,
                 message TEXT,
                 date varchar(20))
                 """)
-    
+
     conn.commit()
 
 if __name__ == "__main__":
