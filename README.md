@@ -79,7 +79,29 @@ Les tests de fonction se trouvent dans le dossier test de chaque composant de vi
 
 # RECQUIS
 
+- Faire en environement virtuel
 
-# UTILISATION 
+- Installer python, Django via la commande pip (pip s'installe lors de l'installation de python)
+
+- Manier git
+
+- Avoir un compte Heroku (Processus de push expliqué sur la page deploy)
+
+- Savoir manier le SQL (postgresql)
+
+<br><br><br>
+
 
 # AMELIORATION
+
+La prédiction qui au bout d'un moment va sortir qu'un seul chiffre
+
+le nombre de data qui nous est limité
+
+Un conseil, une amélioration ? jeanbaptiste.servais@gmail.com
+
+
+
+
+
+
