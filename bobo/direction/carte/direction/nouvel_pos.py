@@ -62,7 +62,9 @@ def long_lat(lat, long, kiloms, sens):
     try:
         kiloms = float(kiloms)
     except TypeError:
-
+        kiloms = 20.0
+        kiloms = float(kiloms)
+    except ValueError:
         kiloms = 20.0
         kiloms = float(kiloms)
 
