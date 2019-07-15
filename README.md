@@ -42,12 +42,14 @@ Remplir la database à la main ou par tache cron depuis le dossier (pollution/a_
 
 Dans ce dossier nous proposons une solution fonctionnelle et techniques. Afin de la bonne compréhension nous avons mis les diagrammes de base de donnée ainsi que les diagrammes de classe.
 
-# ORGANISATION photo/ORGANISTAION POLLUTION
+
+<br><br>
+# ORGANISATION des templates
 
 #Il y a les pages principages,
 
 ces pages contiennent respectivement un haut(haut_page) et une navebarre(menu) ainsi qu'un bottom(bottom)
-
+<br><br><br>
 
 
 
@@ -69,13 +71,13 @@ La mode est importante pour la confiance en soi mais
 aussi vis a vis des autres (de maniere insconsciente (impression de sympathie, inlligence...))
 mais elle a plusieurs conséquences nefastes sur la placenete vis a vis de la pollution de l'air par exemple.
 
-
+<br><br>
 # Les Tests
 
 Se trouvent dans le fichier test.py de chaques application. Nous avons testé les pages et leur status de 200.
 
 Les tests de fonction se trouvent dans le dossier test de chaque composant de viexs_function composant views.py. Dedans nous regroupons les tests des fonctions ainsi que des url et API sollicitées
-
+<br><br>
 # RECQUIS
 
 - Faire en environement virtuel
@@ -88,7 +90,7 @@ Les tests de fonction se trouvent dans le dossier test de chaque composant de vi
 
 - Savoir manier le SQL (postgresql)
 
-<br><br><br>
+<br><br>
 
 
 # AMELIORATION
