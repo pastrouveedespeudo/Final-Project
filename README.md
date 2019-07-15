@@ -1,12 +1,14 @@
-et encore ya les import qui bug du coup chez un autre ca doit faire 9.5
+tout rendre pep8 tin 6/10 jtrouvais ca beaucoup...
+
 
 faire mention légale 
-
-les menu qui deborde les mettre en fermer
 
 Tous rechanger ce n'est pas un blog / magazine virtuel
 
 recuperer macguyvert
+
+
+
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
 
