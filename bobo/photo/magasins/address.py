@@ -3,12 +3,14 @@ or Hairdressers. So we can
 display it on a google map"""
 
 import requests
-from bs4 import *
+from bs4 import BeautifulSoup
 from geopy.geocoders import Nominatim
 
 #We define global variables
 SCRAP = ['Rue', 'Avenue', 'Allée', 'allée', 'Impasse', 'Adresse']
-AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36"
+AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) Appl" +\
+        "eWebKit/537.36 (KHTML, like Gecko) Ch" +\
+        "rome/50.0.2661.94 Safari/537.36"
 PATH = "https://www.google.com/search?q=adresse+{}+{}+&oq=adresse+{}+{}"
 
 
@@ -17,24 +19,20 @@ def address_geo(name, city):
     """We scrapping by SCRAP variable
     if we find one of those
     we break and recup the line"""
-    
+
     path = PATH.format(name, city, name, city)
-
     request_html = requests.get(path, headers={"User-Agent": AGENT})
-
     page = request_html.content
-    
     soup_html = BeautifulSoup(page, "html.parser")
-    
     propriete = soup_html.find_all("span")
 
     stop = ''
     address = []
 
     for i in propriete:
-        if stop == True:
+        if stop is True:
             break
-        if i.string == None:
+        if i.string is None:
             pass
         else:
             for j in SCRAP:
@@ -42,33 +40,32 @@ def address_geo(name, city):
                 if finding >= 0:
                     address.append(i.string)
                     stop = True
-                    
+
     return address
 
 
 def city_geo(parameter):
-    """Here we searching from Python modul(geopy.geocoders)"""
-    """address from the input from html page"""
+    """Here we searching from Python modul(geopy.geocoders)
+    address from the input from html page"""
 
     geocoder = Nominatim(user_agent="app.py")
-    
     location = geocoder.geocode(parameter, True, 30)
 
     #in the case of an error we
     #return oops we have found nothing.
     #This will be an alarm on the html page
-    
+
+    out = ''
+
     try:
         localisation = location.address
         localisation = str(localisation)
 
-        b = location.latitude
-        c = location.longitude
+        latti = location.latitude
+        longi = location.longitude
 
-        return b, c
+        out = latti, longi
 
-    except:
-        return "Oups nous n'avons rien trouvé"
-
-
-
+    except AttributeError:
+        out = "Oups nous n'avons rien trouvé"
+    return out
