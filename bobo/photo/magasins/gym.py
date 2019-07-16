@@ -1,6 +1,6 @@
 """This is functions for search gym area from bs4"""
 import requests
-from bs4 import *
+from bs4 import BeautifulSoup
 
 from .GYM_CONFIG import GYM
 from .GYM_CONFIG import PATH_CITY
@@ -45,20 +45,20 @@ def schedule_gym(name, city):
     for i in propriete:
         liste.append(i.string)
 
- 
-    week = ['lundi', 'mardi', 'mercredi', 'jeudi',
-            'vendredi', 'samedi', 'dimanche',]
+
+##    week = ['lundi', 'mardi', 'mercredi', 'jeudi',
+##            'vendredi', 'samedi', 'dimanche',]
 
 
-##    week = ['Monday', 'Tuesday', 'Wednesday',
-##              'Thursday', 'Friday', 'Saturday', 'Sunday',]
+    week = ['Monday', 'Tuesday', 'Wednesday',
+            'Thursday', 'Friday', 'Saturday', 'Sunday',]
 
 
     liste1 = []
     count = 0
-    
+
     for i in liste:
- 
+
         for j in week:
             var_find = str(i).find(str(j))
             if var_find >= 0:
