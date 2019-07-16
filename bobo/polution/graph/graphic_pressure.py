@@ -2,13 +2,11 @@
 we recuperate all data from one condition
 and create a matplolib graph"""
 
-import matplotlib.pyplot as plt
-import numpy as np
-import pylab
-import psycopg2
-import numpy as np
-import os
+
 import shutil
+import matplotlib.pyplot as plt
+import psycopg2
+
 from .function_graph import moyenne
 from .function_graph import new
 
@@ -17,39 +15,40 @@ from .CONFIG import HOST
 from .CONFIG import USER
 from .CONFIG import PASSWORD
 
+
+
 def visu_pressure(city):
     """Here we call database for take pressure"""
-    
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
     cursor = conn.cursor()
-    
+
     sql = ("""SELECT pression, nombre_particule FROM pression
             WHERE nom_ville = %s;""")
-    
-    values = (city)
 
-    cursor.execute(sql, (city,))
-
+    cursor.execute(sql, (city, ))
     rows = cursor.fetchall()
     liste = [i for i in rows]
 
     return liste
 
+
 def treatment_pressure(data_pressure):
     """We split it into list who corresponding to data"""
-    
+
     strong = [1]
     normal = []
     low = []
 
     for i in data_pressure:
-        
-        if i[0] == None or i[0] == 'None' or\
-           i[1] == None or i[1] == 'None':
+
+        if i[0] in (None, 'None') or\
+           i[1] in (None, 'None'):
             pass
+
         elif i[0] == 'forte':
             strong.append(int(i[1]))
 
@@ -75,38 +74,27 @@ def treatment_pressure(data_pressure):
 
 
 def diagram_pressure(data_strong, data_low, data_normal,
-              er_strong, er_low, er_normal, save):
+                     er_strong, er_low, er_normal):
 
     """We create a graph and return it"""
     plt.bar(range(3), [data_strong, data_low, data_normal],
-                        width = 0.1, color = 'black',
-                       yerr = [er_strong, er_low, er_normal],
-                        ecolor = 'black', capsize = 10)
-
+            width=0.1, color='black',
+            yerr=[er_strong, er_low, er_normal],
+            ecolor='black', capsize=10)
 
     plt.xticks(range(3), ['forte pression', 'faible pression',
                           'pression normale'])
 
-        
+
     plt.ylabel('Taux de pollution en AQI')
     plt.title("Taux de pollution selon la pression en hpa")
-    
+
     nouveau = new()
     print(nouveau)
     plt.savefig(nouveau, transparent=True)
     plt.clf()
     plt.close()
-    
+
     shutil.move(nouveau, '/app/static/popo')
+
     return nouveau
-
-
-
-
-
-
-
-
-
-
-
