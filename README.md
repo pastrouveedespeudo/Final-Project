@@ -1,4 +1,4 @@
-tout rendre pep8 tin 6/10 jtrouvais ca beaucoup...
+vérifier les graphes (erreyr a cause des expect)
 
 
 faire mention légale 
