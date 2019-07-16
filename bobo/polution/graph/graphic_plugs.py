@@ -2,8 +2,9 @@
 we recuperate all data from one condition
 and create a matplolib graph"""
 
-import os
-import shutil as shutil
+
+import shutil
+
 import matplotlib
 matplotlib.use('Agg')
 
