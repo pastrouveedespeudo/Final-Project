@@ -3,6 +3,7 @@
     and add +1."""
 
 import os
+import shutil
 import numpy as np
 
 def moyenne(liste):
@@ -23,25 +24,25 @@ def new():
     """Here we define the new graphic"""
 
     liste_new = []
-    liste = os.listdir('/app/static/popo')
-
+    #liste = os.listdir('/app/static/popo')
+    liste = os.listdir(r'C:\Users\jeanbaptiste\bobo\bobo\static\popo')
     for i in liste:
         try:
             number = str((i[-7])) + str((i[-6])) + str((i[-5]))
             number = int(number)
             liste_new.append(number)
-        except IndexError:
+        except ValueError:
             pass
 
         try:
             number = str((i[-6])) + str((i[-5]))
             number = int(number)
             liste_new.append(number)
-        except IndexError:
+        except ValueError:
             try:
                 number = int(i[-5])
                 liste_new.append(number)
-            except IndexError:
+            except ValueError:
                 pass
 
     maxi = max(liste_new) + 1
