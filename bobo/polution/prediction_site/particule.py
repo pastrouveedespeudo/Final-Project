@@ -3,26 +3,23 @@ the numbers of particle,
 ranking pollute in France and industrail poles"""
 
 import requests
-import datetime
-import urllib.request
-from bs4 import *
+from bs4 import BeautifulSoup
 
-
-from .CONFIG import PATH_PARTICLE_RATE
+from CONFIG import PATH_PARTICLE_RATE
 
 def particule2(lieu):
     """we search particule rate from plumelabs"""
 
-    nb = []
+    numbers = []
     liste = []
 
     path = PATH_PARTICLE_RATE.format(lieu)
     request = requests.get(path)
     page = request.content
     soup_html = BeautifulSoup(page, "html.parser")
-    Property = soup_html.find_all("div", {'class':'report__pi-number'})
+    properties = soup_html.find_all("div", {'class':'report__pi-number'})
 
-    for i in Property:
+    for i in properties:
         liste.append(i.get_text())
 
     for i in liste:
@@ -30,54 +27,46 @@ def particule2(lieu):
             try:
                 j = int(j)
                 if j == int(j):
-                    nb.append(str(j))
-            except:
+                    numbers.append(str(j))
+            except ValueError:
                 pass
-  
-    nb = ''.join(nb)
-    nb = int(nb)
-    polution = nb
 
-    return polution
+    numbers = ''.join(numbers)
+    numbers = int(numbers)
+
+    return numbers
 
 
-    
 def france(place):
     """France ranking"""
 
-    liste = ["lyon", "marseille","paris","roubaix"]
+    out = ''
 
-    counter = 0
-    for i in liste:
+    if place == 'lyon':
+        out = 'un'
+    elif place == 'marseille':
+        out = 'deux'
 
-        if place == place[0]:
-            return 'un'
-            break
+    elif place == 'paris':
+        out = 'trois'
 
-        elif place == place[1]:
-            return 'deux'
-            break
+    elif place == "roubaix":
+        out = 'quattre'
+    else:
+        out = 'non'
 
-        elif place == place[2]:
-            return 'trois'
-            break
+    return out
 
-        elif place == place[3]:
-            return 'quattre'
-            break
-        else:
-            return 'non'
-            break
-           
-        counter += 1
-    
+
 
 def industrie(place):
     """Industrie cities"""
 
+    out = ''
     if place == 'lyon':
-        return 'oui'
+        out = 'oui'
     elif place == 'paris':
-        return 'non'
+        out = 'non'
     elif place == 'marseille':
-        return 'oui'
+        out = 'oui'
+    return out
