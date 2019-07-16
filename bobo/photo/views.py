@@ -1,13 +1,7 @@
 """Views function for MVT model"""
 
 from django.shortcuts import render
-from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
-from django.contrib.auth.decorators import login_required
-from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.gzip import gzip_page
-from django.http import StreamingHttpResponse
-from django.middleware.gzip import GZipMiddleware
 
 from .views_functions import the_colors_function
 from .views_functions import tendance_function
@@ -31,7 +25,7 @@ def navebarre_admin2(request):
 def navebarre_coupe(request):
     """Here we return a home html respons"""
     return render(request, 'menu/navebarre_coupe.html')
- 
+
 def navebarre_habits(request):
     """Here we return a home html respons"""
     return render(request, 'menu/navebarre_habits.html')
@@ -92,11 +86,6 @@ def coupe(request):
 
     if request.method == "POST":
 
-        image = request.POST.get('posting')
-        haircut = request.POST.get('coupe')
-        search = request.POST.get('coupedecheveux')
-        saving = request.POST.get('product')
-
         map_hairdresser = request.POST.get('buttony')
         vivile = request.POST.get('country')
         haircut_style = request.POST.get('hairdresser')
@@ -111,7 +100,6 @@ def coupe(request):
             #We call gymm_map_function from views_function
             data = gymm_map_function(gymm_map, gym_pays)
             return HttpResponse(data)
-
 
         if gymm:
             print(gymm)
