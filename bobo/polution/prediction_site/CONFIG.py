@@ -50,7 +50,7 @@ PATH_LYON_POLENNE = 'https://weather.com/fr-FR/forecast/allergy/l/7615c204059d' 
 PATH_MARSEILLE_POLENNE = 'https://weather.com/fr-FR/forecast/allergy/l/97' +\
                          'adc36f89aa35486ece34380b006f2c946ef82fad53a58954c33e39e23948fe'
 
-COMPA_POELENNE = '<div class="styles__allergyMsg__qual__yaxvL"' +\
+COMPA_POELENNE = '<div class="styles__allergyMsg__qual__yaxvL" ' +\
                  'classname="styles__allergyMsg__qual__yaxvL"'
 
 
