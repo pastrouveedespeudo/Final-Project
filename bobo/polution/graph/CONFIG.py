@@ -1,3 +1,5 @@
+"""This variables for database"""
+
 DATABASE = 'datu8fkornnndh'
 USER = 'pwtfmpvfpsujtw'
 HOST = 'ec2-46-137-188-105.eu-west-1.compute.amazonaws.com'
