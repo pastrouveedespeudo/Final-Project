@@ -1,7 +1,4 @@
-vérifier les graphes (erreyr a cause des expect)
-
-import matplotlib
-matplotlib.use('Agg')
+documenter le code
 
 faire mention légale 
 
