@@ -13,9 +13,13 @@ import os
 
 from .tendance_file.analysis_database.tendance import la_tendance
 
-from .magasins.address import *
-from .magasins.gym import *
-from .magasins.hairdresser import *
+from .magasins.address import address_geo
+from .magasins.address import city_geo
+from .magasins.gym import big_city_gym
+from .magasins.gym import schedule_gym
+
+from .magasins.hairdresser import cities
+from .magasins.hairdresser import schedule_hair
 
 from .data_tchat.database import database_coupe
 from .data_tchat.database import database_habit
@@ -93,11 +97,11 @@ def the_colors_function(color):
         coul_analyse_haut = liste10[1][0]
         coul_analyse_bas = liste10[1][1]
 
-    elif color == 'brune' or color == 'noire':
+    elif color in ('brune', 'noire'):
         coul_analyse_haut = liste10[0][0]
         coul_analyse_bas = liste10[0][1]
 
-    elif color == 'chatain' or color == 'rousse':
+    elif color in ('chatain', 'rousse'):
 
         coul_analyse_haut = liste10[2][0]
         coul_analyse_bas = liste10[2][1]
@@ -113,13 +117,15 @@ def gymm_map_function(gymm_map, gym_pays):
     the_address = address_geo(gymm_map, gym_pays)
     lat_long = city_geo(the_address)
 
+    out = ''
+
     if lat_long == "Oups nous n'avons rien trouvé":
-        return lat_long
+        out = lat_long
 
     else:
         data = str(lat_long[0]) + ' ' + str(lat_long[1])
-        return data
-
+        out = data
+    return out
 
 def gymm_function(gymm):
     """This is gym function we return gym list"""
@@ -127,15 +133,15 @@ def gymm_function(gymm):
     gym_list = []
 
     the_cities = big_city_gym(gymm)
-    
+
     for i in the_cities:
         if len(gym_list) == 4:
             return gym_list
-            
-        a = schedule_gym(i, gymm)
 
-        if a != []:
-            gym_list.append([i, a, ""])
+        the_schedule = schedule_gym(i, gymm)
+
+        if the_schedule != []:
+            gym_list.append([i, the_schedule, ""])
 
     return gym_list
 
@@ -149,12 +155,12 @@ def haircut_style_function(haircut_style):
 
     the_hairdressers = cities(haircut_style)
 
-    for i in the_hairdressers: 
+    for i in the_hairdressers:
         schedule1 = schedule_hair(i, haircut_style)
 
         if [schedule1] == [] or schedule1 == []\
            or schedule1 == "" or schedule1 == " "\
-           or schedule1 == None:
+           or schedule1 is None:
             the_hairdressers.remove(i)
 
         else:
@@ -171,7 +177,7 @@ def map_hairdresser_function(map_hairdresser, vivile):
 
     lat_long = city_geo(the_address)
     if lat_long == "Oups nous n'avons rien trouvé":
-        data =  "Oups nous n'avons rien trouvé"
+        data = "Oups nous n'avons rien trouvé"
 
     else:
         data = str(lat_long[0]) + ' ' + str(lat_long[1])
