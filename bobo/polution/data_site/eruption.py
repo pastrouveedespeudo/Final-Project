@@ -1,80 +1,93 @@
 """Here we recup data. There are erruption on this week ?"""
 
-import requests
-import urllib.request
-from bs4 import *
 import datetime
+import requests
+from bs4 import BeautifulSoup
 
-from .CONFIG_DATA_SITE import MONTH_DICO_EN
+from CONFIG_DATA_SITE import MONTH_DICO_EN
+
+
 
 def date():
     """We define date and match it with MONTH_DICO_EN variable"""
 
-    date = datetime.datetime.now()
+    datee = datetime.datetime.now()
+    day = datee.day
+    month = datee.month
+    year = datee.year
+    month = str(month)
+    year = str(year)
 
-    day = date.day
-    month = date.month
-    year = date.year
 
-    month = str(month)   
-    year = str(year)  
-
-                        
     this_month = ''
     for key, value in MONTH_DICO_EN.items():
-                                    
-        if str(month) == key:                          
+
+        if str(month) == key:
             this_month = value
 
-            
     return day, this_month, year
+
 
 def soup_search():
     """We calling bs4"""
 
     path = "https://www.volcanodiscovery.com/fr/volcanoes/today.html"
-    r = requests.get(path)
-    page = r.content
+    request_html = requests.get(path)
+    page = request_html.content
     soup = BeautifulSoup(page, "html.parser")
-    Property = soup.find_all("div", {"class":"ln"}) 
-                                                    
-    liste = []
-    liste.append(str(Property))
+    properties = soup.find_all("div", {"class":"ln"})
 
-    
+    liste = []
+    liste.append(str(properties))
+
+    return liste
+
+def function_eruption(i, liste):
+    """Pep8 function"""
+
+    day, this_month, year = date()
+
+    day = int(day)
+    day = day - i
+    day = str(day)
+
+    to_search = day +' '+ this_month + ' ' + year
+    to_search1 = this_month + ' ' + day + ' ' + year
+    to_search2 = day + '-' + this_month + '-' +year
+    to_search3 = day + '-' + this_month + '-' + year
+    to_search4 = this_month + ' ' + day + ', ' + year
+
+    finding1 = str(liste).find(str(to_search))
+    finding2 = str(liste).find(str(to_search1))
+    finding3 = str(liste).find(str(to_search2))
+    finding4 = str(liste).find(str(to_search3))
+    finding5 = str(liste).find(str(to_search4))
+
+    return finding1, finding2, finding3,\
+           finding4, finding5
+
 def eruption():
     """Here we get eruption during the last week"""
-        
-    day, this_month, year = date()
+
+    day, this_month, _ = date()
     liste = soup_search()
-
     liste2 = []
-    for i in range(7):      
 
-        day = int(day)
-        day = day - i
-        day = str(day) 
-        
-        to_search = day +' '+ this_month + ' ' + year        
-        to_search1 = this_month + ' ' + day + ' ' + year
-        to_search2 = day + '-' + this_month + '-' +year
-        to_search3 = day + '-' + this_month + '-' + year
-        to_search4 = this_month + ' ' + day + ', ' + year
+    for i in range(7):
 
-        finding1 = str(liste).find(str(to_search))    
-        finding2 = str(liste).find(str(to_search1))
-        finding3 = str(liste).find(str(to_search2))
-        finding4 = str(liste).find(str(to_search3))
-        finding5 = str(liste).find(str(to_search4))
+        finding1, finding2, finding3,\
+           finding4, finding5 = function_eruption(i, liste)
 
         if finding1 >= 0 or\
            finding2 >= 0 or\
-           finding3 >=0 or\
+           finding3 >= 0 or\
            finding4 >= 0 or\
-           finding5 >=0: 
+           finding5 >= 0:
             day = str(day) + ' ' + this_month
             liste2.append(day)
-
-
+    out = ''
     if liste2 != []:
-        return 'oui'
+        out = 'oui'
+    else:
+        out = None
+    return out
