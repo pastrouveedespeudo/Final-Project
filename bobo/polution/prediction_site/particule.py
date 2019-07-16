@@ -5,7 +5,7 @@ ranking pollute in France and industrail poles"""
 import requests
 from bs4 import BeautifulSoup
 
-from CONFIG import PATH_PARTICLE_RATE
+from .CONFIG import PATH_PARTICLE_RATE
 
 def particule2(lieu):
     """we search particule rate from plumelabs"""
