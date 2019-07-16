@@ -1,61 +1,59 @@
 """This is file for prediction site web
 We'll mesure temperature and the current season"""
 
-import requests
+
 import datetime
-import urllib.request
-from bs4 import *
+import requests
 
-from .CONFIG import *
+from .CONFIG import CLE_OPEN
+from .CONFIG import PATH_TEMP
 
 
-def recuperation_donnée_température(lieu):
+def recuperation_donnee_temperature(lieu):
     """We recuperate the temperature"""
-    
-    localisation = PATH_TEMP.format(lieu,CLE_OPEN)
 
+    localisation = PATH_TEMP.format(lieu, CLE_OPEN)
     requests_html = requests.get(localisation)
-
     data = requests_html.json()
+    temperature = data['main']['temp']
+    temperature = temperature - 273.15
 
-    température = data['main']['temp']
-    température = température - 273.15
+    current_temperature = ''
 
-    if température < 0:
-        return '> 0'
-    elif température >= 0 and température <= 10:
-        return '0_10'
-    elif température >= 10 and température <= 20:
-        return '11_20'
-    elif température >= 20 and température <= 30:
-        return '21_30'
-    elif température >= 30 and température <= 40:
-        return '31_40'
-    elif température >= 40:
-        return '41>'
+    if temperature < 0:
+        current_temperature = '> 0'
+    if 0 <= temperature <= 10:
+        current_temperature = '0_10'
+    if 10 <= temperature <= 20:
+        current_temperature = '11_20'
+    if 20 <= temperature <= 30:
+        current_temperature = '21_30'
+    if 30 <= temperature <= 40:
+        current_temperature = '31_40'
+    if temperature >= 40:
+        current_temperature = '41>'
 
+    return current_temperature
 
 
 def saison():
     """We recuperate the season"""
 
     date = datetime.datetime.now()
-    mois = date.month
-    jour = date.day
+    the_month = date.month
 
-    if mois == 12 or mois == 1\
-       or mois == 2:
-        return 'hiver'
+    current_month = ''
 
-    elif mois == 3 or mois == 4\
-         or mois == 5:
-        return 'primtemps'
+    if the_month in (12, 1, 2):
+        current_month = 'hiver'
 
-    elif mois == 6 or mois == 7\
-         or mois == 8\
-         or mois == 9:
-        return 'été'
+    if the_month in (3, 4, 5):
+        current_month = 'primtemps'
 
-    elif mois == 10 or mois == 11\
-         or mois == 12:
-        return 'automne'
+    if the_month in (6, 7, 8, 9):
+        current_month = 'été'
+
+    if the_month in (10, 11, 12):
+        current_month = 'automne'
+
+    return current_month
