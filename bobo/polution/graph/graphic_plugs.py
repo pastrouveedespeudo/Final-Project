@@ -2,7 +2,11 @@
 we recuperate all data from one condition
 and create a matplolib graph"""
 
-import shutil
+import os
+import shutil as shutil
+import matplotlib
+matplotlib.use('Agg')
+
 import matplotlib.pyplot as plt
 import psycopg2
 
@@ -137,4 +141,5 @@ def diagram_plugs(data_no,
     plt.close()
 
     shutil.move(nouveau, '/app/static/popo')
+
     return nouveau
