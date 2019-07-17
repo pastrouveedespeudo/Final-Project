@@ -1,9 +1,9 @@
 """This is polenne function
     we take polenne data from plumairlab"""
 
+
 import requests
-import urllib.request
-from bs4 import *
+from bs4 import BeautifulSoup
 
 from .CONFIG_DATA_SITE import PATH_PARIS_POLENNE
 from .CONFIG_DATA_SITE import PATH_LYON_POLENNE
@@ -13,7 +13,7 @@ from .CONFIG_DATA_SITE import COMPA_POELENNE
 
 def path_function(city):
     """Here we define the path"""
-    
+
     city = city.lower()
     path = ''
 
@@ -26,23 +26,23 @@ def path_function(city):
     elif city == 'marseille':
         path = PATH_MARSEILLE_POLENNE
 
-    return path 
+    return path
+
 
 
 def soup_function(city):
     """Soup and BS4 call"""
-    
-    #path_function()
+
+
     path = path_function(city)
 
     request_html = requests.get(path)
     page = request_html.content
     soup_html = BeautifulSoup(page, "html.parser")
-    Property = soup_html.find_all("div")
-
+    properties = soup_html.find_all("div")
     liste = []
-    liste.append(str(Property))
-    
+    liste.append(str(properties))
+
     finding = str(liste).find('Confort de respiration:')
     liste = liste[0][finding:finding + 200]
 
@@ -56,19 +56,19 @@ def polenne(city):
 
     word = ''
     liste2 = []
-    oContinuer = ''
-    
+    ocontinuer = ''
+
     for i in liste:
         if i == '>':
             if word == COMPA_POELENNE:
                 word = ''
-                oContinuer = True
+                ocontinuer = True
             else:
-                word =  ''
+                word = ''
 
-        elif oContinuer == True:
+        elif ocontinuer is True:
             if i == '<':
-                oContinuer = False
+                ocontinuer = False
             liste2.append(i)
         else:
             word += i
