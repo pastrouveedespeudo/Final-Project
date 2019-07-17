@@ -3,7 +3,7 @@
 import datetime
 import requests
 from bs4 import BeautifulSoup
-from .CONFIG import DEAPARTURE
+from CONFIG import DEAPARTURE
 
 
 
@@ -26,10 +26,10 @@ def trafique_circulation():
         if (jour, mois) == i:
             dep = True
 
-    if dep == '':
+    if dep is not True:
         normale = True
 
-    elif dep is True:
+    if dep is True:
         out = 'depart_routier'
 
     elif normale is True:
@@ -61,14 +61,13 @@ def heure_de_pointe():
     if pointe is not True:
         non_pointe = True
 
-    elif pointe is True:
+    if pointe is True:
         out = 'heure_pointe'
 
     elif non_pointe is True:
         out = 'non_heure_pointe'
 
     return out
-
 
 
 def habitude():
