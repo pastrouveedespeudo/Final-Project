@@ -1,5 +1,5 @@
-"""We lunch and recup all data"""
-
+"""We lunch, recup all data and stock it into database.
+For that we call all files."""
 
 import datetime
 import psycopg2
@@ -38,7 +38,8 @@ from CONFIG import HOST
 from CONFIG import PASSWORD
 
 def heure_jour_function():
-    """We define the current time"""
+    """We define the current time day and hour for
+    have a repair into the database"""
 
     date = datetime.datetime.now()
     jour = date.day
@@ -57,8 +58,8 @@ def heure_jour_function():
 HEURE_JOUR = heure_jour_function()
 
 
-#liste = ['lyon', 'paris','marseille']
-liste = ['marseille']
+liste = ['lyon', 'paris','marseille']
+#liste = ['marseille']
 #liste = ['lyon']
 #liste = ['paris']
 
@@ -66,94 +67,74 @@ liste = ['marseille']
 for i in liste:
 
     print('TOUR: ', i)
-    m = particule2(i)
-    #print('taux de particule de', m, 'a', i)
+    data_m = particule2(i)
 
 
-    a = periode_angrais()
-    print('période engrais ?', a)
-    #insertion_angrais(i, a, heure_jour[0], heure_jour[1], m)
+    data_a = periode_angrais()
+    print('période engrais ?', data_a)
 
-    c = saison()
-    print('saison : ', c)
-    #insertion_saison(i,c, heure_jour[0], heure_jour[1], m)
+    data_c = saison()
+    print('saison : ', data_c)
 
-    d = recup_tag()
-    print('augmentation du prix barille de diesel, du d+ et du dollar : ', d)
-    #insertion_diesel(i, d, heure_jour[0], heure_jour[1], m)
+    data_d = recup_tag()
+    print('augmentation du prix barille de diesel, du d+ et du dollar : ',
+          data_d)
 
+    data_e = eruption()
+    print('erruption cet semaine ? le :', data_e)
 
-    e = eruption()
-    print('erruption cet semaine ? le :', e)
-    #insertion_eruption(i,  e, heure_jour[0], heure_jour[1], m)
+    data_g = nuit_jour()
+    print('nous sommes en periode de :', data_g)
 
-    g = nuit_jour()
-    print('nous sommes en periode de :', g)
-    #insertion_nuit_jour(i, g, heure_jour[0], heure_jour[1], m)
+    data_r = trafique_circulation()
+    print('aujourd\'hui est il un départ routier ?', data_r)
 
-    r = trafique_circulation()
-    print('aujourd\'hui est il un départ routier ?', r)
-    #insertion_trafique_circulation(i, r, heure_jour[0], heure_jour[1], m)
+    data_s = heure_de_pointe()
+    print('est ce une heure de pointe ?', data_s)
 
-    s = heure_de_pointe()
-    print('est ce une heure de pointe ?', s)
-    #insertion_heure_de_pointe(i,  s, heure_jour[0], heure_jour[1], m)
+    data_t = habitude()
+    print('quel periode de la semaine ?', data_t)
 
-    t = habitude()
-    print('quel periode de la semaine ?', t)
-    #insertion_habitude(i, t, heure_jour[0], heure_jour[1], m)
+    data_u = bouchons(i)
+    print('a', i, 'il y a un', '', data_u, 'bouchon')
 
-    u = bouchons(i)
-    print('a', i, 'il y a un', '', u, 'bouchon')
-    #insertion_bouchon(i, u, heure_jour[0], heure_jour[1], m)
+    data_v = activite_execptionnelle(i)
+    print('a', i, 'il y a manif ou pas ?', data_v)
 
-    v = activite_execptionnelle(i)
-    print('a', i, 'il y a manif ou pas ?', v)
-    #insertion_activité_execptionnelle( i, v, heure_jour[0], heure_jour[1], m)
+    data_q = habitant(i)
+    print('population active de', i, 'de :', data_q)
 
-    q = habitant(i)
-    print('population active de', i, 'de :', q)
-    #insertion_habitant(i, q, heure_jour[0], heure_jour[1], m)
+    data_n = industrie(i)
+    print(i, 'est dans une zone industrielle polluante ?', data_n)
 
-    n = industrie(i)
-    print(i, 'est dans une zone industrielle polluante ?', n)
-    #insertion_industrie(i, n, heure_jour[0], heure_jour[1], m)
+    data_o = polenne(i)
+    print('le taux de polenne a ', i, 'est : ', data_o)
 
-    o = polenne(i)
-    print('le taux de polenne a ', i, 'est : ', o)
-    #insertion_polenne(i, o, heure_jour[0], heure_jour[1], m)
+    data_l = france(i)
+    print(i, 'est', data_l, 'en france')
 
-    l = france(i)
-    print(i, 'est', l, 'en france')
-    #insertion_france(i, l, heure_jour[0], heure_jour[1], m)
+    data_h = recuperation_donnee_meteo(i)
+    print('il fait', data_h, 'à', i)
 
-    h = recuperation_donnee_meteo(i)
-    print('il fait', h, 'à', i)
-    #insertion_météo(i, h, heure_jour[0], heure_jour[1], m)
+    data_j = vent(i)
+    print('le vent est :', data_j, 'a', i)
 
-    j = vent(i)
-    print('le vent est :', j, 'a', i)
-    #insertion_vent(i, j, heure_jour[0], heure_jour[1], m)
+    data_k = pression(i)
+    print('la pression est', data_k, 'a', i)
 
+    data_b = recuperation_donnee_temperature(i)
+    print('la température est dans une plage de: ', data_b)
 
-    k = pression(i)
-    print('la pression est', k, 'a', i)
-    #insertion_pression(i, k, heure_jour[0], heure_jour[1], m)
+    data_f = incendie(i)
+    print('incendie a', i, 'ojd ?', data_f)
 
-    b = recuperation_donnee_temperature(i)
-    print('la température est dans une plage de: ', b)
-    #insertion_température(i, b, heure_jour[0], heure_jour[1], m)
-
-    f = incendie(i)
-    print('incendie a', i, 'ojd ?', f)
-    #insertion_incendie(i, f, heure_jour[0], heure_jour[1], m)
 
 
     #print('\n')
 
 
 
-
+    #We insert data into the database !
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
@@ -182,11 +163,11 @@ for i in liste:
             """)
 
 
-    values = (i, k, j, h, b, c,
-              n, q,
-              r, s, t, u, v
-              , a, d, e, f, g,
-              o, l, HEURE_JOUR[1], HEURE_JOUR[0], m)
+    values = (i, data_k, data_j, data_h, data_b, data_c,
+              data_n, data_q,
+              data_r, data_s, data_t, data_u, data_v
+              , data_a, data_d, data_e, data_f, data_g,
+              data_o, data_l, HEURE_JOUR[1], HEURE_JOUR[0], data_m)
 
     cursor.execute(sql, values)
     conn.commit()
