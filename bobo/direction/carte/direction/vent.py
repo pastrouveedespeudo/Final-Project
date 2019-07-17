@@ -11,7 +11,9 @@ from .CONFIG import CLE
 
 
 def le_vent(lieu):
-    """We call API"""
+    """We call API adn recup speed and degrees of the wind.
+    The degrees informs us where search, the next city, the
+    next coordinates to return."""
 
     localisation = PATH_VENT.format(lieu, CLE)
     requet_html = requests.get(localisation)
@@ -24,7 +26,7 @@ def le_vent(lieu):
 
 
 def function_code_postal(lieu):
-    """Sub function of code_postal()"""
+    """Here we recup the postal code of the current place."""
 
     path = PATH_POSTAL.format(lieu)
     request_html = requests.get(path)
@@ -38,7 +40,10 @@ def function_code_postal(lieu):
     return liste
 
 def code_postal(lieu):
-    """Search code postal for the weather site api call"""
+    """Thank to the postal code we can
+    search the right city. Two litle city can almost the same name
+    so it refined the search. We search a number and add it to a
+    variable."""
 
     liste = function_code_postal(lieu)
 
@@ -64,7 +69,8 @@ def code_postal(lieu):
     return liste_code[0]
 
 def function_vent_deux_pep(mot):
-    """pep 8 function"""
+    """Associated to function_vent_deux
+    we transforme SE to south east for example."""
 
     direction = ''
 
@@ -92,7 +98,7 @@ def function_vent_deux_pep(mot):
     return direction
 
 def function_vent_deux(mot):
-    """We return str"""
+    """we transforme SE to south east for example."""
 
     direction = ''
 
@@ -114,7 +120,11 @@ def function_vent_deux(mot):
     return direction
 
 def vent_deux(lieu):
-    """We scrapping into site web weather"""
+    """We scrapping into site web weather.
+    We recup the postal code and search from a format URL
+    the right city and ask the web site to give us
+    the td_corps_meteo tag. This web site give to us
+    the direction of the wind."""
 
     code = code_postal(lieu)
     path = PATH_VENT_DEUX.format(lieu, code)
