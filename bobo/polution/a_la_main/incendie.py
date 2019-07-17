@@ -1,102 +1,108 @@
 """We recup fire data"""
 
-import os
-import cv2
-import json
+import datetime
 import requests
-import datetime
-import urllib.request
-from bs4 import *
-import datetime
+from bs4 import BeautifulSoup
+
 
 PATH_LYON = 'https://www.lyoncapitale.fr/?s=incendie'
 PATH_MARSEILLE = 'https://www.20minutes.fr/search?q=incendie+marseille'
 PATH_PARIS = 'https://www.20minutes.fr/search?q=incendie+paris'
 
 
-def incendie(ville):
-    """Define the day and recup on web site the data"""
+
+def lyon(jour, mois, annee):
+    """We searching fire from lyon"""
+
+    path = PATH_LYON
+    request_lyon = requests.get(path)
+
+    page = request_lyon.content
+    soup = BeautifulSoup(page, "html.parser")
+    propriete = soup.find_all("div")
+    liste = []
+    liste.append(str(propriete))
+    daate = str(jour) + ' ' + str(mois) + ' ' + str(annee)
+    finding_a = str(liste).find(str(daate))
+    if finding_a >= 0:
+        out = 'oui'
+    else:
+        out = None
+    return out
+
+def paris_marseille(path, jour, mois, annee):
+    """We searching fire from paris, marseille"""
 
     date = datetime.datetime.now()
-    
+
+    request_html = requests.get(path)
+    page = request_html.content
+    soup = BeautifulSoup(page, "html.parser")
+    propriete = soup.find_all("div")
+    liste = []
+    liste.append(str(propriete))
+
+    finding_a = str(liste).find('incendie')
+    liste = liste[0][finding_a - 1000:finding_a + 1000]
+    mois_chi = date.month
+
+    counter = 0
+    for i in str(mois_chi):
+        counter += 1
+
+    if counter == 1:
+        daate1 = str(annee) + '-0' + str(mois_chi)+'-'+str(jour)
+        daate3 = str(jour) + '-0' + str(mois_chi)+'-'+str(annee)
+    else:
+        daate1 = str(annee) + '-' + str(mois_chi)+'-'+str(jour)
+        daate3 = str(jour) + '-' + str(mois_chi)+'-'+str(annee)
+
+    daate = str(jour) + ' ' + str(mois) + ' ' + str(annee)
+
+
+    finding_b = str(liste).find(daate)
+    finding_c = str(liste).find(daate1)
+    finding_d = str(liste).find(daate3)
+    out = ''
+    if finding_b >= 0 or finding_c >= 0 or finding_d >= 0:
+        out = 'oui'
+    else:
+        out = None
+    return out
+
+
+
+def incendie(ville):
+    """We define the current day,
+    transform it in english
+    and try to match it with the site web"""
+
+    date = datetime.datetime.now()
     jour = date.day
     mois = date.month
-    année = date.year
+    annee = date.year
 
-
-    dico = {'1':'janvier','2':'fevrier','3':'mars','4':'avril',
-            '5':'mai','6':'juin','7':'juillet','8':'août',
-            '9':'septembre','10':'octobre','11':'novembre','12':'decembre'}
+    dico = {'1': 'janvier', '2': 'fevrier', '3': 'mars', '4': 'avril',
+            '5': 'mai', '6': 'juin', '7': 'juillet', '8': 'août',
+            '9': 'septembre', '10': 'octobre', '11': 'novembre',
+            '12': 'decembre'}
 
 
     for cle, valeur in dico.items():
         if str(mois) == cle:
             mois = valeur
 
-
-    
     ville = ville.lower()
 
     if ville == 'lyon':
-        path = PATH_LYON
-        r = requests.get(path)
+        out = lyon(jour, mois, annee)
 
-
-        page = r.content
-        soup = BeautifulSoup(page, "html.parser")
-
-        propriete = soup.find_all("div")
-
-        liste = []
-
-        liste.append(str(propriete))
-        daate = str(jour) + ' ' + str(mois) + ' ' + str(année)
-        #print(daate)
-
-        a = str(liste).find(str(daate))
-        #print(a)
-        #print(liste[0][a-200:a+100])
-
-        
     elif ville == 'paris':
         path = PATH_PARIS
+        out = paris_marseille(path, jour, mois, annee)
+
     elif ville == 'marseille':
         path = PATH_MARSEILLE
-    
-    r = requests.get(path)
+        out = paris_marseille(path, jour, mois, annee)
 
-    page = r.content
-    soup = BeautifulSoup(page, "html.parser")
-
-    propriete = soup.find_all("div")
-
-    liste = []
-    liste.append(str(propriete))
-
-    a = str(liste).find('incendie')
-
-    liste = liste[0][a-1000:a+1000]
-
-    mois_chi = date.month
-
-    c = 0
-    for i in str(mois_chi):
-        c+=1
-
-    if c == 1:
-        daate1 = str(année) + '-0' + str(mois_chi)+'-'+str(jour)
-        daate3 = str(jour) + '-0' + str(mois_chi)+'-'+str(année)
-    else:
-        daate1 = str(année) + '-' + str(mois_chi)+'-'+str(jour)
-        daate3 = str(jour) + '-' + str(mois_chi)+'-'+str(année)
-        
-    daate = str(jour) + ' ' + str(mois) + ' ' + str(année)
-    
-
-    b = str(liste).find(daate)
-    c = str(liste).find(daate1)
-    d = str(liste).find(daate3)
-
-    if b >= 0 or c >= 0 or d >=0:
-        return 'oui'
-
+    return out
