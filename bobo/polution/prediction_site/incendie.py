@@ -1,4 +1,6 @@
-"""We recup fire data"""
+"""We recup fire data on differents web site.
+    we try to search on article the current date
+    of the fire section"""
 
 import datetime
 import requests
@@ -12,7 +14,9 @@ PATH_PARIS = 'https://www.20minutes.fr/search?q=incendie+paris'
 
 
 def lyon(jour, mois, annee):
-    """We searching fire from lyon"""
+    """We searching fire from lyon on
+    fire section from actuality of Lyon
+    We search from all div the current date"""
 
     path = PATH_LYON
     request_lyon = requests.get(path)
@@ -31,7 +35,10 @@ def lyon(jour, mois, annee):
     return out
 
 def paris_marseille(path, jour, mois, annee):
-    """We searching fire from paris, marseille"""
+    """Here we search
+    all differents possibilities
+    of format of date for fire section
+    of Paris and Marseille"""
 
     date = datetime.datetime.now()
 
