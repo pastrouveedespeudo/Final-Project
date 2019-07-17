@@ -59,12 +59,13 @@ def function_errupiton(liste, i):
     to_search2 = day + '-' + this_month + '-' +year
     to_search3 = day + '-' + this_month + '-' + year
     to_search4 = this_month + ' ' + day + ', ' + year
+    to_search5 = day + ' Jul'
 
     finding1 = str(liste).find(str(to_search))
     finding2 = str(liste).find(str(to_search1))
     finding3 = str(liste).find(str(to_search2))
     finding4 = str(liste).find(str(to_search3))
-    finding5 = str(liste).find(str(to_search4))
+    finding5 = str(liste).find(str(to_search5))
 
     return finding1, finding2, finding3,\
            finding4, finding5
