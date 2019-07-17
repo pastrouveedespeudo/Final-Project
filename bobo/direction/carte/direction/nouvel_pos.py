@@ -1,7 +1,6 @@
 """Here we calculate the new
-   direction
-   We have calculate
-   a 1 degree = 111.11 km
+   direction. We have calculate
+   a one degree = 111.11 km
    so we *0.009 the number of
    km for have degrees to km and add it to lat
    if direction isn't sud, nord
@@ -12,7 +11,7 @@ from math import cos
 from math import radians
 
 def long_lat_1(sens, lat, long, kilometre):
-    """Function for pep8"""
+    """function to lighten long_lat"""
 
     if sens == 'sudsudouest':
         lat = lat + kilometre
@@ -54,10 +53,12 @@ def long_lat_1(sens, lat, long, kilometre):
 
 
 def long_lat(lat, long, kiloms, sens):
-    """We calculate new direction"""
-
-    #In case where superficie.py
-    #fail or an exception is present
+    """We calculate new direction for example if
+    direction is sud, we take the current latitude
+    we add the kilometer. This is our new latitude.
+    For north east, we subtracted kilometer to latitude
+    and longitude and for longitude
+    multiply by cos(337) radiant !"""
 
     try:
         kiloms = float(kiloms)
