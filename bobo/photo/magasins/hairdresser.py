@@ -12,7 +12,10 @@ from .HAIR_CONFIG import AGENT
 
 
 def cities(city):
-    """Here we search all span"""
+    """Here we search all span.
+    On this span, we search all elements
+    of LISTE1 (cf config.py).
+    If we find it we add it to a liste."""
 
     path = PATH_HAIRDRESSER.format(city, city)
 
@@ -24,10 +27,14 @@ def cities(city):
     liste = []
 
     for i in properties:
+        #all span found.
+
         for j in LISTE1:
             finding = str(i.string).find(str(j))
+
             if finding >= 0:
                 liste.append(i.string)
+                #If we found element of LISTE1 finding will be
 
     return liste
 
@@ -36,7 +43,8 @@ def cities(city):
 
 def schedule_hair(name, city):
     """Here we search schedule of haidresser by
-    scrapping day of week"""
+    scrapping day of week.
+    We translate it for the template respons."""
 
 
     path = PATH_SCHEDULE.format(name, city)
@@ -46,8 +54,11 @@ def schedule_hair(name, city):
     properties = soup_request.find_all("td")
 
     liste = []
+
     for i in properties:
         liste.append(i.string)
+        #We stock text into a liste.
+        #Because it return tag like <span>i.STRINNNNG</span>
 
     week = ['Monday', 'Tuesday', 'Wednesday',
             'Thursday', 'Friday', 'Saturday', 'Sunday',]
@@ -58,9 +69,10 @@ def schedule_hair(name, city):
 
     for i in liste:
         for j in week:
-
             finding = str(i).find(str(j))
             if finding >= 0:
+                #If we find day of a week we translate it
+
                 if i == 'Monday':
                     translate = 'lundi'
                 elif i == 'Tuesday':
