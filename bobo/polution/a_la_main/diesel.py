@@ -1,10 +1,14 @@
-"""We recup diesel data"""
+"""Here we define tendance of diesel and dollars"""
 
 import requests
 from bs4 import BeautifulSoup
 
 def course_dollars():
-    """Here we try to get course of dollars BeautifulSoup and Request"""
+    """Here we try to get course of dollars
+    BeautifulSoup and Request. We search all span.
+    We add all of them to a list. And search elemnet
+    520 to 525. We check if the sign + is present.
+    It symbolize the course of dollars."""
 
     path = "https://prixdubaril.com/"
 
@@ -29,7 +33,9 @@ def course_dollars():
 
 
 def soup_function():
-    """We call bs4"""
+    """Soup function we search all tags (carburant_red).
+    On this web site, if one of the product increases
+    the tag is define like carburant_red."""
 
     dol = course_dollars()
 
@@ -113,3 +119,4 @@ def recup_tag():
          dol == 'dollars baisse  ':
         out = 'fort'
     return out
+
