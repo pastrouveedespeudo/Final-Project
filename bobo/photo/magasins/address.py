@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 from geopy.geocoders import Nominatim
 
-#We define global variables
+#We define globals variables
 SCRAP = ['Rue', 'Avenue', 'Allée', 'allée', 'Impasse', 'Adresse']
 AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) Appl" +\
         "eWebKit/537.36 (KHTML, like Gecko) Ch" +\
@@ -46,7 +46,10 @@ def address_geo(name, city):
 
 def city_geo(parameter):
     """Here we searching from Python modul(geopy.geocoders)
-    address from the input from html page"""
+    address from the input from html page
+    if nothing is matched we return
+    'Oups nous n'avons rien trouvé'. It inform the template
+    that nothing is found"""
 
     geocoder = Nominatim(user_agent="app.py")
     location = geocoder.geocode(parameter, True, 30)
