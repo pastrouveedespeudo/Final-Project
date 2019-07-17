@@ -64,7 +64,7 @@ from .views_function import function_tchat
 
 from .data_tchat.database import tchat_polution
 from .data_tchat.database import tchat_graphe
-from .data_tchat.database import tchat_donnée
+from .data_tchat.database import tchat_donnee
 from .data_tchat.database import tchat_machine_a_o
 from .data_tchat.database import tchat_prediction
 from .data_tchat.database import tchat_info_pollu
