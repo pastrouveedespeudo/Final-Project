@@ -10,7 +10,9 @@ from CONFIG import CLE_OPEN
 
 
 def recuperation_donnee_temperature(lieu):
-    """We recuperate the temperature"""
+    """We recuperate the current temperature
+    from a place. We ask Openweather for that.
+    We have define temperature by slice."""
 
     localisation = PATH_TEMP.format(lieu, CLE_OPEN)
     requests_html = requests.get(localisation)
@@ -38,7 +40,9 @@ def recuperation_donnee_temperature(lieu):
 
 
 def saison():
-    """We recuperate the season"""
+    """We recuperate the season
+    We ask the current season and transform
+    the number to a str variable."""
 
     date = datetime.datetime.now()
     mois = date.month
