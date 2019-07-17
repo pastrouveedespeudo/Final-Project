@@ -1,8 +1,14 @@
+finir a la main et 
+
 documenter le code
+
+refaire les test et les mettre pep8
 
 faire mention légale 
 
 Tous rechanger ce n'est pas un blog / magazine virtuel
+
+finir le readme
 
 recuperer macguyvert
 
