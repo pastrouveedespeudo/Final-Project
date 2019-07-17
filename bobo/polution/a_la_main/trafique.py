@@ -3,7 +3,7 @@
 import datetime
 import requests
 from bs4 import BeautifulSoup
-from .CONFIG import DEAPARTURE
+from CONFIG import DEAPARTURE
 
 
 
