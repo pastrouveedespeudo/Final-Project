@@ -26,7 +26,8 @@ def date():
 
 
 def soup_search():
-    """We call bs4 for search class Ln"""
+    """We calling bs4, and recup all ln tags.
+    It contains the date of all resum of volcanoes today."""
 
     path = "https://www.volcanodiscovery.com/fr/volcanoes/today.html"
     request_html = requests.get(path)
@@ -39,7 +40,8 @@ def soup_search():
 
 
 def function_erruption(liste, i):
-    """Pep 8 function"""
+    """We define all all possible dates
+    and try to find it."""
 
     day, this_month, year = date()
 
@@ -66,7 +68,11 @@ def function_erruption(liste, i):
            finding4, finding5
 
 def eruption():
-    """Here we get eruption during the last week"""
+    """Here we get eruption during the last week.
+    We call function_eruption and search all possible
+    dates from the site web and try to find
+    it. If we found an article with the current date,
+    so an eruption were present."""
 
     day, this_month, _ = date()
     liste = soup_search()
