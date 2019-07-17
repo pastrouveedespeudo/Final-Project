@@ -1,4 +1,6 @@
-"""Here we return the fire cities"""
+"""We recup fire data on differents web site.
+    we try to search on article the current date
+    of the fire section"""
 
 import datetime
 import requests
@@ -23,7 +25,9 @@ def date():
 
 
 def soup_lyon():
-    """We searchinf fire for lyon"""
+    """We searching fire from lyon on
+    fire section from actuality of Lyon
+    We search from all div the current date"""
 
     day, month, year = date()
 
@@ -47,7 +51,7 @@ def soup_lyon():
     return out
 
 def soup_request(path):
-    """We call all div"""
+    """We call all div by BS4 and we append it to a list"""
 
     request_html = requests.get(path)
     page = request_html.content
@@ -60,7 +64,9 @@ def soup_request(path):
     return liste
 
 def function_search(daate, daate1, daate3, liste):
-    """pep8 function"""
+    """Associate to search_date,
+    we try to find in the list 3 possibilities
+    of date."""
 
     finding1 = str(liste).find(daate)
     finding2 = str(liste).find(daate1)
@@ -109,7 +115,8 @@ def search_date(path):
 
 def fire_city(city):
     """here we are going to look for
-    current fire in the three different cities."""
+    current fire in the three different cities from
+    fire section of the 3 differents cities"""
 
     path = ''
     _, month, _ = date()
