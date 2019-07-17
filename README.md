@@ -13,7 +13,7 @@ finir le readme
 
 recuperer macguyvert
 
-
+ajouteer au trello pep8 3 jours au lieu des 2heures
 
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
