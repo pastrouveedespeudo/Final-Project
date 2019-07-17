@@ -1,10 +1,13 @@
-"""We call coordinate"""
+"""We give a parameter to the function.
+    it sends us a longitude and a lattitude"""
 
 from geopy.geocoders import Nominatim
 
 def ville(parametre):
-    """Here we searching from Python modul(geopy.geocoders)
-    address from the input from html page"""
+    """We call geopy library. There is a timeout (30sec)
+    We geocode the parameter here a city,
+    call the address. We transform it into str variable
+    and return it."""
 
     geocoder = Nominatim(user_agent="app.py")
     #parametre is data recup from data()
