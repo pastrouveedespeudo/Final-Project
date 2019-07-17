@@ -10,7 +10,7 @@ from CONFIG import WEATHER_PATH
 from CONFIG import PRESSURE_PATH
 
 
-def recuperation_donnée_météo(lieu):
+def recuperation_donnee_meteo(lieu):
     """We recuperate weather with API"""
     
     localisation = WEATHER_PATH.format(lieu, CLE_OPEN)
@@ -41,7 +41,7 @@ def vent(lieu):
     data = request_html.json()
 
     vent = data['wind']['speed']
-  
+
     out = ''
     if vent <= 3 :
         out = 'faible'
