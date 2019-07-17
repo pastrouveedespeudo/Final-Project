@@ -70,23 +70,23 @@ def function_vent_deux_pep(mot):
 
     if mot == 'SE':
         direction = 'sudest'
-    if mot == 'SSE':
+    elif mot == 'SSE':
         direction = 'sudsudest'
-    if mot == 'S':
+    elif mot == 'S':
         direction = 'sud'
-    if mot == 'SSO':
+    elif mot == 'SSO':
         direction = 'sudsudouest'
-    if mot == 'SO':
+    elif mot == 'SO':
         direction = 'sudouest'
-    if mot == 'OSO':
+    elif mot == 'OSO':
         direction = 'ouestsudouest'
-    if mot == 'O':
+    elif mot == 'O':
         direction = 'ouest'
-    if mot == 'ONO':
+    elif mot == 'ONO':
         direction = 'ouestnordouest'
-    if mot == 'NO':
+    elif mot == 'NO':
         direction = 'nordouest'
-    if mot == 'NNO':
+    elif mot == 'NNO':
         direction = 'nordnordouest'
 
     return direction
@@ -98,15 +98,15 @@ def function_vent_deux(mot):
 
     if mot == 'N':
         direction = 'nord'
-    if mot == 'NNE':
+    elif mot == 'NNE':
         direction = 'nordnordest'
-    if mot == 'NE':
+    elif mot == 'NE':
         direction = 'nordest'
-    if mot == 'ENE':
+    elif mot == 'ENE':
         direction = 'estnordest'
-    if mot == 'E':
+    elif mot == 'E':
         direction = 'est'
-    if mot == 'ESE':
+    elif mot == 'ESE':
         direction = 'estsudest'
     else:
         direction = function_vent_deux_pep(mot)
