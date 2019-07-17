@@ -1,5 +1,5 @@
 
-chercher les bug
+la partie mode a faire
 
 documenter le code
 
