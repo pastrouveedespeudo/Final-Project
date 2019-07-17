@@ -19,7 +19,9 @@ def dress_to_ville(lat, long):
     a part of the data. Because it return
     all information on the addresse like 
     Region, department, dependency ect.
-    So we just take the city and the department"""
+    So we just take the city and the department.
+    Under out form for the template (who translate it
+    for google map)"""
 
     coordinates = (lat, long)
     revers = reverse_geocoderr(coordinates)
