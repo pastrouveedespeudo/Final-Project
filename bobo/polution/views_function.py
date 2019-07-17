@@ -24,7 +24,7 @@ from .data_site.pollution import traffic as Traffic
 
 from .data_tchat.database import database_pollution
 from .data_tchat.database import database_graphe
-from .data_tchat.database import database_donnée
+from .data_tchat.database import database_donnee
 from .data_tchat.database import database_machine_a_o
 from .data_tchat.database import database_prediction
 from .data_tchat.database import database_info_pollu
@@ -49,7 +49,7 @@ def function_tchat(data, tchat):
     elif tchat == "tchat_graphe":
         database_graphe(data)
     elif tchat == "tchat_donnée":
-        database_donnée(data)
+        database_donnee(data)
     if tchat == "tchat_machine_a_o":
         database_machine_a_o(data)
     elif tchat == "tchat_prediction":
