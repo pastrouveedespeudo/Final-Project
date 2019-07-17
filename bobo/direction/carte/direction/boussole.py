@@ -2,7 +2,8 @@
 
 
 def function_calcul_vent(direction):
-    """We define direction of wind"""
+    """This is our tool direction we input a degrees from
+    Openweather API and go out his associated name"""
 
     out = ''
 
@@ -43,7 +44,10 @@ def function_calcul_vent(direction):
     return out
 
 def calcul_vent(direction):
-    """We define direction of wind"""
+    """We define direction of wind
+    we try for example if direction is 0 or 360 degrees so it's
+    the north, elif direction if superior to 0 and inferior
+    to 22.5 degrees so it's the north east."""
 
     out = ''
 
