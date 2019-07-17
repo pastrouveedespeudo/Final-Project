@@ -24,8 +24,8 @@ def new():
     """Here we define the new graphic"""
 
     liste_new = []
-    #liste = os.listdir('/app/static/popo')
-    liste = os.listdir(r'C:\Users\jeanbaptiste\bobo\bobo\static\popo')
+    liste = os.listdir('/app/static/popo')
+    #liste = os.listdir(r'C:\Users\jeanbaptiste\bobo\bobo\static\popo')
     for i in liste:
         try:
             number = str((i[-7])) + str((i[-6])) + str((i[-5]))
