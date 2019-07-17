@@ -1,23 +1,17 @@
-"""Here for the database we document variables"""
-
-import requests
-import datetime
-import urllib.request
-from bs4 import *
+"""Here for the site web we document variables"""
 
 def habitant(lieu):
     """We define variables"""
 
-    lyon = 328469
-    paris = 1350800 
-    marseille = 762480 
+    out = ''
 
     if lieu == 'lyon':
-        return 'supp300K'
+        out = 'supp300K'
 
     if lieu == 'paris':
-        return 'sup1M'
+        out = 'sup1M'
 
     if lieu == 'marseille':
-        return 'sup500K'
-    #population active de 15 a 59 ans
+        out = 'sup500K'
+
+    return out
