@@ -14,12 +14,12 @@ from .CONFIG import GROS_MOTS
 
 
 def function_tchat(data):
-    """On split la data,
-    et chaque mot est comparé a la liste des gros mot.
-    Si un des mots correspond on retourne non
-    pour non ne pas push en database.
-    De plus si la data est vide on ne push pas,
-    sinon on insert dans la database et retournons la data."""
+    """We split the data,
+    and each word is compared to the list of big words.
+    If one of the words matches we return no
+    for not do not push in database.
+    Moreover if the data is empty we do not push,
+    otherwise we insert in the database and return the data."""
 
     liste = data.split()
     for i in liste:
