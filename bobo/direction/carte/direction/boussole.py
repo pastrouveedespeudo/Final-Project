@@ -1,86 +1,86 @@
-"""This is our tool direction"""
-
-def calcul_vent1(direction):
-    """PEP8 function"""
-
-    direction_input = ''
-
-    if 180 < direction <= 202.5:
-        direction_input = 'sudsudouest'
-
-    if 202.5 < direction <= 225:
-        direction_input = 'sudsudouest'
-
-    if direction == 225:
-        direction_input = 'sudouest'
-
-    if 225 < direction <= 247.5:
-        direction_input = 'sudouest'
-
-    if 247.5 < direction <= 270:
-        direction_input = 'ouestsudouest'
-
-    if direction > 270:
-        direction_input = 'ouest'
-
-    if 270 < direction <= 292.5:
-        direction_input = 'ouestnordouest'
-
-    if 292.5 < direction <= 315:
-        direction_input = 'nordouest'
-
-    if direction == 315:
-        direction_input = 'nordouest'
-
-    if 315 < direction <= 337.5:
-        direction_input = 'nordnordouest'
-
-    return direction_input
+"""We define direction with degrees"""
 
 
-def calcul_vent(direction):
-    """We using trigonometric circle
-       for determinate orientation of wind
-       we transform degrees to str"""
+def function_calcul_vent(direction):
+    """We define direction of wind"""
 
-    direction_input = ''
-
-    if direction in (0, 360):
-        direction_input = 'nord'
-
-    if 0 < direction <= 22.5:
-        direction_input = 'nordnordest'
-
-    if 22.5 < direction <= 45:
-        direction_input = 'nordnordest'
-
-    if direction == 45:
-        direction_input = 'nordest'
-
-    if 45 < direction <= 67.5:
-        direction_input = 'estnordest'
-
-    if 67.5 < direction <= 90:
-        direction_input = 'estnordest'
-
-    if 90 < direction <= 112.5:
-        direction_input = 'est'
+    out = ''
 
     if 112.5 < direction <= 135:
-        direction_input = 'estsudest'
+        out = 'estsudest'
 
-    if direction == 135:
-        direction_input = 'sudest'
+    elif direction == 135:
+        out = 'sudest'
 
-    if 135 < direction <= 157.5:
-        direction_input = 'sudsudest'
+    elif 135 < direction <= 157.5:
+        out = 'sudsudest'
 
-    if 157.5 < direction <= 180:
-        direction_input = 'sudsudest'
+    elif 157.5 < direction <= 180:
+        out = 'sudsudest'
 
-    if direction == 180:
-        direction_input = 'sud'
+    elif direction == 180:
+        out = 'sud'
 
-    direction_input = calcul_vent1(direction)
+    elif 180 < direction <= 202.5:
+        out = 'sudsudouest'
 
-    return direction_input
+    elif 202.5 < direction <= 225:
+        out = 'sudsudouest'
+
+    elif direction == 225:
+        out = 'sudouest'
+
+    elif 225 < direction <= 247.5:
+        out = 'sudouest'
+
+    elif  247.5 < direction <= 270:
+        out = 'ouestsudouest'
+
+    elif 270 < direction < 360:
+        out = 'ouest'
+
+
+    return out
+
+def calcul_vent(direction):
+    """We define direction of wind"""
+
+    out = ''
+
+    if direction in (0, 360):
+        out = 'nord'
+
+    elif 0 < direction <= 22.5:
+        out = 'nordnordest'
+
+    elif 22.5 <= direction <= 45:
+        out = 'nordnordest'
+
+    elif direction == 45:
+        out = 'nordest'
+
+    elif 45 < direction <= 67.5:
+        out = 'estnordest'
+
+    elif 67.5 < direction <= 90:
+        out = 'estnordest'
+
+    elif 90 < direction <= 112.5:
+        out = 'est'
+
+    elif 270 < direction <= 292.5:
+        out = 'ouestnordouest'
+
+    elif 292.5 < direction <= 315:
+        out = 'nordouest'
+
+    elif direction == 315:
+        out = 'nordouest'
+
+    elif 315 < direction <= 337.5:
+        out = 'nordnordouest'
+
+    else:
+        out = function_calcul_vent(direction)
+
+    return out
