@@ -1,5 +1,5 @@
 """This is file for prediction site web
-We'll mesure temperature and the current season"""
+We'll recup temperature and the current season"""
 
 
 import datetime
@@ -10,7 +10,9 @@ from .CONFIG import PATH_TEMP
 
 
 def recuperation_donnee_temperature(lieu):
-    """We recuperate the temperature"""
+    """We recuperate the current temperature
+    from a place. We ask Openweather for that.
+    We have define temperature by slice."""
 
     localisation = PATH_TEMP.format(lieu, CLE_OPEN)
     requests_html = requests.get(localisation)
@@ -37,7 +39,9 @@ def recuperation_donnee_temperature(lieu):
 
 
 def saison():
-    """We recuperate the season"""
+    """We recuperate the season
+    We ask the current season and transform
+    the number to a str variable."""
 
     date = datetime.datetime.now()
     the_month = date.month
