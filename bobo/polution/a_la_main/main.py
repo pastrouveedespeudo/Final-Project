@@ -1,47 +1,68 @@
 """We lunch and recup all data"""
 
-import psycopg2
+
 import datetime
-
-from angrais import *
-from climat import *
-from diesel import *
-from eruption import *
-from incendie import *
-from jour_nuit import *
-from météo import *
-from particule import *
-from polenne import *
-from socio import *
-from trafique import *
-
-from database2 import *
+import psycopg2
 
 
+from angrais import periode_angrais
 
-def heure_jour():
-    
+from climat import saison
+from climat import recuperation_donnee_temperature
+
+from diesel import recup_tag
+from eruption import eruption
+from incendie import incendie
+from jour_nuit import nuit_jour
+
+from meteo import pression
+from meteo import vent
+from meteo import recuperation_donnee_meteo
+
+from particule import particule2
+from particule import france
+from particule import industrie
+
+from polenne import polenne
+from socio import habitant
+
+from trafique import trafique_circulation
+from trafique import heure_de_pointe
+from trafique import habitude
+from trafique import bouchons
+from trafique import activite_execptionnelle
+
+from CONFIG import DATABASE
+from CONFIG import USER
+from CONFIG import HOST
+from CONFIG import PASSWORD
+
+def heure_jour_function():
+    """We define the current time"""
+
     date = datetime.datetime.now()
     jour = date.day
     mois = date.month
-    année = date.year
+    annee = date.year
 
     heure = date.hour
     minute = date.minute
 
-    jour = str(jour)+'_'+str(mois)+'_'+str(année)
+    jour = str(jour)+'_'+str(mois)+'_'+str(annee)
     heure = str(heure)+'_'+str(minute)
-    
+
     return jour, heure
 
 
-heure_jour = heure_jour()
+HEURE_JOUR = heure_jour_function()
 
 
-liste = ['lyon', 'paris','marseille']
-#liste = ['marseille']
+#liste = ['lyon', 'paris','marseille']
+liste = ['marseille']
 #liste = ['lyon']
 #liste = ['paris']
+
+
 for i in liste:
 
     print('TOUR: ', i)
@@ -83,11 +104,11 @@ for i in liste:
     #insertion_habitude(i, t, heure_jour[0], heure_jour[1], m)
 
     u = bouchons(i)
-    print('a', i, 'il y a un','',  u, 'bouchon')
+    print('a', i, 'il y a un', '', u, 'bouchon')
     #insertion_bouchon(i, u, heure_jour[0], heure_jour[1], m)
 
-    v = activité_execptionnelle(i)
-    print('a', i ,'il y a manif ou pas ?', v)
+    v = activite_execptionnelle(i)
+    print('a', i, 'il y a manif ou pas ?', v)
     #insertion_activité_execptionnelle( i, v, heure_jour[0], heure_jour[1], m)
 
     q = habitant(i)
@@ -95,7 +116,7 @@ for i in liste:
     #insertion_habitant(i, q, heure_jour[0], heure_jour[1], m)
 
     n = industrie(i)
-    print(i,'est dans une zone industrielle polluante ?', n)
+    print(i, 'est dans une zone industrielle polluante ?', n)
     #insertion_industrie(i, n, heure_jour[0], heure_jour[1], m)
 
     o = polenne(i)
@@ -106,7 +127,7 @@ for i in liste:
     print(i, 'est', l, 'en france')
     #insertion_france(i, l, heure_jour[0], heure_jour[1], m)
 
-    h = recuperation_donnée_météo(i)
+    h = recuperation_donnee_meteo(i)
     print('il fait', h, 'à', i)
     #insertion_météo(i, h, heure_jour[0], heure_jour[1], m)
 
@@ -116,15 +137,15 @@ for i in liste:
 
 
     k = pression(i)
-    print('la pression est', k,'a', i)
+    print('la pression est', k, 'a', i)
     #insertion_pression(i, k, heure_jour[0], heure_jour[1], m)
 
-    b = recuperation_donnée_température(i)
+    b = recuperation_donnee_temperature(i)
     print('la température est dans une plage de: ', b)
     #insertion_température(i, b, heure_jour[0], heure_jour[1], m)
 
     f = incendie(i)
-    print('incendie a', i ,'ojd ?', f)
+    print('incendie a', i, 'ojd ?', f)
     #insertion_incendie(i, f, heure_jour[0], heure_jour[1], m)
 
 
@@ -133,32 +154,31 @@ for i in liste:
 
 
 
-
-    conn = psycopg2.connect(database='datu8fkornnndh',
-                             user='pwtfmpvfpsujtw',
-                             host='ec2-46-137-188-105.eu-west-1.compute.amazonaws.com',
-                             password='e260133d94ee203ca0d3d7f0ccbc37d20b27b63b06841ca37a4e42eaf9ef5696')
+    conn = psycopg2.connect(database=DATABASE,
+                            user=USER,
+                            host=HOST,
+                            password=PASSWORD)
     cursor = conn.cursor()
-    
+
     sql = ("""INSERT INTO conditions2
             (nom_ville, pression, vent,
             météo, climat, saison,
-              REGION_INDUSTRIEL_POLLUEE,
-              POPULATION_ACTIVE_HABITANT,
-              TRAFIQUE, HEURE, WEEKEND,
-              BOUCHON, ACTIVITE_EXEPTIONNELLE
-              , angrais, diesel,
-              eruption,incendie,
-              jour_nuit, polenne,
-              pos, heure_donnée, date,
-              nombre_particule)
-              VALUES (%s,%s,%s,
-              %s,%s,%s,%s,
-              %s,%s,
-              %s,%s,%s,%s,
-              %s,%s,%s,%s,
-              %s,%s,
-              %s,%s, %s, %s);
+            REGION_INDUSTRIEL_POLLUEE,
+            POPULATION_ACTIVE_HABITANT,
+            TRAFIQUE, HEURE, WEEKEND,
+            BOUCHON, ACTIVITE_EXEPTIONNELLE
+            , angrais, diesel,
+            eruption,incendie,
+            jour_nuit, polenne,
+            pos, heure_donnée, date,
+            nombre_particule)
+            VALUES (%s,%s,%s,
+            %s,%s,%s,%s,
+            %s,%s,
+            %s,%s,%s,%s,
+            %s,%s,%s,%s,
+            %s,%s,
+            %s,%s, %s, %s);
             """)
 
 
@@ -166,7 +186,7 @@ for i in liste:
               n, q,
               r, s, t, u, v
               , a, d, e, f, g,
-              o, l, heure_jour[1], heure_jour[0], m)
+              o, l, HEURE_JOUR[1], HEURE_JOUR[0], m)
 
-    cursor.execute(sql, values)    
+    cursor.execute(sql, values)
     conn.commit()
