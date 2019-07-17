@@ -4,20 +4,26 @@ import reverse_geocoder as rervers_g
 
 
 def reverse_geocoderr(coordinates):
-    """We reverse from have an address
-       and not coordinates"""
+    """Right here we enter a parameter.
+    There are latitude and longitude.
+    It return an address. It's the opposite of normally call.
+    So it call reverse"""
 
     result = rervers_g.search(coordinates)
     return result
 
 
 def dress_to_ville(lat, long):
-    """We reverse from have an address
-       and not coordinates (second technic)"""
+    """Same as reverse_geocoderr.
+    Here we take the information and recup only
+    a part of the data. Because it return
+    all information on the addresse like 
+    Region, department, dependency ect.
+    So we just take the city and the department"""
 
     coordinates = (lat, long)
     revers = reverse_geocoderr(coordinates)
-
+    print(revers)
     liste = []
     counter = 0
 
