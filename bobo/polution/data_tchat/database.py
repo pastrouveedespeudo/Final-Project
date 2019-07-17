@@ -1,14 +1,13 @@
 """Here we call database for tchat data"""
 
+
+import datetime
 import psycopg2
 
 from .CONFIG import HOST
 from .CONFIG import USER
 from .CONFIG import PASSWORD
 from .CONFIG import DATABASE
-
-import datetime
-
 
 
 def database_pollution(data):
@@ -21,24 +20,26 @@ def database_pollution(data):
 
     date = day, month, year
     date = str(date)
-    
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
+
     cur.execute("""INSERT INTO tchat_polution
                 (message, date)
                 values(%s, %s)
                 """, (data, date))
-    
+
     conn.commit()
+
+
 
 def database_graphe(data):
     """We insert new text on tchat_graphe"""
-    
+
     date = datetime.datetime.now()
     day = date.day
     month = date.month
@@ -46,25 +47,26 @@ def database_graphe(data):
 
     date = day, month, year
     date = str(date)
-    
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
+
     cur.execute("""INSERT INTO tchat_graphe
                 (message, date)
                 values(%s, %s)
                 """, (data, date))
-    
+
     conn.commit()
 
 
-def database_donnée(data):
+
+def database_donnee(data):
     """We insert new text on tchat_donnée"""
-    
+
     date = datetime.datetime.now()
     day = date.day
     month = date.month
@@ -72,25 +74,26 @@ def database_donnée(data):
 
     date = day, month, year
     date = str(date)
-    
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
+
     cur.execute("""INSERT INTO tchat_donnée
                 (message, date)
                 values(%s, %s)
                 """, (data, date))
-    
+
     conn.commit()
+
 
 
 def database_machine_a_o(data):
     """We insert new text on tchat_machine_a_o"""
-    
+
     date = datetime.datetime.now()
     day = date.day
     month = date.month
@@ -98,24 +101,26 @@ def database_machine_a_o(data):
 
     date = day, month, year
     date = str(date)
-    
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
+
     cur.execute("""INSERT INTO tchat_machine_a_o
                 (message, date)
                 values(%s, %s)
                 """, (data, date))
-    
+
     conn.commit()
+
+
 
 def database_prediction(data):
     """We insert new text on tchat_prediction"""
-    
+
     date = datetime.datetime.now()
     day = date.day
     month = date.month
@@ -123,25 +128,26 @@ def database_prediction(data):
 
     date = day, month, year
     date = str(date)
-    
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
+
     cur.execute("""INSERT INTO tchat_prediction
                 (message, date)
                 values(%s, %s)
                 """, (data, date))
-    
+
     conn.commit()
+
 
 
 def database_info_pollu(data):
     """We insert new text on tchat_info_pollu"""
-    
+
     date = datetime.datetime.now()
     day = date.day
     month = date.month
@@ -149,27 +155,20 @@ def database_info_pollu(data):
 
     date = day, month, year
     date = str(date)
-    
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
+
     cur.execute("""INSERT INTO tchat_info_pollu
                 (message, date)
                 values(%s, %s)
                 """, (data, date))
-    
+
     conn.commit()
-
-
-
-
-
-
-
 
 
 
@@ -181,22 +180,19 @@ def tchat_polution():
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
-    cur.execute("""
-                select * from tchat_polution;
-                """)
 
-    
+    cur.execute("""select * from tchat_polution;""")
+
+
     conn.commit()
-    
+
     rows = cur.fetchall()
     liste = [i for i in rows]
-    
     liste1 = traitement(liste)
-    
+
     return liste1
 
 
@@ -207,50 +203,41 @@ def tchat_graphe():
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
-    cur.execute("""
-                select * from tchat_graphe;
-                """)
 
-    
+    cur.execute("""select * from tchat_graphe;""")
+
     conn.commit()
-    
+
     rows = cur.fetchall()
     liste = [i for i in rows]
-    
     liste1 = traitement(liste)
-    
+
     return liste1
 
 
-def tchat_donnée():
+
+def tchat_donnee():
     """We insert new text on tchat_donnée"""
 
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
-    cur.execute("""
-                select * from tchat_donnée;
-                """)
 
-    
+    cur.execute("""select * from tchat_donnée;""")
+
     conn.commit()
-    
+
     rows = cur.fetchall()
     liste = [i for i in rows]
-    
     liste1 = traitement(liste)
-    
+
     return liste1
-
-
 
 
 
@@ -260,22 +247,18 @@ def tchat_machine_a_o():
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
-
+                            password=PASSWORD)
     cur = conn.cursor()
-    
-    cur.execute("""
-                select * from tchat_machine_a_o;
-                """)
 
-    
+    cur.execute("""select * from tchat_machine_a_o;""")
+
+
     conn.commit()
-    
+
     rows = cur.fetchall()
     liste = [i for i in rows]
-    
     liste1 = traitement(liste)
-    
+
     return liste1
 
 
@@ -286,23 +269,20 @@ def tchat_prediction():
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
-    cur.execute("""
-                select * from tchat_prediction;
-                """)
 
-    
+    cur.execute("""select * from tchat_prediction;""")
+
     conn.commit()
-    
+
     rows = cur.fetchall()
     liste = [i for i in rows]
-    
     liste1 = traitement(liste)
-    
+
     return liste1
+
 
 
 def tchat_info_pollu():
@@ -311,22 +291,19 @@ def tchat_info_pollu():
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
-                            password=PASSWORD) 
+                            password=PASSWORD)
 
     cur = conn.cursor()
-    
-    cur.execute("""
-                select * from tchat_info_pollu;
-                """)
 
-    
+    cur.execute("""select * from tchat_info_pollu;""")
+
+
     conn.commit()
-    
+
     rows = cur.fetchall()
     liste = [i for i in rows]
-    
     liste1 = traitement(liste)
-    
+
     return liste1
 
 
