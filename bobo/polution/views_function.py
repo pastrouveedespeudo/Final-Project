@@ -142,7 +142,7 @@ def data_function_departure():
     """We recup deaparture of cites"""
 
     no_point_lyon = ""
-    departure = Traffic('lyon')
+    departure = Traffic()
 
     try:
         departure_lyon = departure[0]
