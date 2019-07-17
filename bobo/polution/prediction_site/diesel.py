@@ -1,10 +1,14 @@
-"""We recup diesel data"""
+"""We recup diesel data on a web site."""
 
 import requests
 from bs4 import BeautifulSoup
 
 def course_dollars():
-    """Here we try to get course of dollars BeautifulSoup and Request"""
+    """Here we try to get course of dollars
+    BeautifulSoup and Request. We search all span.
+    We add all of them to a list. And search elemnet
+    520 to 525. We check if the sign + is present.
+    It symbolize the course of dollars."""
 
     path = "https://prixdubaril.com/"
     request_html = requests.get(path)
@@ -28,7 +32,9 @@ def course_dollars():
 
 
 def soup_function():
-    """Soup function we search all tags (carburant_red)"""
+    """Soup function we search all tags (carburant_red).
+    On this web site, if one of the product increases
+    the tag is define like carburant_red."""
 
     dol = course_dollars()
     path = "https://prixdubaril.com/"
@@ -41,7 +47,7 @@ def soup_function():
 
 
 def finding_function():
-    """Here we finding this words
+    """Here we finding gaz and gazole (it's 'the same')
     becasue we search red color
     it significate his increase"""
 
@@ -65,7 +71,8 @@ def finding_function():
 
 
 def function_recup_tag1(gas, gasplus, dol):
-    """Pep8 function"""
+    """Associate to function_recup_tag.
+    We enounce conditions."""
 
     out = ''
     if gas is True:
@@ -86,7 +93,8 @@ def function_recup_tag1(gas, gasplus, dol):
     return out
 
 def function_recup_tag(gas, gasplus, dol):
-    """Pep8 function"""
+    """Associate to function_recup_tag.
+    We enounce conditions."""
 
     out = ''
     if gas is False:
