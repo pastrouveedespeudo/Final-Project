@@ -1,19 +1,21 @@
+avant vendredi
 
-la partie mode a faire
 
-documenter le code
+la partie mode a faire demi journée
 
-refaire les test et les mettre pep8
+documenter le code demi journée
 
-faire mention légale 
+refaire les test et les mettre pep8 demi journée
 
-Tous rechanger ce n'est pas un blog / magazine virtuel
+faire mention légale 5heures
 
-finir le readme
+Tous rechanger ce n'est pas un blog / magazine virtuel 2heures
 
-recuperer macguyvert
+finir le readme 4h heures
 
-ajouteer au trello pep8 3 jours au lieu des 2heures
+recuperer macguyvert 
+
+
 
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
