@@ -1,21 +1,24 @@
 """We recup fertilizer data for increment database"""
 
-
 import datetime
+
 
 def periode_angrais():
     """Here we define fertilizer period"""
 
-    mois_angrais = [5,6]
-
+    mois_angrais = [5, 6]
 
     date = datetime.datetime.now()
-    
-    jour = date.day
+
     mois = date.month
-    année = date.year
+
+    out = ''
 
     for i in mois_angrais:
         if mois == i:
-            return 'oui'
+            out = 'oui'
             break
+        else:
+            out = None
+    return out
+
