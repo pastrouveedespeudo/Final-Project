@@ -1,3 +1,5 @@
+# fais rien dautre que bobo avant la soute tu recommences a tengager a bobo la
+
 finir a la main et 
 
 documenter le code
