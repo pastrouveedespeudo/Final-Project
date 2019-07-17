@@ -1,69 +1,86 @@
 """We define direction with degrees"""
 
+
+def function_calcul_vent(direction):
+    """We define direction of wind"""
+
+    out = ''
+
+    if 112.5 < direction <= 135:
+        out = 'estsudest'
+
+    elif direction == 135:
+        out = 'sudest'
+
+    elif 135 < direction <= 157.5:
+        out = 'sudsudest'
+
+    elif 157.5 < direction <= 180:
+        out = 'sudsudest'
+
+    elif direction == 180:
+        out = 'sud'
+
+    elif 180 < direction <= 202.5:
+        out = 'sudsudouest'
+
+    elif 202.5 < direction <= 225:
+        out = 'sudsudouest'
+
+    elif direction == 225:
+        out = 'sudouest'
+
+    elif 225 < direction <= 247.5:
+        out = 'sudouest'
+
+    elif  247.5 < direction <= 270:
+        out = 'ouestsudouest'
+
+    elif 270 < direction < 360:
+        out = 'ouest'
+
+
+    return out
+
 def calcul_vent(direction):
+    """We define direction of wind"""
 
-    if direction == 0 or direction == 360:
-        return 'nord'
+    out = ''
 
-    if direction > 0 and direction <= 22.5:
-        return 'nordnordest'
-    
-    if direction > 22.5 and direction <= 45:
-        return 'nordnordest'
-    
-    if direction == 45:
-        return 'nordest'
+    if direction in (0, 360):
+        out = 'nord'
 
-    if direction > 45 and direction <= 67.5:
-        return 'estnordest'
-    
-    if direction > 67.5 and direction <= 90:
-        return 'estnordest'
-    
-    if direction > 90 and direction <= 112.5:
-        return 'est'
-    
-    if direction > 112.5 and direction <= 135:
-        return 'estsudest'
-    
-    if direction == 135:
-        return 'sudest'
+    elif 0 < direction <= 22.5:
+        out = 'nordnordest'
 
-    if direction > 135 and direction <= 157.5:
-        return 'sudsudest'
+    elif 22.5 <= direction <= 45:
+        out = 'nordnordest'
 
-    if direction > 157.5 and direction <= 180:
-        return 'sudsudest'
+    elif direction == 45:
+        out = 'nordest'
 
-    if direction == 180:
-         return 'sud'
-         
-    if direction > 180 and direction <= 202.5:
-        return 'sudsudouest'
+    elif 45 < direction <= 67.5:
+        out = 'estnordest'
 
-    if direction > 202.5 and direction <= 225:
-        return 'sudsudouest'
-    
-    if direction == 225:
-        return 'sudouest'
+    elif 67.5 < direction <= 90:
+        out = 'estnordest'
 
-    if direction > 225 and direction <= 247.5:
-        return 'sudouest'
-    
-    if direction > 247.5 and direction <= 270:
-        return 'ouestsudouest'
-    
-    if direction > 270:
-        return 'ouest'
-    
-    if direction > 270 and direction <= 292.5:
-        return 'ouestnordouest'
-    
-    if direction > 292.5 and direction <= 315:
-        return 'nordouest'
-    
-    if direction == 315:
-        return 'nordouest'
-    
-    if direction > 315 and direction <= 337.5:
-        return 'nordnordouest'
+    elif 90 < direction <= 112.5:
+        out = 'est'
+
+    elif 270 < direction <= 292.5:
+        out = 'ouestnordouest'
+
+    elif 292.5 < direction <= 315:
+        out = 'nordouest'
+
+    elif direction == 315:
+        out = 'nordouest'
+
+    elif 315 < direction <= 337.5:
+        out = 'nordnordouest'
+
+    else:
+        out = function_calcul_vent(direction)
+
+    return out
