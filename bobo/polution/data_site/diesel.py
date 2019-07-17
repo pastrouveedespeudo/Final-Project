@@ -4,7 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 
 def course_dollars():
-    """Here we try to get course of dollars BeautifulSoup and Request"""
+    """Here we try to get course of dollars
+    BeautifulSoup and Request. We search all span.
+    We add all of them to a list. And search elemnet
+    520 to 525. We check if the sign + is present.
+    It symbolize the course of dollars."""
 
     path = "https://prixdubaril.com/"
     request_html = requests.get(path)
@@ -27,7 +31,9 @@ def course_dollars():
     return out
 
 def soup_function():
-    """Soup function we search all tag carburant_red"""
+    """Soup function we search all tags (carburant_red).
+    On this web site, if one of the product increases
+    the tag is define like carburant_red."""
 
     dol = course_dollars()
     path = "https://prixdubaril.com/"
