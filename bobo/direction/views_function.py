@@ -1,4 +1,6 @@
-"""Sub function of views"""
+"""This function is associated with the views to lighten it.
+    Views call views_function who call ville, nouvel_pos,
+    vent, superficie and addresse."""
 
 from .carte.direction.ville import ville
 from .carte.direction.nouvel_pos import long_lat
@@ -12,7 +14,12 @@ from .CONFIG import GROS_MOTS
 
 
 def function_tchat(data):
-    """Tchat function"""
+    """On split la data,
+    et chaque mot est comparé a la liste des gros mot.
+    Si un des mots correspond on retourne non
+    pour non ne pas push en database.
+    De plus si la data est vide on ne push pas,
+    sinon on insert dans la database et retournons la data."""
 
     liste = data.split()
     for i in liste:
@@ -27,7 +34,12 @@ def function_tchat(data):
     return data
 
 def function_map(data):
-    """Calling all function"""
+    """This function call ville from ville,
+    dress_to_ville from addresse, vent_deux
+    from vent, long_lat from nouvel_pos.
+    We recup the latitude and longitude,
+    the direction of the wind, the area of the city
+    and we calcul the new lattitude and longitude."""
 
     lat, long = ville(data)
     adresse = dress_to_ville(lat, long)
@@ -38,7 +50,11 @@ def function_map(data):
 
 
 def function_map2(data2):
-    """Transform , to ."""
+    """The template sends us an answer that we process.
+    For example, 5.5 becomes 5.5 for the first loop.
+    For the second one identifies the,
+    to be able to identify the first element is the lattitude
+    that one adds to a list. So we can identify the second element"""
 
     lat = ''
     long = ''
@@ -68,7 +84,10 @@ def function_map2(data2):
 
 def function_map3(lat, long, listee, index, data):
     """Second function if the trials insn't
-    the first one"""
+    the first one. Because we just add area of city
+    to the degrees. Now We juste recup the city,
+    the direction of wind, the area of the new coordinate
+    and calcul the new position."""
 
     lat = float(lat)
     long = listee[index:-1]
