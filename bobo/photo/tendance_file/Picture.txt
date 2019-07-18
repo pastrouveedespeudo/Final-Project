@@ -3,4 +3,9 @@ For the head and the body, turn them around
 so that you do not see any more arms or faces.
 Do not want the feet.
 
+You need to place your picture into the path : '/static/bobo'
+
+First you need to go in remplir_database
+Second you must lunch analyse_femme_haut.py care it take a litle be longer
+
 Contact me to jeanbaptisteservais@gmail.fr
