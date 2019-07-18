@@ -6,10 +6,10 @@ or hairdressers for exemple."""
 import requests
 from bs4 import BeautifulSoup
 
-from .GYM_CONFIG import GYM
-from .GYM_CONFIG import PATH_CITY
-from .GYM_CONFIG import AGENT
-from .GYM_CONFIG import PATH_SCHEDULE
+from GYM_CONFIG import GYM
+from GYM_CONFIG import PATH_CITY
+from GYM_CONFIG import AGENT
+from GYM_CONFIG import PATH_SCHEDULE
 
 
 
