@@ -2,83 +2,59 @@
 weather, wind and pressure functions
 for site web"""
 
-
-import requests
 import datetime
-import urllib.request
-from bs4 import *
+import requests
 
 from CONFIG import CLE_OPEN
 from CONFIG import WEATHER_PATH
 from CONFIG import PRESSURE_PATH
 
 
-def recuperation_donnée_météo(lieu):
+def recuperation_donnee_meteo(lieu):
     """We recuperate weather with API"""
     
     localisation = WEATHER_PATH.format(lieu, CLE_OPEN)
-    r = requests.get(localisation)
-    data=r.json()
-
+    request_html = requests.get(localisation)
+    data = request_html.json()
 
     méteo = data['weather'][0]['main']
 
-    if méteo == "Rain" or\
-       méteo == 'Thunderstorm':
-        return 'pluie'
+    out = ''
+
+    if méteo in ("Rain", "Thunderstorm"):
+        out = 'pluie'
     
-    elif méteo == "Clouds" or\
-         méteo == 'Mist' or\
-         méteo == 'Haze':
-        return 'nuageux'
+    elif méteo in ("Clouds", 'Mist', 'Haze'):
+        out = 'nuageux'
     
     elif méteo == "Clear":
-        return 'beau_temps'
+        out = 'beau_temps'
 
-
-
-
-
-
-
-
-
-
-
+    return out
 
 
 def vent(lieu):
     """We recuperate wind with API"""
     
     localisation = WEATHER_PATH.format(lieu, CLE_OPEN)
-    r = requests.get(localisation)
-    data=r.json()
+    request_html = requests.get(localisation)
+    data = request_html.json()
 
-    
-    try:
-        vent_degres = data['wind']['deg']
-    except:
-        pass
-
-    
     vent = data['wind']['speed']
 
-
+    out = ''
     if vent <= 3 :
-        return 'faible'
+        out = 'faible'
         
-    elif vent <= 6 and vent > 3:
-        return 'moyen fort'
+    elif 6 >= vent > 3:
+        out = 'moyen fort'
 
-    elif vent <= 8 and vent > 6:
-        return 'fort'
+    elif 8 >= vent > 6:
+        out = 'fort'
 
     elif vent >= 8:
-        return 'tres fort'
-
-
-
-
+        out = 'tres fort'
+    return out
 
 
 
@@ -86,57 +62,21 @@ def pression(lieu):
     """We recuperate pressure with API"""
 
     localisation = WEATHER_PATH.format(lieu, CLE_OPEN)
-    r = requests.get(localisation)
-    data=r.json()
+    request_html = requests.get(localisation)
+    data = request_html.json()
     
     date = datetime.datetime.now()
     mois = date.month
 
     pression = data['main']['pressure']
 
-    
+    out = ''
     if pression >= 1030:
-        return 'forte'
+        out = 'forte'
 
     elif pression <= 1013:
-        return 'faible'
+        out = 'faible'
 
     else:
-        return 'normale'
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        out = 'normale'
+    return out
