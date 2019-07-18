@@ -1,3 +1,7 @@
+c un site web sous forme de magazine et dans un magazine y'a des fois des thèses et anti thèses et les avis extérieurs compte donc forum !
+
+relire l'intro
+
 faire mention légale 5heures
 
 Tous rechanger ce n'est pas un blog / magazine virtuel 2heures
@@ -5,16 +9,16 @@ Tous rechanger ce n'est pas un blog / magazine virtuel 2heures
 recuperer macguyvert 
 
 
-# BLOG sur la mode et la pollution, Le magazine virtuel
+# Un site web sur la mode et la pollution, Le magazine virtuel
 
-<em>Un blog qui se veut etre différent des autres, Un blog application, Le Magazine Virtuel</em>
+<em>Un Site web sous la forme d'un article de magazine qui se veut être différent des autres, Le Magazine Virtuel</em>
 <br><br><br>
 
 
 
 # Partie mode
 
-<em>La description de l'architecture de ce blog est expliquer dans le dossier administratif/diagramme de classe</em>
+<em>La description de l'architecture de ce site est expliqué dans le dossier administratif/diagramme de classes</em>
 <br><br>
 <u>remplir la database</u>
 <br>
@@ -25,7 +29,7 @@ Dans un premier temps il faut:
 
 
 #tendance
-- Une fois la tendance remplis la views (après appel de la page) va afficher/appeler par photo.tendance_site.analyse_database.tendance le fichier
+- Une fois la tendance remplie, la views (après appel de la page) va afficher/appeler par photo.tendance_site.analyse_database.tendance le fichier
 questionnant la database et l'affiche sur un template.
 
 #coiffure/habits
@@ -42,7 +46,7 @@ Remplir la database à la main ou par tache cron depuis le dossier (pollution/a_
 <br><br><br>
 # Le dossier administratif
 
-Dans ce dossier nous proposons une solution fonctionnelle et techniques. Afin de la bonne compréhension nous avons mis les diagrammes de base de donnée ainsi que les diagrammes de classe.
+Dans ce dossier nous proposons une solution fonctionnelle et technique. Afin de la bonne compréhension nous avons mis les diagrammes de base de données ainsi que les diagrammes de classe.
 
 
 <br><br>
@@ -65,24 +69,24 @@ https://myprofilmypollution.herokuapp.com
 Résumé (la note d'intention se trouve dans livrable)
 
 
-Suivre les concept de la mode est crutial aujoud'hui. La mode est un ensemble de règle qui définisse les critères de la beauté. Oui mais... la mode n'est pas forcement la beauté ! ici nous parlerons de non négligence de soi. En effet, Verriez vous George Clooney avec les sourciles du comte Olaf ou avec une barbe d'ermit? Verriez vous Madonna avec une crete verte ? Non car ces personne suivent la mode.Elle vous permet dassurer votre crédibilité au travail mais aussi votre confiance en vous. Il a été démontrer scientifiquement que  d'etre beau et bien habillé aumgentait le salaire les bonnes notes, la sensation d'intelligence et de sympathie.  Il est donc très important detre bien sur soi tant au niveau vestimentaire qu'au niveau du corps car l'estime de soi augmente la sympathie, le bien etre en somme le bonheur. Une coupe tendance ou des vatements des années 50 peuvent etre révolus aujourd'hui  et paraitre "moche" de nos jours. Il faut donc de suivre la mode et par le biais de conformisme et par notre instrinct grégaire car la mode est une variable indispensable à la beauté et a l'impression que l'on donne à autruit de nos jours. Pour cela nous proposons des fonctionnalités qui présentent les coloris de la mode au niveau vestimentaire mais aussi d'adapté sa coupe selon son cheveux et la forme de son visage par des draggable de coupe et de vetement mais la mode, à quel prix ? Au prix des futures générations ? En effet, la mode est le deuxieme facteur de pollution apres le pétrol. Par le non recyclage des vetements, le transport ou bien la teinture des vetements le monde de la beauté aggrave la qualité de l'air. Nous essayons donc d'aider mais aussi d'informer a travers ce site web, de donnée les connaissances a l'utilisateur des différents aspect de la pollution. Afin de faire cela nous allons raisoner de la facon suivante:  nous présentons les informations sur la pollution puis les données surlequelles nous nous sommes basés,  puis les graphiques et une des solutions qui existe pour lutter contre la polluiton.  Bien sur nous avons fait d'autres fonctionnalités comme
-une carte des vent afin de suivre la pollution et une prédiction afin de suivre la pollution en temps réel selon
-des elements bien précis.
-
-La mode est importante pour la confiance en soi mais 
-aussi vis a vis des autres (de maniere insconsciente (impression de sympathie, inlligence...))
-mais elle a plusieurs conséquences nefastes sur la placenete vis a vis de la pollution de l'air par exemple.
+Suivre les concepts de la mode est crucial aujourd'hui. La mode est un ensemble de règles qui définisse les critères de la beauté. Oui mais... la mode n'est pas forcément la beauté ! ici nous parlerons de non-négligence de soi. En effet, Verriez vous George Clooney avec les sourciles du comte Olaf ou avec une barbe d'hermitte? Verriez-vous Madonna avec une crête verte ? Non car ces personnes suivent la mode. Elle vous permet dassurer votre crédibilité au travail mais aussi votre confiance en vous. Il a été démontrer scientifiquement que d'être beau et bien habillé augmentait le salaire, les bonnes notes, la sensation d'intelligence et de sympathie. Il est donc très important d'être bien sur soi tant au niveau vestimentaire qu'au niveau du corps car l'estime de soi augmente la sympathie, le bien etre en somme le bonheur. Une coupe tendance où des vêtements des années 50 peuvent être révolus aujourd'hui et paraître "moches" de nos jours. Il faut donc de suivre la mode et par le biais de conformismes et par notre instinct grégaire car la mode est une variable indispensable à la beauté et à l'impression que l'on donne à autrui de nos jours.
+<br><br>
+Pour cela nous proposons des fonctionnalités qui présentent les coloris de la mode au niveau vestimentaire mais aussi d'adapter sa coupe selon son cheveu et la forme de son visage par des dragables de coupe et de vêtement mais la mode, à quel prix ? Au prix des futures générations ? En effet, la mode est le deuxième facteur de pollution après le pétrole. Par le non-recyclage des vêtements, le transport ou bien la teinture des vêtements le monde de la beauté aggrave la qualité de l'air. Nous essayons donc d'aider mais aussi d'informer à travers ce site web, de données les connaissances a l'utilisateur des différents aspects de la pollution. Afin de faire cela nous allons raisonner de la façon suivante: nous présentons les informations sur la pollution puis les données surlequelles nous nous sommes basés, puis les graphiques et une des solutions qui existent pour lutter contre la pollution. Bien sûr nous avons fait d'autres fonctionnalités comme
+une carte des vents afin de suivre la pollution et une prédiction afin de suivre la pollution en temps réel selon des éléments bien précis.
+La mode est importante pour la confiance en soi mais aussi vis-à-vis d'autres (de manière inconsciente (impression de sympathie, intelligence...)) mais elle a plusieurs conséquences néfastes sur la planète vis-à-vis de la pollution de l'air par exemple.
 
 <br><br>
 # Les Tests
 
-Se trouvent dans le fichier test.py de chaques application. Nous avons testé les pages et leur status de 200.
+Se trouvent dans le fichier test.py de chaque application. Nous avons testé les pages et leur status de 200.
 
-Les tests de fonction se trouvent dans le dossier test de chaque composant de viexs_function composant views.py. Dedans nous regroupons les tests des fonctions ainsi que des url et API sollicitées
+Les tests de fonction se trouvent dans le dossier test de chaque composant de viexs_function composant views.py. Dedans nous regroupons les tests des fonctions ainsi que des url et API sont sollicitées.
+
+A noter que les tests ne seront pas toujours 'PASSED' car nos fonctions appellent des données qui dépendent de données indépendantes. Par exemple la météo, ou la taille d'un bouchon. 
 <br><br>
 # RECQUIS
 
-- Faire en environement virtuel
+- Faire en environnement virtuel
 
 - Installer python, Django via la commande pip (pip s'installe lors de l'installation de python)
 
@@ -102,9 +106,3 @@ La prédiction qui au bout d'un moment va sortir qu'un seul chiffre
 le nombre de data qui nous est limité
 
 Un conseil, une amélioration ? jeanbaptiste.servais@gmail.com
-
-
-
-
-
-
