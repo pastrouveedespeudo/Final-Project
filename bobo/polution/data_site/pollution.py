@@ -22,7 +22,10 @@ from .CONFIG_DATA_SITE import DEAPARTURE
 
 
 def particle_rate(city):
-    """we search particule rate from plumelabs"""
+    """we search particule rate from plumelabs
+    by recup report__pi-number tag.
+    We try to recup integer from this tag
+    and to add it to a list"""
 
     number = []
     liste = []
@@ -152,7 +155,8 @@ def traffic_function():
 
 
 def traffic():
-    """we search traffic"""
+    """we search traffic by comparaison of element
+    of list and current date"""
 
     day, month, _, hour = traffic_function()
 
@@ -190,7 +194,8 @@ def traffic():
 
 
 def habit():
-    """we search habit"""
+    """we search habitby comparaison of element
+    of list and current date"""
 
     weekend = ''
     day_of_week = ''
@@ -228,7 +233,9 @@ def city_ranking_pollute(lieu):
 
 
 def industrial_area(city):
-    """we search industrial area Fr"""
+    """we search industrial area Fr
+    on a web site by scrapping with element
+    of POLLUTING_POLE"""
 
     site = ''
 
@@ -255,7 +262,9 @@ def industrial_area(city):
 
 
 def traffic_lyon_request(path):
-    """we search demonstration Lyon"""
+    """we search demonstration Lyon.
+    We seach from a web site news tag. And we
+    search the word Manifestation"""
 
     request_html = requests.get(path)
     page = request_html.content
@@ -276,7 +285,9 @@ def traffic_lyon_request(path):
 
 
 def traffic_paris_function_request(path):
-    """This is paris function"""
+    """we search demonstration Paris.
+    We seach from a web site wday tag. And we
+    search the word Manifestation"""
 
 
     date = datetime.datetime.now()
@@ -296,7 +307,8 @@ def traffic_paris_function_request(path):
 
 
 def traffic_paris_function_reuqest1(path):
-    """This is paris function"""
+    """Here we search demonstration paris
+    by scrapping day of the week."""
 
     _, date, day, day_week = traffic_paris_function_request(path)
 
@@ -334,7 +346,9 @@ def traffic_paris_function_reuqest1(path):
 
 
 def traffic_paris_request(path):
-    """we search demonstration Paris"""
+    """we search demonstration Paris.
+    We try to transform data to integer.
+    And to match it to current date."""
 
     numero_mois, the_day, _,\
                  day, day_week = traffic_paris_function_reuqest1(path)
@@ -360,7 +374,8 @@ def traffic_paris_request(path):
 
 
 def traffic_marseille_request(path):
-    """we search demonstration Marseille"""
+    """Here we search demonstration Marseille
+    by scrapping day of the week."""
 
     numero_mois, the_day, _,\
                  day, day_week = traffic_paris_function_reuqest1(path)
@@ -432,7 +447,8 @@ def socio(city):
 
 
 def function_plugs_lyon(city):
-    """bs4 lyon fplugs function"""
+    """We define plugs. We search font38 green tag
+    because it's the contains of the plugs"""
 
 
     path = "https://www.moncoyote.com/fr/info-trafic-{}.html".format(city)
@@ -477,27 +493,31 @@ def plugs_lyon_function(kilom, the_plugs):
 
 
 def plugs_lyon(city):
-    """Here we recup plugs from lyon"""
+    """We traiting list and define plugs by pugls_function"""
 
     liste = []
     kilom = ''
     properties = function_plugs_lyon(city)
-
+    #font38 green tag (contains the plugs like  '      24km')
 
     for i in properties:
         for j in i:
             if j in ('K', 'k'):
                 kilom = True
-
+                #If we found k or K for km
+                #We define True variable.
     try:
         for i in properties:
             for j in i:
                 if j == ',':
                     liste.append(str('.'))
+                    #We transform ',' to '.' 
                 try:
                     j = int(j)
                     if j == int(j):
                         liste.append(str(j))
+                        #We try to transform all element
+                        #to int.
                 except ValueError:
                     pass
 
@@ -544,7 +564,8 @@ def plugs_paris_function(the_plugs):
 
 
 def plugs_paris():
-    """ plugs paris function"""
+    """We define plugs for paris, we call bs4 and
+    define plugs size"""
 
     path = "http://www.sytadin.fr/sys/barometre_courbe_cumul.jsp.html#"
 
