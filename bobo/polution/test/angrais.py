@@ -1,31 +1,30 @@
-"""We recup fertilizer data for increment database"""
+"""We recup fertilizer data for increment database.
+The fertilizer period is in June and May.
+We define the current period and matching it to mois_angrais.
+If this matching so we return yes else we return None."""
 
+import datetime
 
-import requests
-import datetime
-import urllib.request
-from bs4 import *
-import datetime
 
 def periode_angrais():
+    """We run the loop and put conditions.
+    If there is a comparaison so we return
+    yes and break the loop. Else
+    (no comparaison) we define out like None."""
 
-    mois_angrais = [5,6]
-
+    mois_angrais = [5, 6]
 
     date = datetime.datetime.now()
-    
-    jour = date.day
+
     mois = date.month
-    année = date.year
+
+    out = ''
 
     for i in mois_angrais:
-        print(i, mois)
         if mois == i:
-            return 'oui'
+            out = 'oui'
             break
-
-
-
-
-
+        else:
+            out = None
+    return out
 
