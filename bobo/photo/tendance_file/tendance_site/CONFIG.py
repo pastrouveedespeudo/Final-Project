@@ -1,4 +1,5 @@
-"""This is config for tendance site"""
+"""This is config for tendance site if there is a bug, we must add 
+list into list"""
 
 DATABASE = 'datu8fkornnndh'
 USER = 'pwtfmpvfpsujtw'
