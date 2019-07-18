@@ -1,7 +1,7 @@
 """Here we call database and return
     visualisation_donnée2 data"""
 
-from .database import VisualisationTable
+from database import VisualisationTable
 
 
 class Visualisation:
