@@ -1,10 +1,6 @@
-finir les test 
-
 faire mention légale 5heures
 
 Tous rechanger ce n'est pas un blog / magazine virtuel 2heures
-
-finir le readme 4h heures
 
 recuperer macguyvert 
 
