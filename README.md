@@ -1,10 +1,5 @@
 avant vendredi
 
-
-la partie mode a faire demi journée
-
-documenter le code demi journée
-
 refaire les test et les mettre pep8 demi journée
 
 faire mention légale 5heures
@@ -15,7 +10,7 @@ finir le readme 4h heures
 
 recuperer macguyvert 
 
-
+#verifier la documentation
 
 
 # BLOG sur la mode et la pollution, Le magazine virtuel
