@@ -1,65 +1,64 @@
 """This is file for increment database
 We'll mesure temperature and the current season"""
 
-import requests
+
 import datetime
-import urllib.request
-from bs4 import *
+import requests
 
-from CONFIG import *
+from CONFIG import PATH_TEMP
+from CONFIG import CLE_OPEN
 
 
-def recuperation_donnée_température(lieu):
-    """We recuperate the temperature"""
-    
-    localisation = PATH_TEMP.format(lieu,CLE_OPEN)
+def recuperation_donnee_temperature(lieu):
+    """We recuperate the current temperature
+    from a place. We ask Openweather for that.
+    We have define temperature by slice."""
 
+    localisation = PATH_TEMP.format(lieu, CLE_OPEN)
     requests_html = requests.get(localisation)
-
     data = requests_html.json()
 
-    température = data['main']['temp']
-    température = température - 273.15
+    temperature = data['main']['temp']
+    temperature = temperature - 273.15
 
-    if température < 0:
-        return '> 0'
-    elif température >= 0 and température <= 10:
-        return '0_10'
-    elif température >= 10 and température <= 20:
-        return '11_20'
-    elif température >= 20 and température <= 30:
-        return '21_30'
-    elif température >= 30 and température <= 40:
-        return '31_40'
-    elif température >= 40:
-        return '41>'
+    out = ''
 
+    if temperature < 0:
+        out = '> 0'
+    elif 0 <= temperature <= 10:
+        out = '0_10'
+    elif 10 <= temperature <= 20:
+        out = '11_20'
+    elif 20 <= temperature <= 30:
+        out = '21_30'
+    elif 30 <= temperature <= 40:
+        out = '31_40'
+    elif temperature >= 40:
+        out = '41>'
+
+    return out
 
 
 def saison():
-    """We recuperate the season"""
+    """We recuperate the season
+    We ask the current season and transform
+    the number to a str variable."""
 
     date = datetime.datetime.now()
     mois = date.month
-    jour = date.day
 
-    if mois == 12 or mois == 1\
-       or mois == 2:
-        return 'hiver'
+    out = ''
 
-    elif mois == 3 or mois == 4\
-         or mois == 5:
-        return 'primtemps'
+    if mois in (12, 1, 2):
+        out = 'hiver'
 
-    elif mois == 6 or mois == 7\
-         or mois == 8\
-         or mois == 9:
-        return 'été'
+    elif mois in (3, 4, 5):
+        out = 'primtemps'
 
-    elif mois == 10 or mois == 11\
-         or mois == 12:
-        return 'automne'
+    elif mois in (6, 7, 8, 9):
+        out = 'été'
 
+    elif mois in (10, 11, 12):
+        out = 'automne'
 
-
-
+    return out
