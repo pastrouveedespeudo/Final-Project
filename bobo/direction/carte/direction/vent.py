@@ -41,9 +41,8 @@ def function_code_postal(lieu):
 
 def code_postal(lieu):
     """Thank to the postal code we can
-    search the right city. Two litle city can almost the same name
-    so it refined the search. We search a number and add it to a
-    variable."""
+    call the URL of weather. Indeed,
+    this url need the city and the postal code."""
 
     liste = function_code_postal(lieu)
 
