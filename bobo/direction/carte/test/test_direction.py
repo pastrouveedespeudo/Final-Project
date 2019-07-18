@@ -27,7 +27,7 @@ def test_ville():
 
 def test_vent():
     parametre = 'crest'
-    sortie = 4.1, 20
+    sortie = 3.6, 340
     assert script_vent.le_vent(parametre) == sortie
 
 
@@ -70,7 +70,7 @@ def test_direction():
 
 def test_vent2():
     parametre = 'crest'
-    sortie = 'nord'
+    sortie = 'nordnordest'
     assert script_vent.vent_deux(parametre) == sortie
 
 
@@ -122,7 +122,7 @@ def test_superficie():
 def test_views_function():
 
     para = 'crest' 
-    sortie = ((44.5178475, 5.0236641), 44.7282675, 5.0236641)
+    sortie = ((44.5178475, 4.829971468736538), 44.7282675, 5.0236641)
     assert views.function_map(para) == sortie
 
 
