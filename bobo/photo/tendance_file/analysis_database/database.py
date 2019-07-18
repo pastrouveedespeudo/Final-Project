@@ -13,13 +13,9 @@ from .CONFIG import PASSWORD
 class Table:
     """We create class table"""
 
-    def __init__(self):
-        """Initialise constructor"""
 
-        pass
-
-
-    def creation_table_donnee(self):
+    @classmethod
+    def creation_table_donnee(cls):
         """Create data table for top and bot of picture.
         Stock name, size and color of the picture."""
 
@@ -44,7 +40,9 @@ class Table:
         conn.commit()
 
 
-    def creation_table_donnee2(self):
+
+    @classmethod
+    def creation_table_donnee2(cls):
         """Create data table for top and bot of picture.
         Stock name, size and color of the haircut picture."""
 
@@ -63,7 +61,8 @@ class Table:
         conn.commit()
 
 
-    def table_analyse(self):
+    @classmethod
+    def table_analyse(cls):
         """We stocking the analysis of the picture"""
 
         conn = psycopg2.connect(database=DATABASE,
@@ -80,12 +79,12 @@ class Table:
 
 
 
-class Insertion_table:
+class Insertiontable:
     """We create insertion class"""
 
 
     def __init__(self, taille_haut, taille_bas,
-                 nom, sexe, haut, bas, coiffure,
+                 nom, sexe, haut, bas,
                  image):
         """Initialise constructor"""
 
@@ -95,9 +94,10 @@ class Insertion_table:
         self.sexe = sexe
         self.haut = haut
         self.bas = bas
-        self.coiffure = coiffure
         self.image = image
-        
+
+
+
     def insertion_info(self, nom, sexe, haut,
                        bas, taille_haut, taille_bas):
         """Here we insert into database name, sexe, top, bot
@@ -131,8 +131,8 @@ class Insertion_table:
 
 
 
-
-    def coiffure(self, image, coiffure):
+    @classmethod
+    def coiffure(cls, image, coiffure):
         """We insert data of haircuts pictures"""
 
         conn = psycopg2.connect(database=DATABASE,
@@ -142,13 +142,13 @@ class Insertion_table:
 
         cur = conn.cursor()
 
-        self.coiffure = coiffure
-        self.image = image
+        cls.coiffure = coiffure
+        cls.image = image
 
 
         cur.execute("""insert into bobo1_coiffure
                     (image, coiffure)
-                    values(%s, %s);""", (self.image, self.coiffure))
+                    values(%s, %s);""", (cls.image, cls.coiffure))
 
 
         conn.commit()
@@ -159,7 +159,9 @@ class Insertion_table:
 class VisualisationTable:
     """This is a visualisation class"""
 
-    def visualisation_donnee(self):
+
+    @classmethod
+    def visualisation_donnee(cls):
         """We visualise data (we add it to a list)"""
 
         conn = psycopg2.connect(database=DATABASE,
@@ -178,7 +180,10 @@ class VisualisationTable:
 
         return liste
 
-    def visualisation_donnee2(self):
+
+
+    @classmethod
+    def visualisation_donnee2(cls):
         """We visualise haircuts data (we add it to a list)"""
 
         conn = psycopg2.connect(database=DATABASE,
