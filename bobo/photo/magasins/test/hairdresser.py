@@ -5,10 +5,10 @@ and their schedul by city input"""
 import requests
 from bs4 import BeautifulSoup
 
-from .HAIR_CONFIG import LISTE1
-from .HAIR_CONFIG import PATH_HAIRDRESSER
-from .HAIR_CONFIG import PATH_SCHEDULE
-from .HAIR_CONFIG import AGENT
+from HAIR_CONFIG import LISTE1
+from HAIR_CONFIG import PATH_HAIRDRESSER
+from HAIR_CONFIG import PATH_SCHEDULE
+from HAIR_CONFIG import AGENT
 
 
 def cities(city):
