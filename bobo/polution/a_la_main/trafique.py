@@ -91,7 +91,8 @@ def habitude():
 
 
 def function_plugs_lyon(city):
-    """We define plugs"""
+    """We define plugs. We search font38 green tag
+    because it's the contains of the plugs"""
 
     path = "https://www.moncoyote.com/fr/info-trafic-{}.html".format(city)
 
@@ -104,7 +105,7 @@ def function_plugs_lyon(city):
 
 
 def pugls_function(kilometers, out):
-    """Pep 8 function we define size of the plugs"""
+    """We define the size of the plugs."""
 
     size_plugs = ''
 
@@ -140,21 +141,27 @@ def plugs_lyon(city):
     kilometers = ''
 
     properties = function_plugs_lyon(city)
+    #font38 green tag (contains the plugs like  '      24km')
 
     for i in properties:
         for j in i:
             if j in ('K', 'k'):
                 kilometers = True
+                #If we found k or K for km
+                #We define True variable.
 
     try:
         for i in properties:
             for j in i:
                 if j == ',':
                     liste.append(str('.'))
+                    #We transform ',' to '.'
                 try:
                     j = int(j)
                     if j == int(j):
                         liste.append(str(j))
+                        #We try to transform all element
+                        #to int.
                 except:
                     pass
 
@@ -247,7 +254,9 @@ def bouchons(city):
 
 
 def traffic_lyon_request(path):
-    """we search demonstration Lyon"""
+    """we search demonstration Lyon.
+    We seach from a web site news tag. And we
+    search the word Manifestation"""
 
     request_html = requests.get(path)
     page = request_html.content
@@ -268,7 +277,9 @@ def traffic_lyon_request(path):
 
 
 def traffic_paris_function_request(path):
-    """we search demonstration Paris"""
+    """we search demonstration Paris.
+    We seach from a web site wday tag. And we
+    search the word Manifestation"""
 
     date = datetime.datetime.now()
     day = date.day
@@ -288,7 +299,8 @@ def traffic_paris_function_request(path):
 
 
 def traffic_paris_function_reuqest1(path):
-    """we search demonstration paris"""
+    """Here we search demonstration paris
+    by scrapping day of the week."""
 
     _, date, day, day_week = traffic_paris_function_request(path)
 
@@ -326,9 +338,12 @@ def traffic_paris_function_reuqest1(path):
 
 
 def traffic_paris_request(path):
-    """we search demonstration Paris"""
+    """we search demonstration Paris.
+    We try to transform data to integer.
+    And to match it to current date."""
 
-    numero_mois, the_day, _, day, day_week = traffic_paris_function_reuqest1(path)
+    numero_mois, the_day, _, day,\
+                 day_week = traffic_paris_function_reuqest1(path)
 
     num = []
 
@@ -351,9 +366,11 @@ def traffic_paris_request(path):
 
 
 def traffic_marseille_request(path):
-    """we search demonstration Marseille"""
+    """Here we search demonstration Marseille
+    by scrapping day of the week."""
 
-    numero_mois, the_day, _, day, day_week = traffic_paris_function_reuqest1(path)
+    numero_mois, the_day, _, day,\
+                 day_week = traffic_paris_function_reuqest1(path)
 
     num = []
 
