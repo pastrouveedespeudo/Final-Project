@@ -1,5 +1,7 @@
 avant vendredi
 
+finir tendance pep8
+
 refaire les test et les mettre pep8 demi journée
 
 faire mention légale 5heures
