@@ -1,7 +1,4 @@
-avant vendredi
-
-
-refaire les test et les mettre pep8 demi journée
+finir les test 
 
 faire mention légale 5heures
 
