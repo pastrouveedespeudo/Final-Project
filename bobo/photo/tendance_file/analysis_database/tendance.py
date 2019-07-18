@@ -1,11 +1,11 @@
+
+
 import psycopg2
 
 from .CONFIG import DATABASE
 from .CONFIG import USER
 from .CONFIG import HOST
 from .CONFIG import PASSWORD
-from .CONFIG import LISTE1
-from .CONFIG import LISTE5
 
 from .coupe_analysis import recup2
 
@@ -13,40 +13,54 @@ from .coupe_analysis import recup2
 
 def dataaa():
     """Here we call database and select
-    data recorded"""
-    
+    data recorded from donnee1.
+    It's all picture which includes
+    top and bot of clothes"""
+
     conn = psycopg2.connect(database=DATABASE,
                             user=USER,
                             host=HOST,
                             password=PASSWORD)
 
     cur = conn.cursor()
-
     cur.execute("""select * from analyse_donnee1;""")
-
     conn.commit()
 
     rows = cur.fetchall()
     liste = [i for i in rows]
-    
+
     return liste
 
 
 def i_into_i(liste):
-    """Here we clean list from dataaa()"""
-    
+    """Here we clean list from dataaa().
+    the goal is to recup row data like
+    (green,1), (gray,5), photo1.jpg, "bas"
+    in a list of list
+    For this we say: if the 1st element is ')'
+    the 2nd element is ',' ... so you insert to position counter
+    the current row."""
+
+    LISTE1 = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],]
+
     counter = 0
     counter1 = 0
-    
+
     for i in liste[0][0]:
-        
+
         if liste[0][0][counter1] == ')' and\
            liste[0][0][counter1 + 1] == ',' and\
            liste[0][0][counter1 + 2] == ' ' and\
            liste[0][0][counter1 + 3] == '(' and\
            liste[0][0][counter1 + 4] == '[':
             counter += 1
-        
+
         elif i == '[':
             pass
 
@@ -54,13 +68,14 @@ def i_into_i(liste):
             LISTE1[counter].append(i)
 
         counter1 += 1
-            
+
     return LISTE1
 
 
 
 def unification(liste1):
-    """here we unificate the last list"""
+    """So we get this :['"', 'b', 'l', 'e', 'u'....
+    we must join it now."""
     
     liste2 = []
     for i in liste1:
@@ -75,7 +90,10 @@ def unification(liste1):
 
 
 def suppression_en_trop(liste2):
-    """we clean the parentheses, hooks too much"""
+    """we clean the parentheses, hooks too much.
+    For do that we ignore all -> ) " , ( ][
+    and add to mot variable the rest.
+    At the end of loop we add it to a list."""
     
     liste3 = []
     
@@ -106,9 +124,38 @@ def suppression_en_trop(liste2):
 
 
 def re_elment_de_liste(liste4):
-    """here we sort our data by list list,
-    indeed we have mixed up and down data"""
-    
+    """"
+    Now we get list into list.
+    the first part of the list of list is a list of
+    color and the number of color pixel. The second
+    is the name + top or down part of the picture.
+    We need to have no 2 part into list of list
+    but a unique list.
+    [ ("bleu", 1), ("beige", 8), ("marron", 3),
+    ("blanc", 44), ("noir", 2), ("rouge", 239),
+    ("gris", 25) ], "2a.jpg", "haut"',
+
+    ->['bleu', '1', 'beige', '8',
+    'marron', '3', 'blanc', '44',
+    'noir', '2', 'rouge', '239',
+    'gris', '25', '2a.jpg', 'haut']
+ 
+    """
+
+
+    LISTE5 = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],
+              [], [], [], [], [], [], [], [], [], [], [], [], [], [], [],]
+
+
+
     counter = 0
     for i in liste4:
         
@@ -132,13 +179,15 @@ def re_elment_de_liste(liste4):
 
         else:
             liste6.append(i)
-            
+
     return liste6
 
 
 def mise_en_dico(liste6):
     """here we organize it
-    in dictionnary"""
+    in dictionnary
+    For example:
+    bleu': '1', 'beige': '8',"""
     
     liste7 = []
     dico = {}
@@ -167,7 +216,17 @@ def mise_en_dico(liste6):
 
 def determination_couleur(liste7):
     """Here we associate the the biggest
-    score to the picture"""
+    score to the picture.
+    We ignore the white who's egal to
+    255, 255, 255. This is define by nearest()
+    the name white is associate to 255, 255, 255
+    254, 254, 254dont take the name white.
+    And our background is egal to 255, 255, 255.
+    Same for grey.
+    We only take the highter number of the current list.
+    For example:
+    ("blanc", 44), ("noir", 2), ("rouge", 239) we take red and
+    associate it to the name picture."""
 
     liste8 = []
     for i in liste7:
@@ -212,7 +271,11 @@ def determination_couleur(liste7):
 
 def les_tendances_couleurs(liste8):
     """We reunicate all data, t-shirt,
-    jean and haircut"""
+    jean and haircut.
+    Now we have data like :
+    ('rouge', '2a.jpg', 'haut', 'marron'),
+    ('bleu', '2a.jpg', 'bas', 'marron')
+    where marron is the color of haircut."""
 
     
     #We call class visu from coupe_analysis.py
@@ -252,7 +315,7 @@ def les_tendances_couleurs(liste8):
     counter1 = 0
     for i in coupa2:
         liste9[counter1] = liste9[counter1] + (i,)
-        liste9[counter1 + 1] = liste9[counter1 + 1] + (i,)
+        liste9[counter1 + 1] = liste9[counter1 + 1] + (i, )
         counter1 += 2
         
     return liste9
@@ -261,7 +324,20 @@ def les_tendances_couleurs(liste8):
 
 
 def dico_max(dico):
-    
+    """
+    Now we define a variable egal to 0.
+    We loop the dictionary.
+    We recup the value and compare it to
+    the number.
+    If the value is > number
+    we redefine the number and coul who is the key.
+    Like number = 0
+    bleu = 5 so number < value
+    rouge = 10 so number < value
+    green = 1 so we ignore it
+    and we return the final key.
+    """
+
     nb = 0
     coul = ''
     
@@ -277,6 +353,11 @@ def dico_max(dico):
 
 
 def analyse_tendance_funct_1(liste, c):
+    """Now we must define all of this
+    by haircuts color.
+    We ask the list, your 4th element is marron ? blond?...
+    If yes we add it to a list.
+    """
 
     liste1 = []
     liste2 = []
@@ -302,7 +383,10 @@ def analyse_tendance_funct_1(liste, c):
 
 
 def analyse_tendance_funct_2(liste):
-    
+    """We loop a list, and a dictionnary.
+    If element of list == key we add + 1 to value dictionnary
+    It will say to us the highter color""""
+
     dico = {}
     
     for i in liste:
@@ -318,7 +402,8 @@ def analyse_tendance_funct_2(liste):
 
 
 def analyse_tendance(liste):
-    """We define color from picture"""
+    """We define color from picture
+    Like blond == bleu top, red bot for example"""
 
     #define color of t-shirt
     funt1 = analyse_tendance_funct_1(liste, 0)
