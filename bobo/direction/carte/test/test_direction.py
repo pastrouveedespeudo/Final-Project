@@ -27,7 +27,7 @@ def test_ville():
 
 def test_vent():
     parametre = 'crest'
-    sortie = 1.5, 170
+    sortie = 4.1, 20
     assert script_vent.le_vent(parametre) == sortie
 
 
@@ -55,15 +55,10 @@ def test_postal():
 
 
 
-
-
 def test_code_postal():
     parametre = 'crest'
     sortie = '26400'
     assert script_vent.code_postal(parametre) == sortie
-
-
-
 
 
 def test_direction():
@@ -73,11 +68,11 @@ def test_direction():
 
 
 
-
 def test_vent2():
     parametre = 'crest'
-    sortie = 'sudsudouest'
+    sortie = 'nord'
     assert script_vent.vent_deux(parametre) == sortie
+
 
 
 
@@ -88,6 +83,7 @@ def test_reverse():
     liste.append(str(result[0]))
     out = [OrderedDict([('lat', '44.72836'), ('lon', '5.02722'), ('name', 'Crest'), ('admin1', 'Rhone-Alpes'), ('admin2', 'Departement de la Drome'), ('cc', 'FR')])]
     assert result == out
+
 
 
 def test_dresse():
@@ -102,6 +98,7 @@ def test_vent_calcul():
     parametre = 360
     sortie = 'nord'
     assert script_boussole.calcul_vent(parametre) == sortie
+
 
 def test_pos():
     para1 = 44.5
@@ -125,7 +122,7 @@ def test_superficie():
 def test_views_function():
 
     para = 'crest' 
-    sortie = ((44.9386875, 5.1035092650880935), 44.7282675, 5.0236641)
+    sortie = ((44.5178475, 5.0236641), 44.7282675, 5.0236641)
     assert views.function_map(para) == sortie
 
 
