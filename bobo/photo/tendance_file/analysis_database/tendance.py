@@ -394,33 +394,10 @@ def analyse_tendance_funct_2(liste):
 
     return dico
 
-def function_analyse(liste_bas_marron,
-                     liste_bas_blond,
-                     liste_bas_chatain):
-    """Associate to analyse_tendance
+
+def function_analyse(liste):
+    """Associate to analyse_tendance.
     We define color from picture
-    Like blond == bleu top, red bot for example"""
-    dico_bas_marron = analyse_tendance_funct_2(liste_bas_marron)
-    dico_bas_blond = analyse_tendance_funct_2(liste_bas_blond)
-    dico_bas_chatin = analyse_tendance_funct_2(liste_bas_chatain)
-
-
-    #Take the most value
-    haut_marron = dico_max(dico_haut_marron)
-    haut_blond = dico_max(dico_haut_blond)
-    haut_chatain = dico_max(dico_haut_chatin)
-
-    bas_marron = dico_max(dico_bas_marron)
-    bas_blond = dico_max(dico_bas_blond)
-    bas_chatain = dico_max(dico_bas_chatin)
-
-
-    marron = [haut_marron, bas_marron]
-    blond = [haut_blond, bas_blond]
-    chatain = [haut_chatain, bas_chatain]
-
-def analyse_tendance(liste):
-    """We define color from picture
     Like blond == bleu top, red bot for example"""
 
     #define color of t-shirt
@@ -443,16 +420,76 @@ def analyse_tendance(liste):
     liste_bas_blond = funt2[1]
     liste_bas_chatain = funt2[2]
 
+    dico_bas_marron = analyse_tendance_funct_2(liste_bas_marron)
+    dico_bas_blond = analyse_tendance_funct_2(liste_bas_blond)
+    dico_bas_chatin = analyse_tendance_funct_2(liste_bas_chatain)
 
-    marron, blond,\
-            chatain = function_analyse(liste_bas_marron,
-                     liste_bas_blond,
-                     liste_bas_chatain)
 
-    print(marron, blond, chatain)
+    return dico_haut_marron, dico_haut_blond, dico_haut_chatin,\
+           dico_bas_marron, dico_bas_blond, dico_bas_chatin
+
+
+def top(dico_haut_marron, dico_haut_blond, dico_haut_chatin):
+    """We define top of picture"""
+    #Take the most value
+    haut_marron = dico_max(dico_haut_marron)
+    haut_blond = dico_max(dico_haut_blond)
+    haut_chatain = dico_max(dico_haut_chatin)
+
+    return haut_marron, haut_blond, haut_chatain
+
+
+def bot(dico_bas_marron, dico_bas_blond, dico_bas_chatin):
+    """We define bot of picture"""
+
+    bas_marron = dico_max(dico_bas_marron)
+    bas_blond = dico_max(dico_bas_blond)
+    bas_chatain = dico_max(dico_bas_chatin)
+
+    return bas_marron, bas_blond, bas_chatain
+
+
+def colors(haut_marron, bas_marron,
+           haut_blond, bas_blond,
+           haut_chatain, bas_chatain):
+    """We define the colors"""
+
+    marron = [haut_marron, bas_marron]
+    blond = [haut_blond, bas_blond]
+    chatain = [haut_chatain, bas_chatain]
+
     return marron, blond, chatain
 
 
+def analyse_tendance(liste):
+    """We define color from picture
+    Like blond == bleu top, red bot for example"""
+
+
+    dico_haut_marron, dico_haut_blond,\
+                      dico_haut_chatin, dico_bas_marron,\
+                      dico_bas_blond,\
+                      dico_bas_chatin = function_analyse(liste)
+
+
+    haut_marron, haut_blond,\
+                 haut_chatain = top(dico_haut_marron,
+                                    dico_haut_blond,
+                                    dico_haut_chatin)
+
+
+    bas_marron, bas_blond,\
+                bas_chatain = bot(dico_bas_marron,
+                                  dico_bas_blond,
+                                  dico_bas_chatin)
+
+
+    marron, blond, chatain = colors(haut_marron, bas_marron,
+                                    haut_blond, bas_blond,
+                                    haut_chatain, bas_chatain)
+
+    print(marron, blond, chatain)
+    return marron, blond, chatain
 
 
 def la_tendance():
