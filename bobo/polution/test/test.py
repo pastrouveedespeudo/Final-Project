@@ -18,12 +18,6 @@ import polenne as script10
 import pollution as script11
 
 
-
-
-
-
-
-
 def test_un():
     sortie = None
 
@@ -41,7 +35,7 @@ def test_trois():
     parametre = 'crest'
     sortie = '21_30'
 
-    assert script2.recuperation_donnée_température(parametre) == sortie
+    assert script2.recuperation_donnee_temperature(parametre) == sortie
 
     
 def test_quattre():
@@ -60,7 +54,7 @@ def test_cinq():
 
 
 def test_six():
-    sortie = 'dollars augmente'
+    sortie = 'dollars baisse  '
 
     assert script4.course_dollars() == sortie
 
@@ -68,45 +62,45 @@ def test_six():
 
 def test_ville():
 
-    sortie = (True, False, 'dollars augmente')
+    sortie = (True, False, 'dollars baisse  ')
 
     assert script4.finding_function() == sortie
 
 
 
-def test_ville():
-    sortie = 'moyen'
+def test_villedza():
+    sortie = 'fort'
 
     assert script4.recup_tag() == sortie
 
 
-def test_ville():
-    sortie = (1, 'July', '2019')
+def test_villeeazeazeaez():
+    sortie = (18, 'July', '2019')
 
     assert script5.date() == sortie
 
 
-def test_ville():
-    sortie = None
+def test_villeoiu():
+    sortie = 'oui'
 
     assert script5.eruption() == sortie
 
 
-def test_ville():
+def test_villejh():
 
     sortie = None
 
-    assert script6.period_fertilizer() == sortie
+    assert script6.periode_angrais() == sortie
 
 
 
-def test_ville():
+def test_villertuy():
     parametre = 'crest'
-    sortie = (1, 7, 2019)
+    sortie = (18, 7, 2019)
 
     assert script7.date() == sortie
 
-def test_ville():
+def test_villebcv():
 
     sortie = 'non'
 
@@ -123,14 +117,14 @@ def test_ville1():
 
 def test_ville2():
     parametre = 'paris'
-    sortie = 'non'
+    sortie = 'oui'
 
     assert script7.fire_city(parametre) == sortie
 
 
 def test_ville3():
     parametre = 'marseille'
-    sortie = 'non'
+    sortie = 'oui'
 
     assert script7.fire_city(parametre) == sortie
 
@@ -138,7 +132,7 @@ def test_ville3():
 
 def test_ville():
     parametre = 'lyon'
-    sortie = 'pluie'
+    sortie = 'beau_temps'
 
     assert script8.recuperation_donnée_météo(parametre) == sortie
 
@@ -146,7 +140,7 @@ def test_ville():
 
 def test_ville857():
     parametre = 'lyon'
-    sortie = 'fort'
+    sortie = 'faible'
 
     assert script8.vent(parametre) == sortie
 
@@ -327,7 +321,7 @@ def test_ville33():
 
 
 
-def test_ville33():
+def test_ville3aa3():
     parametre = 'lyon'
     sortie = 328469
 
@@ -342,8 +336,8 @@ def test_ville33():
     assert script11.plugs_lyon(parametre) == sortie
 
 
-def test_ville33():
-    sortie = 10
+def test_ville33a():
+    sortie = 'tres grand'
 
     assert script11.plugs_paris() == sortie
 
