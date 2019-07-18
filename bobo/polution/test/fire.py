@@ -1,168 +1,115 @@
-"""Bs4, request, str find 16/04/2019"""
+"""We recup fire data on differents web site.
+    we try to search on article the current date
+    of the fire section"""
 
-
-import requests
-import urllib.request
-from bs4 import *
 import datetime
-
-from CONFIG_DATA_SITE import PATH_LYON_FIRE
-from CONFIG_DATA_SITE import PATH_MARSEILLE_FIRE
-from CONFIG_DATA_SITE import PATH_PARIS_FIRE
-from CONFIG_DATA_SITE import MONTH_DICO
+import requests
+from bs4 import BeautifulSoup
 
 
+PATH_LYON = 'https://www.lyoncapitale.fr/?s=incendie'
+PATH_MARSEILLE = 'https://www.20minutes.fr/search?q=incendie+marseille'
+PATH_PARIS = 'https://www.20minutes.fr/search?q=incendie+paris'
 
-def date():
-    """We define the date"""
-    
+
+
+def lyon(jour, mois, annee):
+    """We searching fire from lyon on
+    fire section from actuality of Lyon
+    We search from all div the current date"""
+
+    path = PATH_LYON
+    request_lyon = requests.get(path)
+
+    page = request_lyon.content
+    soup = BeautifulSoup(page, "html.parser")
+    propriete = soup.find_all("div")
+    liste = []
+    liste.append(str(propriete))
+    daate = str(jour) + ' ' + str(mois) + ' ' + str(annee)
+    finding_a = str(liste).find(str(daate))
+    if finding_a >= 0:
+        out = 'oui'
+    else:
+        out = None
+    return out
+
+def paris_marseille(path, jour, mois, annee):
+    """Here we search
+    all differents possibilities
+    of format of date for fire section
+    of Paris and Marseille"""
+
     date = datetime.datetime.now()
-    day = date.day
-    month = date.month
-    year = date.year
 
-    return day, month, year
-
-
-def soup_lyon():
-    """We searchinf fire for lyon"""
-    
-    day, month, year = date()
-    
-    path = PATH_LYON_FIRE
     request_html = requests.get(path)
     page = request_html.content
-    soup_request = BeautifulSoup(page, "html.parser")
-    Property = soup_request.find_all("div")
-
-    liste = []
-    liste.append(str(Property))
-
-    daate = str(day) + ' ' + str(month) + ' ' + str(year)
-    finding = str(liste).find(str(daate))
-
-    if finding >= 0:
-        return 'oui'
-    else:
-        return 'non'
-
-
-def soup_request(path):
-    """We call all div"""
-    
-    r = requests.get(path)
-    page = r.content
     soup = BeautifulSoup(page, "html.parser")
-    Property = soup.find_all("div")
-
+    propriete = soup.find_all("div")
     liste = []
-    liste.append(str(Property))
+    liste.append(str(propriete))
 
-    return liste
-
-
-def search_date(path):
-    """Here we search 
-    all differents possibilities
-    of format of date"""
-    
-    liste = soup_request(path)
-    day, month, year = date()
-
-    finding = str(liste).find('incendie')
-    liste = liste[0][finding - 1000:finding + 1000]
-    month_chi = month
+    finding_a = str(liste).find('incendie')
+    liste = liste[0][finding_a - 1000:finding_a + 1000]
+    mois_chi = date.month
 
     counter = 0
-    for i in str(month_chi):
+    for i in str(mois_chi):
         counter += 1
 
     if counter == 1:
-        daate1 = str(year) + '-0' + str(month_chi)+'-'+str(day)
-        daate3 = str(day) + '-0' + str(month_chi)+'-'+str(year)
+        daate1 = str(annee) + '-0' + str(mois_chi)+'-'+str(jour)
+        daate3 = str(jour) + '-0' + str(mois_chi)+'-'+str(annee)
     else:
-        daate1 = str(year) + '-' + str(month_chi)+'-'+str(day)
-        daate3 = str(day) + '-' + str(month_chi)+'-'+str(year)
-        
-    daate = str(day) + ' ' + str(month) + ' ' + str(year)
-    
-    finding1 = str(liste).find(daate)
-    finding2 = str(liste).find(daate1)
-    finding3 = str(liste).find(daate3)
+        daate1 = str(annee) + '-' + str(mois_chi)+'-'+str(jour)
+        daate3 = str(jour) + '-' + str(mois_chi)+'-'+str(annee)
 
-    if finding1 >= 0 or\
-       finding2 >= 0 or\
-       finding3 >=0:
-        return 'oui'
+    daate = str(jour) + ' ' + str(mois) + ' ' + str(annee)
+
+
+    finding_b = str(liste).find(daate)
+    finding_c = str(liste).find(daate1)
+    finding_d = str(liste).find(daate3)
+    out = ''
+    if finding_b >= 0 or finding_c >= 0 or finding_d >= 0:
+        out = 'oui'
     else:
-        return 'non'
-
-    
-def fire_city(city):
-    """here we are going to look for
-    current fire in the three different cities."""
-
-    path = ''
-    day, month, year = date()
-
-    for key, value in MONTH_DICO.items():    
-        if str(month) == key:
-            month = value
-
-    city = city.lower()
-
-
-    if city == 'lyon':
-        lyon_city = soup_lyon()
-        if lyon_city:
-            return lyon_city
-
-    elif city == 'paris':
-        path = PATH_PARIS_FIRE
-    elif city == 'marseille':
-        path = PATH_MARSEILLE_FIRE
-
-
-    fire = search_date(path)
-    return fire
+        out = None
+    return out
 
 
 
+def incendie(ville):
+    """We define the current day,
+    transform it in english
+    and try to match it with the site web"""
+
+    date = datetime.datetime.now()
+    jour = date.day
+    mois = date.month
+    annee = date.year
+
+    dico = {'1': 'janvier', '2': 'fevrier', '3': 'mars', '4': 'avril',
+            '5': 'mai', '6': 'juin', '7': 'juillet', '8': 'août',
+            '9': 'septembre', '10': 'octobre', '11': 'novembre',
+            '12': 'decembre'}
 
 
+    for cle, valeur in dico.items():
+        if str(mois) == cle:
+            mois = valeur
 
+    ville = ville.lower()
 
+    if ville == 'lyon':
+        out = lyon(jour, mois, annee)
 
+    elif ville == 'paris':
+        path = PATH_PARIS
+        out = paris_marseille(path, jour, mois, annee)
 
+    elif ville == 'marseille':
+        path = PATH_MARSEILLE
+        out = paris_marseille(path, jour, mois, annee)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return out
