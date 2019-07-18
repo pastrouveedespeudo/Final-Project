@@ -11,21 +11,20 @@
 
 import os
 
-from tendance_file.analysis_database.tendance import la_tendance
+from tendance import la_tendance
 
-from magasins.address import address_geo
-from magasins.address import city_geo
-from magasins.gym import big_city_gym
-from magasins.gym import schedule_gym
+from address import address_geo
+from address import city_geo
+from gym import big_city_gym
+from gym import schedule_gym
 
-from magasins.hairdresser import cities
-from magasins.hairdresser import schedule_hair
+from hairdresser import cities
+from hairdresser import schedule_hair
 
-from data_tchat.database import database_coupe
-from data_tchat.database import database_habit
-from data_tchat.database import database_tendance
-
-from data_tchat.CONFIG import GROS_MOTS
+##from database import database_coupe
+##from database import database_habit
+##from database import database_tendance
+##from CONFIG import GROS_MOTS
 
 
 def function_tchat(data, tchat):
