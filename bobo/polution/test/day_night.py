@@ -1,34 +1,29 @@
+"""Here we look if it's during the day or the night
+for site web"""
+
 import datetime
 
-def night_day():
-    """Here we just recup information about the moment of
-    the day"""
-    
-    night = [22, 23, 24, 1, 2, 3, 4, 5, 6, 7, 8]
+def nuit_jour():
+    """Define day or night period"""
+
+    nuit = [22, 23, 24, 1, 2, 3, 4, 5, 6, 7, 8]
+
 
     date = datetime.datetime.now()
-    hour = date.hour
-    
-    if hour == 23: 
-        hour = 1
-    elif hour == 24:
-        hour = 2
+    heure = date.hour
+
+    if heure == 23:
+        heure = 1
+    elif heure == 24:
+        heure = 2
     else:
-        hour + 2 
+        heure = heure + 2
 
-    the_night = ''
-    no_night = ''
-
-    
-    for i in night:
-        if i == hour:
-            the_night = 'nuit'
-            return the_night 
+    the_periode = ''
+    for i in nuit:
+        if i == heure:
+            the_periode = 'nuit'
         else:
-            no_night = 'jour'
+            the_periode = 'jour'
 
-    return no_night
-
-    
-
-
+    return the_periode
