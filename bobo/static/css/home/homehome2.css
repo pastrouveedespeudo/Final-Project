@@ -1,3 +1,17 @@
+
+a:hover{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:none;
+}
+
+@media screen and (min-width: 992px) and (max-width:1700px) {
+  #separate10{
+    height:600px;
+  }
+}
+
 #description{
   height:200px;
   text-align:justify;
