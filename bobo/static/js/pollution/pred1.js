@@ -1,3 +1,4 @@
+
 function one(div, ville){
     document.getElementById(div).style.background = "red";
     if(ville == 'info1'){
@@ -20,7 +21,7 @@ function display(ville){
     //and display the loading logo
 
     document.getElementById('pred').innerHTML = ""
-    document.getElementById('choix').innerHTML = 'Vous avez choisis ' + ville;
+    document.getElementById('choix').innerHTML = 'Vous avez choisi ' + ville;
     document.getElementById('chargement').style.display = "block";
 
 };
