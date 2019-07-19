@@ -7,7 +7,6 @@ from django.conf.urls import handler500
 
 from . import views
 
-
 handler404 = "bobo.views.handler404"
 handler500 = "bobo.views.handler500"
 
