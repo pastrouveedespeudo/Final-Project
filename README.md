@@ -1,8 +1,4 @@
-c un site web sous forme de magazine et dans un magazine y'a des fois des thèses et anti thèses et les avis extérieurs compte donc forum !
-
 relire l'intro
-
-faire mention légale 5heures
 
 Tous rechanger ce n'est pas un blog / magazine virtuel 2heures
 
