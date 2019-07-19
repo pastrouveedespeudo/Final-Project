@@ -1,8 +1,12 @@
 relire l'intro 
 
-traquer les bugs
+home espace blanc,
+
+mettre un sommaire au livrable + page de garde
 
 Tous rechanger ce n'est pas un blog (livrable)
+
+traquer les bugs
 
 recuperer macguyvert 
 
