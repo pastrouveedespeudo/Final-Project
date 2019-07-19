@@ -1,5 +1,7 @@
 recuperer macguyvert 
 
+faute mentions certains (s)
+
 faute home
 
 traquer les bugs
