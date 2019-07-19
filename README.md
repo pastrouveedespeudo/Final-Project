@@ -1,12 +1,6 @@
-relire l'intro 
-
-mettre un sommaire au livrable + page de garde
-
-Tous rechanger ce n'est pas un blog (livrable)
-
 recuperer macguyvert 
 
-#en ce moment a cause du départ routier ca bug maisau cas ou c pas ca faut enlever le truk a cause du timeout grrrr fo push avant minuit
+
 
 # Un site web sur la mode et la pollution, Le magazine virtuel
 
@@ -68,7 +62,7 @@ https://myprofilmypollution.herokuapp.com
 Résumé (la note d'intention se trouve dans livrable)
 
 
-Suivre les concepts de la mode est crucial aujourd'hui. La mode est un ensemble de règles qui définisse les critères de la beauté. Oui mais... la mode n'est pas forcément la beauté ! ici nous parlerons de non-négligence de soi. En effet, Verriez vous George Clooney avec les sourciles du comte Olaf ou avec une barbe d'hermitte? Verriez-vous Madonna avec une crête verte ? Non car ces personnes suivent la mode. Elle vous permet dassurer votre crédibilité au travail mais aussi votre confiance en vous. Il a été démontrer scientifiquement que d'être beau et bien habillé augmentait le salaire, les bonnes notes, la sensation d'intelligence et de sympathie. Il est donc très important d'être bien sur soi tant au niveau vestimentaire qu'au niveau du corps car l'estime de soi augmente la sympathie, le bien etre en somme le bonheur. Une coupe tendance où des vêtements des années 50 peuvent être révolus aujourd'hui et paraître "moches" de nos jours. Il faut donc de suivre la mode et par le biais de conformismes et par notre instinct grégaire car la mode est une variable indispensable à la beauté et à l'impression que l'on donne à autrui de nos jours.
+Suivre les concepts de la mode est crucial aujourd'hui. La mode est un panel de règles qui définisse un ensemble de critère de la beauté, la mode est un vecteur à la beauté ! ici nous parlerons de non-négligence de soi. En effet, Verriez vous George Clooney avec les sourciles du comte Olaf ou avec une barbe d'hermitte? Verriez-vous Madonna avec une crête verte ? Non car ces personnes suivent la mode. Elle vous permet dassurer votre crédibilité au travail mais aussi votre confiance en vous. Il a été démontrer scientifiquement que d'être beau et bien habillé augmentait le salaire, les bonnes notes, la sensation d'intelligence et de sympathie. Il est donc très important d'être bien sur soi tant au niveau vestimentaire qu'au niveau du corps car l'estime de soi augmente la sympathie, le bien etre en somme le bonheur. Une coupe tendance où des vêtements des années 50 peuvent être révolus aujourd'hui et paraître "moches" de nos jours. Il faut donc de suivre la mode et par le biais de conformismes et par notre instinct grégaire car la mode est une variable indispensable à la beauté et à l'impression que l'on donne à autrui de nos jours.
 <br><br>
 Pour cela nous proposons des fonctionnalités qui présentent les coloris de la mode au niveau vestimentaire mais aussi d'adapter sa coupe selon son cheveu et la forme de son visage par des dragables de coupe et de vêtement mais la mode, à quel prix ? Au prix des futures générations ? En effet, la mode est le deuxième facteur de pollution après le pétrole. Par le non-recyclage des vêtements, le transport ou bien la teinture des vêtements le monde de la beauté aggrave la qualité de l'air. Nous essayons donc d'aider mais aussi d'informer à travers ce site web, de données les connaissances a l'utilisateur des différents aspects de la pollution. Afin de faire cela nous allons raisonner de la façon suivante: nous présentons les informations sur la pollution puis les données surlequelles nous nous sommes basés, puis les graphiques et une des solutions qui existent pour lutter contre la pollution. Bien sûr nous avons fait d'autres fonctionnalités comme
 une carte des vents afin de suivre la pollution et une prédiction afin de suivre la pollution en temps réel selon des éléments bien précis.
