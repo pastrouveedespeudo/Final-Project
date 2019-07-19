@@ -1,15 +1,12 @@
 relire l'intro 
 
-home espace blanc,
-
 mettre un sommaire au livrable + page de garde
 
 Tous rechanger ce n'est pas un blog (livrable)
 
-traquer les bugs
-
 recuperer macguyvert 
 
+#en ce moment a cause du départ routier ca bug maisau cas ou c pas ca faut enlever le truk a cause du timeout grrrr fo push avant minuit
 
 # Un site web sur la mode et la pollution, Le magazine virtuel
 
