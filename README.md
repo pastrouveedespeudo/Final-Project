@@ -1,6 +1,8 @@
-relire l'intro
+relire l'intro 
 
-Tous rechanger ce n'est pas un blog / magazine virtuel 2heures
+traquer les bugs
+
+Tous rechanger ce n'est pas un blog (livrable)
 
 recuperer macguyvert 
 
