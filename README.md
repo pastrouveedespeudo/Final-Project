@@ -1,5 +1,11 @@
 recuperer macguyvert 
 
+faute home
+
+traquer les bugs
+
+faire la présentation (avec des images et tout)
+
 
 
 # Un site web sur la mode et la pollution, Le magazine virtuel
