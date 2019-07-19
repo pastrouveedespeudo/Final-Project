@@ -1,12 +1,8 @@
 recuperer macguyvert 
 
-faute mentions certains (s)
-
-faute home
-
 traquer les bugs
 
-faire la présentation (avec des images et tout)
+finir la présentation
 
 mettre en debug false
 
