@@ -140,7 +140,7 @@ def tchat_donnee_v(request):
         out = function_tchat(data, 'tchat_donnée')
         return HttpResponse(out)
 
-    message = tchat_donnée()
+    message = tchat_donnee()
     return render(request, "tchat_donnee.html", {"message":message})
 
 
