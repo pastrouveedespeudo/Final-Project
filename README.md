@@ -108,3 +108,5 @@ La prédiction qui au bout d'un moment va sortir qu'un seul chiffre
 le nombre de data qui nous est limité
 
 Un conseil, une amélioration ? jeanbaptiste.servais@gmail.com
+
+<em>allez donc voir notre dernier projet: https://projettoemploi.herokuapp.com/ </em>
