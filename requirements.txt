@@ -28,7 +28,7 @@ mysql-connector-python==8.0.16
 numpy==1.16.1
 opencv-contrib-python==4.1.0.25
 opencv-python==4.0.0.21
-opencv-python-headless==4.1.0.25
+opencv-python-headless==4.2.0.32
 Pillow==6.0.0
 postgres==2.2.2
 protobuf==3.7.1
