@@ -1,7 +1,7 @@
 autopy==2.1.0
 beautifulsoup4==4.7.1
 castro==1.0.6
-certifi==2018.11.29
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 colour==0.1.5
